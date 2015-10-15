@@ -65,11 +65,11 @@
     HTNavigationController *nav3 = [[HTNavigationController alloc] initWithRootViewController:find];
     
     MyStoreViewController *myStore = [[MyStoreViewController alloc]init];
-    myStore.tabBarItem = [self tabbarItemWithTitle:@"我的店" andItemImage:@"wode_icon"];
+    myStore.tabBarItem = [self tabbarItemWithTitle:@"我的店" andItemImage:@"maishoudian_icon"];
     HTNavigationController *nav4 = [[HTNavigationController alloc] initWithRootViewController:myStore];
     
     MineViewController *mine = [[MineViewController alloc]init];
-    mine.tabBarItem = [self tabbarItemWithTitle:@"我的" andItemImage:@"maishoudian_icon"];
+    mine.tabBarItem = [self tabbarItemWithTitle:@"我的" andItemImage:@"wode_icon"];
     HTNavigationController *nav5 = [[HTNavigationController alloc] initWithRootViewController:mine];
     
     return @[nav1, nav2, nav3, nav4, nav5];

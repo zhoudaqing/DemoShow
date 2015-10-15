@@ -23,10 +23,9 @@
 {
     [super viewDidLoad];
     
-    self.title = @"商城";
-    
     self.separateView.backgroundColor = [UIColor whiteColor];
     
+    [self.navigationController.navigationBar setBackgroundImage:HTImage(@"statusBar") forBarMetrics:UIBarMetricsDefault];
 }
 
 - (NSArray *)functionTitles

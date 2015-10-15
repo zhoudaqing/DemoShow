@@ -36,15 +36,6 @@
     self.window.rootViewController = self.tabBarController;
 
     [self.window makeKeyAndVisible];
-    
-    //  MARK:远程推送
-    NSDictionary * userInfo = [launchOptions objectForKey:UIApplicationLaunchOptionsRemoteNotificationKey];
-    if (userInfo) {
-        
-    }
-    
-    //  MARK:显示引导页
-    [HTGuideManager showGuideViewWithDelegate:self];
 
     return YES;
 }

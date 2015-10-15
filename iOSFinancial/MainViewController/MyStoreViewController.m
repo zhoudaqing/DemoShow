@@ -6,202 +6,64 @@
 //  Copyright © 2015年 Mr.Yan. All rights reserved.
 //
 
-#import "MineViewController.h"
+#import "MyStoreViewController.h"
 
-@interface MineViewController ()<UITableViewDelegate, UITableViewDataSource>
 
-@property (nonatomic)UITableView *tableView;
+@interface MyStoreViewController ()<UINavigationControllerDelegate>
+{
+    UIImageView *_backImage;
+}
 
 @end
 
-@implementation MineViewController
+@implementation MyStoreViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    self.title = @"我的";
-    // Do any additional setup after loading the view.
-    self.tableView = [[UITableView alloc]initWithFrame:self.view.bounds];
-    self.tableView.delegate  = self;
-    self.tableView.dataSource = self;
-    [self.view addSubview:self.tableView];
+    self.navigationController.navigationBarHidden = YES;
+    [self.tableView removeFromSuperview];
+    _backImage = [[UIImageView alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    [_backImage setImage:[UIImage imageNamed:@"wodedian.PNG"]];
+    [self.view addSubview:_backImage];
+    _backImage.userInteractionEnabled = YES;
     
-    UIView *view = [[UIView alloc]init];
-    view.backgroundColor = [UIColor clearColor];
-    [self.tableView setTableFooterView:view];
+    [self addsubViews];
+}
+
+- (void)addsubViews
+{
+    UILabel *lable = [[UILabel alloc]initWithFrame:CGRectMake(20, 251, 120, 20)];
+    lable.textColor = [UIColor whiteColor];
+    lable.text = @"当前货架数量：50个";
+    lable.font = [UIFont systemFontOfSize:13.0];
+    [_backImage addSubview:lable];
     
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return 6;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    if (section == 0) {
-        return 1;
-    }
-    return 2;
-}
-
-- (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
     
-    NSString *identifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
-    }
+    UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(238, 251, 120, 20)];
+    btn.backgroundColor = [UIColor redColor];
+    [btn.layer setMasksToBounds:YES];
+    [btn.layer setCornerRadius:5.0];
     
-    switch (indexPath.section) {
-        case 0:
-        {
-            UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 90)];
-            [imageView setImage:[UIImage imageNamed:@"tuceng1"]];
-            [cell addSubview:imageView];
-        }
-            break;
-        case 1:
-        {
-            switch (indexPath.row) {
-                case 0:
-                {
-                    cell.imageView.image = [UIImage imageNamed:@"dingdanguanli_icon"];
-                    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-                    cell.detailTextLabel.text = @"查看全部订单";
-                    cell.textLabel.text = @"我的订单";
-                }
-                    break;
-                    
-                default:
-                {
-                    UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 64 )];
-                    [imageView setImage:[UIImage imageNamed:@"tuceng2"]];
-                    [cell addSubview:imageView];
-                }
-                    break;
-            }
-        }
-            break;
-        case 2:
-        {
-            switch (indexPath.row) {
-                case 0:
-                {
-                    cell.textLabel.text = @"我的优惠券";
-                    cell.imageView.image = [UIImage imageNamed:@"youhuijuan_icon"];
-                    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-                }
-                    break;
-                    
-                default:
-                {
-                    cell.textLabel.text = @"收货地址与管理";
-                    cell.imageView.image = [UIImage imageNamed:@"dingdanguanli_icon"];
-                    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-                }
-                    break;
-            }
-        }
-            break;
-        case 3:
-        {
-            switch (indexPath.row) {
-                case 0:
-                {
-                    cell.textLabel.text = @"关注的商品";
-                    cell.imageView.image = [UIImage imageNamed:@"wodeguanzhu_icon"];
-                    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-                }
-                    break;
-                    
-                default:
-                {
-                    cell.textLabel.text = @"收货地址与管理";
-                    cell.imageView.image = [UIImage imageNamed:@"shouhuodizhi_icon"];
-                    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-                }
-                    break;
-            }
-        }
-            break;
-        case 4:
-        {
-            switch (indexPath.row) {
-                case 0:
-                {
-                    cell.textLabel.text = @"联系鲜生活";
-                    cell.imageView.image = [UIImage imageNamed:@"lianxixianlife_icon"];
-                    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-                }
-                    break;
-                    
-                default:
-                {
-                    cell.textLabel.text = @"意见反馈";
-                    cell.imageView.image = [UIImage imageNamed:@"yijian_icon@3x"];
-                    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-                }
-                    break;
-            }
-        }
-            break;
-        default:
-            switch (indexPath.row) {
-                case 0:
-                {
-                    cell.textLabel.text = @"关于生活";
-                    cell.imageView.image = [UIImage imageNamed:@"guanyuxianlife_icon"];
-                    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-                }
-                    break;
-                    
-                default:
-                {
-                    cell.textLabel.text = @"清楚本地缓存";
-                    cell.imageView.image = [UIImage imageNamed:@"qingchuhuancun_icon"];
-                    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-                }
-                    break;
-            }
-            
-            break;
-    }
-    return cell;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
-{
-    if (section == 5) {
-        return 0;
-    }
-    return 10;
-}
-
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (indexPath.section == 0) {
-        return 90;
-    }
-    if (indexPath.section == 1&& indexPath.row == 1) {
-        return 64;
-    }
-    return 44;
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // 取消选中状态
-    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    [btn setTitle:@"免费升级店铺" forState:UIControlStateNormal];
+    btn.titleLabel.font = [UIFont systemFontOfSize:13.0];
+    [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [_backImage addSubview:btn];
+    
+    [btn addTarget:self action:@selector(pushYanshiDemo) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIButton *btn2 = [[UIButton alloc]initWithFrame:CGRectMake(0, 291, [UIScreen mainScreen].bounds.size.width, 44)];
+    btn2.backgroundColor = [UIColor clearColor];
+    [_backImage addSubview:btn2];
+    [btn2 addTarget:self action:@selector(pushYanshiDemo) forControlEvents:UIControlEventTouchUpInside];
     
 }
 
+- (void)pushYanshiDemo
+{
+    
+    NSLog(@"~~~~~~~");
+    
+}
 
 @end

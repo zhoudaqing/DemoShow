@@ -11,11 +11,13 @@
 #import "ActionWebViewController.h"
 #import "UIView+NoneDataView.h"
 #import "ContentCell.h"
+#import "StoreDetailViewController.h"
+
 
 @interface LocalStoreViewController ()
 
 @property (nonatomic, strong)   HTADScrollView *adScrollView;
-@property (nonatomic, strong)   UIImage *contentImage;
+
 
 @end
 
@@ -30,9 +32,13 @@
     
     self.tableView.tableHeaderView = self.adScrollView;
     
-    self.contentImage = HTImage(@"content");
+    __weakSelf;
+    [self setImage:HTImage(@"content") WithTouchBlock:^(NSIndexPath *indexPath) {
+        StoreDetailViewController *detail = [[StoreDetailViewController alloc] init];
+        detail.hidesBottomBarWhenPushed = YES;
+        [weakSelf.navigationController pushViewController:detail animated:YES];
+    }];
     
-    [self.tableView reloadData];
 }
 
 //  MARK:广告滚动视图
@@ -84,27 +90,6 @@
     
 }
 
-#pragma mark -
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return 1;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return self.contentImage.size.height;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    ContentCell *cell = nil;
-    
-    cell = [[ContentCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    cell.contentImageView.image = self.contentImage;
-    
-    return cell;
-}
 
 @end

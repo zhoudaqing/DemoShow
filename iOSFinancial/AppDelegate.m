@@ -28,7 +28,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
  
-    
     [self initFinishLaunch:application andOption:launchOptions];
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
@@ -69,7 +68,6 @@
 {
     //  MARK:系统样式
     [self initAppStyle];
-    
 }
 
 //  MARK: Setting
@@ -79,18 +77,15 @@
     
     //  去掉tabbar底下的黑线 (顶部的阴影线 是 shoadowImage 造成的)
     [[UITabBar appearance] setTintColor:[UIColor jt_barTintColor]];
-    //[[UITabBar appearance] setShadowImage:HTImage(@"")];
     
     //  修改navigation Bar底下的黑色线
-    [[UINavigationBar appearance] setBarTintColor:[UIColor jt_barTintColor]];
-    [[UINavigationBar appearance] setShadowImage:HTImage(@"")];//[[UIImage alloc] init]
+//    [[UINavigationBar appearance] setBarTintColor:[UIColor jt_barTintColor]];
+    //[[UINavigationBar appearance] setShadowImage:HTImage(@"")];//[[UIImage alloc] init]
     
     //修改返回按钮图片
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
-    
-    //returnBackIcon dismissIndicatior
-    [[UINavigationBar appearance] setBackIndicatorImage:[UIImage imageNamed:@"returnBackIcon"]];
-    [[UINavigationBar appearance] setBackIndicatorTransitionMaskImage:[UIImage imageNamed:@"returnBackIcon"]];
+    [[UINavigationBar appearance] setBackIndicatorImage:[UIImage imageNamed:@"dismissIndicatior"]];
+    [[UINavigationBar appearance] setBackIndicatorTransitionMaskImage:[UIImage imageNamed:@"dismissIndicatior"]];
     
     [[UITableView appearance] setSeparatorColor:[UIColor jt_lineColor]];
     

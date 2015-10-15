@@ -6,8 +6,10 @@
 //  Copyright © 2015年 Mr.Yang. All rights reserved.
 //
 
-#import "HTBaseTableViewController.h"
+#import "BaseDetailViewController.h"
 
-@interface LocalStoreViewController : HTBaseTableViewController
+@interface LocalStoreViewController : BaseDetailViewController
+
+
 
 @end

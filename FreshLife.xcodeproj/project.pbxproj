@@ -86,6 +86,9 @@
 		928860E61B297F810060502D /* UILabel+FlickerNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 928860E51B297F810060502D /* UILabel+FlickerNumber.m */; };
 		928C97521B85834900D4CDD5 /* UIView+LabelSign.m in Sources */ = {isa = PBXBuildFile; fileRef = 928C97511B85834900D4CDD5 /* UIView+LabelSign.m */; };
 		92943C341BCE8FED005B44CB /* ContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 92943C331BCE8FED005B44CB /* ContentCell.m */; settings = {ASSET_TAGS = (); }; };
+		92943C391BCF6163005B44CB /* StoreDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92943C381BCF6163005B44CB /* StoreDetailViewController.m */; settings = {ASSET_TAGS = (); }; };
+		92943C3C1BCF7FAE005B44CB /* BaseDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92943C3B1BCF7FAE005B44CB /* BaseDetailViewController.m */; settings = {ASSET_TAGS = (); }; };
+		92943C3F1BCF834B005B44CB /* GoodDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92943C3E1BCF834B005B44CB /* GoodDetailViewController.m */; settings = {ASSET_TAGS = (); }; };
 		9296B25C1B70C9680053B157 /* ShareTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9296B25B1B70C9670053B157 /* ShareTitleView.m */; };
 		92A41EE31B26D4030036DC58 /* HTADScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 92A41EE21B26D4030036DC58 /* HTADScrollView.m */; };
 		92B47FFE1B6F611C00AF9A2D /* UIBarButtonItem+Badge.m in Sources */ = {isa = PBXBuildFile; fileRef = 92B47FFD1B6F611C00AF9A2D /* UIBarButtonItem+Badge.m */; };
@@ -266,6 +269,12 @@
 		928C97511B85834900D4CDD5 /* UIView+LabelSign.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LabelSign.m"; sourceTree = "<group>"; };
 		92943C321BCE8FED005B44CB /* ContentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentCell.h; sourceTree = "<group>"; };
 		92943C331BCE8FED005B44CB /* ContentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentCell.m; sourceTree = "<group>"; };
+		92943C371BCF6163005B44CB /* StoreDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreDetailViewController.h; sourceTree = "<group>"; };
+		92943C381BCF6163005B44CB /* StoreDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreDetailViewController.m; sourceTree = "<group>"; };
+		92943C3A1BCF7FAE005B44CB /* BaseDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseDetailViewController.h; sourceTree = "<group>"; };
+		92943C3B1BCF7FAE005B44CB /* BaseDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseDetailViewController.m; sourceTree = "<group>"; };
+		92943C3D1BCF834B005B44CB /* GoodDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodDetailViewController.h; sourceTree = "<group>"; };
+		92943C3E1BCF834B005B44CB /* GoodDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodDetailViewController.m; sourceTree = "<group>"; };
 		9296B25A1B70C9670053B157 /* ShareTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareTitleView.h; sourceTree = "<group>"; };
 		9296B25B1B70C9670053B157 /* ShareTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareTitleView.m; sourceTree = "<group>"; };
 		92A41EE11B26D4030036DC58 /* HTADScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTADScrollView.h; sourceTree = "<group>"; };
@@ -644,6 +653,28 @@
 			path = HTRequest;
 			sourceTree = "<group>";
 		};
+		92943C351BCF6133005B44CB /* StoreViewController */ = {
+			isa = PBXGroup;
+			children = (
+				92943C361BCF6149005B44CB /* DetailViewController */,
+				92FBFC8A1BCE48BB00F479F4 /* StoreSelectionControllers */,
+				92FBFC831BCE3B1400F479F4 /* StoreViewController.h */,
+				92FBFC841BCE3B1400F479F4 /* StoreViewController.m */,
+			);
+			name = StoreViewController;
+			sourceTree = "<group>";
+		};
+		92943C361BCF6149005B44CB /* DetailViewController */ = {
+			isa = PBXGroup;
+			children = (
+				92943C371BCF6163005B44CB /* StoreDetailViewController.h */,
+				92943C381BCF6163005B44CB /* StoreDetailViewController.m */,
+				92943C3D1BCF834B005B44CB /* GoodDetailViewController.h */,
+				92943C3E1BCF834B005B44CB /* GoodDetailViewController.m */,
+			);
+			name = DetailViewController;
+			sourceTree = "<group>";
+		};
 		92A41EE01B26D4030036DC58 /* HTADScrollView */ = {
 			isa = PBXGroup;
 			children = (
@@ -747,11 +778,9 @@
 		92D5777C1ACBB7C30070DC76 /* MainController */ = {
 			isa = PBXGroup;
 			children = (
+				92943C351BCF6133005B44CB /* StoreViewController */,
 				924D11691BCE61360040C318 /* ActionWebViewController.h */,
 				924D116A1BCE61360040C318 /* ActionWebViewController.m */,
-				92FBFC8A1BCE48BB00F479F4 /* StoreSelectionControllers */,
-				92FBFC831BCE3B1400F479F4 /* StoreViewController.h */,
-				92FBFC841BCE3B1400F479F4 /* StoreViewController.m */,
 				92FBFC7B1BCE3B1400F479F4 /* CartViewController.h */,
 				92FBFC7C1BCE3B1400F479F4 /* CartViewController.m */,
 				92FBFC7D1BCE3B1400F479F4 /* FindViewController.h */,
@@ -814,6 +843,8 @@
 		92FBFC8A1BCE48BB00F479F4 /* StoreSelectionControllers */ = {
 			isa = PBXGroup;
 			children = (
+				92943C3A1BCF7FAE005B44CB /* BaseDetailViewController.h */,
+				92943C3B1BCF7FAE005B44CB /* BaseDetailViewController.m */,
 				92FBFC8B1BCE48F900F479F4 /* LocalStoreViewController.h */,
 				92FBFC8C1BCE48F900F479F4 /* LocalStoreViewController.m */,
 				92FBFC8E1BCE490600F479F4 /* GlobleViewController.h */,
@@ -909,7 +940,7 @@
 				TargetAttributes = {
 					92D2A27C1AC3DF7B00C9A4AE = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = WJ39GR2PR6;
+						DevelopmentTeam = 3T4BLT5L4D;
 					};
 				};
 			};
@@ -1001,6 +1032,7 @@
 				92FBFC851BCE3B1400F479F4 /* CartViewController.m in Sources */,
 				921DD2EF1AEB67AF0004251F /* NSString+Size.m in Sources */,
 				92FBFC871BCE3B1400F479F4 /* MineViewController.m in Sources */,
+				92943C391BCF6163005B44CB /* StoreDetailViewController.m in Sources */,
 				926811CE1ADE86DD00FAB0A2 /* ContainerViewController.m in Sources */,
 				921DD2F21AEB67AF0004251F /* UIColor+HTExtension.m in Sources */,
 				9211AF751B7AF74D00B7FD9F /* VPImageCropperViewController.m in Sources */,
@@ -1059,9 +1091,11 @@
 				921DD28D1AEB65790004251F /* HTBaseTableControl.m in Sources */,
 				921DD2EC1AEB67AF0004251F /* NSString+BFExtension.m in Sources */,
 				92B480051B6F6B3400AF9A2D /* MCBadgeView.m in Sources */,
+				92943C3F1BCF834B005B44CB /* GoodDetailViewController.m in Sources */,
 				92EB85851AC561C800A80E03 /* HTTabBarController.m in Sources */,
 				92DA92791B3C164800AACF1D /* UIView+NoneDataView.m in Sources */,
 				924D116B1BCE61360040C318 /* ActionWebViewController.m in Sources */,
+				92943C3C1BCF7FAE005B44CB /* BaseDetailViewController.m in Sources */,
 				92A41EE31B26D4030036DC58 /* HTADScrollView.m in Sources */,
 				921DD28A1AEB65790004251F /* HTActions.m in Sources */,
 				92DA92761B3C050000AACF1D /* UIView+Layer.m in Sources */,

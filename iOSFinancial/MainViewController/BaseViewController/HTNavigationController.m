@@ -69,7 +69,7 @@
     self.interactivePopGestureRecognizer.enabled = NO;
     
     //  移除底下的黑线
-    [self removeNavigationBarbottomLine:self.navigationBar];
+//    [self removeNavigationBarbottomLine:self.navigationBar];
 }
 
 //  MARK:remove bottom line

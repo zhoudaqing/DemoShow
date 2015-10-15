@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "HTBaseTableViewController.h"
+#import "BaseDetailViewController.h"
 
 
-@interface FindViewController : HTBaseTableViewController
+@interface FindViewController : BaseDetailViewController
 
 @end

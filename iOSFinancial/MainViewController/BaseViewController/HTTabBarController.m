@@ -58,6 +58,7 @@
     
     CartViewController *cart = [[CartViewController alloc]init];
     cart.tabBarItem = [self tabbarItemWithTitle:@"购物车" andItemImage:@"gouwuche_icon"];
+    cart.tabBarItem.badgeValue = @"3";
     HTNavigationController *nav2 = [[HTNavigationController alloc] initWithRootViewController:cart];
     
     FindViewController *find = [[FindViewController alloc]init];

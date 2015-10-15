@@ -19,6 +19,14 @@
 
 @implementation StoreViewController
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    [self.navigationController.navigationBar setBackgroundImage:HTImage(@"statusBar") forBarMetrics:UIBarMetricsDefault];
+    
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -26,12 +34,15 @@
     self.separateView.backgroundColor = [UIColor whiteColor];
     
     [self.navigationController.navigationBar setBackgroundImage:HTImage(@"statusBar") forBarMetrics:UIBarMetricsDefault];
+    
+
+    
 }
 
 - (NSArray *)functionTitles
 {
     if (!_functionTitles) {
-        _functionTitles = @[@"商城", @"全球精选", @"新品上市"];
+        _functionTitles = @[@"商城", @"全球甄选", @"新品上市"];
     }
     
     return _functionTitles;
@@ -45,10 +56,10 @@
         LocalStoreViewController *investController = [[LocalStoreViewController alloc] init];
         [array addObject:investController];
         
-        GlobleViewController *toInvest = [[GlobleViewController alloc] init];
+        LocalStoreViewController *toInvest = [[LocalStoreViewController alloc] init];
         [array addObject:toInvest];
         
-        NewProductViewController *finish = [[NewProductViewController alloc] init];
+        LocalStoreViewController *finish = [[LocalStoreViewController alloc] init];
         [array addObject:finish];
         
         _selectionControllers = array;

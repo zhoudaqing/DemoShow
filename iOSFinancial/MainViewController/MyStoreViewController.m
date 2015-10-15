@@ -1,22 +1,35 @@
 //
-//  MyStoreViewController.m
+//  MineViewController.m
 //  XianLife
 //
 //  Created by Mr.Yan on 15/10/13.
 //  Copyright © 2015年 Mr.Yan. All rights reserved.
 //
 
-#import "MyStoreViewController.h"
+#import "MineViewController.h"
 
-@interface MyStoreViewController ()
+@interface MineViewController ()<UITableViewDelegate, UITableViewDataSource>
+
+@property (nonatomic)UITableView *tableView;
 
 @end
 
-@implementation MyStoreViewController
+@implementation MineViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
+    self.title = @"我的";
     // Do any additional setup after loading the view.
+    self.tableView = [[UITableView alloc]initWithFrame:self.view.bounds];
+    self.tableView.delegate  = self;
+    self.tableView.dataSource = self;
+    [self.view addSubview:self.tableView];
+    
+    UIView *view = [[UIView alloc]init];
+    view.backgroundColor = [UIColor clearColor];
+    [self.tableView setTableFooterView:view];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,14 +37,171 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 6;
 }
-*/
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    if (section == 0) {
+        return 1;
+    }
+    return 2;
+}
+
+- (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    NSString *identifier = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+    }
+    
+    switch (indexPath.section) {
+        case 0:
+        {
+            UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 90)];
+            [imageView setImage:[UIImage imageNamed:@"tuceng1"]];
+            [cell addSubview:imageView];
+        }
+            break;
+        case 1:
+        {
+            switch (indexPath.row) {
+                case 0:
+                {
+                    cell.imageView.image = [UIImage imageNamed:@"dingdanguanli_icon"];
+                    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+                    cell.detailTextLabel.text = @"查看全部订单";
+                    cell.textLabel.text = @"我的订单";
+                }
+                    break;
+                    
+                default:
+                {
+                    UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 64 )];
+                    [imageView setImage:[UIImage imageNamed:@"tuceng2"]];
+                    [cell addSubview:imageView];
+                }
+                    break;
+            }
+        }
+            break;
+        case 2:
+        {
+            switch (indexPath.row) {
+                case 0:
+                {
+                    cell.textLabel.text = @"我的优惠券";
+                    cell.imageView.image = [UIImage imageNamed:@"youhuijuan_icon"];
+                    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+                }
+                    break;
+                    
+                default:
+                {
+                    cell.textLabel.text = @"收货地址与管理";
+                    cell.imageView.image = [UIImage imageNamed:@"dingdanguanli_icon"];
+                    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+                }
+                    break;
+            }
+        }
+            break;
+        case 3:
+        {
+            switch (indexPath.row) {
+                case 0:
+                {
+                    cell.textLabel.text = @"关注的商品";
+                    cell.imageView.image = [UIImage imageNamed:@"wodeguanzhu_icon"];
+                    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+                }
+                    break;
+                    
+                default:
+                {
+                    cell.textLabel.text = @"收货地址与管理";
+                    cell.imageView.image = [UIImage imageNamed:@"shouhuodizhi_icon"];
+                    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+                }
+                    break;
+            }
+        }
+            break;
+        case 4:
+        {
+            switch (indexPath.row) {
+                case 0:
+                {
+                    cell.textLabel.text = @"联系鲜生活";
+                    cell.imageView.image = [UIImage imageNamed:@"lianxixianlife_icon"];
+                    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+                }
+                    break;
+                    
+                default:
+                {
+                    cell.textLabel.text = @"意见反馈";
+                    cell.imageView.image = [UIImage imageNamed:@"yijian_icon@3x"];
+                    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+                }
+                    break;
+            }
+        }
+            break;
+        default:
+            switch (indexPath.row) {
+                case 0:
+                {
+                    cell.textLabel.text = @"关于生活";
+                    cell.imageView.image = [UIImage imageNamed:@"guanyuxianlife_icon"];
+                    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+                }
+                    break;
+                    
+                default:
+                {
+                    cell.textLabel.text = @"清楚本地缓存";
+                    cell.imageView.image = [UIImage imageNamed:@"qingchuhuancun_icon"];
+                    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+                }
+                    break;
+            }
+            
+            break;
+    }
+    return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+{
+    if (section == 5) {
+        return 0;
+    }
+    return 10;
+}
+
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.section == 0) {
+        return 90;
+    }
+    if (indexPath.section == 1&& indexPath.row == 1) {
+        return 64;
+    }
+    return 44;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // 取消选中状态
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    
+}
+
 
 @end

@@ -51,6 +51,8 @@
     if (button.tag == 1000) {
         //  购物车
         self.tabBarController.selectedIndex = 1;
+        [self.navigationController popToRootViewControllerAnimated:NO];
+        
     }else {
         
     }

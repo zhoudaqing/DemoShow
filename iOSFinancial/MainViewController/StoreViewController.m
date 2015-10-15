@@ -24,7 +24,6 @@
     [super viewDidAppear:animated];
     
     [self.navigationController.navigationBar setBackgroundImage:HTImage(@"statusBar") forBarMetrics:UIBarMetricsDefault];
-    
 }
 
 - (void)viewDidLoad
@@ -33,9 +32,8 @@
     
     self.separateView.backgroundColor = [UIColor whiteColor];
     
-    [self.navigationController.navigationBar setBackgroundImage:HTImage(@"statusBar") forBarMetrics:UIBarMetricsDefault];
-    
-
+    [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
+    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor],NSFontAttributeName : [UIFont systemFontOfSize:18]}];
     
 }
 

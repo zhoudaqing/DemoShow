@@ -20,6 +20,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
+    
     self.view.backgroundColor = [UIColor whiteColor];
     self.navigationController.navigationBarHidden = YES;
     [self.tableView removeFromSuperview];
@@ -56,6 +59,10 @@
     btn2.backgroundColor = [UIColor clearColor];
     [_backImage addSubview:btn2];
     [btn2 addTarget:self action:@selector(pushYanshiDemo) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIImageView *middleImage = [[UIImageView alloc]initWithFrame:CGRectMake(0, 344, self.view.width, 200)];
+    [middleImage setImage:[UIImage imageNamed:@"wodedian1"]];
+    [self.view addSubview:middleImage];
     
 }
 

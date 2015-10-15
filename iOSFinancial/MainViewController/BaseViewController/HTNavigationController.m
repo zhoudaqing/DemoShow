@@ -37,14 +37,19 @@
         
         self.screenShotsList = [[NSMutableArray alloc]initWithCapacity:2];
         self.canDragBack = YES;
-        
+        _isContentLight = NO;
     }
     return self;
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle
 {
-    return UIStatusBarStyleLightContent;
+    return _isContentLight ? UIStatusBarStyleDefault : UIStatusBarStyleLightContent;
+}
+
+- (UIStatusBarAnimation)preferredStatusBarUpdateAnimation
+{
+    return UIStatusBarAnimationFade;
 }
 
 - (void)viewDidLoad

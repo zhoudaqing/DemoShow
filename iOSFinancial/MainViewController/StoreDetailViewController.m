@@ -20,8 +20,7 @@
     [super viewWillAppear:animated];
     
     [self.navigationController.navigationBar setBackgroundImage:nil forBarMetrics:0];
-    [[UINavigationBar appearance] setBarTintColor:[UIColor jt_barTintColor]];
-    
+    [self.navigationController.navigationBar setBarTintColor:[UIColor jt_barTintColor]];
 
 }
 

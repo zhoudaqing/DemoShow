@@ -60,17 +60,20 @@
     cart.tabBarItem = [self tabbarItemWithTitle:@"购物车" andItemImage:@"gouwuche_icon"];
     cart.tabBarItem.badgeValue = @"3";
     HTNavigationController *nav2 = [[HTNavigationController alloc] initWithRootViewController:cart];
+    nav2.isContentLight = YES;
     
     FindViewController *find = [[FindViewController alloc]init];
     find.tabBarItem = [self tabbarItemWithTitle:@"寻鲜" andItemImage:@"xunxian_icon"];
     HTNavigationController *nav3 = [[HTNavigationController alloc] initWithRootViewController:find];
+    nav3.isContentLight = YES;
     
     MyStoreViewController *myStore = [[MyStoreViewController alloc]init];
-    myStore.tabBarItem = [self tabbarItemWithTitle:@"我的店" andItemImage:@"wode_icon"];
+    myStore.tabBarItem = [self tabbarItemWithTitle:@"我的店" andItemImage:@"maishoudian_icon"];
     HTNavigationController *nav4 = [[HTNavigationController alloc] initWithRootViewController:myStore];
+    nav4.isContentLight = YES;
     
     MineViewController *mine = [[MineViewController alloc]init];
-    mine.tabBarItem = [self tabbarItemWithTitle:@"我的" andItemImage:@"maishoudian_icon"];
+    mine.tabBarItem = [self tabbarItemWithTitle:@"我的" andItemImage:@"wode_icon"];
     HTNavigationController *nav5 = [[HTNavigationController alloc] initWithRootViewController:mine];
     
     return @[nav1, nav2, nav3, nav4, nav5];

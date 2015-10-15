@@ -778,9 +778,9 @@
 		92D5777C1ACBB7C30070DC76 /* MainController */ = {
 			isa = PBXGroup;
 			children = (
-				92943C351BCF6133005B44CB /* StoreViewController */,
 				924D11691BCE61360040C318 /* ActionWebViewController.h */,
 				924D116A1BCE61360040C318 /* ActionWebViewController.m */,
+				92943C351BCF6133005B44CB /* StoreViewController */,
 				92FBFC7B1BCE3B1400F479F4 /* CartViewController.h */,
 				92FBFC7C1BCE3B1400F479F4 /* CartViewController.m */,
 				92FBFC7D1BCE3B1400F479F4 /* FindViewController.h */,

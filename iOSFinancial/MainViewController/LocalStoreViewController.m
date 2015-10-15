@@ -8,11 +8,17 @@
 
 #import "LocalStoreViewController.h"
 #import "HTADScrollView.h"
-
+#import "ActionWebViewController.h"
+#import "UIView+NoneDataView.h"
+#import "ContentCell.h"
 
 @interface LocalStoreViewController ()
 
+@property (nonatomic, strong)   HTADScrollView *adScrollView;
+@property (nonatomic, strong)   UIImage *contentImage;
+
 @end
+
 
 @implementation LocalStoreViewController
 
@@ -22,6 +28,83 @@
     
     self.view.backgroundColor = [UIColor randomColor];
     
+    self.tableView.tableHeaderView = self.adScrollView;
+    
+    self.contentImage = HTImage(@"content");
+    
+    [self.tableView reloadData];
+}
+
+//  MARK:广告滚动视图
+- (HTADScrollView *)adScrollView
+{
+    if (!_adScrollView) {
+        
+        CGFloat height = 150.0f;
+        if (is55Inch) {
+            height = 166.0f;
+        }
+        
+        NSArray *images = @[HTImage(@"advise_1"), HTImage(@"advise_2"), HTImage(@"advise_3"), HTImage(@"advise_2")];
+        
+        _adScrollView = [[HTADScrollView alloc] initWithFrame:CGRectMake(0, 0, APPScreenWidth, 107) images:images andTitles:nil];
+        
+        __weakSelf;
+        [_adScrollView setTouchBlock:^(NSInteger index) {
+            [weakSelf adverViewTouchIndedIndex:index];
+            
+        }];
+    }
+    
+    return _adScrollView;
+}
+
+//  广告试图单击的位置
+- (void)adverViewTouchIndedIndex:(NSInteger)index
+{
+    /*
+    NSString *urlStr = [dict stringForKey:@"herf"];
+    
+    if (isEmpty(urlStr)) {
+        //  如果为空，则不做任何操作
+        return;
+    }
+    
+    if ([urlStr isEqualToString:@"com.yyyy.jdlc://project"]) {
+        self.tabBarController.selectedIndex = 1;
+        return;
+    }
+    
+    ActionWebViewController *webVC = [[ActionWebViewController alloc] init];
+    webVC.url = HTURL(urlStr);
+    
+    webVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:webVC animated:YES];
+     */
+    
+}
+
+#pragma mark -
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 1;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return self.contentImage.size.height;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    ContentCell *cell = nil;
+    
+    cell = [[ContentCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    cell.contentImageView.image = self.contentImage;
+    
+    return cell;
 }
 
 @end

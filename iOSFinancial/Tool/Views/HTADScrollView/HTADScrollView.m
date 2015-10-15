@@ -92,7 +92,7 @@
 {
     self.pageControl.numberOfPages = self.images.count;
     self.pageControl.currentPage = 0;
-    [_pageControl sizeToFit];
+    _pageControl.hidden = YES;
     
     CGRect rect = _pageControl.frame;
     rect.size = [_pageControl sizeForNumberOfPages:_images.count];
@@ -146,6 +146,7 @@
         _pageControl.currentPageIndicatorTintColor = [UIColor whiteColor];
         _pageControl.pageIndicatorTintColor = [UIColor colorWithHEX:0xe0e0e0];
         _pageControl.hidesForSinglePage = YES;
+        _pageControl.hidden = YES;
     }
     
     return _pageControl;
@@ -157,32 +158,47 @@
     CGRect rect = self.frame;
     rect.origin.y = 0;
     
+    UIImage *image = nil;
     NSInteger count = (_images.count == 0  || _images.count == 1) ? 1 : _images.count + 2;
     
     for (int i = 0; i < count; i++) {
         NSString *urlStr;
         if (_images.count > i) {
             urlStr =   [_images objectAtIndex:i];
+            image = [_images objectAtIndex:i];
         }
         
         int index = 0;
         if (i == 0) {
             urlStr = [_images lastObject];
+            
+            image = [_images lastObject];
+            
             index = (int)[_images count] - 1;
             if (index < 0) {
                 index = 0;
             }
+            
         }else if (i == count - 1) {
+            
             urlStr = [_images firstObject];
+            image = [_images firstObject];
+            
             index = 0;
+            
         }else {
             urlStr = _images[i - 1];
+            image = _images[i - 1];
+            
             index = i - 1;
         }
 
         rect.origin.x = i * CGRectGetWidth(rect);
         imageView = [[UIImageView alloc] initWithFrame:rect];
         imageView.tag = index;
+        imageView.image = image;
+        
+        /*
         NSURL *url = [NSURL URLWithString:urlStr];
         __weak UIImageView *weakView = imageView;
         
@@ -193,6 +209,9 @@
             }
 
         }];
+         */
+        
+        
         imageView.userInteractionEnabled = YES;
         
         //add gesture

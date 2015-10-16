@@ -201,8 +201,11 @@
 {
     // 取消选中状态
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
-    CloudTabbarController *VC = [[CloudTabbarController alloc]init];
-    [self.navigationController presentViewController:VC animated:YES completion:nil];
+    if ( indexPath.section ==2 && indexPath.row == 0) {
+        CloudTabbarController *VC = [[CloudTabbarController alloc]init];
+        [self.navigationController presentViewController:VC animated:YES completion:nil];
+    }
+    
 }
 
 

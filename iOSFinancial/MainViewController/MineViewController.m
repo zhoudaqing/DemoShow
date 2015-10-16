@@ -18,6 +18,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.isStyleLight = NO;
+    
     [self.navigationController.navigationBar setBarTintColor:HTWhiteColor];
     [self.navigationController.navigationBar setTintColor:[UIColor jt_barTintColor]];
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor blackColor],NSFontAttributeName : [UIFont systemFontOfSize:18]}];

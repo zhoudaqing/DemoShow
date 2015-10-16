@@ -24,6 +24,7 @@ typedef void (^AlertViewBlock)(UIAlertView *alertView, NSInteger buttonIndex);
     BOOL   _isFirstLoadView;
     BOOL   _isKeyboardAppear;
     AlertViewBlock _alertViewBlock;
+
 }
 
 @property (nonatomic, strong)   NSMutableArray *guideImageArray;
@@ -591,12 +592,20 @@ typedef void (^AlertViewBlock)(UIAlertView *alertView, NSInteger buttonIndex);
 
 - (void)changeStateBarStyleLight:(BOOL)light
 {
+    _isStyleLight = light;
     UIStatusBarStyle style = light ? UIStatusBarStyleLightContent : UIStatusBarStyleDefault;
 
     [[UIApplication sharedApplication] setStatusBarStyle:style];
+    
+    [self setNeedsStatusBarAppearanceUpdate];
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle {
+    
+    if (_isStyleLight) {
+        return UIStatusBarStyleLightContent;
+    }
+    
     return UIStatusBarStyleDefault;
 }
 

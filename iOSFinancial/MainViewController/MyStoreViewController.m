@@ -18,10 +18,16 @@
 
 @implementation MyStoreViewController
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    self.isStyleLight = YES;
+
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
     
     self.view.backgroundColor = [UIColor whiteColor];
     self.navigationController.navigationBarHidden = YES;

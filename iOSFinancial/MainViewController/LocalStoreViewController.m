@@ -51,7 +51,7 @@
             height = 166.0f;
         }
         
-        NSArray *images = @[HTImage(@"advise_1"), HTImage(@"advise_2"), HTImage(@"advise_3"), HTImage(@"advise_2")];
+        NSArray *images = @[HTImage(@"advise_1"), HTImage(@"advise_2"), HTImage(@"advise_3"), HTImage(@"gonglve_banner ios")];
         
         _adScrollView = [[HTADScrollView alloc] initWithFrame:CGRectMake(0, 0, APPScreenWidth, 107) images:images andTitles:nil];
         

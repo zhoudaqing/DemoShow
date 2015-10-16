@@ -32,6 +32,7 @@
 //  半透明视图Block
 @property (nonatomic, copy) void(^transparentBlockClicked)(void);
 
+@property (nonatomic, assign) BOOL isStyleLight;
 
 //  显示网络连接状态的视图
 - (void)showLoadingViewWithState:(LoadingState)loadingState;

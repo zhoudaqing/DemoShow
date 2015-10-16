@@ -16,6 +16,8 @@
 		846EE5011B020C1A00F0AE4E /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846EE5001B020C1A00F0AE4E /* CoreTelephony.framework */; };
 		846EE5031B020C2700F0AE4E /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 846EE5021B020C2700F0AE4E /* libstdc++.dylib */; };
 		846EE5051B020C3200F0AE4E /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 846EE5041B020C3200F0AE4E /* libz.dylib */; };
+		84B078A91BCF4956005FA74B /* MyStoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B078A81BCF4956005FA74B /* MyStoreViewController.m */; settings = {ASSET_TAGS = (); }; };
+		84B078AA1BCF4A80005FA74B /* MyStoreViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 84B078A71BCF4956005FA74B /* MyStoreViewController.h */; };
 		84D9FB051AE77DC500C5AAA8 /* AttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D9FB041AE77DC500C5AAA8 /* AttributedLabel.m */; };
 		920C09881B74975000A8CC30 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 920C09871B74975000A8CC30 /* QuartzCore.framework */; };
 		920C098A1B74977400A8CC30 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 920C09891B74977400A8CC30 /* libicucore.dylib */; };
@@ -112,7 +114,6 @@
 		92FBFC851BCE3B1400F479F4 /* CartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92FBFC7C1BCE3B1400F479F4 /* CartViewController.m */; settings = {ASSET_TAGS = (); }; };
 		92FBFC861BCE3B1400F479F4 /* FindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92FBFC7E1BCE3B1400F479F4 /* FindViewController.m */; settings = {ASSET_TAGS = (); }; };
 		92FBFC871BCE3B1400F479F4 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92FBFC801BCE3B1400F479F4 /* MineViewController.m */; settings = {ASSET_TAGS = (); }; };
-		92FBFC881BCE3B1400F479F4 /* MyStoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92FBFC821BCE3B1400F479F4 /* MyStoreViewController.m */; settings = {ASSET_TAGS = (); }; };
 		92FBFC891BCE3B1400F479F4 /* StoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92FBFC841BCE3B1400F479F4 /* StoreViewController.m */; settings = {ASSET_TAGS = (); }; };
 		92FBFC8D1BCE48F900F479F4 /* LocalStoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92FBFC8C1BCE48F900F479F4 /* LocalStoreViewController.m */; settings = {ASSET_TAGS = (); }; };
 		92FBFC901BCE490600F479F4 /* GlobleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92FBFC8F1BCE490600F479F4 /* GlobleViewController.m */; settings = {ASSET_TAGS = (); }; };
@@ -138,6 +139,8 @@
 		846EE5001B020C1A00F0AE4E /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		846EE5021B020C2700F0AE4E /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
 		846EE5041B020C3200F0AE4E /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		84B078A71BCF4956005FA74B /* MyStoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyStoreViewController.h; sourceTree = "<group>"; };
+		84B078A81BCF4956005FA74B /* MyStoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyStoreViewController.m; sourceTree = "<group>"; };
 		84D9FB031AE77DC500C5AAA8 /* AttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AttributedLabel.h; path = ../../MainViewController/LogIn/AttributedLabel.h; sourceTree = "<group>"; };
 		84D9FB041AE77DC500C5AAA8 /* AttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AttributedLabel.m; path = ../../MainViewController/LogIn/AttributedLabel.m; sourceTree = "<group>"; };
 		920C09871B74975000A8CC30 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -323,8 +326,6 @@
 		92FBFC7E1BCE3B1400F479F4 /* FindViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindViewController.m; sourceTree = "<group>"; };
 		92FBFC7F1BCE3B1400F479F4 /* MineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
 		92FBFC801BCE3B1400F479F4 /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
-		92FBFC811BCE3B1400F479F4 /* MyStoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyStoreViewController.h; sourceTree = "<group>"; };
-		92FBFC821BCE3B1400F479F4 /* MyStoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyStoreViewController.m; sourceTree = "<group>"; };
 		92FBFC831BCE3B1400F479F4 /* StoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreViewController.h; sourceTree = "<group>"; };
 		92FBFC841BCE3B1400F479F4 /* StoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreViewController.m; sourceTree = "<group>"; };
 		92FBFC8B1BCE48F900F479F4 /* LocalStoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalStoreViewController.h; sourceTree = "<group>"; };
@@ -787,8 +788,8 @@
 				92FBFC7E1BCE3B1400F479F4 /* FindViewController.m */,
 				92FBFC7F1BCE3B1400F479F4 /* MineViewController.h */,
 				92FBFC801BCE3B1400F479F4 /* MineViewController.m */,
-				92FBFC811BCE3B1400F479F4 /* MyStoreViewController.h */,
-				92FBFC821BCE3B1400F479F4 /* MyStoreViewController.m */,
+				84B078A71BCF4956005FA74B /* MyStoreViewController.h */,
+				84B078A81BCF4956005FA74B /* MyStoreViewController.m */,
 			);
 			name = MainController;
 			path = MainViewController;
@@ -940,7 +941,7 @@
 				TargetAttributes = {
 					92D2A27C1AC3DF7B00C9A4AE = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = 3T4BLT5L4D;
+						DevelopmentTeam = PUEB48NTQQ;
 					};
 				};
 			};
@@ -1018,6 +1019,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84B078AA1BCF4A80005FA74B /* MyStoreViewController.h in Sources */,
 				92871C811AF75D85002EC9F6 /* HTBaseRequest.m in Sources */,
 				92FBFC901BCE490600F479F4 /* GlobleViewController.m in Sources */,
 				92FBF0981B8C44B300E56EF9 /* UIView+BorderColor.m in Sources */,
@@ -1060,7 +1062,6 @@
 				92FBFC8D1BCE48F900F479F4 /* LocalStoreViewController.m in Sources */,
 				92871C791AF75D6E002EC9F6 /* HTSectionView.m in Sources */,
 				926811C51ADE571E00FAB0A2 /* HTUserDefault.m in Sources */,
-				92FBFC881BCE3B1400F479F4 /* MyStoreViewController.m in Sources */,
 				9217C9231BC6659500938A9E /* UIImage+JTSImageEffects.m in Sources */,
 				921DD2EE1AEB67AF0004251F /* NSString+LunchName.m in Sources */,
 				926811D11ADE870000FAB0A2 /* HTSeparateView.m in Sources */,
@@ -1102,6 +1103,7 @@
 				922CB5A61AC9789700C4A438 /* MJRefreshConst.m in Sources */,
 				921DD2CD1AEB67310004251F /* UIBarButtonExtern.m in Sources */,
 				928860E61B297F810060502D /* UILabel+FlickerNumber.m in Sources */,
+				84B078A91BCF4956005FA74B /* MyStoreViewController.m in Sources */,
 				926811CB1ADE868C00FAB0A2 /* HTSelectionController.m in Sources */,
 				921DD28C1AEB65790004251F /* HTBaseSource.m in Sources */,
 				92871C841AF761C3002EC9F6 /* LoginRequest.m in Sources */,

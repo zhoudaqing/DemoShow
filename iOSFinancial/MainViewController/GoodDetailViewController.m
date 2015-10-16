@@ -33,12 +33,10 @@
     
     UIButton *cartButton = [self button];
     cartButton.tag = 1000;
-    [cartButton borderRandamColor];
     cartButton.frame = CGRectMake(0, 0, 58, 44);
     
     UIButton *addCard = [self button];
     addCard.tag = 1001;
-    [addCard borderRandamColor];
     addCard.frame = CGRectMake(APPScreenWidth - 140, 0, 140, 44);
     
     [self.bottomView addSubview:cartButton];

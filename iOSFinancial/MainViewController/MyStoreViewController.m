@@ -23,7 +23,7 @@
     [super viewWillAppear:animated];
     
     self.isStyleLight = YES;
-
+    self.navigationController.navigationBarHidden = YES;
 }
 
 - (void)viewDidLoad {
@@ -38,11 +38,7 @@
     
     [self addsubViews];
 }
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    self.navigationController.navigationBarHidden = YES;
-}
+
 - (void)addsubViews
 {
     UILabel *lable = [[UILabel alloc]initWithFrame:CGRectMake(20, 251, 120, 20)];
@@ -50,7 +46,6 @@
     lable.text = @"当前货架数量:50个";
     lable.font = [UIFont systemFontOfSize:13.0];
     [_backImage addSubview:lable];
-    
     
     UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(238, 251, 120, 20)];
     btn.backgroundColor = [UIColor redColor];
@@ -64,7 +59,7 @@
     
     [btn addTarget:self action:@selector(pushYanshiDemo) forControlEvents:UIControlEventTouchUpInside];
     
-    UIButton *btn2 = [[UIButton alloc]initWithFrame:CGRectMake(0, 291, [UIScreen mainScreen].bounds.size.width, 44)];
+    UIButton *btn2 = [[UIButton alloc] initWithFrame:CGRectMake(0, 291, [UIScreen mainScreen].bounds.size.width, 44)];
     btn2.backgroundColor = [UIColor clearColor];
     [_backImage addSubview:btn2];
     [btn2 addTarget:self action:@selector(fanyingbili) forControlEvents:UIControlEventTouchUpInside];

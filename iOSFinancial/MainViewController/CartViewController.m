@@ -7,8 +7,12 @@
 //
 
 #import "CartViewController.h"
+#import "CloudTabbarController.h"
+
 
 @interface CartViewController ()
+
+@property (nonatomic, strong)   CloudTabbarController *controller;
 
 @end
 
@@ -18,12 +22,19 @@
 {
     [super viewWillAppear:animated];
     
-    [self setNeedsStatusBarAppearanceUpdate];
-    
     [self.navigationController.navigationBar setBarTintColor:HTWhiteColor];
     [self.navigationController.navigationBar setTintColor:[UIColor jt_barTintColor]];
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor blackColor],NSFontAttributeName : [UIFont systemFontOfSize:18]}];
 
+}
+
+- (CloudTabbarController *)controller
+{
+    if (!_controller) {
+        _controller = [[CloudTabbarController alloc] init];
+    }
+
+    return _controller;
 }
 
 - (void)viewDidLoad
@@ -40,8 +51,23 @@
         //  结算页面
         BaseDetailViewController *detail = [[BaseDetailViewController alloc] init];
         detail.title = @"订单结算";
+        
         [detail setImage:HTImage(@"payMoney") WithTouchBlock:^(NSIndexPath *indexPath) {
             
+            BaseDetailViewController *paySuccess = [[BaseDetailViewController alloc] init];
+            paySuccess.title = @"订单支付";
+            [paySuccess setImage:HTImage(@"paySuccess") WithTouchBlock:^(NSIndexPath *indexPath) {
+                
+                [weakSelf.navigationController popToRootViewControllerAnimated:NO];
+                weakSelf.navigationController.tabBarController.selectedIndex = 0;
+                [weakSelf presentViewController:weakSelf.controller animated:YES completion:^{
+                    
+                }];
+                
+            }];
+            
+            paySuccess.hidesBottomBarWhenPushed = YES;
+            [weakSelf.navigationController pushViewController:paySuccess animated:YES];
             
         }];
         

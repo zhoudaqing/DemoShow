@@ -58,7 +58,7 @@
     UIButton *btn2 = [[UIButton alloc]initWithFrame:CGRectMake(0, 291, [UIScreen mainScreen].bounds.size.width, 44)];
     btn2.backgroundColor = [UIColor clearColor];
     [_backImage addSubview:btn2];
-    [btn2 addTarget:self action:@selector(pushYanshiDemo) forControlEvents:UIControlEventTouchUpInside];
+    [btn2 addTarget:self action:@selector(fanyingbili) forControlEvents:UIControlEventTouchUpInside];
     
     UIImageView *middleImage = [[UIImageView alloc]initWithFrame:CGRectMake(0, 344, self.view.width, 200)];
     [middleImage setImage:[UIImage imageNamed:@"wodedian1"]];
@@ -71,6 +71,21 @@
     
     NSLog(@"~~~~~~~");
     
+}
+
+- (void)fanyingbili
+{
+    HTBaseViewController *vc = [[HTBaseViewController alloc]init];
+    UIImageView *image = [[UIImageView alloc]initWithFrame:self.view.frame];
+    [image setImage:[UIImage imageNamed:@"yongjinfanbi"]];
+    [vc.view addSubview:image];
+    
+    vc.title = @"关于反佣比例";
+    [vc.navigationController.navigationBar setBarTintColor:HTWhiteColor];
+    [vc.navigationController.navigationBar setTintColor:[UIColor jt_barTintColor]];
+    [vc.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor blackColor],NSFontAttributeName : [UIFont systemFontOfSize:18]}];
+    
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

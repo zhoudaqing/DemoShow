@@ -7,7 +7,7 @@
 //
 
 #import "MyStoreViewController.h"
-
+#import "FanyingbiliViewController.h"
 
 @interface MyStoreViewController ()<UINavigationControllerDelegate>
 {
@@ -24,7 +24,6 @@
     
     
     self.view.backgroundColor = [UIColor whiteColor];
-    self.navigationController.navigationBarHidden = YES;
     [self.tableView removeFromSuperview];
     _backImage = [[UIImageView alloc]initWithFrame:[UIScreen mainScreen].bounds];
     [_backImage setImage:[UIImage imageNamed:@"wodedian.PNG"]];
@@ -33,12 +32,16 @@
     
     [self addsubViews];
 }
-
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBarHidden = YES;
+}
 - (void)addsubViews
 {
     UILabel *lable = [[UILabel alloc]initWithFrame:CGRectMake(20, 251, 120, 20)];
     lable.textColor = [UIColor whiteColor];
-    lable.text = @"当前货架数量：50个";
+    lable.text = @"当前货架数量:50个";
     lable.font = [UIFont systemFontOfSize:13.0];
     [_backImage addSubview:lable];
     
@@ -75,17 +78,15 @@
 
 - (void)fanyingbili
 {
-    HTBaseViewController *vc = [[HTBaseViewController alloc]init];
-    UIImageView *image = [[UIImageView alloc]initWithFrame:self.view.frame];
-    [image setImage:[UIImage imageNamed:@"yongjinfanbi"]];
-    [vc.view addSubview:image];
+    FanyingbiliViewController *vc = [[FanyingbiliViewController alloc]init];
     
-    vc.title = @"关于反佣比例";
-    [vc.navigationController.navigationBar setBarTintColor:HTWhiteColor];
-    [vc.navigationController.navigationBar setTintColor:[UIColor jt_barTintColor]];
-    [vc.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor blackColor],NSFontAttributeName : [UIFont systemFontOfSize:18]}];
-    
+    [vc setHidesBottomBarWhenPushed:YES];
     [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)dissmisVC:(UINavigationController *)VC
+{
+    [VC dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

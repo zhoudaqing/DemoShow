@@ -7,6 +7,8 @@
 //
 
 #import "FindViewController.h"
+#import "CloudTabbarController.h"
+
 
 @interface FindViewController ()
 
@@ -37,15 +39,8 @@
     [self setImage:HTImage(@"freshImage") WithTouchBlock:^(NSIndexPath *indexPath) {
         
         //  结算页面
-        BaseDetailViewController *detail = [[BaseDetailViewController alloc] init];
-        detail.title = @"订单结算";
-        [detail setImage:HTImage(@"payMoney") WithTouchBlock:^(NSIndexPath *indexPath) {
-            
-            
-        }];
-        
-        detail.hidesBottomBarWhenPushed = YES;
-        [weakSelf.navigationController pushViewController:detail animated:YES];
+        CloudTabbarController *tabbar = [[CloudTabbarController alloc] init];
+        [weakSelf presentViewController:tabbar animated:YES completion:nil];
         
     }];
     

@@ -7,6 +7,7 @@
 //
 
 #import "MineViewController.h"
+#import "CloudTabbarController.h"
 
 @interface MineViewController ()
 
@@ -36,6 +37,9 @@
 {
     if (section == 0) {
         return 1;
+    }
+    if (section == 2) {
+        return 3;
     }
     return 2;
 }
@@ -84,12 +88,19 @@
             switch (indexPath.row) {
                 case 0:
                 {
-                    cell.textLabel.text = @"我的优惠券";
-                    cell.imageView.image = [UIImage imageNamed:@"youhuijuan_icon"];
+                    cell.textLabel.text = @"我的理财";
+                    cell.imageView.image = [UIImage imageNamed:@"yzh"];
                     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
                 }
                     break;
-                    
+                case 1:
+                {
+                    cell.textLabel.text = @"我的优惠券";
+                    cell.imageView.image = [UIImage imageNamed:@"youhuijuan_icon"];
+                    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+
+                }
+                    break;
                 default:
                 {
                     cell.textLabel.text = @"收货地址与管理";
@@ -190,7 +201,8 @@
 {
     // 取消选中状态
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
-    
+    CloudTabbarController *VC = [[CloudTabbarController alloc]init];
+    [self.navigationController presentViewController:VC animated:YES completion:nil];
 }
 
 

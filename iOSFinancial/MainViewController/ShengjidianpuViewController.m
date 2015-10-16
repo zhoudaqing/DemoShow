@@ -1,55 +1,45 @@
 //
-//  FanyingbiliViewController.m
+//  ShengjidianpuViewController.m
 //  FreshLife
 //
 //  Created by Mr.Yan on 15/10/16.
 //  Copyright © 2015年 Mr.Yang. All rights reserved.
 //
 
-#import "FanyingbiliViewController.h"
 #import "ShengjidianpuViewController.h"
+#import "CloudTabbarController.h"
 
-@interface FanyingbiliViewController ()
+@interface ShengjidianpuViewController ()
 
 @end
 
-@implementation FanyingbiliViewController
+@implementation ShengjidianpuViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    UIImageView *image = [[UIImageView alloc]initWithFrame:CGRectMake(0, -64, self.view.width, [UIScreen mainScreen].bounds.size.height)];
-    [image setImage:[UIImage imageNamed:@"yongjinfanbi"]];
+    UIImageView *image = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, self.view.width, [UIScreen mainScreen].bounds.size.height)];
+    [image setImage:[UIImage imageNamed:@"buyDetail"]];
     [self.view addSubview:image];
     
-    self.title = @"关于反佣比例";
+    self.title = @"关于升级店铺";
     
     [self.navigationController.navigationBar setBarTintColor:HTWhiteColor];
     [self.navigationController.navigationBar setTintColor:[UIColor jt_barTintColor]];
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor blackColor],NSFontAttributeName : [UIFont systemFontOfSize:18]}];
     
-    
     image.userInteractionEnabled = YES;
-    UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(35,image.height - 105 , image.width - 70 , 30)];
-    btn.backgroundColor = [UIColor redColor];
-    [btn.layer setMasksToBounds:YES];
-    [btn.layer setCornerRadius:5.0];
-    
-    [btn setTitle:@"免费升级店铺" forState:UIControlStateNormal];
-    btn.titleLabel.font = [UIFont systemFontOfSize:13.0];
-    [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(35,400 , image.width - 70 , 60)];
     [image addSubview:btn];
-    [btn addTarget:self action:@selector(pushYanshiDemo) forControlEvents:UIControlEventTouchUpInside];
-
-
+    [btn addTarget:self action:@selector(pushYanshiDemoC) forControlEvents:UIControlEventTouchUpInside];
 }
 
-- (void)pushYanshiDemo
+
+- (void)pushYanshiDemoC
 {
-    ShengjidianpuViewController *vc = [[ShengjidianpuViewController alloc]init];
-    
-    [vc setHidesBottomBarWhenPushed:YES];
-    [self.navigationController pushViewController:vc animated:YES];
+    CloudTabbarController *VC = [[CloudTabbarController alloc]init];
+    [self.navigationController presentViewController:VC animated:YES completion:nil];
+
 }
 
 

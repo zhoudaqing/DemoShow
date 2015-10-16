@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4AB285645092B631D67316E3 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CF480FEA583E75C06B17D907 /* libPods.a */; };
+		84558CC51BD129B800494B33 /* GunayudianpuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84558CC41BD129B800494B33 /* GunayudianpuViewController.m */; settings = {ASSET_TAGS = (); }; };
 		846EE4F71B020BE100F0AE4E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846EE4F61B020BE100F0AE4E /* Security.framework */; };
 		846EE4F91B020BED00F0AE4E /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 846EE4F81B020BED00F0AE4E /* libiconv.dylib */; };
 		846EE4FB1B020BF600F0AE4E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846EE4FA1B020BF600F0AE4E /* SystemConfiguration.framework */; };
@@ -19,6 +20,7 @@
 		84B078A91BCF4956005FA74B /* MyStoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B078A81BCF4956005FA74B /* MyStoreViewController.m */; settings = {ASSET_TAGS = (); }; };
 		84B078AA1BCF4A80005FA74B /* MyStoreViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 84B078A71BCF4956005FA74B /* MyStoreViewController.h */; };
 		84B078AD1BD0E9E3005FA74B /* FanyingbiliViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B078AC1BD0E9E3005FA74B /* FanyingbiliViewController.m */; settings = {ASSET_TAGS = (); }; };
+		84B078B31BD11FF9005FA74B /* ShengjidianpuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B078B21BD11FF9005FA74B /* ShengjidianpuViewController.m */; settings = {ASSET_TAGS = (); }; };
 		84D9FB051AE77DC500C5AAA8 /* AttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D9FB041AE77DC500C5AAA8 /* AttributedLabel.m */; };
 		920C09881B74975000A8CC30 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 920C09871B74975000A8CC30 /* QuartzCore.framework */; };
 		920C098A1B74977400A8CC30 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 920C09891B74977400A8CC30 /* libicucore.dylib */; };
@@ -136,6 +138,8 @@
 /* Begin PBXFileReference section */
 		14B289AA3B2CF05F6448C292 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		7EE58AAF6E091240DC48F283 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		84558CC31BD129B800494B33 /* GunayudianpuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GunayudianpuViewController.h; sourceTree = "<group>"; };
+		84558CC41BD129B800494B33 /* GunayudianpuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GunayudianpuViewController.m; sourceTree = "<group>"; };
 		846EE4F61B020BE100F0AE4E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		846EE4F81B020BED00F0AE4E /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
 		846EE4FA1B020BF600F0AE4E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -148,6 +152,8 @@
 		84B078A81BCF4956005FA74B /* MyStoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyStoreViewController.m; sourceTree = "<group>"; };
 		84B078AB1BD0E9E3005FA74B /* FanyingbiliViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FanyingbiliViewController.h; sourceTree = "<group>"; };
 		84B078AC1BD0E9E3005FA74B /* FanyingbiliViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FanyingbiliViewController.m; sourceTree = "<group>"; };
+		84B078B11BD11FF9005FA74B /* ShengjidianpuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShengjidianpuViewController.h; sourceTree = "<group>"; };
+		84B078B21BD11FF9005FA74B /* ShengjidianpuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShengjidianpuViewController.m; sourceTree = "<group>"; };
 		84D9FB031AE77DC500C5AAA8 /* AttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AttributedLabel.h; path = ../../MainViewController/LogIn/AttributedLabel.h; sourceTree = "<group>"; };
 		84D9FB041AE77DC500C5AAA8 /* AttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AttributedLabel.m; path = ../../MainViewController/LogIn/AttributedLabel.m; sourceTree = "<group>"; };
 		920C09871B74975000A8CC30 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -809,6 +815,10 @@
 				84B078A81BCF4956005FA74B /* MyStoreViewController.m */,
 				84B078AB1BD0E9E3005FA74B /* FanyingbiliViewController.h */,
 				84B078AC1BD0E9E3005FA74B /* FanyingbiliViewController.m */,
+				84558CC31BD129B800494B33 /* GunayudianpuViewController.h */,
+				84558CC41BD129B800494B33 /* GunayudianpuViewController.m */,
+				84B078B11BD11FF9005FA74B /* ShengjidianpuViewController.h */,
+				84B078B21BD11FF9005FA74B /* ShengjidianpuViewController.m */,
 			);
 			name = MainController;
 			path = MainViewController;
@@ -982,7 +992,7 @@
 				TargetAttributes = {
 					92D2A27C1AC3DF7B00C9A4AE = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = 3T4BLT5L4D;
+						DevelopmentTeam = APTG87LYY6;
 					};
 				};
 			};
@@ -1121,6 +1131,7 @@
 				921DD2C61AEB67310004251F /* ButtonCell.m in Sources */,
 				92DA92E51B42511900AACF1D /* UIViewController+ViewControllers.m in Sources */,
 				92FBFC931BCE491400F479F4 /* NewProductViewController.m in Sources */,
+				84B078B31BD11FF9005FA74B /* ShengjidianpuViewController.m in Sources */,
 				926812821AE8CE5700FAB0A2 /* NSString+BaseURL.m in Sources */,
 				92FF34CC1B904A6E00D03FF7 /* SystemConfig.m in Sources */,
 				84D9FB051AE77DC500C5AAA8 /* AttributedLabel.m in Sources */,
@@ -1152,6 +1163,7 @@
 				84B078A91BCF4956005FA74B /* MyStoreViewController.m in Sources */,
 				926811CB1ADE868C00FAB0A2 /* HTSelectionController.m in Sources */,
 				921DD28C1AEB65790004251F /* HTBaseSource.m in Sources */,
+				84558CC51BD129B800494B33 /* GunayudianpuViewController.m in Sources */,
 				92871C841AF761C3002EC9F6 /* LoginRequest.m in Sources */,
 				92F01EA51AF4A58F00957F7C /* HTPercentView.m in Sources */,
 				922CB5831AC93E8300C4A438 /* HTBaseViewController.m in Sources */,

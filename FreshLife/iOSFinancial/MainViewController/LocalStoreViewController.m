@@ -31,8 +31,6 @@
 {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor randomColor];
-    
     self.tableView.tableHeaderView = self.adScrollView;
     
     __weakSelf;

@@ -76,8 +76,13 @@
         [weakSelf.navigationController pushViewController:detail animated:YES];
         
     }];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tongzhi) name:@"huodongtongzhi" object:nil];
 
+}
 
+-(void)tongzhi
+{
+    [self setImageBaoyouhuodong:[UIImage imageNamed:@"mycar1t"]];
 }
 
 

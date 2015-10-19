@@ -15,7 +15,7 @@
 
 @interface MyStoreViewController ()<UINavigationControllerDelegate>
 {
-    UIImageView *_backImage;
+    UIImageView *_backImage, *_passView;
 }
 
 @end
@@ -72,9 +72,9 @@
     [middleImage setImage:[UIImage imageNamed:@"wodedian1"]];
     [self.view addSubview:middleImage];
     
-    UIButton *btn3 = [[UIButton alloc]initWithFrame:CGRectMake(0, middleImage.bottom+20, self.view.width, 60)];
-    [_backImage addSubview:btn3];
-    [btn3 addTarget:self action:@selector(pushYanshiDemo) forControlEvents:UIControlEventTouchUpInside];
+//    UIButton *btn3 = [[UIButton alloc]initWithFrame:CGRectMake(0, middleImage.bottom+20, self.view.width, 60)];
+//    [_backImage addSubview:btn3];
+//    [btn3 addTarget:self action:@selector(pushYanshiDemo) forControlEvents:UIControlEventTouchUpInside];
     
     
     UIButton *btn4 = [[UIButton alloc]initWithFrame:CGRectMake(lable.right + 146, lable.origin.y - 120, 80, 20)];
@@ -119,10 +119,33 @@
 
 - (void)pushYanshiDemoC
 {
-    CloudTabbarController *VC = [[CloudTabbarController alloc]init];
-    [self.navigationController presentViewController:VC animated:YES completion:nil];
+    _passView =[[UIImageView alloc]initWithFrame:CGRectMake(0, 2*APPScreenHeight, APPScreenWidth, APPScreenHeight)];
+    [_passView setImage:[UIImage imageNamed:@"passImage"]];
+    [self.view addSubview:_passView];
+    [UIView animateWithDuration:0.3 animations:^{
+        _passView.frame = self.view.frame;
+    } completion:^(BOOL finished) {
+        _passView.userInteractionEnabled = YES;
+    }];
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(showTabar)];
+    [_passView addGestureRecognizer:tap];
     
 }
 
+
+- (void)showTabar
+{
+    CloudTabbarController *VC = [[CloudTabbarController alloc]init];
+    [self.navigationController presentViewController:VC animated:YES completion:nil];
+    
+    [self performSelector:@selector(dissPassView) withObject:nil afterDelay:1.5f];
+}
+
+- (void)dissPassView
+{
+    [_passView removeFromSuperview];
+
+}
 
 @end

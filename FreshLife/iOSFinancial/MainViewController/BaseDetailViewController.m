@@ -22,6 +22,12 @@
     self.cellToucheBlock = touchBlock;
 }
 
+- (void)setImageBaoyouhuodong:(UIImage *)image
+{
+    self.contentImage = image;
+    [self.tableView reloadData];
+}
+
 #pragma mark -
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section

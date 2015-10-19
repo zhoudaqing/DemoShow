@@ -16,4 +16,6 @@
 
 - (void)setImage:(UIImage *)image WithTouchBlock:(void (^)(NSIndexPath *indexPath))cellTouchBlock;
 
+- (void)setImageBaoyouhuodong:(UIImage *)image;
+
 @end

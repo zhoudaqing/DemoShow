@@ -106,19 +106,42 @@
 - (void)showgoodsList
 {
     StoreDetailViewController *detail = [[StoreDetailViewController alloc] init];
-    detail.title = @"活动详情";
     __weakSelf;
-    
+    detail.title = @"授权页面";
     detail.hidesBottomBarWhenPushed = YES;
     [weakSelf.navigationController pushViewController:detail animated:YES];
     detail.view.hidden = YES;
     detail.view.hidden = NO;
     
     [detail setImage:HTImage(@"jianGuoDetail") WithTouchBlock:^(NSIndexPath *indexPath) {
-        CloudTabbarController *tabbar = [[CloudTabbarController alloc] init];
-        tabbar.selectedIndex = 1;
-        [weakSelf presentViewController:tabbar animated:YES completion:nil];
+        [self changeBottomView];
+        UILabel *lable = [[UILabel alloc]initWithFrame:CGRectMake(50, -280, APPScreenWidth - 100, 60)];
+        lable.text = @"恭喜授权成功~！";
+        lable.textAlignment = NSTextAlignmentCenter;
+        lable.backgroundColor = [UIColor  blackColor];
+        lable.textColor = [UIColor whiteColor];
+        [self.bottomView addSubview:lable];
+        
+        //创建通知
+        NSNotification *notification =[NSNotification notificationWithName:@"huodongtongzhi" object:nil userInfo:nil];
+        //通过通知中心发送通知
+        [[NSNotificationCenter defaultCenter] postNotification:notification];
+        
+        [UIView animateWithDuration:1.8 animations:^{
+            lable.alpha = 0.3;
+        } completion:^(BOOL finished) {
+            [lable removeFromSuperview];
+        }];
+        [weakSelf dismissViewController];
+        [self.view bringSubviewToFront:self.bottomView];
     }];
+}
+
+- (void)changeBottomView
+{
+    UIView *view = [[UIView alloc]initWithFrame:CGRectMake(101, 0, 135, 44)];
+    view.backgroundColor = [UIColor colorWithRed:238.0/255.0 green:238.0/255.0 blue:238.0/255.0 alpha:1];
+    [self.bottomView addSubview:view];
 }
 
 - (NSString *)title

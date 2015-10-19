@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "passImage.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "授权页 拷贝.png",
       "scale" : "2x"
     },
     {

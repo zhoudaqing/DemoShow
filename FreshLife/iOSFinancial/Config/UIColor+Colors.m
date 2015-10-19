@@ -65,6 +65,7 @@
 {
     return [UIColor colorWithHEX:0xfa640e];
 }
+
 /**
  *  按钮高亮色
  */
@@ -72,6 +73,7 @@
 {
     return [UIColor colorWithHEX:0xea5414];
 }
+
 /**
  *  按钮不能点击色
  */

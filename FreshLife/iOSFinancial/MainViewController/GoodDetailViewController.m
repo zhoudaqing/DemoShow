@@ -8,11 +8,15 @@
 
 #import "GoodDetailViewController.h"
 #import "UIView+BorderColor.h"
+#import "StoreDetailViewController.h"
+#import "CloudTabbarController.h"
 
 
 @interface GoodDetailViewController ()
 
 @property (nonatomic, strong) UIImageView *bottomView;
+
+@property (nonatomic, strong) UITapGestureRecognizer *tap;
 
 @end
 
@@ -22,7 +26,7 @@
 {
     [super viewDidLoad];
     
-    __weakSelf;
+
     [self setImage:HTImage(@"goodDetail") WithTouchBlock:^(NSIndexPath *indexPath) {
         
         
@@ -75,9 +79,36 @@
         _bottomView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, APPScreenWidth, 44)];
         _bottomView.image = HTImage(@"bottomBar");
         _bottomView.userInteractionEnabled = YES;
+        [_bottomView addGestureRecognizer:self.tap];
+        
     }
 
     return _bottomView;
+}
+
+- (UITapGestureRecognizer *)tap
+{
+    if (!_tap) {
+        _tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(showgoodsList)];
+    }
+    return _tap;
+}
+
+- (void)showgoodsList
+{
+    StoreDetailViewController *detail = [[StoreDetailViewController alloc] init];
+    detail.title = @"活动详情";
+    __weakSelf;
+    
+    detail.hidesBottomBarWhenPushed = YES;
+    [weakSelf.navigationController pushViewController:detail animated:YES];
+    detail.view.hidden = YES;
+    detail.view.hidden = NO;
+    
+    [detail setImage:HTImage(@"jianGuoDetail") WithTouchBlock:^(NSIndexPath *indexPath) {
+        CloudTabbarController *tabbar = [[CloudTabbarController alloc] init];
+        [weakSelf presentViewController:tabbar animated:YES completion:nil];
+    }];
 }
 
 - (NSString *)title

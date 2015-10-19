@@ -68,19 +68,19 @@
 //  广告试图单击的位置
 - (void)adverViewTouchIndedIndex:(NSInteger)index
 {
-    StoreDetailViewController *detail = [[StoreDetailViewController alloc] init];
-    detail.title = @"活动详情";
-    __weakSelf;
-    
-    detail.hidesBottomBarWhenPushed = YES;
-    [weakSelf.navigationController pushViewController:detail animated:YES];
-    detail.view.hidden = YES;
-    detail.view.hidden = NO;
-    
-    [detail setImage:HTImage(@"jianGuoDetail") WithTouchBlock:^(NSIndexPath *indexPath) {
-        CloudTabbarController *tabbar = [[CloudTabbarController alloc] init];
-        [weakSelf presentViewController:tabbar animated:YES completion:nil];
-    }];
+//    StoreDetailViewController *detail = [[StoreDetailViewController alloc] init];
+//    detail.title = @"活动详情";
+//    __weakSelf;
+//    
+//    detail.hidesBottomBarWhenPushed = YES;
+//    [weakSelf.navigationController pushViewController:detail animated:YES];
+//    detail.view.hidden = YES;
+//    detail.view.hidden = NO;
+//    
+//    [detail setImage:HTImage(@"jianGuoDetail") WithTouchBlock:^(NSIndexPath *indexPath) {
+//        CloudTabbarController *tabbar = [[CloudTabbarController alloc] init];
+//        [weakSelf presentViewController:tabbar animated:YES completion:nil];
+//    }];
 
     
     /*

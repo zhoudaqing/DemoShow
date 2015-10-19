@@ -54,7 +54,7 @@
             height = 166.0f;
         }
         
-        NSArray *images = @[HTImage(@"advise_1"), HTImage(@"advise_2"), HTImage(@"advise_3"), HTImage(@"actionBanner")];
+        NSArray *images = @[HTImage(@"advise_1"), HTImage(@"advise_2"), HTImage(@"advise_3")];
         
         _adScrollView = [[HTADScrollView alloc] initWithFrame:CGRectMake(0, 0, APPScreenWidth, 107) images:images andTitles:nil];
         
@@ -70,19 +70,19 @@
 //  广告试图单击的位置
 - (void)adverViewTouchIndedIndex:(NSInteger)index
 {
-    StoreDetailViewController *detail = [[StoreDetailViewController alloc] init];
-    detail.title = @"活动详情";
-    __weakSelf;
-    
-    detail.hidesBottomBarWhenPushed = YES;
-    [weakSelf.navigationController pushViewController:detail animated:YES];
-    detail.view.hidden = YES;
-    detail.view.hidden = NO;
-    
-    [detail setImage:HTImage(@"jianGuoDetail") WithTouchBlock:^(NSIndexPath *indexPath) {
-        CloudTabbarController *tabbar = [[CloudTabbarController alloc] init];
-        [weakSelf presentViewController:tabbar animated:YES completion:nil];
-    }];
+//    StoreDetailViewController *detail = [[StoreDetailViewController alloc] init];
+//    detail.title = @"活动详情";
+//    __weakSelf;
+//    
+//    detail.hidesBottomBarWhenPushed = YES;
+//    [weakSelf.navigationController pushViewController:detail animated:YES];
+//    detail.view.hidden = YES;
+//    detail.view.hidden = NO;
+//    
+//    [detail setImage:HTImage(@"jianGuoDetail") WithTouchBlock:^(NSIndexPath *indexPath) {
+//        CloudTabbarController *tabbar = [[CloudTabbarController alloc] init];
+//        [weakSelf presentViewController:tabbar animated:YES completion:nil];
+//    }];
 
     
     /*

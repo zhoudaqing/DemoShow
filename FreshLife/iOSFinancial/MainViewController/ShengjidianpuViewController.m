@@ -29,7 +29,7 @@
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor blackColor],NSFontAttributeName : [UIFont systemFontOfSize:18]}];
     
     image.userInteractionEnabled = YES;
-    UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(35,400 , image.width - 70 , 60)];
+    UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, self.view.width , self.view.height)];
     [image addSubview:btn];
     [btn addTarget:self action:@selector(pushYanshiDemoC) forControlEvents:UIControlEventTouchUpInside];
 }

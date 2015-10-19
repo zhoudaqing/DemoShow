@@ -50,6 +50,13 @@
 
 - (void)buttonClicked:(UIButton *)button
 {
+    
+    //  购物车
+    self.tabBarController.selectedIndex = 1;
+    [self.navigationController popToRootViewControllerAnimated:NO];
+    
+    return;
+    /*
     if (button.tag == 1000) {
         //  购物车
         self.tabBarController.selectedIndex = 1;
@@ -58,6 +65,8 @@
     }else {
         
     }
+     */
+    
 }
 
 - (UIButton *)button
@@ -107,6 +116,7 @@
     
     [detail setImage:HTImage(@"jianGuoDetail") WithTouchBlock:^(NSIndexPath *indexPath) {
         CloudTabbarController *tabbar = [[CloudTabbarController alloc] init];
+        tabbar.selectedIndex = 1;
         [weakSelf presentViewController:tabbar animated:YES completion:nil];
     }];
 }

@@ -8,6 +8,7 @@
 
 #import "InvestViewController.h"
 #import "UIBarButtonExtern.h"
+#import "CloudTabbarController.h"
 
 @interface InvestViewController ()
 
@@ -34,9 +35,57 @@
     
     __weakSelf;
     [self setImage:HTImage(@"InvestIndex") WithTouchBlock:^(NSIndexPath *indexPath) {
-        [weakSelf doInvest];
+        [weakSelf doNext];
     }];
     
+}
+
+- (void)doNext
+{
+    __weakSelf;
+    
+    CloudTabbarController *tabbar = (CloudTabbarController *)self.navigationController.tabBarController;
+    if (!tabbar.isLogin) {
+        
+        //  验证真实姓名
+        
+        BaseDetailViewController *regedit = [[BaseDetailViewController alloc] init];
+        regedit.title = @"验证真实姓名";
+        [regedit setImage:HTImage(@"validateUserName") WithTouchBlock:^(NSIndexPath *indexPath) {
+            
+            //  设置密码
+            BaseDetailViewController *regedit = [[BaseDetailViewController alloc] init];
+            regedit.title = @"设置密码";
+            [regedit setImage:HTImage(@"setPass") WithTouchBlock:^(NSIndexPath *indexPath) {
+                
+                //  绑定银行卡
+                BaseDetailViewController *regedit = [[BaseDetailViewController alloc] init];
+                regedit.title = @"绑定银行卡";
+                [regedit setImage:HTImage(@"setAccount") WithTouchBlock:^(NSIndexPath *indexPath) {
+                    
+                    //  登录完成
+                    [weakSelf.navigationController popToRootViewControllerAnimated:YES];
+                    CloudTabbarController *tabbar = (CloudTabbarController *)self.navigationController.tabBarController;
+                    tabbar.isLogin = YES;
+                }];
+                
+                regedit.hidesBottomBarWhenPushed = YES;
+                [weakSelf.navigationController pushViewController:regedit animated:YES];
+                
+            }];
+            
+            regedit.hidesBottomBarWhenPushed = YES;
+            [weakSelf.navigationController pushViewController:regedit animated:YES];
+            
+        }];
+        
+        regedit.hidesBottomBarWhenPushed = YES;
+        [weakSelf.navigationController pushViewController:regedit animated:YES];
+        
+    }else {
+        
+        [weakSelf doInvest];
+    }
 }
 
 - (void)doInvest

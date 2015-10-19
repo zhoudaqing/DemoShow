@@ -33,14 +33,8 @@
     
     self.title = @"寻鲜";
     
-    __weakSelf;
-    
     //  购物车页面
     [self setImage:HTImage(@"freshImage") WithTouchBlock:^(NSIndexPath *indexPath) {
-        
-        //  结算页面
-        CloudTabbarController *tabbar = [[CloudTabbarController alloc] init];
-        [weakSelf presentViewController:tabbar animated:YES completion:nil];
         
     }];
     

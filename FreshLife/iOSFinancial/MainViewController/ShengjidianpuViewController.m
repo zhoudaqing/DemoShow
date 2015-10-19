@@ -38,6 +38,7 @@
 - (void)pushYanshiDemoC
 {
     CloudTabbarController *VC = [[CloudTabbarController alloc]init];
+    VC.selectedIndex = 1;
     [self.navigationController presentViewController:VC animated:YES completion:nil];
 
 }

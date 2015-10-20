@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 #import "OTCover.h"
+#import "BaseDetailViewController.h"
+#import "CloudTabbarController.h"
 
 @interface ViewController ()<UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate>
 
@@ -20,6 +22,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     OTCover *test = [[OTCover alloc] initWithTableViewWithHeaderImage:[UIImage imageNamed:@"image.png"] withOTCoverHeight:200];
     test.tableView.delegate = self;
     test.tableView.dataSource = self;
@@ -29,8 +32,6 @@
     view.backgroundColor = [UIColor clearColor];
     [test.tableView setTableFooterView:view];
     
-    self.navigationController.navigationBar.titleTextAttributes = @{UITextAttributeTextColor: [UIColor orangeColor],
-                                                                    UITextAttributeFont : [UIFont boldSystemFontOfSize:18]};
     self.title = @"我的";
     
 }
@@ -45,6 +46,7 @@
     if (section == 0) {
         return 5;
     }
+    
     return 1;
 }
 
@@ -64,6 +66,10 @@
                 {
                     cell.imageView.image = [UIImage imageNamed:@"my_Recharge"];
                     cell.textLabel.text = @"余额";
+                    
+                    UIImageView *image = [[UIImageView alloc]initWithFrame:CGRectMake(APPScreenWidth -110, 6, 80, 32)];
+                    [image setImage:HTImage(@"UMS_shake__share_button")];
+                    [cell addSubview:image];
                 }
                     break;
                 case 1:
@@ -113,6 +119,7 @@
     if (section == 0) {
         return 10;
     }
+    
     return 0;
 }
 
@@ -128,16 +135,46 @@
 {
     // 取消选中状态
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
-    if (indexPath.row == 1) {
+    if (indexPath.row == 0) {
+        [self pushViewControllers];
+        
+    }else {
+        
+        CloudTabbarController *tab = [[CloudTabbarController alloc] init];
+        [self presentViewController:tab animated:YES completion:nil];
         
     }
     
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
+- (void)pushViewControllers
+{
+    __weakSelf;
+    
+    //  付款页面
+    BaseDetailViewController *detail = [[BaseDetailViewController alloc] init];
+    detail.title = @"充值";
+    [detail setImage:HTImage(@"pay_selectPage") WithTouchBlock:^(NSIndexPath *indexPath) {
+        
+        //  活动说明页面
+        BaseDetailViewController *detail = [[BaseDetailViewController alloc] init];
+        detail.title = @"活动说明";
+        [detail setImage:HTImage(@"pay_selectPage") WithTouchBlock:^(NSIndexPath *indexPath) {
+            
+            CloudTabbarController *tab = [[CloudTabbarController alloc] init];
+            tab.selectedIndex = 1;
+            [weakSelf presentViewController:tab animated:YES completion:nil];
+            
+        }];
+        
+        [weakSelf.navigationController pushViewController:detail animated:YES];
+        
+    }];
+     
+    detail.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:detail animated:YES];
 }
+
 
 @end
 

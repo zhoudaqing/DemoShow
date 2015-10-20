@@ -10,7 +10,6 @@
 #import "HTNavigationController.h"
 #import "FirstViewController.h"
 #import "SecondViewController.h"
-#import "ThirdViewController.h"
 #import "ViewController.h"
 
 @interface HTTabBarController ()
@@ -53,6 +52,7 @@
     FirstViewController *store = [[FirstViewController alloc]init];
     store.tabBarItem = [self tabbarItemWithTitle:@"首页" andItemImage:@"tabbar_home"];
     HTNavigationController *nav1 = [[HTNavigationController alloc] initWithRootViewController:store];
+    nav1.isContentLight = YES;
     
     SecondViewController *cart = [[SecondViewController alloc]init];
     cart.tabBarItem = [self tabbarItemWithTitle:@"订单" andItemImage:@"tabbar_itemlist"];

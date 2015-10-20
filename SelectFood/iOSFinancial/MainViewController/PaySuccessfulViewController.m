@@ -7,6 +7,7 @@
 //
 
 #import "PaySuccessfulViewController.h"
+#import "PackingViewController.h"
 
 @interface PaySuccessfulViewController ()
 {
@@ -43,13 +44,14 @@
     [bottomBtn addTarget:self action:@selector(clickBottomBtn) forControlEvents:UIControlEventTouchUpInside];
     [_backImage addSubview:bottomBtn];
     
-    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tongzhi) name:@"Paytongzhi" object:nil];
+
 }
 
 
 - (void)clickLeftBtn
 {
-    
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 - (void)clickRightBtn
@@ -59,6 +61,12 @@
 
 - (void)clickBottomBtn
 {
-    
+    PackingViewController *pack = [[PackingViewController alloc]init];
+    [self.navigationController pushViewController:pack animated:YES];
+}
+- (void)tongzhi
+{
+    [_backImage setImage:HTImage(@"zhifuchengonglingqu")];
+
 }
 @end

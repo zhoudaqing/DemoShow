@@ -24,12 +24,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.navigationController.navigationBar.hidden = NO;
-    self.navigationController.navigationBar.titleTextAttributes = @{UITextAttributeTextColor: [UIColor orangeColor],
-UITextAttributeFont : [UIFont boldSystemFontOfSize:18]};
-    self.title = @"纯然火锅";
     
-    [self.navigationController.navigationBar setTintColor:[UIColor redColor]];
-    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor orangeColor],NSFontAttributeName : [UIFont systemFontOfSize:18]}];
+    self.title = @"纯然火锅";
     
     _backImage = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, APPScreenWidth, APPScreenHeight - 40)];
     [_backImage setImage:HTImage(@"shouye1")];
@@ -76,14 +72,6 @@ UITextAttributeFont : [UIFont boldSystemFontOfSize:18]};
     [self.navigationController pushViewController:pays animated:YES];
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

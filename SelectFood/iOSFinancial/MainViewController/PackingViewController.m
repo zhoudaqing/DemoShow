@@ -50,12 +50,12 @@
                 //  绑定银行卡
                 BaseDetailViewController *regedit = [[BaseDetailViewController alloc] init];
                 regedit.title = @"买入金额";
-                [regedit setImage:HTImage(@"buyStep1") WithTouchBlock:^(NSIndexPath *indexPath) {
+                [regedit setImage:HTImage(@"tiyanlijimairu") WithTouchBlock:^(NSIndexPath *indexPath) {
                     
                   
                         BaseDetailViewController *regedit = [[BaseDetailViewController alloc] init];
                         regedit.title = @"购买成功";
-                        [regedit setImage:HTImage(@"buyStep3") WithTouchBlock:^(NSIndexPath *indexPath) {
+                        [regedit setImage:HTImage(@"chenggongmairu") WithTouchBlock:^(NSIndexPath *indexPath) {
                         
                             //创建通知
                             NSNotification *notification =[NSNotification notificationWithName:@"Paytongzhi" object:nil userInfo:nil];

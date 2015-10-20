@@ -70,6 +70,11 @@
                     UIImageView *image = [[UIImageView alloc]initWithFrame:CGRectMake(APPScreenWidth -110, 6, 80, 32)];
                     [image setImage:HTImage(@"UMS_shake__share_button")];
                     [cell addSubview:image];
+                    UILabel *lable = [[UILabel alloc]initWithFrame:image.bounds ];
+                    lable.text = @"充值";
+                    lable.textAlignment = NSTextAlignmentCenter;
+                    lable.textColor = [UIColor whiteColor];
+                    [image addSubview:lable];
                 }
                     break;
                 case 1:

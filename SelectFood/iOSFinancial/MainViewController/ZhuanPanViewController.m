@@ -7,9 +7,11 @@
 //
 
 #import "ZhuanPanViewController.h"
+#import "KaihuYanzhengViewController.h"
 
 @interface ZhuanPanViewController ()<UIAlertViewDelegate>
 @property (nonatomic)UITapGestureRecognizer *tap;
+@property (nonatomic , copy) NSString *notice;
 @end
 
 @implementation ZhuanPanViewController
@@ -24,9 +26,14 @@
     [self.view addSubview:backImage];
     backImage.userInteractionEnabled = YES;
     [backImage addGestureRecognizer:self.tap];
-    
-}
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tongzhi) name:@"huodongtongzhi" object:nil];
+    self.notice = @"先去完成实名认证";
 
+}
+- (void)tongzhi
+{
+    self.notice = @"恭喜您获得50元优惠券~！";
+}
 - (UITapGestureRecognizer *)tap
 {
     if (!_tap) {
@@ -37,14 +44,23 @@
 
 -(void)showgoodsList
 {
-    UIAlertView *alter = [[UIAlertView alloc] initWithTitle:@"" message:@"请完善信息" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
+    UIAlertView *alter = [[UIAlertView alloc] initWithTitle:@"" message:self.notice delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
     alter.delegate = self;
     [alter show];
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-    
+    KaihuYanzhengViewController *shouye1 = [[KaihuYanzhengViewController alloc]init];
+    shouye1.hidesBottomBarWhenPushed  = YES;
+    if ([self.notice isEqualToString:@"先去完成实名认证"]) {
+        [self.navigationController pushViewController:shouye1 animated:YES];
+
+    }else
+    {
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+
 }
 
 @end

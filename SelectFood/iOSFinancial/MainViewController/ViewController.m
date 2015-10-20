@@ -66,6 +66,10 @@
                 {
                     cell.imageView.image = [UIImage imageNamed:@"my_Recharge"];
                     cell.textLabel.text = @"余额";
+                    
+                    UIImageView *image = [[UIImageView alloc]initWithFrame:CGRectMake(APPScreenWidth -110, 6, 80, 32)];
+                    [image setImage:HTImage(@"UMS_shake__share_button")];
+                    [cell addSubview:image];
                 }
                     break;
                 case 1:

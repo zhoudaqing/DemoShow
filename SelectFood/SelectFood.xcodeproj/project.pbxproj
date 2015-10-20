@@ -16,6 +16,10 @@
 		846EE5011B020C1A00F0AE4E /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846EE5001B020C1A00F0AE4E /* CoreTelephony.framework */; };
 		846EE5031B020C2700F0AE4E /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 846EE5021B020C2700F0AE4E /* libstdc++.dylib */; };
 		846EE5051B020C3200F0AE4E /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 846EE5041B020C3200F0AE4E /* libz.dylib */; };
+		846FFAC21BD5FCE800FA6C14 /* OTCover.m in Sources */ = {isa = PBXBuildFile; fileRef = 846FFAC11BD5FCE800FA6C14 /* OTCover.m */; settings = {ASSET_TAGS = (); }; };
+		846FFAC51BD6003900FA6C14 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846FFAC41BD6003900FA6C14 /* ViewController.m */; settings = {ASSET_TAGS = (); }; };
+		846FFAC81BD640B300FA6C14 /* Shouye1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846FFAC71BD640B300FA6C14 /* Shouye1ViewController.m */; settings = {ASSET_TAGS = (); }; };
+		846FFACB1BD6482800FA6C14 /* ZhuanPanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846FFACA1BD6482800FA6C14 /* ZhuanPanViewController.m */; settings = {ASSET_TAGS = (); }; };
 		84D9FB051AE77DC500C5AAA8 /* AttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D9FB041AE77DC500C5AAA8 /* AttributedLabel.m */; };
 		920C09881B74975000A8CC30 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 920C09871B74975000A8CC30 /* QuartzCore.framework */; };
 		920C098A1B74977400A8CC30 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 920C09891B74977400A8CC30 /* libicucore.dylib */; };
@@ -135,6 +139,14 @@
 		846EE5001B020C1A00F0AE4E /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		846EE5021B020C2700F0AE4E /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
 		846EE5041B020C3200F0AE4E /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		846FFAC01BD5FCE800FA6C14 /* OTCover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTCover.h; sourceTree = "<group>"; };
+		846FFAC11BD5FCE800FA6C14 /* OTCover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTCover.m; sourceTree = "<group>"; };
+		846FFAC31BD6003900FA6C14 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		846FFAC41BD6003900FA6C14 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		846FFAC61BD640B300FA6C14 /* Shouye1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shouye1ViewController.h; sourceTree = "<group>"; };
+		846FFAC71BD640B300FA6C14 /* Shouye1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shouye1ViewController.m; sourceTree = "<group>"; };
+		846FFAC91BD6482800FA6C14 /* ZhuanPanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZhuanPanViewController.h; sourceTree = "<group>"; };
+		846FFACA1BD6482800FA6C14 /* ZhuanPanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZhuanPanViewController.m; sourceTree = "<group>"; };
 		84D9FB031AE77DC500C5AAA8 /* AttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AttributedLabel.h; path = ../../MainViewController/LogIn/AttributedLabel.h; sourceTree = "<group>"; };
 		84D9FB041AE77DC500C5AAA8 /* AttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AttributedLabel.m; path = ../../MainViewController/LogIn/AttributedLabel.m; sourceTree = "<group>"; };
 		920C09871B74975000A8CC30 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -612,10 +624,18 @@
 			children = (
 				925BE4BF1BD4B8D6007B742C /* FirstViewController.h */,
 				925BE4C01BD4B8D6007B742C /* FirstViewController.m */,
+				846FFAC61BD640B300FA6C14 /* Shouye1ViewController.h */,
+				846FFAC71BD640B300FA6C14 /* Shouye1ViewController.m */,
+				846FFAC91BD6482800FA6C14 /* ZhuanPanViewController.h */,
+				846FFACA1BD6482800FA6C14 /* ZhuanPanViewController.m */,
 				925BE4C21BD4B8FD007B742C /* SecondViewController.h */,
 				925BE4C31BD4B8FD007B742C /* SecondViewController.m */,
 				925BE4C51BD4B919007B742C /* ThirdViewController.h */,
 				925BE4C61BD4B919007B742C /* ThirdViewController.m */,
+				846FFAC31BD6003900FA6C14 /* ViewController.h */,
+				846FFAC41BD6003900FA6C14 /* ViewController.m */,
+				846FFAC01BD5FCE800FA6C14 /* OTCover.h */,
+				846FFAC11BD5FCE800FA6C14 /* OTCover.m */,
 			);
 			name = MainViewController;
 			sourceTree = "<group>";
@@ -1027,10 +1047,12 @@
 				9217C9211BC6659500938A9E /* JTSSimpleImageDownloader.m in Sources */,
 				92943C341BCE8FED005B44CB /* ContentCell.m in Sources */,
 				922CB5A81AC9789700C4A438 /* MJRefreshHeaderView.m in Sources */,
+				846FFACB1BD6482800FA6C14 /* ZhuanPanViewController.m in Sources */,
 				921DD2F61AEB67AF0004251F /* UIView+Prompting.m in Sources */,
 				92F559111AE9F3F10074A52A /* HTVersionManager.m in Sources */,
 				92D2A2861AC3DF7B00C9A4AE /* AppDelegate.m in Sources */,
 				9217C91E1BC6659500938A9E /* JTSAnimatedGIFUtility.m in Sources */,
+				846FFAC21BD5FCE800FA6C14 /* OTCover.m in Sources */,
 				921DD2C91AEB67310004251F /* PlaceHolderTextView.m in Sources */,
 				921DD2F01AEB67AF0004251F /* NSString+URLEncoding.m in Sources */,
 				92BD02B41AEF430E00758530 /* Buttons.m in Sources */,
@@ -1077,6 +1099,7 @@
 				92B480051B6F6B3400AF9A2D /* MCBadgeView.m in Sources */,
 				92EB85851AC561C800A80E03 /* HTTabBarController.m in Sources */,
 				92DA92791B3C164800AACF1D /* UIView+NoneDataView.m in Sources */,
+				846FFAC81BD640B300FA6C14 /* Shouye1ViewController.m in Sources */,
 				924D116B1BCE61360040C318 /* ActionWebViewController.m in Sources */,
 				92943C3C1BCF7FAE005B44CB /* BaseDetailViewController.m in Sources */,
 				92A41EE31B26D4030036DC58 /* HTADScrollView.m in Sources */,
@@ -1085,6 +1108,7 @@
 				922CB5A61AC9789700C4A438 /* MJRefreshConst.m in Sources */,
 				921DD2CD1AEB67310004251F /* UIBarButtonExtern.m in Sources */,
 				928860E61B297F810060502D /* UILabel+FlickerNumber.m in Sources */,
+				846FFAC51BD6003900FA6C14 /* ViewController.m in Sources */,
 				926811CB1ADE868C00FAB0A2 /* HTSelectionController.m in Sources */,
 				921DD28C1AEB65790004251F /* HTBaseSource.m in Sources */,
 				92871C841AF761C3002EC9F6 /* LoginRequest.m in Sources */,

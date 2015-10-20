@@ -13,6 +13,15 @@
 @end
 
 @implementation SecondViewController
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    self.navigationController.navigationBar.hidden = YES;
+    UIImageView *backImage = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, APPScreenWidth, APPScreenHeight)];
+    [backImage setImage:HTImage(@"dingdanyeBack")];
+    [self.view addSubview:backImage];
+}
 
 
 @end

@@ -40,7 +40,8 @@
         //  验证真实姓名
         BaseDetailViewController *regedit = [[BaseDetailViewController alloc] init];
         regedit.title = @"验证真实姓名";
-        [regedit setImage:HTImage(@"validateUserName") WithTouchBlock:^(NSIndexPath *indexPath) {
+        regedit.view.frame = CGRectMake(0, -120, APPScreenWidth, APPScreenHeight);
+        [regedit setImage:HTImage(@"timing") WithTouchBlock:^(NSIndexPath *indexPath) {
             
             //  设置密码
             BaseDetailViewController *regedit = [[BaseDetailViewController alloc] init];

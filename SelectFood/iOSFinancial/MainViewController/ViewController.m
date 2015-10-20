@@ -155,7 +155,7 @@
         //  活动说明页面
         BaseDetailViewController *detail = [[BaseDetailViewController alloc] init];
         detail.title = @"活动说明";
-        [detail setImage:HTImage(@"pay_selectPage") WithTouchBlock:^(NSIndexPath *indexPath) {
+        [detail setImage:HTImage(@"action_rechargeMoney") WithTouchBlock:^(NSIndexPath *indexPath) {
             
             CloudTabbarController *tab = [[CloudTabbarController alloc] init];
             tab.selectedIndex = 1;

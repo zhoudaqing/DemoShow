@@ -37,7 +37,6 @@
     [self setImage:HTImage(@"InvestIndex") WithTouchBlock:^(NSIndexPath *indexPath) {
         [weakSelf doNext];
     }];
-    
 }
 
 - (void)doNext

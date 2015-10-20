@@ -29,6 +29,7 @@
     [backImage addGestureRecognizer:self.tap];
     
 }
+
 - (UITapGestureRecognizer *)tap
 {
     if (!_tap) {
@@ -43,6 +44,7 @@
     shouye1.hidesBottomBarWhenPushed  = YES;
     [self.navigationController pushViewController:shouye1 animated:YES];
 }
+
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];

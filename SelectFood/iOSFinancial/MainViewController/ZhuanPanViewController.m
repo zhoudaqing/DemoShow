@@ -16,12 +16,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationController.navigationBar.titleTextAttributes = @{UITextAttributeTextColor: [UIColor orangeColor],
-                                                                    UITextAttributeFont : [UIFont boldSystemFontOfSize:18]};
-    self.title = @"活动转盘";
     
-    [self.navigationController.navigationBar setTintColor:[UIColor redColor]];
-    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor orangeColor],NSFontAttributeName : [UIFont systemFontOfSize:18]}];
+    self.title = @"活动转盘";
     
     UIImageView *backImage = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, APPScreenWidth, APPScreenHeight)];
     [backImage setImage:HTImage(@"dazhuanpan")];

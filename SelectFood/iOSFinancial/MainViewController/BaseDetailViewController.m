@@ -22,6 +22,15 @@
     self.cellToucheBlock = touchBlock;
 }
 
+- (void)setBackImage:(UIImage *)image WithTouchBlock:(void (^)(NSIndexPath *))TouchBlock
+{
+    UIImageView *backImage = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, APPScreenWidth, APPScreenHeight)];
+    [backImage setImage:HTImage(@"shouyeBack")];
+    [self.view addSubview:backImage];
+    self.contentImage = [UIImage imageNamed:@""];
+    self.cellToucheBlock = TouchBlock;
+}
+
 #pragma mark -
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section

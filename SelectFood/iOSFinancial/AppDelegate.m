@@ -87,6 +87,8 @@
     [[UINavigationBar appearance] setBackIndicatorImage:[UIImage imageNamed:@"return"]];
     [[UINavigationBar appearance] setBackIndicatorTransitionMaskImage:[UIImage imageNamed:@"returnH"]];
     
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor orangeColor],NSFontAttributeName : [UIFont systemFontOfSize:18]}];
+    
     [[UITableView appearance] setSeparatorColor:[UIColor jt_lineColor]];
     
     [[UISwitch appearance] setOnTintColor:[UIColor jt_barTintColor]];

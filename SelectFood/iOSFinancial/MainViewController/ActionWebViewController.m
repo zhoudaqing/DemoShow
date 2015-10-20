@@ -69,7 +69,7 @@
     if ([scheme rangeOfString:@"com.yyyy.jdlc"].length > 0) {
         if ([relativePath rangeOfString:@"extern"].length > 0) {
             //其它浏览器打开
-            NSString *openURL = [self getParamAtIndex:1 inURL:requestURL];
+            //NSString *openURL = [self getParamAtIndex:1 inURL:requestURL];
             
             //NSString *detailURL = [NSString stringWithFormat:@"%@/%@", jianDanWapServer, openURL];
             

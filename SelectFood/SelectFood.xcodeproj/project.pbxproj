@@ -75,7 +75,6 @@
 		924D116B1BCE61360040C318 /* ActionWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 924D116A1BCE61360040C318 /* ActionWebViewController.m */; settings = {ASSET_TAGS = (); }; };
 		925BE4C11BD4B8D6007B742C /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 925BE4C01BD4B8D6007B742C /* FirstViewController.m */; settings = {ASSET_TAGS = (); }; };
 		925BE4C41BD4B8FD007B742C /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 925BE4C31BD4B8FD007B742C /* SecondViewController.m */; settings = {ASSET_TAGS = (); }; };
-		925BE4C71BD4B919007B742C /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 925BE4C61BD4B919007B742C /* ThirdViewController.m */; settings = {ASSET_TAGS = (); }; };
 		926811C21ADE570900FAB0A2 /* HTGuideManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 926811C11ADE570900FAB0A2 /* HTGuideManager.m */; };
 		926811C51ADE571E00FAB0A2 /* HTUserDefault.m in Sources */ = {isa = PBXBuildFile; fileRef = 926811C41ADE571E00FAB0A2 /* HTUserDefault.m */; };
 		926811CB1ADE868C00FAB0A2 /* HTSelectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 926811CA1ADE868C00FAB0A2 /* HTSelectionController.m */; };
@@ -250,8 +249,6 @@
 		925BE4C01BD4B8D6007B742C /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		925BE4C21BD4B8FD007B742C /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		925BE4C31BD4B8FD007B742C /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
-		925BE4C51BD4B919007B742C /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
-		925BE4C61BD4B919007B742C /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
 		926811C01ADE570900FAB0A2 /* HTGuideManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTGuideManager.h; sourceTree = "<group>"; };
 		926811C11ADE570900FAB0A2 /* HTGuideManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTGuideManager.m; sourceTree = "<group>"; };
 		926811C31ADE571E00FAB0A2 /* HTUserDefault.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTUserDefault.h; sourceTree = "<group>"; };
@@ -630,8 +627,6 @@
 				846FFACA1BD6482800FA6C14 /* ZhuanPanViewController.m */,
 				925BE4C21BD4B8FD007B742C /* SecondViewController.h */,
 				925BE4C31BD4B8FD007B742C /* SecondViewController.m */,
-				925BE4C51BD4B919007B742C /* ThirdViewController.h */,
-				925BE4C61BD4B919007B742C /* ThirdViewController.m */,
 				846FFAC31BD6003900FA6C14 /* ViewController.h */,
 				846FFAC41BD6003900FA6C14 /* ViewController.m */,
 				846FFAC01BD5FCE800FA6C14 /* OTCover.h */,
@@ -1026,7 +1021,6 @@
 			files = (
 				92871C811AF75D85002EC9F6 /* HTBaseRequest.m in Sources */,
 				92FBF0981B8C44B300E56EF9 /* UIView+BorderColor.m in Sources */,
-				925BE4C71BD4B919007B742C /* ThirdViewController.m in Sources */,
 				928C97521B85834900D4CDD5 /* UIView+LabelSign.m in Sources */,
 				921DD2CB1AEB67310004251F /* RedPointLabel.m in Sources */,
 				9217C9261BC66A3E00938A9E /* HTTransparentView.m in Sources */,

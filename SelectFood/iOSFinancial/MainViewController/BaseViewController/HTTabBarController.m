@@ -10,7 +10,6 @@
 #import "HTNavigationController.h"
 #import "FirstViewController.h"
 #import "SecondViewController.h"
-#import "ThirdViewController.h"
 #import "ViewController.h"
 
 @interface HTTabBarController ()

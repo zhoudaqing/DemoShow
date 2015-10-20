@@ -32,8 +32,6 @@
     view.backgroundColor = [UIColor clearColor];
     [test.tableView setTableFooterView:view];
     
-    self.navigationController.navigationBar.titleTextAttributes = @{UITextAttributeTextColor: [UIColor orangeColor],
-                                                                    UITextAttributeFont : [UIFont boldSystemFontOfSize:18]};
     self.title = @"我的";
     
 }
@@ -173,9 +171,6 @@
     [self.navigationController pushViewController:detail animated:YES];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-}
 
 @end
 

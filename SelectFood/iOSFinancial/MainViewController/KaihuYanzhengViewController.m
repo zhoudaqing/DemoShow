@@ -1,43 +1,36 @@
 //
-//  ZhuanPanViewController.m
+//  KaihuYanzhengViewController.m
 //  SelectFood
 //
 //  Created by Mr.Yan on 15/10/20.
 //  Copyright © 2015年 Mr.Yang. All rights reserved.
 //
 
-#import "ZhuanPanViewController.h"
 #import "KaihuYanzhengViewController.h"
 
-@interface ZhuanPanViewController ()<UIAlertViewDelegate>
+@interface KaihuYanzhengViewController ()
 @property (nonatomic)UITapGestureRecognizer *tap;
-@property (nonatomic , copy) NSString *notice;
 @end
 
-@implementation ZhuanPanViewController
+@implementation KaihuYanzhengViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationController.navigationBar.titleTextAttributes = @{UITextAttributeTextColor: [UIColor orangeColor],
                                                                     UITextAttributeFont : [UIFont boldSystemFontOfSize:18]};
-    self.title = @"活动转盘";
+    self.title = @"开户验证";
     
     [self.navigationController.navigationBar setTintColor:[UIColor redColor]];
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor orangeColor],NSFontAttributeName : [UIFont systemFontOfSize:18]}];
     
     UIImageView *backImage = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, APPScreenWidth, APPScreenHeight)];
-    [backImage setImage:HTImage(@"dazhuanpan")];
+    [backImage setImage:HTImage(@"kaihuyanzheng")];
     [self.view addSubview:backImage];
     backImage.userInteractionEnabled = YES;
     [backImage addGestureRecognizer:self.tap];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tongzhi) name:@"huodongtongzhi" object:nil];
-    self.notice = @"请完善信息";
+    
+}
 
-}
-- (void)tongzhi
-{
-    self.notice = @"恭喜您获得50元优惠券~！";
-}
 - (UITapGestureRecognizer *)tap
 {
     if (!_tap) {
@@ -48,23 +41,18 @@
 
 -(void)showgoodsList
 {
-    UIAlertView *alter = [[UIAlertView alloc] initWithTitle:@"" message:self.notice delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
+    UIAlertView *alter = [[UIAlertView alloc] initWithTitle:@"" message:@"验证成功" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
     alter.delegate = self;
     [alter show];
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-    KaihuYanzhengViewController *shouye1 = [[KaihuYanzhengViewController alloc]init];
-    shouye1.hidesBottomBarWhenPushed  = YES;
-    if ([self.notice isEqualToString:@"请完善信息"]) {
-        [self.navigationController pushViewController:shouye1 animated:YES];
-
-    }else
-    {
-        [self.navigationController popViewControllerAnimated:YES];
-    }
-
+    //创建通知
+    NSNotification *notification =[NSNotification notificationWithName:@"huodongtongzhi" object:nil userInfo:nil];
+    //通过通知中心发送通知
+    [[NSNotificationCenter defaultCenter] postNotification:notification];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 @end

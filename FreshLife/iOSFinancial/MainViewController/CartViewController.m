@@ -57,13 +57,13 @@
             BaseDetailViewController *paySuccess = [[BaseDetailViewController alloc] init];
             paySuccess.title = @"订单支付";
             [paySuccess setImage:HTImage(@"paySuccess") WithTouchBlock:^(NSIndexPath *indexPath) {
-                /*
+            
                 [weakSelf.navigationController popToRootViewControllerAnimated:NO];
                 weakSelf.navigationController.tabBarController.selectedIndex = 0;
-                [weakSelf presentViewController:weakSelf.controller animated:YES completion:^{
-                 
-                }];
-                */
+//                [weakSelf presentViewController:weakSelf.controller animated:YES completion:^{
+//                 
+//                }];
+                
                 
             }];
             

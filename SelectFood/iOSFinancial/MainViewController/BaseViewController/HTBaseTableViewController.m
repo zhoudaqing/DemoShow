@@ -70,6 +70,12 @@
 //    UIView *footerView = [[UIView alloc] init];
 //    footerView.height = 64.0f;
 //    self.tableView.tableFooterView = footerView;
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tongzhi) name:@"chongzhitongzhi" object:nil];
+}
+
+- (void)tongzhi
+{
+    
 }
 
 #pragma mark - UITableViewCellSeparatorInsets

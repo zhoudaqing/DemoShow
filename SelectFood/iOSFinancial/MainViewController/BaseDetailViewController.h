@@ -14,8 +14,12 @@
 
 @property (nonatomic, copy) void(^cellToucheBlock)(NSIndexPath *indexPath);
 
+@property (nonatomic,assign) BOOL isRecharge;
+
 - (void)setImage:(UIImage *)image WithTouchBlock:(void (^)(NSIndexPath *indexPath))cellTouchBlock;
 
 - (void)setBackImage:(UIImage *)image WithTouchBlock:(void (^)(NSIndexPath *indexPath ))TouchBlock;
+
+- (void)setAlerConten:(NSString *)conten withLeftBtn:(NSString *)leftTitle rightBtn:(NSString *)rightTitle;
 
 @end

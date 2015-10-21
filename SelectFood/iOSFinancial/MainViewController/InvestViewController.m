@@ -80,6 +80,7 @@
                                 
                                 BaseDetailViewController *regedit = [[BaseDetailViewController alloc] init];
                                 regedit.title = @"输入完成";
+                                [regedit setAlerConten:@"恭喜您已获得50元挑食优惠券" withLeftBtn:@"查看" rightBtn:@"取消"];
                                 [regedit setImage:HTImage(@"buyStep3") WithTouchBlock:^(NSIndexPath *indexPath) {
                                     
                                     [weakSelf.navigationController popToRootViewControllerAnimated:YES];

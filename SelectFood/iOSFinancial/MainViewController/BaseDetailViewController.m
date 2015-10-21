@@ -10,7 +10,7 @@
 #import "ContentCell.h"
 
 
-@interface BaseDetailViewController ()
+@interface BaseDetailViewController ()<UIAlertViewDelegate>
 
 @end
 
@@ -29,6 +29,31 @@
     [self.view addSubview:backImage];
     self.contentImage = [UIImage imageNamed:@""];
     self.cellToucheBlock = TouchBlock;
+}
+
+- (void)setAlerConten:(NSString *)conten withLeftBtn:(NSString *)leftTitle rightBtn:(NSString *)rightTitle
+{
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"" message:conten delegate:self cancelButtonTitle:leftTitle otherButtonTitles:rightTitle, nil];
+    [alert show];
+}
+
+- (void)alertView:(UIAlertView *)alertView willDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 0) {
+        //创建通知
+        NSNotification *notification =[NSNotification notificationWithName:@"chongzhitongzhi" object:nil userInfo:nil];
+        //通过通知中心发送通知
+        [[NSNotificationCenter defaultCenter] postNotification:notification];
+
+        [self.navigationController popToRootViewControllerAnimated:YES];
+    }
+}
+
+- (void)tongzhi
+{
+    if (self.isRecharge) {
+        [self.navigationController popViewControllerAnimated:NO];
+    }
 }
 
 #pragma mark -

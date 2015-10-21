@@ -11,5 +11,6 @@
 @interface CloudTabbarController : HTTabBarController
 
 @property (nonatomic, assign) BOOL isLogin;
+@property (nonatomic, assign) BOOL isPromptShowed;
 
 @end

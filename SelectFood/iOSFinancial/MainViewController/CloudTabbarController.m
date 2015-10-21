@@ -24,14 +24,11 @@
 {
     [super viewDidLoad];
     
-    if (!_isPromptShowed) {
-        [self.view addSubview:self.promptView];
-    }
 }
 
 - (NSString *)promptText
 {
-    return @"Hello~sjdfjskdljfkljsdklfjklsjkljdfkljksljdfjsdkljfklsdjfkljsdkljfkljsdkljflkjsdkljflkjdskljfklsjdlkfjlksdjlkfjlksdjlfkjlsdjlkfjlkjeojiosfjsjeoifjoesijfoijseojfoisejofjo";
+    return @"云账户，是一家移动金融功能平台服务商，链接移动互联网应用开发者和金融机构，基于移动互联网为用户提供金融服务，打造全新的金融服务体验环境。";
 }
 
 - (UIView *)promptView
@@ -46,7 +43,7 @@
         [_promptView addSubview:alphaView];
         
         UILabel *titleLabel = [[UILabel alloc] init];
-        titleLabel.numberOfLines = 2;
+        titleLabel.numberOfLines = 4;
         titleLabel.textColor = HTWhiteColor;
         titleLabel.text = [self promptText];
         CGSize size = [titleLabel sizeThatFits:CGSizeMake(300, 200)];
@@ -100,5 +97,8 @@
     
     return tabBarItem;
 }
-
+- (void)addPromptView;
+{
+    [self.view addSubview:[self promptView]];
+}
 @end

@@ -146,6 +146,7 @@
     }else {
         
         CloudTabbarController *tab = [[CloudTabbarController alloc] init];
+        [tab addPromptView];
         [self presentViewController:tab animated:YES completion:nil];
         
     }

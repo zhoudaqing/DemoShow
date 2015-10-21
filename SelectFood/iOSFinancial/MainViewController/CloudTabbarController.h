@@ -12,5 +12,6 @@
 
 @property (nonatomic, assign) BOOL isLogin;
 @property (nonatomic, assign) BOOL isPromptShowed;
+- (void)addPromptView;
 
 @end

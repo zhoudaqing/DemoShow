@@ -53,7 +53,7 @@
 {
     KaihuYanzhengViewController *shouye1 = [[KaihuYanzhengViewController alloc]init];
     shouye1.hidesBottomBarWhenPushed  = YES;
-    if ([self.notice isEqualToString:@"先去完成实名认证"]) {
+    if ([self.notice isEqualToString:@"激活挑食金融服务即可参加抽奖"]) {
         [self.navigationController pushViewController:shouye1 animated:YES];
 
     }else

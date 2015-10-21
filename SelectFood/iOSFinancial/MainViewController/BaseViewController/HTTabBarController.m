@@ -30,8 +30,16 @@
     self.tabBar.clipsToBounds = YES;
     
     [self changeShowdImageColor];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tongzhi) name:@"chongzhitongzhi" object:nil];
 }
 
+- (void)tongzhi
+{
+    [self dismissViewControllerAnimated:NO completion:^{
+        
+    }];
+}
 //  改变阴影线颜色
 - (void)changeShowdImageColor
 {

@@ -24,7 +24,7 @@
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor orangeColor],NSFontAttributeName : [UIFont systemFontOfSize:18]}];
     
     UIImageView *backImage = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, APPScreenWidth, APPScreenHeight)];
-    [backImage setImage:HTImage(@"kaihuyanzheng")];
+    [backImage setImage:HTImage(@"tiyanshiming")];
     [self.view addSubview:backImage];
     backImage.userInteractionEnabled = YES;
     [backImage addGestureRecognizer:self.tap];

@@ -32,6 +32,7 @@
     [self.view addSubview:_backImage];
     _backImage.userInteractionEnabled = YES;
     [_backImage addGestureRecognizer:self.tap];
+    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tongzhi) name:@"huodongtongzhi" object:nil];
     
     UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(252, APPScreenHeight - 90, 120, 44)];

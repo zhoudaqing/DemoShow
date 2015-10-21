@@ -10,8 +10,10 @@
 #import "ContentCell.h"
 
 
-@interface BaseDetailViewController ()
-
+@interface BaseDetailViewController ()<UIAlertViewDelegate>
+{
+    NSIndexPath *_index;
+}
 @end
 
 @implementation BaseDetailViewController
@@ -29,6 +31,35 @@
     [self.view addSubview:backImage];
     self.contentImage = [UIImage imageNamed:@""];
     self.cellToucheBlock = TouchBlock;
+}
+
+- (void)setAlerConten:(NSString *)conten withLeftBtn:(NSString *)leftTitle rightBtn:(NSString *)rightTitle
+{
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"" message:conten delegate:self cancelButtonTitle:leftTitle otherButtonTitles:rightTitle, nil];
+    [alert show];
+}
+
+- (void)alertView:(UIAlertView *)alertView willDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 1) {
+        //创建通知
+        NSNotification *notification =[NSNotification notificationWithName:@"chongzhitongzhi" object:nil userInfo:nil];
+        //通过通知中心发送通知
+        [[NSNotificationCenter defaultCenter] postNotification:notification];
+
+        [self.navigationController popToRootViewControllerAnimated:YES];
+    }
+    if ([alertView.message isEqualToString:@"恭喜您10000元理财体验金已到账，体验投资后即可获得精品羊肉一份"]) {
+        _cellToucheBlock(_index);
+
+    }
+}
+
+- (void)tongzhi
+{
+    if (self.isRecharge) {
+        [self.navigationController popViewControllerAnimated:NO];
+    }
 }
 
 #pragma mark -
@@ -56,9 +87,17 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (_cellToucheBlock) {
+    _index = indexPath;
+    if (_cellToucheBlock&&!self.alertContent) {
         _cellToucheBlock(indexPath);
+       
+    }else{
+        
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"" message:self.alertContent delegate:self cancelButtonTitle:@"好的" otherButtonTitles: nil];
+        self.alertContent = nil;
+        [alert show];
     }
+        
 }
 
 

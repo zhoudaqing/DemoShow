@@ -44,32 +44,17 @@
         [regedit setImage:HTImage(@"timing") WithTouchBlock:^(NSIndexPath *indexPath) {
             //  设置密码
             BaseDetailViewController *regedit = [[BaseDetailViewController alloc] init];
-            regedit.title = @"买入基金";
+            regedit.title = @"绑定银行卡";
             [regedit setImage:HTImage(@"buyStep0") WithTouchBlock:^(NSIndexPath *indexPath) {
                 
-                //  绑定银行卡
-                BaseDetailViewController *regedit = [[BaseDetailViewController alloc] init];
-                regedit.title = @"买入金额";
-                [regedit setImage:HTImage(@"tiyanlijimairu") WithTouchBlock:^(NSIndexPath *indexPath) {
-                    
-                  
-                        BaseDetailViewController *regedit = [[BaseDetailViewController alloc] init];
-                        regedit.title = @"购买成功";
-                        [regedit setImage:HTImage(@"chongzhifanhui") WithTouchBlock:^(NSIndexPath *indexPath) {
                         
-                            //创建通知
-                            NSNotification *notification =[NSNotification notificationWithName:@"Paytongzhi" object:nil userInfo:nil];
-                            //通过通知中心发送通知
-                            [[NSNotificationCenter defaultCenter] postNotification:notification];
-                            [weakSelf.navigationController popToViewController:weakSelf.navigationController.viewControllers[2] animated:YES];
+            //创建通知
+            NSNotification *notification =[NSNotification notificationWithName:@"Paytongzhi" object:nil userInfo:nil];
+            //通过通知中心发送通知
+            [[NSNotificationCenter defaultCenter] postNotification:notification];
+            [weakSelf.navigationController popToViewController:weakSelf.navigationController.viewControllers[2] animated:YES];
                             
-                        }];
-                    
-                    [weakSelf.navigationController pushViewController:regedit animated:YES];
-                    
-                }];
                 
-                [weakSelf.navigationController pushViewController:regedit animated:YES];
                 
             }];
             

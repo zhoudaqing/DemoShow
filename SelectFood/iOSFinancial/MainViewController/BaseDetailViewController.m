@@ -11,7 +11,9 @@
 
 
 @interface BaseDetailViewController ()<UIAlertViewDelegate>
-
+{
+    NSIndexPath *_index;
+}
 @end
 
 @implementation BaseDetailViewController
@@ -47,6 +49,10 @@
 
         [self.navigationController popToRootViewControllerAnimated:YES];
     }
+    if ([alertView.message isEqualToString:@"恭喜您10000元理财体验金已到账，体验投资后即可获得精品羊肉一份"]) {
+        _cellToucheBlock(_index);
+
+    }
 }
 
 - (void)tongzhi
@@ -81,6 +87,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    _index = indexPath;
     if (_cellToucheBlock&&!self.alertContent) {
         _cellToucheBlock(indexPath);
        

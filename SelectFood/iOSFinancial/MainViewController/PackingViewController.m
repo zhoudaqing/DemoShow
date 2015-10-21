@@ -45,7 +45,8 @@
             //  设置密码
             BaseDetailViewController *regedit = [[BaseDetailViewController alloc] init];
             regedit.title = @"绑定银行卡";
-            [regedit setImage:HTImage(@"buyStep0") WithTouchBlock:^(NSIndexPath *indexPath) {
+            regedit.alertContent = @"恭喜您10000元理财体验金已到账，体验投资后即可获得精品羊肉一份";
+            [regedit setImage:HTImage(@"jiesuanbangka") WithTouchBlock:^(NSIndexPath *indexPath) {
                 
                         
             //创建通知

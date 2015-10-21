@@ -164,7 +164,7 @@
         
         //  活动说明页面
         BaseDetailViewController *detail = [[BaseDetailViewController alloc] init];
-        detail.title = @"活动说明";
+        detail.title = @"挑食金融活动说明";
         detail.isRecharge = YES;
         [detail setImage:HTImage(@"action_rechargeMoney") WithTouchBlock:^(NSIndexPath *indexPath) {
             

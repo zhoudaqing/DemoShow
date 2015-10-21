@@ -48,9 +48,17 @@
         [[NSNotificationCenter defaultCenter] postNotification:notification];
 
         [self.navigationController popToRootViewControllerAnimated:YES];
-    }
-    if ([alertView.message isEqualToString:@"精品羊肉券已放入您的挑食账户中，可供下次购买使用"]) {
+    }else if([alertView.message isEqualToString:@"精品羊肉券已放入您的挑食账户中，可供下次购买使用"]) {
         _cellToucheBlock(_index);
+
+    }else
+    {
+        //创建通知
+        NSNotification *notification =[NSNotification notificationWithName:@"chongzhitongzhigeren" object:nil userInfo:nil];
+        //通过通知中心发送通知
+        [[NSNotificationCenter defaultCenter] postNotification:notification];
+        
+        [self.navigationController popToRootViewControllerAnimated:YES];
 
     }
 }
@@ -61,6 +69,14 @@
         [self.navigationController popViewControllerAnimated:NO];
     }
 }
+
+- (void)tongzhi1
+{
+    if (self.isRecharge) {
+        [self.navigationController popToRootViewControllerAnimated:NO];
+    }
+}
+
 
 #pragma mark -
 

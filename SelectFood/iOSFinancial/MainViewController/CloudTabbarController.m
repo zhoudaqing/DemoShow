@@ -28,7 +28,7 @@
 
 - (NSString *)promptText
 {
-    return @"云账户，是一家移动金融功能平台服务商，链接移动互联网应用开发者和金融机构，基于移动互联网为用户提供金融服务，打造全新的金融服务体验环境。";
+    return @"";
 }
 
 - (UIView *)promptView
@@ -36,11 +36,13 @@
     if (!_promptView) {
         _promptView = [[UIView alloc] initWithFrame:self.view.bounds];
         _promptView.backgroundColor = HTClearColor;
-        
-        UIView *alphaView = [[UIView alloc] initWithFrame:self.view.bounds];
-        alphaView.backgroundColor = HTBlackColor;
-        alphaView.alpha = .8;
-        [_promptView addSubview:alphaView];
+        UIImageView *imageView = [[UIImageView alloc]initWithFrame:_promptView.bounds];
+        imageView.image = HTImage(@"zhezhao");
+        [_promptView addSubview:imageView];
+//        UIView *alphaView = [[UIView alloc] initWithFrame:self.view.bounds];
+//        alphaView.backgroundColor = HTBlackColor;
+//        alphaView.alpha = 1;
+//        [_promptView addSubview:alphaView];
         
         UILabel *titleLabel = [[UILabel alloc] init];
         titleLabel.numberOfLines = 4;

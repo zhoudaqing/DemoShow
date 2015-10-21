@@ -172,7 +172,7 @@
             [weakSelf presentViewController:tab animated:YES completion:nil];
             
         }];
-        
+        //
         [weakSelf.navigationController pushViewController:detail animated:YES];
         
     }];

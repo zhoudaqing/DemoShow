@@ -32,7 +32,6 @@
     [self changeShowdImageColor];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tongzhi) name:@"chongzhitongzhi" object:nil];
-
 }
 
 - (void)tongzhi
@@ -41,7 +40,6 @@
         
     }];
 }
-
 //  改变阴影线颜色
 - (void)changeShowdImageColor
 {

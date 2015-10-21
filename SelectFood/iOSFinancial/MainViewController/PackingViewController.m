@@ -41,8 +41,8 @@
         BaseDetailViewController *regedit = [[BaseDetailViewController alloc] init];
         regedit.title = @"验证真实姓名";
         regedit.view.frame = CGRectMake(0, -120, APPScreenWidth, APPScreenHeight);
+        regedit.alertContent = @"恭喜您10000元理财体验金已到账，体验投资后即可精品羊肉一份";
         [regedit setImage:HTImage(@"timing") WithTouchBlock:^(NSIndexPath *indexPath) {
-            
             //  设置密码
             BaseDetailViewController *regedit = [[BaseDetailViewController alloc] init];
             regedit.title = @"买入基金";
@@ -56,7 +56,7 @@
                   
                         BaseDetailViewController *regedit = [[BaseDetailViewController alloc] init];
                         regedit.title = @"购买成功";
-                        [regedit setImage:HTImage(@"chenggongmairu") WithTouchBlock:^(NSIndexPath *indexPath) {
+                        [regedit setImage:HTImage(@"chongzhifanhui") WithTouchBlock:^(NSIndexPath *indexPath) {
                         
                             //创建通知
                             NSNotification *notification =[NSNotification notificationWithName:@"Paytongzhi" object:nil userInfo:nil];

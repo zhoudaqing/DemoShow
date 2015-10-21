@@ -39,7 +39,7 @@
 
 - (void)alertView:(UIAlertView *)alertView willDismissWithButtonIndex:(NSInteger)buttonIndex
 {
-    if (buttonIndex == 0) {
+    if (buttonIndex == 1) {
         //创建通知
         NSNotification *notification =[NSNotification notificationWithName:@"chongzhitongzhi" object:nil userInfo:nil];
         //通过通知中心发送通知
@@ -81,9 +81,16 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (_cellToucheBlock) {
+    if (_cellToucheBlock&&!self.alertContent) {
         _cellToucheBlock(indexPath);
+       
+    }else{
+        
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"" message:self.alertContent delegate:self cancelButtonTitle:@"好的" otherButtonTitles: nil];
+        self.alertContent = nil;
+        [alert show];
     }
+        
 }
 
 

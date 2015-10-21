@@ -19,7 +19,7 @@
     // Do any additional setup after loading the view.
     self.navigationController.navigationBar.titleTextAttributes = @{UITextAttributeTextColor: [UIColor orangeColor],
                                                                     UITextAttributeFont : [UIFont boldSystemFontOfSize:18]};
-    self.title = @"调试金融活动说明";
+    self.title = @"挑食金融活动说明";
     
     [self.navigationController.navigationBar setTintColor:[UIColor redColor]];
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor orangeColor],NSFontAttributeName : [UIFont systemFontOfSize:18]}];
@@ -44,8 +44,8 @@
         [regedit setImage:HTImage(@"timing") WithTouchBlock:^(NSIndexPath *indexPath) {
             //  设置密码
             BaseDetailViewController *regedit = [[BaseDetailViewController alloc] init];
-            regedit.title = @"绑定银行卡";
-            regedit.alertContent = @"恭喜您10000元理财体验金已到账，体验投资后即可获得精品羊肉一份";
+            regedit.title = @"关联银行卡";
+            regedit.alertContent = @"精品羊肉券已放入您的挑食账户中，可供下次购买使用";
             [regedit setImage:HTImage(@"jiesuanbangka") WithTouchBlock:^(NSIndexPath *indexPath) {
                 
                         

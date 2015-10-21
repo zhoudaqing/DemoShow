@@ -21,7 +21,7 @@
     
     self.title = @"挑食金融活动转盘";
     
-    UIImageView *backImage = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, APPScreenWidth, APPScreenHeight)];
+    UIImageView *backImage = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, APPScreenWidth, APPScreenHeight- 44)];
     [backImage setImage:HTImage(@"dazhuanpan")];
     [self.view addSubview:backImage];
     backImage.userInteractionEnabled = YES;

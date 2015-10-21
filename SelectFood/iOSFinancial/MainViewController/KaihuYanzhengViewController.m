@@ -28,6 +28,7 @@
     [self.view addSubview:backImage];
     backImage.userInteractionEnabled = YES;
     [backImage addGestureRecognizer:self.tap];
+
     
 }
 

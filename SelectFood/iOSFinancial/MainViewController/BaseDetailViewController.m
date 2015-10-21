@@ -49,7 +49,7 @@
 
         [self.navigationController popToRootViewControllerAnimated:YES];
     }
-    if ([alertView.message isEqualToString:@"恭喜您10000元理财体验金已到账，体验投资后即可获得精品羊肉一份"]) {
+    if ([alertView.message isEqualToString:@"精品羊肉券已放入您的挑食账户中，可供下次购买使用"]) {
         _cellToucheBlock(_index);
 
     }
@@ -93,7 +93,7 @@
        
     }else{
         
-        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"" message:self.alertContent delegate:self cancelButtonTitle:@"好的" otherButtonTitles: nil];
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"" message:self.alertContent delegate:self cancelButtonTitle:@"我知道了" otherButtonTitles: nil];
         self.alertContent = nil;
         [alert show];
     }

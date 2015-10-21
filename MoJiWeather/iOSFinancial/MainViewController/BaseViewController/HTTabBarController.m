@@ -51,16 +51,16 @@
 - (NSArray *)subViewControllers
 {
     FirstViewController *store = [[FirstViewController alloc]init];
-    store.tabBarItem = [self tabbarItemWithTitle:@"首页" andItemImage:@"tabbar_home"];
+    store.tabBarItem = [self tabbarItemWithTitle:@"首页" andItemImage:@"tabbar_weather"];
     HTNavigationController *nav1 = [[HTNavigationController alloc] initWithRootViewController:store];
     
     FirstViewController *cart = [[FirstViewController alloc]init];
-    cart.tabBarItem = [self tabbarItemWithTitle:@"订单" andItemImage:@"tabbar_itemlist"];
+    cart.tabBarItem = [self tabbarItemWithTitle:@"订单" andItemImage:@"tabbar_live"];
     HTNavigationController *nav2 = [[HTNavigationController alloc] initWithRootViewController:cart];
     nav2.isContentLight = YES;
     
     FirstViewController *find = [[FirstViewController alloc]init];
-    find.tabBarItem = [self tabbarItemWithTitle:@"我的" andItemImage:@"tabbar_usercenter"];
+    find.tabBarItem = [self tabbarItemWithTitle:@"我的" andItemImage:@"tabbar_profile"];
     HTNavigationController *nav3 = [[HTNavigationController alloc] initWithRootViewController:find];
     nav3.isContentLight = YES;
     
@@ -69,8 +69,8 @@
 
 - (UITabBarItem *)tabbarItemWithTitle:(NSString *)title andItemImage:(NSString *)imageStr
 {
-    UIImage *selectImage = HTImage(HTSTR(@"%@H", imageStr));
-    UIImage *normalImage = HTImage(HTSTR(@"%@", imageStr));
+    UIImage *selectImage = HTImage(HTSTR(@"%@_select", imageStr));
+    UIImage *normalImage = HTImage(HTSTR(@"%@_normal", imageStr));
     UITabBarItem *tabBarItem = [[UITabBarItem alloc] initWithTitle:title image:normalImage selectedImage:selectImage];
     
     return tabBarItem;

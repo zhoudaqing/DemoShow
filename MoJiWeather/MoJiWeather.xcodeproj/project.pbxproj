@@ -310,7 +310,7 @@
 		92E6A0071BD0FAB8001C378A /* PersonalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalViewController.m; sourceTree = "<group>"; };
 		92EB85461AC5132700A80E03 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = iOSFinancial/Singleton/User.h; sourceTree = SOURCE_ROOT; };
 		92EB85471AC5132700A80E03 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = iOSFinancial/Singleton/User.m; sourceTree = SOURCE_ROOT; };
-		92EB857E1AC5517400A80E03 /* SelectFood-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SelectFood-Prefix.pch"; sourceTree = "<group>"; };
+		92EB857E1AC5517400A80E03 /* MoJiWeather-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MoJiWeather-Prefix.pch"; sourceTree = "<group>"; };
 		92EB85831AC561C800A80E03 /* HTTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTabBarController.h; sourceTree = "<group>"; };
 		92EB85841AC561C800A80E03 /* HTTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTabBarController.m; sourceTree = "<group>"; };
 		92EB85861AC561E400A80E03 /* HTNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTNavigationController.h; sourceTree = "<group>"; };
@@ -678,7 +678,7 @@
 		92D2A2741AC3DF7B00C9A4AE = {
 			isa = PBXGroup;
 			children = (
-				92D2A27F1AC3DF7B00C9A4AE /* SelectFood */,
+				92D2A27F1AC3DF7B00C9A4AE /* MojiWeather */,
 				92D2A27E1AC3DF7B00C9A4AE /* Products */,
 				C07E7AA21A6E1B519C8D5668 /* Pods */,
 				BEE744C818A786CA6D70AC54 /* Frameworks */,
@@ -693,11 +693,11 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		92D2A27F1AC3DF7B00C9A4AE /* SelectFood */ = {
+		92D2A27F1AC3DF7B00C9A4AE /* MojiWeather */ = {
 			isa = PBXGroup;
 			children = (
 				92D2A2901AC3DF7B00C9A4AE /* Images.xcassets */,
-				92EB857E1AC5517400A80E03 /* SelectFood-Prefix.pch */,
+				92EB857E1AC5517400A80E03 /* MoJiWeather-Prefix.pch */,
 				92D2A2841AC3DF7B00C9A4AE /* AppDelegate.h */,
 				92D2A2851AC3DF7B00C9A4AE /* AppDelegate.m */,
 				9268127C1AE8CE5700FAB0A2 /* Config */,
@@ -709,7 +709,7 @@
 				92D2A2AC1AC3E31500C9A4AE /* ThirdPart */,
 				92D2A2801AC3DF7B00C9A4AE /* Supporting Files */,
 			);
-			name = SelectFood;
+			name = MojiWeather;
 			path = iOSFinancial;
 			sourceTree = "<group>";
 		};

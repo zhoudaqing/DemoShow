@@ -14,5 +14,12 @@
 
 @implementation FirstViewController
 
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+  
+    
+}
 
 @end

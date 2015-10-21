@@ -41,7 +41,7 @@
 
 -(void)showgoodsList
 {
-    UIAlertView *alter = [[UIAlertView alloc] initWithTitle:@"" message:@"认证成功" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
+    UIAlertView *alter = [[UIAlertView alloc] initWithTitle:@"" message:@"已激活，立即抽奖！" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
     alter.delegate = self;
     [alter show];
 }

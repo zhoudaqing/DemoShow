@@ -80,7 +80,7 @@
                 case 1:
                 {
                     cell.imageView.image = [UIImage imageNamed:@"yzh"];
-                    cell.textLabel.text = @"云账户理财";
+                    cell.textLabel.text = @"挑食金融";
                 }
                     break;
                 case 2:

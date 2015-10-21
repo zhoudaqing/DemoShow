@@ -19,7 +19,7 @@
     // Do any additional setup after loading the view.
     self.navigationController.navigationBar.titleTextAttributes = @{UITextAttributeTextColor: [UIColor orangeColor],
                                                                     UITextAttributeFont : [UIFont boldSystemFontOfSize:18]};
-    self.title = @"活动说明";
+    self.title = @"调试金融活动说明";
     
     [self.navigationController.navigationBar setTintColor:[UIColor redColor]];
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor orangeColor],NSFontAttributeName : [UIFont systemFontOfSize:18]}];

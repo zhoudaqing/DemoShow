@@ -19,7 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"活动转盘";
+    self.title = @"挑食金融活动转盘";
     
     UIImageView *backImage = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, APPScreenWidth, APPScreenHeight)];
     [backImage setImage:HTImage(@"dazhuanpan")];
@@ -27,12 +27,12 @@
     backImage.userInteractionEnabled = YES;
     [backImage addGestureRecognizer:self.tap];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tongzhi) name:@"huodongtongzhi" object:nil];
-    self.notice = @"先去完成实名认证";
+    self.notice = @"激活挑食金融服务即可参加抽奖";
 
 }
 - (void)tongzhi
 {
-    self.notice = @"恭喜您获得50元优惠券~！";
+    self.notice = @"恭喜您抽中50元优惠券，点击『立即结算』即可使用";
 }
 - (UITapGestureRecognizer *)tap
 {
@@ -44,7 +44,7 @@
 
 -(void)showgoodsList
 {
-    UIAlertView *alter = [[UIAlertView alloc] initWithTitle:@"" message:self.notice delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
+    UIAlertView *alter = [[UIAlertView alloc] initWithTitle:@"" message:self.notice delegate:nil cancelButtonTitle:@"好的" otherButtonTitles:nil];
     alter.delegate = self;
     [alter show];
 }

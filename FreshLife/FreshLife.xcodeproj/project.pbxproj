@@ -95,6 +95,7 @@
 		92943C3C1BCF7FAE005B44CB /* BaseDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92943C3B1BCF7FAE005B44CB /* BaseDetailViewController.m */; settings = {ASSET_TAGS = (); }; };
 		92943C3F1BCF834B005B44CB /* GoodDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92943C3E1BCF834B005B44CB /* GoodDetailViewController.m */; settings = {ASSET_TAGS = (); }; };
 		9296B25C1B70C9680053B157 /* ShareTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9296B25B1B70C9670053B157 /* ShareTitleView.m */; };
+		92A1F6041BD8F43D00EF1493 /* ActionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92A1F6031BD8F43D00EF1493 /* ActionViewController.m */; settings = {ASSET_TAGS = (); }; };
 		92A41EE31B26D4030036DC58 /* HTADScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 92A41EE21B26D4030036DC58 /* HTADScrollView.m */; };
 		92B47FFE1B6F611C00AF9A2D /* UIBarButtonItem+Badge.m in Sources */ = {isa = PBXBuildFile; fileRef = 92B47FFD1B6F611C00AF9A2D /* UIBarButtonItem+Badge.m */; };
 		92B480021B6F664B00AF9A2D /* XMBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 92B480011B6F664B00AF9A2D /* XMBadgeView.m */; };
@@ -293,6 +294,8 @@
 		92943C3E1BCF834B005B44CB /* GoodDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodDetailViewController.m; sourceTree = "<group>"; };
 		9296B25A1B70C9670053B157 /* ShareTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareTitleView.h; sourceTree = "<group>"; };
 		9296B25B1B70C9670053B157 /* ShareTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareTitleView.m; sourceTree = "<group>"; };
+		92A1F6021BD8F43D00EF1493 /* ActionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionViewController.h; sourceTree = "<group>"; };
+		92A1F6031BD8F43D00EF1493 /* ActionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionViewController.m; sourceTree = "<group>"; };
 		92A41EE11B26D4030036DC58 /* HTADScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTADScrollView.h; sourceTree = "<group>"; };
 		92A41EE21B26D4030036DC58 /* HTADScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTADScrollView.m; sourceTree = "<group>"; };
 		92B47FFC1B6F611C00AF9A2D /* UIBarButtonItem+Badge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Badge.h"; sourceTree = "<group>"; };
@@ -699,6 +702,15 @@
 			name = DetailViewController;
 			sourceTree = "<group>";
 		};
+		92A1F6011BD8F41700EF1493 /* ActionView */ = {
+			isa = PBXGroup;
+			children = (
+				92A1F6021BD8F43D00EF1493 /* ActionViewController.h */,
+				92A1F6031BD8F43D00EF1493 /* ActionViewController.m */,
+			);
+			name = ActionView;
+			sourceTree = "<group>";
+		};
 		92A41EE01B26D4030036DC58 /* HTADScrollView */ = {
 			isa = PBXGroup;
 			children = (
@@ -836,6 +848,7 @@
 		92E69FFC1BD0F9F8001C378A /* CustomClientViewController */ = {
 			isa = PBXGroup;
 			children = (
+				92A1F6011BD8F41700EF1493 /* ActionView */,
 				92E6A0001BD0FA67001C378A /* CloudTabbarController.h */,
 				92E6A0011BD0FA67001C378A /* CloudTabbarController.m */,
 				92E69FFD1BD0FA2F001C378A /* CloudAccountViewController.h */,
@@ -1100,6 +1113,7 @@
 				922CB5A81AC9789700C4A438 /* MJRefreshHeaderView.m in Sources */,
 				921DD2F61AEB67AF0004251F /* UIView+Prompting.m in Sources */,
 				92F559111AE9F3F10074A52A /* HTVersionManager.m in Sources */,
+				92A1F6041BD8F43D00EF1493 /* ActionViewController.m in Sources */,
 				92D2A2861AC3DF7B00C9A4AE /* AppDelegate.m in Sources */,
 				9217C91E1BC6659500938A9E /* JTSAnimatedGIFUtility.m in Sources */,
 				921DD2C91AEB67310004251F /* PlaceHolderTextView.m in Sources */,

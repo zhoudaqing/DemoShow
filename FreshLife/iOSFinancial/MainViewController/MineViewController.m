@@ -185,7 +185,6 @@
     return 10;
 }
 
-
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.section == 0) {
@@ -204,6 +203,15 @@
     if ( indexPath.section ==2 && indexPath.row == 0) {
         CloudTabbarController *VC = [[CloudTabbarController alloc]init];
         [self.navigationController presentViewController:VC animated:YES completion:nil];
+        
+    }else {
+        
+        CloudTabbarController *vc = [[CloudTabbarController alloc] init];
+        vc.actionImage = HTImage(@"xianLifeActionPage");
+        vc.showType = ShowTypeInvest;
+        [vc refreshView];
+        
+        [self presentViewController:vc animated:YES completion:nil];
     }
     
 }

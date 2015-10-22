@@ -18,6 +18,43 @@
 
 @implementation CloudTabbarController
 
+- (void)refreshView
+{
+    //  投资
+    if (_showType == ShowTypeInvest) {
+        
+        //  选中投资页面
+        self.selectedIndex = 1;
+        
+        //  有广告页
+        if (_actionImage) {
+            [self showActionPageViewController];
+            
+        }
+        
+    }else {
+        
+        
+    }
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+}
+
+- (void)showActionPageViewController
+{
+    BaseDetailViewController *action = [[BaseDetailViewController alloc] init];
+    
+    __weak BaseDetailViewController *weakAction = action;
+    [action setImage:_actionImage WithTouchBlock:^(NSIndexPath *indexPath) {
+        [weakAction dismissViewController];
+    }];
+    
+    [self presentViewController:action animated:NO completion:nil];
+}
 
 - (NSArray *)subViewControllers
 {

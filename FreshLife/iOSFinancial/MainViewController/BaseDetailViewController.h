@@ -18,4 +18,8 @@
 
 - (void)setImageBaoyouhuodong:(UIImage *)image;
 
+- (void)setAlerConten:(NSString *)conten withLeftBtn:(NSString *)leftTitle rightBtn:(NSString *)rightTitle isPush:(BOOL)ispu;
+
+- (void)shouquanWith:(NSString *)content;
+
 @end

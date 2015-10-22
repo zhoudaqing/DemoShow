@@ -42,6 +42,15 @@
 
 - (void)alertView:(UIAlertView *)alertView willDismissWithButtonIndex:(NSInteger)buttonIndex
 {
+    CloudTabbarController *tabbar = (CloudTabbarController *)self.navigationController.tabBarController;
+    
+    if (tabbar.showType == ShowTypeInvest) {
+        //  获得20元现金券
+        [self.tabBarController dismissViewControllerAnimated:YES completion:nil];
+        return;
+    }
+    
+    
     NSLog(@"%ld",(long)buttonIndex);
     if (buttonIndex == 1){
         if ([alertView.message isEqualToString:@"恭喜您已获得鲜life满69元即可免运费的资格，继续完成投资即可活动20元优惠券"]) {
@@ -49,8 +58,6 @@
             CloudTabbarController *tab = [[CloudTabbarController alloc] init];
             tab.selectedIndex = 1;
             [self presentViewController:tab animated:YES completion:nil];
-
-            
         }
         
     }else{
@@ -61,7 +68,7 @@
             if ([alertView.message isEqualToString:@"恭喜您已获得鲜life满69元即可免运费的资格，继续完成投资即可活动20元优惠券"]) {
                 [self.navigationController popToViewController:self.navigationController.viewControllers[2] animated:YES];
             }else{
-        _cellToucheBlock(_index);
+                _cellToucheBlock(_index);
             }
         }
     }

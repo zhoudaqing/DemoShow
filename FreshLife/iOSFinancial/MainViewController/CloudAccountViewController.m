@@ -48,7 +48,6 @@
     if (!tabbar.isLogin) {
         
         //  验证真实姓名
-        
         BaseDetailViewController *regedit = [[BaseDetailViewController alloc] init];
         regedit.title = @"验证真实姓名";
         [regedit setImage:HTImage(@"validateUserName") WithTouchBlock:^(NSIndexPath *indexPath) {

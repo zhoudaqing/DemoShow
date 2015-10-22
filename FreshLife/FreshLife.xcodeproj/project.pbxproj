@@ -681,8 +681,6 @@
 		92943C351BCF6133005B44CB /* StoreViewController */ = {
 			isa = PBXGroup;
 			children = (
-				92943C3A1BCF7FAE005B44CB /* BaseDetailViewController.h */,
-				92943C3B1BCF7FAE005B44CB /* BaseDetailViewController.m */,
 				92943C361BCF6149005B44CB /* DetailViewController */,
 				92FBFC8A1BCE48BB00F479F4 /* StoreSelectionControllers */,
 				92FBFC831BCE3B1400F479F4 /* StoreViewController.h */,
@@ -848,6 +846,8 @@
 		92E69FFC1BD0F9F8001C378A /* CustomClientViewController */ = {
 			isa = PBXGroup;
 			children = (
+				92943C3A1BCF7FAE005B44CB /* BaseDetailViewController.h */,
+				92943C3B1BCF7FAE005B44CB /* BaseDetailViewController.m */,
 				92A1F6011BD8F41700EF1493 /* ActionView */,
 				92E6A0001BD0FA67001C378A /* CloudTabbarController.h */,
 				92E6A0011BD0FA67001C378A /* CloudTabbarController.m */,

@@ -206,12 +206,32 @@
         
     }else {
         
-        CloudTabbarController *vc = [[CloudTabbarController alloc] init];
-        vc.actionImage = HTImage(@"xianLifeActionPage");
-        vc.showType = ShowTypeInvest;
-        [vc refreshView];
+        __weakSelf;
         
-        [self presentViewController:vc animated:YES completion:nil];
+        //  优惠券页面
+        BaseDetailViewController *detail = [[BaseDetailViewController alloc] init];
+        detail.title = @"优惠券";
+        [detail setImage:HTImage(@"youhui") WithTouchBlock:^(NSIndexPath *indexPath) {
+            
+            BaseDetailViewController *detail = [[BaseDetailViewController alloc] init];
+            detail.title = @"活动页面";
+            [detail setImage:HTImage(@"xianjinquan") WithTouchBlock:^(NSIndexPath *indexPath) {
+                
+                CloudTabbarController *vc = [[CloudTabbarController alloc] init];
+                vc.actionPrompt = @"您已获得鲜Life20元优惠券,可在结算支付订单时抵现金使用";
+                vc.showType = ShowTypeInvest;
+                [vc refreshView];
+                
+                [weakSelf presentViewController:vc animated:YES completion:^{
+                    [weakSelf.navigationController popViewControllerAnimated:NO];
+                }];
+            }];
+            
+            [weakSelf.navigationController pushViewController:detail animated:YES];
+        }];
+        
+        detail.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:detail animated:YES];
     }
     
 }

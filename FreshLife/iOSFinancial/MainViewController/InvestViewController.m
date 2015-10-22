@@ -46,27 +46,69 @@
     CloudTabbarController *tabbar = (CloudTabbarController *)self.navigationController.tabBarController;
     if (!tabbar.isLogin) {
         
-        //  验证真实姓名
-        
-        BaseDetailViewController *regedit = [[BaseDetailViewController alloc] init];
-        regedit.title = @"验证真实姓名";
-        [regedit setImage:HTImage(@"validateUserName") WithTouchBlock:^(NSIndexPath *indexPath) {
+        BaseDetailViewController *buy = [[BaseDetailViewController alloc] init];
+        buy.title = @"买入基金";
+        [buy setImage:HTImage(@"buyStep0") WithTouchBlock:^(NSIndexPath *indexPath) {
             
-            //  设置密码
+            //  验证真实姓名
             BaseDetailViewController *regedit = [[BaseDetailViewController alloc] init];
-            regedit.title = @"设置密码";
-            [regedit setImage:HTImage(@"setPass") WithTouchBlock:^(NSIndexPath *indexPath) {
+            regedit.title = @"验证真实姓名";
+            [regedit setImage:HTImage(@"validateUserName") WithTouchBlock:^(NSIndexPath *indexPath) {
                 
-                //  绑定银行卡
+                //  设置密码
                 BaseDetailViewController *regedit = [[BaseDetailViewController alloc] init];
-                regedit.title = @"绑定银行卡";
-                [regedit setImage:HTImage(@"setAccount") WithTouchBlock:^(NSIndexPath *indexPath) {
+                regedit.title = @"设置密码";
+                [regedit setImage:HTImage(@"setPass") WithTouchBlock:^(NSIndexPath *indexPath) {
                     
+                    //  绑定银行卡
+                    BaseDetailViewController *regedit = [[BaseDetailViewController alloc] init];
+                    regedit.title = @"绑定银行卡";
+                    [regedit setImage:HTImage(@"setAccount") WithTouchBlock:^(NSIndexPath *indexPath) {
+                        
+                        //  登陆完成
+                        CloudTabbarController *tabbar = (CloudTabbarController *)self.navigationController.tabBarController;
+                        tabbar.isLogin = YES;
+                        
+                        BaseDetailViewController *regedit = [[BaseDetailViewController alloc] init];
+                        regedit.title = @"买入金额";
+                        [regedit setImage:HTImage(@"buyStep1") WithTouchBlock:^(NSIndexPath *indexPath) {
+                            
+                            BaseDetailViewController *regedit = [[BaseDetailViewController alloc] init];
+                            regedit.title = @"输入验证码";
+                            [regedit setImage:HTImage(@"buyStep2") WithTouchBlock:^(NSIndexPath *indexPath) {
+                                
+                                BaseDetailViewController *regedit = [[BaseDetailViewController alloc] init];
+                                regedit.title = @"输入完成";
+                                [regedit setAlerConten:@"恭喜您已获得50元挑食现金券" withLeftBtn:@"查看" rightBtn:@"我知道了" isPush:YES];
+                                [regedit setImage:HTImage(@"buyStep3") WithTouchBlock:^(NSIndexPath *indexPath) {
+                                    
+                                    weakSelf.tabBarController.selectedIndex = 0;
+                                    
+                                    [weakSelf.navigationController popToRootViewControllerAnimated:YES];
+                                    
+                                }];
+                                
+                                [weakSelf.navigationController pushViewController:regedit animated:YES];
+                            }];
+                            
+                            [weakSelf.navigationController pushViewController:regedit animated:YES];
+                            
+                        }];
+                        
+                        [weakSelf.navigationController pushViewController:regedit animated:YES];
+                        
+                    }];
+                    
+                    [weakSelf.navigationController pushViewController:regedit animated:YES];
+                    
+<<<<<<< HEAD
                     //  登录完成
                     [weakSelf doBuyStep];
                     
                     CloudTabbarController *tabbar = (CloudTabbarController *)self.navigationController.tabBarController;
                     tabbar.isLogin = YES;
+=======
+>>>>>>> 7679c3a24fec9c0072d9a195e2ccffe6277cc65a
                 }];
                 
                 [weakSelf.navigationController pushViewController:regedit animated:YES];
@@ -77,8 +119,8 @@
             
         }];
         
-        regedit.hidesBottomBarWhenPushed = YES;
-        [weakSelf.navigationController pushViewController:regedit animated:YES];
+        buy.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:buy animated:YES];
         
     }else {
         

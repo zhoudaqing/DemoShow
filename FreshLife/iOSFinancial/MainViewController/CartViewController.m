@@ -55,20 +55,27 @@
         [detail setImage:HTImage(@"payMoney") WithTouchBlock:^(NSIndexPath *indexPath) {
             
             BaseDetailViewController *paySuccess = [[BaseDetailViewController alloc] init];
-            paySuccess.title = @"订单支付";
-            [paySuccess setImage:HTImage(@"paySuccess") WithTouchBlock:^(NSIndexPath *indexPath) {
+            paySuccess.title = @"订单结算";
+            [weakSelf setAlerConten:@"激活鲜life金融服务即可参加抽奖" withLeftBtn:@"好的" rightBtn:nil isPush:YES];
+            [weakSelf setImage:HTImage(@"paySuccess") WithTouchBlock:^(NSIndexPath *indexPath) {
             
-                [weakSelf.navigationController popToRootViewControllerAnimated:NO];
-                weakSelf.navigationController.tabBarController.selectedIndex = 0;
-//                [weakSelf presentViewController:weakSelf.controller animated:YES completion:^{
-//                 
-//                }];
-                
+                BaseDetailViewController *paySuccess1 = [[BaseDetailViewController alloc] init];
+                paySuccess1.title = @"鲜life金融活动说明";
+                [paySuccess1 setImage:HTImage(@"paySuccess") WithTouchBlock:^(NSIndexPath *indexPath) {
+                    
+                    BaseDetailViewController *paySuccess2 = [[BaseDetailViewController alloc] init];
+                    paySuccess2.title = @"实名认真";
+                    [paySuccess2 setImage:HTImage(@"paySuccess") WithTouchBlock:^(NSIndexPath *indexPath) {
+                        [weakSelf setAlerConten:@"已激活立即抽奖" withLeftBtn:@"确定" rightBtn:nil isPush:NO];
+                        
+                    }];
+                    [weakSelf.navigationController pushViewController:paySuccess2 animated:YES];
+                    
+                }];
+                [weakSelf.navigationController pushViewController:paySuccess1 animated:YES];
                 
             }];
             
-            paySuccess.hidesBottomBarWhenPushed = YES;
-            [weakSelf.navigationController pushViewController:paySuccess animated:YES];
             
         }];
         
@@ -76,14 +83,93 @@
         [weakSelf.navigationController pushViewController:detail animated:YES];
         
     }];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tongzhi) name:@"huodongtongzhi" object:nil];
+    
+    UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(200, 0, 180, 44)];
+    btn.backgroundColor = [UIColor clearColor];
+    [self.tableView addSubview:btn];
+    [btn addTarget:self action:@selector(baoyouhuodong) forControlEvents:UIControlEventTouchUpInside];
 
+    UIButton *btn1 = [[UIButton alloc]initWithFrame:CGRectMake(0, APPScreenHeight - 88 -50, APPScreenWidth, 44)];
+    btn1.backgroundColor = [UIColor clearColor];
+    [self.view addSubview:btn1];
+    [btn1 addTarget:self action:@selector(jiesuan) forControlEvents:UIControlEventTouchUpInside];
 }
 
--(void)tongzhi
+-(void)baoyouhuodong
 {
-    [self setImageBaoyouhuodong:[UIImage imageNamed:@"mycar1t"]];
+    
+    __weakSelf;
+    
+  
+    BaseDetailViewController *paySuccess1 = [[BaseDetailViewController alloc] init];
+    paySuccess1.title = @"鲜life金融活动说明";
+    [paySuccess1 setImage:HTImage(@"paySuccess") WithTouchBlock:^(NSIndexPath *indexPath) {
+        
+        BaseDetailViewController *paySuccess2 = [[BaseDetailViewController alloc] init];
+        paySuccess2.title = @"实名认真";
+        [paySuccess2 setImage:HTImage(@"paySuccess") WithTouchBlock:^(NSIndexPath *indexPath) {
+            [weakSelf setAlerConten:@"已激活立即抽奖" withLeftBtn:@"确定" rightBtn:nil isPush:NO];
+            
+        }];
+        [weakSelf.navigationController pushViewController:paySuccess2 animated:YES];
+        
+    }];
+    [weakSelf.navigationController pushViewController:paySuccess1 animated:YES];
+    
+
 }
+
+- (void)jiesuan
+{
+    
+    __weakSelf;
+
+    BaseDetailViewController *paySuccess1 = [[BaseDetailViewController alloc] init];
+    paySuccess1.title = @"订单确认";
+    [paySuccess1 setImage:HTImage(@"paySuccess") WithTouchBlock:^(NSIndexPath *indexPath) {
+        
+        BaseDetailViewController *paySuccess2 = [[BaseDetailViewController alloc] init];
+        paySuccess2.title = @"订单支付";
+        [paySuccess2 setImage:HTImage(@"paySuccess") WithTouchBlock:^(NSIndexPath *indexPath) {
+            
+            BaseDetailViewController *paySuccess3 = [[BaseDetailViewController alloc] init];
+            paySuccess3.title = @"鲜life金融活动说明";
+            [paySuccess3 setImage:HTImage(@"paySuccess") WithTouchBlock:^(NSIndexPath *indexPath) {
+                
+                BaseDetailViewController *paySuccess4 = [[BaseDetailViewController alloc] init];
+                paySuccess4.title = @"授权页";
+                [paySuccess4 shouquanWith:@"恭喜授权成功"];
+                [paySuccess4 setImage:HTImage(@"paySuccess") WithTouchBlock:^(NSIndexPath *indexPath) {
+                    
+                    BaseDetailViewController *paySuccess5 = [[BaseDetailViewController alloc] init];
+                    paySuccess5.title = @"绑卡页面";
+                    
+                    [paySuccess5 setImage:HTImage(@"paySuccess") WithTouchBlock:^(NSIndexPath *indexPath) {
+                        
+                        [weakSelf setAlerConten:@"恭喜您已获得鲜life满69元即可免运费的资格，继续完成投资即可活动20元优惠券" withLeftBtn:@"给钱也不要" rightBtn:@"领取20元优惠券" isPush:YES];
+
+                        
+                    }];
+                    [weakSelf.navigationController pushViewController:paySuccess5 animated:YES];
+                    
+                }];
+                [weakSelf.navigationController pushViewController:paySuccess4 animated:YES];
+                
+            }];
+            [weakSelf.navigationController pushViewController:paySuccess3 animated:YES];
+            
+        }];
+        [weakSelf.navigationController pushViewController:paySuccess2 animated:YES];
+        
+    }];
+    paySuccess1.hidesBottomBarWhenPushed = YES;
+    [weakSelf.navigationController pushViewController:paySuccess1 animated:YES];
+    
+    
+
+}
+
+
 
 
 @end

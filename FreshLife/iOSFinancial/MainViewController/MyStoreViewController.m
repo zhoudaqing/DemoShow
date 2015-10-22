@@ -27,7 +27,17 @@
     [super viewWillAppear:animated];
     
     self.isStyleLight = YES;
+    
+    [self.navigationController.navigationBar setBarTintColor:HTWhiteColor];
+    [self.navigationController.navigationBar setTintColor:[UIColor jt_barTintColor]];
+    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor blackColor],NSFontAttributeName : [UIFont systemFontOfSize:18]}];
+    
     self.navigationController.navigationBarHidden = YES;
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
 }
 
 - (void)viewDidLoad {
@@ -87,10 +97,19 @@
 
 - (void)pushYanshiDemo
 {
-    ShengjidianpuViewController *vc = [[ShengjidianpuViewController alloc]init];
+    __weakSelf;
+    BaseDetailViewController *update = [[BaseDetailViewController alloc] init];
+    update.title = @"关于升级店铺";
+    [update setImage:HTImage(@"buyDetail") WithTouchBlock:^(NSIndexPath *indexPath) {
+        
+        CloudTabbarController *VC = [[CloudTabbarController alloc]init];
+        VC.showType = ShowTypeInvest;
+        VC.actionPrompt = @"恭喜您，您已获得鲜Life赠送的10个货架，可在『我的店』里使用";
+        [weakSelf.navigationController presentViewController:VC animated:YES completion:nil];
+        
+    }];
     
-    [vc setHidesBottomBarWhenPushed:YES];
-    [self.navigationController pushViewController:vc animated:YES];
+    [self.navigationController pushViewController:update animated:YES];
     
 }
 

@@ -37,7 +37,7 @@
         _promptView = [[UIView alloc] initWithFrame:self.view.bounds];
         _promptView.backgroundColor = HTClearColor;
         UIImageView *imageView = [[UIImageView alloc]initWithFrame:_promptView.bounds];
-        imageView.image = HTImage(@"zhezhao");
+        imageView.image = HTImage(@"zhezhao");//instruction
         [_promptView addSubview:imageView];
 //        UIView *alphaView = [[UIView alloc] initWithFrame:self.view.bounds];
 //        alphaView.backgroundColor = HTBlackColor;

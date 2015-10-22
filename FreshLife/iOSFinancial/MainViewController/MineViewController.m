@@ -88,7 +88,7 @@
             switch (indexPath.row) {
                 case 0:
                 {
-                    cell.textLabel.text = @"我的理财";
+                    cell.textLabel.text = @"鲜理财";
                     cell.imageView.image = [UIImage imageNamed:@"yzh"];
                     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
                 }
@@ -202,6 +202,7 @@
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
     if ( indexPath.section ==2 && indexPath.row == 0) {
         CloudTabbarController *VC = [[CloudTabbarController alloc]init];
+        [VC showPromptView];
         [self.navigationController presentViewController:VC animated:YES completion:nil];
         
     }else {
@@ -209,13 +210,23 @@
         __weakSelf;
         
         //  优惠券页面
-        BaseDetailViewController *detail = [[BaseDetailViewController alloc] init];
-        detail.title = @"优惠券";
-        [detail setImage:HTImage(@"youhui") WithTouchBlock:^(NSIndexPath *indexPath) {
+        BaseDetailViewController *detail1 = [[BaseDetailViewController alloc] init];
+        
+        __weak BaseDetailViewController *weakBase = detail1;
+        detail1.title = @"优惠券";
+        [detail1 setImage:HTImage(@"youhuiweiLingQu") WithTouchBlock:^(NSIndexPath *indexPath) {
+            
+            if (weakBase.isOpen) {
+                [weakBase showAlert:@"您已经领取了优惠券"];
+                return;
+            }
             
             BaseDetailViewController *detail = [[BaseDetailViewController alloc] init];
             detail.title = @"活动页面";
-            [detail setImage:HTImage(@"xianjinquan") WithTouchBlock:^(NSIndexPath *indexPath) {
+            [detail setImage:HTImage(@"xianjinQuan") WithTouchBlock:^(NSIndexPath *indexPath) {
+                
+                weakBase.isOpen = YES;
+                [weakBase refreshView:HTImage(@"youhuiLingQu")];
                 
                 CloudTabbarController *vc = [[CloudTabbarController alloc] init];
                 vc.actionPrompt = @"您已获得鲜Life20元优惠券,可在结算支付订单时抵现金使用";
@@ -230,8 +241,8 @@
             [weakSelf.navigationController pushViewController:detail animated:YES];
         }];
         
-        detail.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:detail animated:YES];
+        detail1.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:detail1 animated:YES];
     }
     
 }

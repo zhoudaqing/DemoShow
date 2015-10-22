@@ -27,7 +27,7 @@
     [self.tableView reloadData];
 }
 
-- (void)setImageBaoyouhuodong:(UIImage *)image
+- (void)refreshView:(UIImage *)image
 {
     self.contentImage = image;
     [self.tableView reloadData];

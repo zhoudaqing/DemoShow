@@ -146,7 +146,7 @@
 
 - (NSString *)title
 {
-    return @"商品列表";
+    return @"-";
 }
 
 @end

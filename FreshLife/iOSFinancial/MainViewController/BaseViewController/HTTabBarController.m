@@ -70,6 +70,7 @@
     MyStoreViewController *myStore = [[MyStoreViewController alloc]init];
     myStore.tabBarItem = [self tabbarItemWithTitle:@"我的店" andItemImage:@"maishoudian_icon"];
     HTNavigationController *nav4 = [[HTNavigationController alloc] initWithRootViewController:myStore];
+    nav4.isContentLight = YES;
     
     MineViewController *mine = [[MineViewController alloc]init];
     mine.tabBarItem = [self tabbarItemWithTitle:@"我的" andItemImage:@"wode_icon"];

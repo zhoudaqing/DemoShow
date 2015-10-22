@@ -17,16 +17,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
     UIImageView *image = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, self.view.width, [UIScreen mainScreen].bounds.size.height)];
     [image setImage:[UIImage imageNamed:@"buyDetail"]];
     [self.view addSubview:image];
     
     self.title = @"关于升级店铺";
-    
-    [self.navigationController.navigationBar setBarTintColor:HTWhiteColor];
-    [self.navigationController.navigationBar setTintColor:[UIColor jt_barTintColor]];
-    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor blackColor],NSFontAttributeName : [UIFont systemFontOfSize:18]}];
     
     image.userInteractionEnabled = YES;
     UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, self.view.width , self.view.height)];

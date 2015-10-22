@@ -964,7 +964,7 @@
 				TargetAttributes = {
 					92D2A27C1AC3DF7B00C9A4AE = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = PUEB48NTQQ;
+						DevelopmentTeam = 3T4BLT5L4D;
 					};
 				};
 			};
@@ -1263,9 +1263,9 @@
 					"$(PROJECT_DIR)/iOSFinancial/ThirdPart/ShareSDK/Extend/SinaWeiboSDK",
 					"$(PROJECT_DIR)/iOSFinancial/ThirdPart/ShareSDK/Extend/WeChatSDK",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jiandanlicai.SelectFood;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jiandanlicai.SelectFoodAll;
 				PRODUCT_NAME = SelectFood;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "f2cb5425-7493-4750-9cbe-48301abffd34";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "armv7 armv7s arm64";
 			};
@@ -1306,9 +1306,9 @@
 					"$(PROJECT_DIR)/iOSFinancial/ThirdPart/ShareSDK/Extend/WeChatSDK",
 				);
 				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = com.jiandanlicai.SelectFood;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jiandanlicai.SelectFoodAll;
 				PRODUCT_NAME = SelectFood;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "f2cb5425-7493-4750-9cbe-48301abffd34";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "armv7 armv7s arm64";
 			};

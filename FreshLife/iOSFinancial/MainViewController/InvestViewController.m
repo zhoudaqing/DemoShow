@@ -69,46 +69,19 @@
                         CloudTabbarController *tabbar = (CloudTabbarController *)self.navigationController.tabBarController;
                         tabbar.isLogin = YES;
                         
-                        BaseDetailViewController *regedit = [[BaseDetailViewController alloc] init];
-                        regedit.title = @"买入金额";
-                        [regedit setImage:HTImage(@"buyStep1") WithTouchBlock:^(NSIndexPath *indexPath) {
-                            
-                            BaseDetailViewController *regedit = [[BaseDetailViewController alloc] init];
-                            regedit.title = @"输入验证码";
-                            [regedit setImage:HTImage(@"buyStep2") WithTouchBlock:^(NSIndexPath *indexPath) {
-                                
-                                BaseDetailViewController *regedit = [[BaseDetailViewController alloc] init];
-                                regedit.title = @"输入完成";
-                                [regedit setAlerConten:@"恭喜您已获得50元挑食现金券" withLeftBtn:@"查看" rightBtn:@"我知道了" isPush:YES];
-                                [regedit setImage:HTImage(@"buyStep3") WithTouchBlock:^(NSIndexPath *indexPath) {
-                                    
-                                    weakSelf.tabBarController.selectedIndex = 0;
-                                    
-                                    [weakSelf.navigationController popToRootViewControllerAnimated:YES];
-                                    
-                                }];
-                                
-                                [weakSelf.navigationController pushViewController:regedit animated:YES];
-                            }];
-                            
-                            [weakSelf.navigationController pushViewController:regedit animated:YES];
-                            
-                        }];
-                        
-                        [weakSelf.navigationController pushViewController:regedit animated:YES];
-                        
+                        [weakSelf doBuyStep];
+                
                     }];
-                    
-                    [weakSelf.navigationController pushViewController:regedit animated:YES];
+            
+                [weakSelf.navigationController pushViewController:regedit animated:YES];
                     
                 }];
                 
-                [weakSelf.navigationController pushViewController:regedit animated:YES];
+            [weakSelf.navigationController pushViewController:regedit animated:YES];
                 
             }];
             
             [weakSelf.navigationController pushViewController:regedit animated:YES];
-            
         }];
         
         buy.hidesBottomBarWhenPushed = YES;
@@ -120,6 +93,49 @@
     }
 }
 
+- (void)doBuyStep
+{
+    __weakSelf;
+    BaseDetailViewController *regedit = [[BaseDetailViewController alloc] init];
+    regedit.title = @"买入金额";
+    [regedit setImage:HTImage(@"buyStep1") WithTouchBlock:^(NSIndexPath *indexPath) {
+        
+        BaseDetailViewController *regedit = [[BaseDetailViewController alloc] init];
+        regedit.title = @"输入验证码";
+        [regedit setImage:HTImage(@"buyStep2") WithTouchBlock:^(NSIndexPath *indexPath) {
+            
+            BaseDetailViewController *regedit = [[BaseDetailViewController alloc] init];
+            regedit.title = @"输入完成";
+            //
+            CloudTabbarController *tabbar = (CloudTabbarController *)self.navigationController.tabBarController;
+            
+            if (tabbar.actionPrompt.length > 0) {
+                
+                if (tabbar.showType == ShowTypeInvest) {
+                    //  投资获得20元现金券
+                    [regedit setAlerConten:tabbar.actionPrompt withLeftBtn:@"我知道了" rightBtn:nil isPush:YES];
+                }else if (tabbar.showType != ShowTypeNormal) {
+                    [regedit setAlerConten:tabbar.actionPrompt withLeftBtn:@"查看" rightBtn:@"我知道了" isPush:YES];
+                }
+            }
+
+            [regedit setImage:HTImage(@"buyStep3") WithTouchBlock:^(NSIndexPath *indexPath) {
+                //  回到首页
+                [weakSelf.navigationController popToRootViewControllerAnimated:YES];
+            }];
+            
+            
+            [weakSelf.navigationController pushViewController:regedit animated:YES];
+        }];
+        
+        [weakSelf.navigationController pushViewController:regedit animated:YES];
+        
+    }];
+    
+    [weakSelf.navigationController pushViewController:regedit animated:YES];
+
+}
+
 - (void)doInvest
 {
     __weakSelf;
@@ -128,33 +144,7 @@
     regedit.title = @"买入基金";
     [regedit setImage:HTImage(@"buyStep0") WithTouchBlock:^(NSIndexPath *indexPath) {
         
-        BaseDetailViewController *regedit = [[BaseDetailViewController alloc] init];
-        regedit.title = @"买入金额";
-        [regedit setImage:HTImage(@"buyStep1") WithTouchBlock:^(NSIndexPath *indexPath) {
-            
-            BaseDetailViewController *regedit = [[BaseDetailViewController alloc] init];
-            regedit.title = @"输入验证码";
-            [regedit setImage:HTImage(@"buyStep2") WithTouchBlock:^(NSIndexPath *indexPath) {
-                
-                BaseDetailViewController *regedit = [[BaseDetailViewController alloc] init];
-                regedit.title = @"输入完成";
-                [regedit setImage:HTImage(@"buyStep3") WithTouchBlock:^(NSIndexPath *indexPath) {
-                    
-                    [weakSelf.navigationController popToRootViewControllerAnimated:YES];
-                }];
-                
-                regedit.hidesBottomBarWhenPushed = YES;
-                [weakSelf.navigationController pushViewController:regedit animated:YES];
-            }];
-            
-            regedit.hidesBottomBarWhenPushed = YES;
-            [weakSelf.navigationController pushViewController:regedit animated:YES];
-            
-        }];
-        
-        regedit.hidesBottomBarWhenPushed = YES;
-        [weakSelf.navigationController pushViewController:regedit animated:YES];
-        
+        [weakSelf doBuyStep];
     }];
     
     regedit.hidesBottomBarWhenPushed = YES;
@@ -166,4 +156,5 @@
 {
     [self dismissViewController];
 }
+
 @end

@@ -48,11 +48,10 @@
     if (!tabbar.isLogin) {
         
         //  验证真实姓名
-    
         BaseDetailViewController *regedit = [[BaseDetailViewController alloc] init];
         regedit.title = @"验证真实姓名";
         [regedit setImage:HTImage(@"validateUserName") WithTouchBlock:^(NSIndexPath *indexPath) {
-        
+            
             //  设置密码
             BaseDetailViewController *regedit = [[BaseDetailViewController alloc] init];
             regedit.title = @"设置密码";
@@ -64,19 +63,18 @@
                 [regedit setImage:HTImage(@"setAccount") WithTouchBlock:^(NSIndexPath *indexPath) {
                     
                     //  登录完成
-                    [weakSelf.navigationController popToRootViewControllerAnimated:YES];
+                    [weakSelf doBuyStep];
+                    
                     CloudTabbarController *tabbar = (CloudTabbarController *)self.navigationController.tabBarController;
                     tabbar.isLogin = YES;
                 }];
                 
-                regedit.hidesBottomBarWhenPushed = YES;
                 [weakSelf.navigationController pushViewController:regedit animated:YES];
                 
             }];
             
-            regedit.hidesBottomBarWhenPushed = YES;
             [weakSelf.navigationController pushViewController:regedit animated:YES];
-
+            
         }];
         
         regedit.hidesBottomBarWhenPushed = YES;
@@ -88,47 +86,50 @@
     }
 }
 
+
+- (void)doBuyStep
+{
+    __weakSelf;
+    BaseDetailViewController *regedit = [[BaseDetailViewController alloc] init];
+    regedit.title = @"买入金额";
+    [regedit setImage:HTImage(@"buyStep1") WithTouchBlock:^(NSIndexPath *indexPath) {
+        
+        BaseDetailViewController *regedit = [[BaseDetailViewController alloc] init];
+        regedit.title = @"输入验证码";
+        [regedit setImage:HTImage(@"buyStep2") WithTouchBlock:^(NSIndexPath *indexPath) {
+            
+            BaseDetailViewController *regedit = [[BaseDetailViewController alloc] init];
+            regedit.title = @"输入完成";
+            [regedit setImage:HTImage(@"buyStep3") WithTouchBlock:^(NSIndexPath *indexPath) {
+                
+                [weakSelf.navigationController popToRootViewControllerAnimated:YES];
+            }];
+            
+            [weakSelf.navigationController pushViewController:regedit animated:YES];
+        }];
+        
+        [weakSelf.navigationController pushViewController:regedit animated:YES];
+        
+    }];
+    
+    [weakSelf.navigationController pushViewController:regedit animated:YES];
+    
+}
+
 - (void)doInvest
 {
     __weakSelf;
-
+    
     BaseDetailViewController *regedit = [[BaseDetailViewController alloc] init];
     regedit.title = @"买入基金";
     [regedit setImage:HTImage(@"buyStep0") WithTouchBlock:^(NSIndexPath *indexPath) {
         
-        BaseDetailViewController *regedit = [[BaseDetailViewController alloc] init];
-        regedit.title = @"买入金额";
-        [regedit setImage:HTImage(@"buyStep1") WithTouchBlock:^(NSIndexPath *indexPath) {
-            
-            BaseDetailViewController *regedit = [[BaseDetailViewController alloc] init];
-            regedit.title = @"输入验证码";
-            [regedit setImage:HTImage(@"buyStep2") WithTouchBlock:^(NSIndexPath *indexPath) {
-                
-                BaseDetailViewController *regedit = [[BaseDetailViewController alloc] init];
-                regedit.title = @"输入完成";
-                [regedit setImage:HTImage(@"buyStep3") WithTouchBlock:^(NSIndexPath *indexPath) {
-                    
-                    [weakSelf.navigationController popToRootViewControllerAnimated:YES];
-                }];
-                
-                regedit.hidesBottomBarWhenPushed = YES;
-                [weakSelf.navigationController pushViewController:regedit animated:YES];
-            }];
-            
-            regedit.hidesBottomBarWhenPushed = YES;
-            [weakSelf.navigationController pushViewController:regedit animated:YES];
-            
-        }];
-        
-        regedit.hidesBottomBarWhenPushed = YES;
-        [weakSelf.navigationController pushViewController:regedit animated:YES];
-        
+        [weakSelf doBuyStep];
     }];
     
     regedit.hidesBottomBarWhenPushed = YES;
     [weakSelf.navigationController pushViewController:regedit animated:YES];
 }
-
 
 - (void)closeTabBar
 {

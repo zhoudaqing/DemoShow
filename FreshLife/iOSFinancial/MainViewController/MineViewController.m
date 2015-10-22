@@ -185,7 +185,6 @@
     return 10;
 }
 
-
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.section == 0) {
@@ -204,6 +203,35 @@
     if ( indexPath.section ==2 && indexPath.row == 0) {
         CloudTabbarController *VC = [[CloudTabbarController alloc]init];
         [self.navigationController presentViewController:VC animated:YES completion:nil];
+        
+    }else {
+        
+        __weakSelf;
+        
+        //  优惠券页面
+        BaseDetailViewController *detail = [[BaseDetailViewController alloc] init];
+        detail.title = @"优惠券";
+        [detail setImage:HTImage(@"youhui") WithTouchBlock:^(NSIndexPath *indexPath) {
+            
+            BaseDetailViewController *detail = [[BaseDetailViewController alloc] init];
+            detail.title = @"活动页面";
+            [detail setImage:HTImage(@"xianjinquan") WithTouchBlock:^(NSIndexPath *indexPath) {
+                
+                CloudTabbarController *vc = [[CloudTabbarController alloc] init];
+                vc.actionPrompt = @"您已获得鲜Life20元优惠券,可在结算支付订单时抵现金使用";
+                vc.showType = ShowTypeInvest;
+                [vc refreshView];
+                
+                [weakSelf presentViewController:vc animated:YES completion:^{
+                    [weakSelf.navigationController popViewControllerAnimated:NO];
+                }];
+            }];
+            
+            [weakSelf.navigationController pushViewController:detail animated:YES];
+        }];
+        
+        detail.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:detail animated:YES];
     }
     
 }

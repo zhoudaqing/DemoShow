@@ -64,7 +64,7 @@
                 [paySuccess1 setImage:HTImage(@"xianLifehuodongshuoming") WithTouchBlock:^(NSIndexPath *indexPath) {
                     
                     BaseDetailViewController *paySuccess2 = [[BaseDetailViewController alloc] init];
-                    paySuccess2.title = @"实名认真";
+                    paySuccess2.title = @"实名认证";
                     [paySuccess2 setImage:HTImage(@"tiyanshiming") WithTouchBlock:^(NSIndexPath *indexPath) {
                         [weakSelf setAlerConten:@"已激活立即抽奖" withLeftBtn:@"确定" rightBtn:nil isPush:NO];
                         
@@ -103,11 +103,11 @@
   
     BaseDetailViewController *paySuccess1 = [[BaseDetailViewController alloc] init];
     paySuccess1.title = @"鲜life金融活动说明";
-    [paySuccess1 setImage:HTImage(@"paySuccess") WithTouchBlock:^(NSIndexPath *indexPath) {
+    [paySuccess1 setImage:HTImage(@"xianLifehuodongshuoming") WithTouchBlock:^(NSIndexPath *indexPath) {
         
         BaseDetailViewController *paySuccess2 = [[BaseDetailViewController alloc] init];
-        paySuccess2.title = @"实名认真";
-        [paySuccess2 setImage:HTImage(@"paySuccess") WithTouchBlock:^(NSIndexPath *indexPath) {
+        paySuccess2.title = @"实名认证";
+        [paySuccess2 setImage:HTImage(@"tiyanshiming") WithTouchBlock:^(NSIndexPath *indexPath) {
             [weakSelf setAlerConten:@"已激活立即抽奖" withLeftBtn:@"确定" rightBtn:nil isPush:NO];
             
         }];
@@ -124,17 +124,13 @@
     
     __weakSelf;
 
-    BaseDetailViewController *paySuccess1 = [[BaseDetailViewController alloc] init];
-    paySuccess1.title = @"订单确认";
-    [paySuccess1 setImage:HTImage(@"paySuccess") WithTouchBlock:^(NSIndexPath *indexPath) {
-        
         BaseDetailViewController *paySuccess2 = [[BaseDetailViewController alloc] init];
         paySuccess2.title = @"订单支付";
         [paySuccess2 setImage:HTImage(@"paySuccess") WithTouchBlock:^(NSIndexPath *indexPath) {
             
             BaseDetailViewController *paySuccess3 = [[BaseDetailViewController alloc] init];
             paySuccess3.title = @"鲜life金融活动说明";
-            [paySuccess3 setImage:HTImage(@"paySuccess") WithTouchBlock:^(NSIndexPath *indexPath) {
+            [paySuccess3 setImage:HTImage(@"xianLifehuodongshuoming") WithTouchBlock:^(NSIndexPath *indexPath) {
                 
                 BaseDetailViewController *paySuccess4 = [[BaseDetailViewController alloc] init];
                 paySuccess4.title = @"授权页";
@@ -142,9 +138,9 @@
                 [paySuccess4 setImage:HTImage(@"paySuccess") WithTouchBlock:^(NSIndexPath *indexPath) {
                     
                     BaseDetailViewController *paySuccess5 = [[BaseDetailViewController alloc] init];
-                    paySuccess5.title = @"绑卡页面";
+                    paySuccess5.title = @"关联银行卡";
                     
-                    [paySuccess5 setImage:HTImage(@"paySuccess") WithTouchBlock:^(NSIndexPath *indexPath) {
+                    [paySuccess5 setImage:HTImage(@"jiesuanbangka") WithTouchBlock:^(NSIndexPath *indexPath) {
                         
                         [weakSelf setAlerConten:@"恭喜您已获得鲜life满69元即可免运费的资格，继续完成投资即可活动20元优惠券" withLeftBtn:@"给钱也不要" rightBtn:@"领取20元优惠券" isPush:YES];
 
@@ -159,12 +155,10 @@
             [weakSelf.navigationController pushViewController:paySuccess3 animated:YES];
             
         }];
+        paySuccess2.hidesBottomBarWhenPushed = YES;
         [weakSelf.navigationController pushViewController:paySuccess2 animated:YES];
         
-    }];
-    paySuccess1.hidesBottomBarWhenPushed = YES;
-    [weakSelf.navigationController pushViewController:paySuccess1 animated:YES];
-    
+
     
 
 }

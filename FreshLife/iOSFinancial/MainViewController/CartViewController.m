@@ -61,11 +61,11 @@
             
                 BaseDetailViewController *paySuccess1 = [[BaseDetailViewController alloc] init];
                 paySuccess1.title = @"鲜life金融活动说明";
-                [paySuccess1 setImage:HTImage(@"paySuccess") WithTouchBlock:^(NSIndexPath *indexPath) {
+                [paySuccess1 setImage:HTImage(@"xianLifehuodongshuoming") WithTouchBlock:^(NSIndexPath *indexPath) {
                     
                     BaseDetailViewController *paySuccess2 = [[BaseDetailViewController alloc] init];
                     paySuccess2.title = @"实名认真";
-                    [paySuccess2 setImage:HTImage(@"paySuccess") WithTouchBlock:^(NSIndexPath *indexPath) {
+                    [paySuccess2 setImage:HTImage(@"tiyanshiming") WithTouchBlock:^(NSIndexPath *indexPath) {
                         [weakSelf setAlerConten:@"已激活立即抽奖" withLeftBtn:@"确定" rightBtn:nil isPush:NO];
                         
                     }];

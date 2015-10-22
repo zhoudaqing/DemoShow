@@ -24,7 +24,9 @@
 {
     self.contentImage = image;
     self.cellToucheBlock = touchBlock;
-    [self.tableView reloadData];
+    if (!_isPush) {
+        [self.tableView reloadData];
+    }
 }
 
 - (void)setImageBaoyouhuodong:(UIImage *)image
@@ -42,8 +44,7 @@
 
 - (void)alertView:(UIAlertView *)alertView willDismissWithButtonIndex:(NSInteger)buttonIndex
 {
-    NSLog(@"%ld",(long)buttonIndex);
-    if (buttonIndex == 1){
+     if (buttonIndex == 1){
         if ([alertView.message isEqualToString:@"恭喜您已获得鲜life满69元即可免运费的资格，继续完成投资即可活动20元优惠券"]) {
 
             CloudTabbarController *tab = [[CloudTabbarController alloc] init];
@@ -52,6 +53,9 @@
 
             
         }
+         if ([alertView.message isEqualToString:@"恭喜您已获得50元挑食现金券"]) {
+             
+         }
         
     }else{
         if (!_isPush) {
@@ -60,7 +64,10 @@
         {
             if ([alertView.message isEqualToString:@"恭喜您已获得鲜life满69元即可免运费的资格，继续完成投资即可活动20元优惠券"]) {
                 [self.navigationController popToViewController:self.navigationController.viewControllers[2] animated:YES];
-            }else{
+            }else if ([alertView.message isEqualToString:@"恭喜您已获得50元挑食现金券"]) {
+                
+            }
+            else{
         _cellToucheBlock(_index);
             }
         }

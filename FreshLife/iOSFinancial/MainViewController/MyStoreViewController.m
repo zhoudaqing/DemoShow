@@ -100,7 +100,7 @@
     __weakSelf;
     BaseDetailViewController *update = [[BaseDetailViewController alloc] init];
     update.title = @"关于升级店铺";
-    [update setImage:HTImage(@"buyDetail") WithTouchBlock:^(NSIndexPath *indexPath) {
+    [update setImage:HTImage(@"dianpushengji") WithTouchBlock:^(NSIndexPath *indexPath) {
         
         CloudTabbarController *VC = [[CloudTabbarController alloc]init];
         VC.showType = ShowTypeInvest;
@@ -109,6 +109,7 @@
         
     }];
     
+    update.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:update animated:YES];
     
 }

@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "xianjinquan.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "instruction.png",
       "scale" : "2x"
     },
     {

@@ -26,16 +26,21 @@ typedef NS_ENUM(NSInteger, ShowType) {
 
 @interface CloudTabbarController : HTTabBarController
 
+
 @property (nonatomic, assign) BOOL isLogin;
 
 //  活动的图片
 @property (nonatomic, strong)   UIImage *actionImage;
-
 @property (nonatomic, assign)   ShowType showType;
 
 //  投资或者验证成功之后的广告语
 @property (nonatomic, copy) NSString *actionPrompt;
 
+//  是否弹出云账户介绍页
+@property (nonatomic, assign) BOOL isPromptShowed;
+
 - (void)refreshView;
+
+- (void)showPromptView;
 
 @end

@@ -14,6 +14,8 @@
 
 @interface CloudTabbarController ()
 
+@property (nonatomic, strong)   UIView *promptView;
+
 @end
 
 @implementation CloudTabbarController
@@ -83,6 +85,58 @@
     UITabBarItem *tabBarItem = [[UITabBarItem alloc] initWithTitle:title image:normalImage selectedImage:selectImage];
     
     return tabBarItem;
+}
+
+
+
+- (NSString *)promptText
+{
+    return @"";
+}
+
+- (void)showPromptView
+{
+    [self.view addSubview:self.promptView];
+}
+
+- (UIView *)promptView
+{
+    if (!_promptView) {
+        _promptView = [[UIView alloc] initWithFrame:self.view.bounds];
+        _promptView.backgroundColor = HTClearColor;
+        UIImageView *imageView = [[UIImageView alloc]initWithFrame:_promptView.bounds];
+        imageView.image = HTImage(@"instruction");//instruction
+        [_promptView addSubview:imageView];
+        //        UIView *alphaView = [[UIView alloc] initWithFrame:self.view.bounds];
+        //        alphaView.backgroundColor = HTBlackColor;
+        //        alphaView.alpha = 1;
+        //        [_promptView addSubview:alphaView];
+        
+        UILabel *titleLabel = [[UILabel alloc] init];
+        titleLabel.numberOfLines = 4;
+        titleLabel.textColor = HTWhiteColor;
+        titleLabel.text = [self promptText];
+        CGSize size = [titleLabel sizeThatFits:CGSizeMake(300, 200)];
+        titleLabel.size = size;
+        titleLabel.center = _promptView.center;
+        [_promptView addSubview:titleLabel];
+        
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapGestureTaped)];
+        
+        [_promptView addGestureRecognizer:tap];
+    }
+    
+    return _promptView;
+}
+
+- (void)tapGestureTaped
+{
+    [UIView animateWithDuration:.25 animations:^{
+        _promptView.alpha = 0;
+    } completion:^(BOOL finished) {
+        _isPromptShowed = YES;
+        [_promptView removeFromSuperview];
+    }];
 }
 
 @end

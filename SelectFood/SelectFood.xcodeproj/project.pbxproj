@@ -16,13 +16,13 @@
 		846EE5011B020C1A00F0AE4E /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846EE5001B020C1A00F0AE4E /* CoreTelephony.framework */; };
 		846EE5031B020C2700F0AE4E /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 846EE5021B020C2700F0AE4E /* libstdc++.dylib */; };
 		846EE5051B020C3200F0AE4E /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 846EE5041B020C3200F0AE4E /* libz.dylib */; };
-		846FFAC21BD5FCE800FA6C14 /* OTCover.m in Sources */ = {isa = PBXBuildFile; fileRef = 846FFAC11BD5FCE800FA6C14 /* OTCover.m */; settings = {ASSET_TAGS = (); }; };
-		846FFAC51BD6003900FA6C14 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846FFAC41BD6003900FA6C14 /* ViewController.m */; settings = {ASSET_TAGS = (); }; };
-		846FFAC81BD640B300FA6C14 /* Shouye1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846FFAC71BD640B300FA6C14 /* Shouye1ViewController.m */; settings = {ASSET_TAGS = (); }; };
-		846FFACB1BD6482800FA6C14 /* ZhuanPanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846FFACA1BD6482800FA6C14 /* ZhuanPanViewController.m */; settings = {ASSET_TAGS = (); }; };
-		846FFAD01BD64D3300FA6C14 /* KaihuYanzhengViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846FFACF1BD64D3300FA6C14 /* KaihuYanzhengViewController.m */; settings = {ASSET_TAGS = (); }; };
-		846FFAD31BD65EF300FA6C14 /* PaySuccessfulViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846FFAD21BD65EF300FA6C14 /* PaySuccessfulViewController.m */; settings = {ASSET_TAGS = (); }; };
-		846FFAD71BD66E7100FA6C14 /* PackingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846FFAD61BD66E7100FA6C14 /* PackingViewController.m */; settings = {ASSET_TAGS = (); }; };
+		846FFAC21BD5FCE800FA6C14 /* OTCover.m in Sources */ = {isa = PBXBuildFile; fileRef = 846FFAC11BD5FCE800FA6C14 /* OTCover.m */; };
+		846FFAC51BD6003900FA6C14 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846FFAC41BD6003900FA6C14 /* ViewController.m */; };
+		846FFAC81BD640B300FA6C14 /* Shouye1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846FFAC71BD640B300FA6C14 /* Shouye1ViewController.m */; };
+		846FFACB1BD6482800FA6C14 /* ZhuanPanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846FFACA1BD6482800FA6C14 /* ZhuanPanViewController.m */; };
+		846FFAD01BD64D3300FA6C14 /* KaihuYanzhengViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846FFACF1BD64D3300FA6C14 /* KaihuYanzhengViewController.m */; };
+		846FFAD31BD65EF300FA6C14 /* PaySuccessfulViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846FFAD21BD65EF300FA6C14 /* PaySuccessfulViewController.m */; };
+		846FFAD71BD66E7100FA6C14 /* PackingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846FFAD61BD66E7100FA6C14 /* PackingViewController.m */; };
 		84D9FB051AE77DC500C5AAA8 /* AttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D9FB041AE77DC500C5AAA8 /* AttributedLabel.m */; };
 		920C09881B74975000A8CC30 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 920C09871B74975000A8CC30 /* QuartzCore.framework */; };
 		920C098A1B74977400A8CC30 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 920C09891B74977400A8CC30 /* libicucore.dylib */; };
@@ -30,13 +30,13 @@
 		920C098E1B7497A300A8CC30 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 920C098D1B7497A300A8CC30 /* CoreText.framework */; };
 		920C09901B7497B600A8CC30 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 920C098F1B7497B600A8CC30 /* ImageIO.framework */; };
 		9211AF751B7AF74D00B7FD9F /* VPImageCropperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9211AF741B7AF74D00B7FD9F /* VPImageCropperViewController.m */; };
-		9217C91E1BC6659500938A9E /* JTSAnimatedGIFUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 9217C9131BC6659500938A9E /* JTSAnimatedGIFUtility.m */; settings = {ASSET_TAGS = (); }; };
-		9217C91F1BC6659500938A9E /* JTSImageInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9217C9151BC6659500938A9E /* JTSImageInfo.m */; settings = {ASSET_TAGS = (); }; };
-		9217C9201BC6659500938A9E /* JTSImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9217C9171BC6659500938A9E /* JTSImageViewController.m */; settings = {ASSET_TAGS = (); }; };
-		9217C9211BC6659500938A9E /* JTSSimpleImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 9217C9191BC6659500938A9E /* JTSSimpleImageDownloader.m */; settings = {ASSET_TAGS = (); }; };
-		9217C9221BC6659500938A9E /* UIApplication+JTSImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9217C91B1BC6659500938A9E /* UIApplication+JTSImageViewController.m */; settings = {ASSET_TAGS = (); }; };
-		9217C9231BC6659500938A9E /* UIImage+JTSImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 9217C91D1BC6659500938A9E /* UIImage+JTSImageEffects.m */; settings = {ASSET_TAGS = (); }; };
-		9217C9261BC66A3E00938A9E /* HTTransparentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9217C9251BC66A3E00938A9E /* HTTransparentView.m */; settings = {ASSET_TAGS = (); }; };
+		9217C91E1BC6659500938A9E /* JTSAnimatedGIFUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 9217C9131BC6659500938A9E /* JTSAnimatedGIFUtility.m */; };
+		9217C91F1BC6659500938A9E /* JTSImageInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9217C9151BC6659500938A9E /* JTSImageInfo.m */; };
+		9217C9201BC6659500938A9E /* JTSImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9217C9171BC6659500938A9E /* JTSImageViewController.m */; };
+		9217C9211BC6659500938A9E /* JTSSimpleImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 9217C9191BC6659500938A9E /* JTSSimpleImageDownloader.m */; };
+		9217C9221BC6659500938A9E /* UIApplication+JTSImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9217C91B1BC6659500938A9E /* UIApplication+JTSImageViewController.m */; };
+		9217C9231BC6659500938A9E /* UIImage+JTSImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 9217C91D1BC6659500938A9E /* UIImage+JTSImageEffects.m */; };
+		9217C9261BC66A3E00938A9E /* HTTransparentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9217C9251BC66A3E00938A9E /* HTTransparentView.m */; };
 		921DD28A1AEB65790004251F /* HTActions.m in Sources */ = {isa = PBXBuildFile; fileRef = 921DD27C1AEB65790004251F /* HTActions.m */; };
 		921DD28B1AEB65790004251F /* HTBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 921DD27F1AEB65790004251F /* HTBaseCell.m */; };
 		921DD28C1AEB65790004251F /* HTBaseSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 921DD2811AEB65790004251F /* HTBaseSource.m */; };
@@ -75,9 +75,9 @@
 		922CB5A71AC9789700C4A438 /* MJRefreshFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 922CB5A11AC9789700C4A438 /* MJRefreshFooterView.m */; };
 		922CB5A81AC9789700C4A438 /* MJRefreshHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 922CB5A31AC9789700C4A438 /* MJRefreshHeaderView.m */; };
 		92442FBA1B817B0D006E3290 /* HTBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 92442FB91B817B0D006E3290 /* HTBaseModel.m */; };
-		924D116B1BCE61360040C318 /* ActionWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 924D116A1BCE61360040C318 /* ActionWebViewController.m */; settings = {ASSET_TAGS = (); }; };
-		925BE4C11BD4B8D6007B742C /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 925BE4C01BD4B8D6007B742C /* FirstViewController.m */; settings = {ASSET_TAGS = (); }; };
-		925BE4C41BD4B8FD007B742C /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 925BE4C31BD4B8FD007B742C /* SecondViewController.m */; settings = {ASSET_TAGS = (); }; };
+		924D116B1BCE61360040C318 /* ActionWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 924D116A1BCE61360040C318 /* ActionWebViewController.m */; };
+		925BE4C11BD4B8D6007B742C /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 925BE4C01BD4B8D6007B742C /* FirstViewController.m */; };
+		925BE4C41BD4B8FD007B742C /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 925BE4C31BD4B8FD007B742C /* SecondViewController.m */; };
 		926811C21ADE570900FAB0A2 /* HTGuideManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 926811C11ADE570900FAB0A2 /* HTGuideManager.m */; };
 		926811C51ADE571E00FAB0A2 /* HTUserDefault.m in Sources */ = {isa = PBXBuildFile; fileRef = 926811C41ADE571E00FAB0A2 /* HTUserDefault.m */; };
 		926811CB1ADE868C00FAB0A2 /* HTSelectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 926811CA1ADE868C00FAB0A2 /* HTSelectionController.m */; };
@@ -94,8 +94,8 @@
 		92871C841AF761C3002EC9F6 /* LoginRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 92871C831AF761C3002EC9F6 /* LoginRequest.m */; };
 		928860E61B297F810060502D /* UILabel+FlickerNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 928860E51B297F810060502D /* UILabel+FlickerNumber.m */; };
 		928C97521B85834900D4CDD5 /* UIView+LabelSign.m in Sources */ = {isa = PBXBuildFile; fileRef = 928C97511B85834900D4CDD5 /* UIView+LabelSign.m */; };
-		92943C341BCE8FED005B44CB /* ContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 92943C331BCE8FED005B44CB /* ContentCell.m */; settings = {ASSET_TAGS = (); }; };
-		92943C3C1BCF7FAE005B44CB /* BaseDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92943C3B1BCF7FAE005B44CB /* BaseDetailViewController.m */; settings = {ASSET_TAGS = (); }; };
+		92943C341BCE8FED005B44CB /* ContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 92943C331BCE8FED005B44CB /* ContentCell.m */; };
+		92943C3C1BCF7FAE005B44CB /* BaseDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92943C3B1BCF7FAE005B44CB /* BaseDetailViewController.m */; };
 		9296B25C1B70C9680053B157 /* ShareTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9296B25B1B70C9670053B157 /* ShareTitleView.m */; };
 		92A41EE31B26D4030036DC58 /* HTADScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 92A41EE21B26D4030036DC58 /* HTADScrollView.m */; };
 		92B47FFE1B6F611C00AF9A2D /* UIBarButtonItem+Badge.m in Sources */ = {isa = PBXBuildFile; fileRef = 92B47FFD1B6F611C00AF9A2D /* UIBarButtonItem+Badge.m */; };
@@ -109,10 +109,10 @@
 		92DA92761B3C050000AACF1D /* UIView+Layer.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DA92751B3C050000AACF1D /* UIView+Layer.m */; };
 		92DA92791B3C164800AACF1D /* UIView+NoneDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DA92781B3C164800AACF1D /* UIView+NoneDataView.m */; };
 		92DA92E51B42511900AACF1D /* UIViewController+ViewControllers.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DA92E41B42511900AACF1D /* UIViewController+ViewControllers.m */; };
-		92E69FFF1BD0FA2F001C378A /* CloudAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E69FFE1BD0FA2F001C378A /* CloudAccountViewController.m */; settings = {ASSET_TAGS = (); }; };
-		92E6A0021BD0FA67001C378A /* CloudTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E6A0011BD0FA67001C378A /* CloudTabbarController.m */; settings = {ASSET_TAGS = (); }; };
-		92E6A0051BD0FAAE001C378A /* InvestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E6A0041BD0FAAE001C378A /* InvestViewController.m */; settings = {ASSET_TAGS = (); }; };
-		92E6A0081BD0FAB8001C378A /* PersonalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E6A0071BD0FAB8001C378A /* PersonalViewController.m */; settings = {ASSET_TAGS = (); }; };
+		92E69FFF1BD0FA2F001C378A /* CloudAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E69FFE1BD0FA2F001C378A /* CloudAccountViewController.m */; };
+		92E6A0021BD0FA67001C378A /* CloudTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E6A0011BD0FA67001C378A /* CloudTabbarController.m */; };
+		92E6A0051BD0FAAE001C378A /* InvestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E6A0041BD0FAAE001C378A /* InvestViewController.m */; };
+		92E6A0081BD0FAB8001C378A /* PersonalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E6A0071BD0FAB8001C378A /* PersonalViewController.m */; };
 		92EB85481AC5132700A80E03 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EB85471AC5132700A80E03 /* User.m */; };
 		92EB85851AC561C800A80E03 /* HTTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EB85841AC561C800A80E03 /* HTTabBarController.m */; };
 		92EB85881AC561E400A80E03 /* HTNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EB85871AC561E400A80E03 /* HTNavigationController.m */; };
@@ -964,7 +964,7 @@
 				TargetAttributes = {
 					92D2A27C1AC3DF7B00C9A4AE = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = 3T4BLT5L4D;
+						DevelopmentTeam = PUEB48NTQQ;
 					};
 				};
 			};
@@ -1265,7 +1265,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jiandanlicai.SelectFoodAll;
 				PRODUCT_NAME = SelectFood;
-				PROVISIONING_PROFILE = "f2cb5425-7493-4750-9cbe-48301abffd34";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "armv7 armv7s arm64";
 			};
@@ -1308,7 +1308,7 @@
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jiandanlicai.SelectFoodAll;
 				PRODUCT_NAME = SelectFood;
-				PROVISIONING_PROFILE = "f2cb5425-7493-4750-9cbe-48301abffd34";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "armv7 armv7s arm64";
 			};

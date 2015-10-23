@@ -88,7 +88,7 @@
             switch (indexPath.row) {
                 case 0:
                 {
-                    cell.textLabel.text = @"鲜理财";
+                    cell.textLabel.text = @"鲜金融";
                     cell.imageView.image = [UIImage imageNamed:@"yzh"];
                     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
                 }

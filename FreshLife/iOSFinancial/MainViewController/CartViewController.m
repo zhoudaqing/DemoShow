@@ -66,7 +66,7 @@
                     BaseDetailViewController *paySuccess2 = [[BaseDetailViewController alloc] init];
                     paySuccess2.title = @"实名认证";
                     [paySuccess2 setImage:HTImage(@"tiyanshiming") WithTouchBlock:^(NSIndexPath *indexPath) {
-                        [weakSelf setAlerConten:@"已激活立即抽奖" withLeftBtn:@"确定" rightBtn:nil isPush:NO];
+                        [weakSelf setAlerConten:@"恭喜您已获得鲜life满69元即可免运费的资格，提交订单即可使用" withLeftBtn:@"我知道了" rightBtn:nil isPush:NO];
                         
                     }];
                     [weakSelf.navigationController pushViewController:paySuccess2 animated:YES];
@@ -108,7 +108,7 @@
         BaseDetailViewController *paySuccess2 = [[BaseDetailViewController alloc] init];
         paySuccess2.title = @"实名认证";
         [paySuccess2 setImage:HTImage(@"tiyanshiming") WithTouchBlock:^(NSIndexPath *indexPath) {
-            [weakSelf setAlerConten:@"已激活立即抽奖" withLeftBtn:@"确定" rightBtn:nil isPush:NO];
+            [weakSelf setAlerConten:@"恭喜您已获得鲜life满69元即可免运费的资格，提交订单即可使用" withLeftBtn:@"我知道了" rightBtn:nil isPush:NO];
             
         }];
         [weakSelf.navigationController pushViewController:paySuccess2 animated:YES];
@@ -135,7 +135,7 @@
                 BaseDetailViewController *paySuccess4 = [[BaseDetailViewController alloc] init];
                 paySuccess4.title = @"授权页";
                 [paySuccess4 shouquanWith:@"恭喜授权成功"];
-                [paySuccess4 setImage:HTImage(@"paySuccess") WithTouchBlock:^(NSIndexPath *indexPath) {
+                [paySuccess4 setImage:HTImage(@"shouquanye") WithTouchBlock:^(NSIndexPath *indexPath) {
                     
                     BaseDetailViewController *paySuccess5 = [[BaseDetailViewController alloc] init];
                     paySuccess5.title = @"关联银行卡";

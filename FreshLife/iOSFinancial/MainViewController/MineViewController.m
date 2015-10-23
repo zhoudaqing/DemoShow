@@ -222,7 +222,7 @@
             }
             
             BaseDetailViewController *detail = [[BaseDetailViewController alloc] init];
-            detail.title = @"活动页面";
+            detail.title = @"鲜life金融活动说明";
             [detail setImage:HTImage(@"xianjinQuan") WithTouchBlock:^(NSIndexPath *indexPath) {
                 
                 weakBase.isOpen = YES;

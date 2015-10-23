@@ -103,9 +103,12 @@
     [update setImage:HTImage(@"dianpushengji") WithTouchBlock:^(NSIndexPath *indexPath) {
         
         CloudTabbarController *VC = [[CloudTabbarController alloc]init];
+        VC.selectedIndex = 1;
         VC.showType = ShowTypeInvest;
         VC.actionPrompt = @"恭喜您，您已获得鲜Life赠送的10个货架，可在『我的店』里使用";
-        [weakSelf.navigationController presentViewController:VC animated:YES completion:nil];
+        [weakSelf.navigationController presentViewController:VC animated:YES completion:^{
+            [self.navigationController popToRootViewControllerAnimated:NO];
+        }];
         
     }];
     
@@ -126,9 +129,9 @@
 
 - (void)fanyingbili
 {
-    FanyingbiliViewController *vc = [[FanyingbiliViewController alloc]init];
-    [vc setHidesBottomBarWhenPushed:YES];
-    [self.navigationController pushViewController:vc animated:YES];
+//    FanyingbiliViewController *vc = [[FanyingbiliViewController alloc]init];
+//    [vc setHidesBottomBarWhenPushed:YES];
+//    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -139,18 +142,21 @@
 
 - (void)pushYanshiDemoC
 {
-    _passView =[[UIImageView alloc]initWithFrame:CGRectMake(0, 2*APPScreenHeight, APPScreenWidth, APPScreenHeight)];
-    [_passView setImage:[UIImage imageNamed:@"passImage"]];
-    [self.view addSubview:_passView];
-    [UIView animateWithDuration:0.3 animations:^{
-        _passView.frame = self.view.frame;
-    } completion:^(BOOL finished) {
-        _passView.userInteractionEnabled = YES;
-    }];
-    
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(showTabar)];
-    [_passView addGestureRecognizer:tap];
-    
+//    _passView =[[UIImageView alloc]initWithFrame:CGRectMake(0, 2*APPScreenHeight, APPScreenWidth, APPScreenHeight)];
+//    [_passView setImage:[UIImage imageNamed:@"passImage"]];
+//    [self.view addSubview:_passView];
+//    [UIView animateWithDuration:0.3 animations:^{
+//        _passView.frame = self.view.frame;
+//    } completion:^(BOOL finished) {
+//        _passView.userInteractionEnabled = YES;
+//    }];
+//    
+//    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(showTabar)];
+//    [_passView addGestureRecognizer:tap];
+    CloudTabbarController *VC = [[CloudTabbarController alloc]init];
+    [VC showPromptView];
+    [self.navigationController presentViewController:VC animated:YES completion:nil];
+
 }
 
 

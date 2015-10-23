@@ -15,6 +15,8 @@
 
 @property (nonatomic, strong)   UIImage *contentImage;
 
+@property (nonatomic, copy)  NSString *shouquan;
+
 @property (nonatomic, copy) void(^cellToucheBlock)(NSIndexPath *indexPath);
 
 - (void)setImage:(UIImage *)image WithTouchBlock:(void (^)(NSIndexPath *indexPath))cellTouchBlock;
@@ -23,6 +25,5 @@
 
 - (void)setAlerConten:(NSString *)conten withLeftBtn:(NSString *)leftTitle rightBtn:(NSString *)rightTitle isPush:(BOOL)ispu;
 
-- (void)shouquanWith:(NSString *)content;
 
 @end

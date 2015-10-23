@@ -69,7 +69,11 @@
         
     }else{
         if (!_isPush) {
-            [self.navigationController popToRootViewControllerAnimated:YES];
+            if ([alertView.message isEqualToString:@"恭喜您已获得鲜life满69元即可免运费的资格，提交订单即可使用"]) {
+                [self.navigationController popToViewController:self.navigationController.viewControllers[1] animated:YES];
+            }else{
+                [self.navigationController popToRootViewControllerAnimated:YES];
+            }
         }else
         {
             if ([alertView.message isEqualToString:@"恭喜您已获得鲜life满69元即可免运费的资格，继续完成投资即可活动20元优惠券"]) {
@@ -84,10 +88,10 @@
     
 }
 
-- (void)shouquanWith:(NSString *)content
+- (void)shouquanShow
 {
     UILabel *lable = [[UILabel alloc]initWithFrame:CGRectMake(50, 280, APPScreenWidth - 100, 60)];
-    lable.text = content;
+    lable.text = self.shouquan;
     lable.textAlignment = NSTextAlignmentCenter;
     lable.backgroundColor = [UIColor  blackColor];
     lable.textColor = [UIColor whiteColor];
@@ -97,6 +101,7 @@
     [UIView animateWithDuration:1.8 animations:^{
         lable.alpha = 0.3;
     } completion:^(BOOL finished) {
+        _cellToucheBlock(_index);
         [lable removeFromSuperview];
     }];
 
@@ -128,6 +133,10 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     _index = indexPath;
+    if (self.shouquan) {
+        [self shouquanShow];
+        return;
+    }
     if (_cellToucheBlock) {
         _cellToucheBlock(indexPath);
     }

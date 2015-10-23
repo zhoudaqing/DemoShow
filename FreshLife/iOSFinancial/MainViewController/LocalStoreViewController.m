@@ -33,11 +33,11 @@
     
     self.tableView.tableHeaderView = self.adScrollView;
     
-    __weakSelf;
+//    __weakSelf;
     [self setImage:HTImage(@"content") WithTouchBlock:^(NSIndexPath *indexPath) {
-        StoreDetailViewController *detail = [[StoreDetailViewController alloc] init];
-        detail.hidesBottomBarWhenPushed = YES;
-        [weakSelf.navigationController pushViewController:detail animated:YES];
+//        StoreDetailViewController *detail = [[StoreDetailViewController alloc] init];
+//        detail.hidesBottomBarWhenPushed = YES;
+//        [weakSelf.navigationController pushViewController:detail animated:YES];
     }];
     
 }

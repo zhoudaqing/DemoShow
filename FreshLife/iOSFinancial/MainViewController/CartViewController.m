@@ -52,18 +52,28 @@
         BaseDetailViewController *detail = [[BaseDetailViewController alloc] init];
         detail.title = @"订单确认";
         __weak BaseDetailViewController *weakBase1 = detail;
+        
+        
+
         [detail setImage:HTImage(@"payMoney1") WithTouchBlock:^(NSIndexPath *indexPath) {
+            
+            if (weakBase1.isOpen == YES) {
+                [weakSelf.navigationController popViewControllerAnimated:YES];
+                return ;
+            }
             
             BaseDetailViewController *paySuccess1 = [[BaseDetailViewController alloc] init];
             paySuccess1.title = @"鲜life金融活动说明";
             
                 [paySuccess1 setImage:HTImage(@"xianLifehuodongshuoming1") WithTouchBlock:^(NSIndexPath *indexPath) {
                     
+                    
                     BaseDetailViewController *paySuccess2 = [[BaseDetailViewController alloc] init];
                     paySuccess2.title = @"实名认证";
                     [paySuccess2 setImage:HTImage(@"tiyanshiming") WithTouchBlock:^(NSIndexPath *indexPath) {
                         [weakSelf setAlerConten:@"恭喜您已获得鲜life满69元即可免运费的资格，提交订单即可使用" withLeftBtn:@"我知道了" rightBtn:nil isPush:NO];
                         [weakBase1 refreshView:HTImage(@"payMoney")];
+                        weakBase1.isOpen = YES;
                     }];
                     
                     [weakSelf.navigationController pushViewController:paySuccess2 animated:YES];
@@ -87,8 +97,9 @@
     [btn addTarget:self action:@selector(baoyouhuodong) forControlEvents:UIControlEventTouchUpInside];
 
     UIButton *btn1 = [[UIButton alloc]initWithFrame:CGRectMake(0, APPScreenHeight - 88 -50, APPScreenWidth, 44)];
-    btn1.backgroundColor = [UIColor clearColor];
+    btn1.backgroundColor = [UIColor redColor];
     [self.view addSubview:btn1];
+    [btn1 setImage:HTImage(@"jiesuan") forState:UIControlStateNormal];
     [btn1 addTarget:self action:@selector(jiesuan) forControlEvents:UIControlEventTouchUpInside];
 }
 

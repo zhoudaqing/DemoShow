@@ -118,6 +118,14 @@
     return [super popViewControllerAnimated:animated];
 }
 
+- (NSArray<UIViewController *> *)popToViewController:(UIViewController *)viewController animated:(BOOL)animated
+{
+    NSInteger index = [self.viewControllers indexOfObject:viewController];
+    [self.screenShotsList removeObjectsInRange:NSMakeRange(index, self.viewControllers.count - index - 1)];
+    
+    return [super popToViewController:viewController animated:YES];
+}
+
 #pragma mark - Utility Methods -
 
 - (UIImage *)capture

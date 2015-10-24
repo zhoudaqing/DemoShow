@@ -14,11 +14,19 @@
 {
     BOOL _isPush;
     NSIndexPath *_index;
-
+    
+    BOOL _isPushedViewController;
 }
 @end
 
 @implementation BaseDetailViewController
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    _isPushedViewController = NO;
+}
 
 - (void)setImage:(UIImage *)image WithTouchBlock:(void (^)(NSIndexPath *))touchBlock
 {
@@ -137,8 +145,11 @@
         [self shouquanShow];
         return;
     }
-    if (_cellToucheBlock) {
+    if (_cellToucheBlock && !_isPushedViewController) {
+        //  已经弹出了，就不能再弹了
+        _isPushedViewController = YES;
         _cellToucheBlock(indexPath);
+        
     }
 }
 

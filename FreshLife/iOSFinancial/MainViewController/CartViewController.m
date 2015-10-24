@@ -49,13 +49,11 @@
     [self setImage:HTImage(@"mycart-1") WithTouchBlock:^(NSIndexPath *indexPath) {
         
         //  结算页面
-        BaseDetailViewController *detail = [[BaseDetailViewController alloc] init];
-        detail.title = @"订单确认";
-        __weak BaseDetailViewController *weakBase1 = detail;
+        BaseDetailViewController *detail3 = [[BaseDetailViewController alloc] init];
+        detail3.title = @"订单确认";
+        __weak BaseDetailViewController *weakBase1 = detail3;
         
-        
-
-        [detail setImage:HTImage(@"payMoney1") WithTouchBlock:^(NSIndexPath *indexPath) {
+        [detail3 setImage:HTImage(@"payMoney1") WithTouchBlock:^(NSIndexPath *indexPath) {
             
             if (weakBase1.isOpen == YES) {
                 [weakSelf.navigationController popViewControllerAnimated:YES];
@@ -71,8 +69,9 @@
                     BaseDetailViewController *paySuccess2 = [[BaseDetailViewController alloc] init];
                     paySuccess2.title = @"实名认证";
                     [paySuccess2 setImage:HTImage(@"tiyanshiming") WithTouchBlock:^(NSIndexPath *indexPath) {
+                        
                         [weakSelf setAlerConten:@"恭喜您已获得鲜life满69元即可免运费的资格，提交订单即可使用" withLeftBtn:@"我知道了" rightBtn:nil isPush:NO];
-                        [weakBase1 refreshView:HTImage(@"payMoney")];
+                        [weakBase1 refreshView:HTImage(@"payMoney2")];
                         weakBase1.isOpen = YES;
                     }];
                     
@@ -86,8 +85,8 @@
 
         }];
         
-        detail.hidesBottomBarWhenPushed = YES;
-        [weakSelf.navigationController pushViewController:detail animated:YES];
+        detail3.hidesBottomBarWhenPushed = YES;
+        [weakSelf.navigationController pushViewController:detail3 animated:YES];
 
     }];
     
@@ -95,12 +94,14 @@
     btn.backgroundColor = [UIColor clearColor];
     [self.tableView addSubview:btn];
     [btn addTarget:self action:@selector(baoyouhuodong) forControlEvents:UIControlEventTouchUpInside];
-
+    
     UIButton *btn1 = [[UIButton alloc]initWithFrame:CGRectMake(0, APPScreenHeight - 88 -50, APPScreenWidth, 44)];
-    btn1.backgroundColor = [UIColor redColor];
     [self.view addSubview:btn1];
-    [btn1 setImage:HTImage(@"jiesuan") forState:UIControlStateNormal];
+    [btn1 setBackgroundImage:HTImage(@"jiesuan") forState:UIControlStateNormal];
+    [btn1 setBackgroundImage:HTImage(@"jiesuan") forState:UIControlStateHighlighted];
     [btn1 addTarget:self action:@selector(jiesuan) forControlEvents:UIControlEventTouchUpInside];
+    
+    self.tableView.height -= btn1.height;
 }
 
 -(void)baoyouhuodong

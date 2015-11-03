@@ -122,12 +122,7 @@
     //  结算页面
     BaseDetailViewController *detail3 = [[BaseDetailViewController alloc] init];
     detail3.title = @"帮助";
-    UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(300, 25, 70, 59)];
-    btn.backgroundColor = [UIColor redColor];
-    [detail3.view addSubview:btn];
-    [btn addTarget:detail3 action:@selector(invested) forControlEvents:UIControlEventTouchUpInside];
-    
-    [detail3 setImage:HTImage(@"travel_content") WithTouchBlock:^(NSIndexPath *indexPath) {
+    [detail3 setImage:HTImage(@"bangzhu") WithTouchBlock:^(NSIndexPath *indexPath) {
         
         BaseDetailViewController *detail4 = [[BaseDetailViewController alloc] init];
         detail4.title = @"穷游金融活动说明";

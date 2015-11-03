@@ -88,28 +88,27 @@
         BaseDetailViewController *detail3 = [[BaseDetailViewController alloc] init];
         detail3.title = @"签到";
     UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(300, 25, 70, 59)];
-    btn.backgroundColor = [UIColor redColor];
     [detail3.view addSubview:btn];
     [btn addTarget:detail3 action:@selector(invested) forControlEvents:UIControlEventTouchUpInside];
     [weakSelf.navigationController.navigationBar setBackgroundImage:nil forBarMetrics:UIBarMetricsDefault];
 
-        [detail3 setImage:HTImage(@"travel_content") WithTouchBlock:^(NSIndexPath *indexPath) {
+        [detail3 setImage:HTImage(@"qiandao") WithTouchBlock:^(NSIndexPath *indexPath) {
             
             BaseDetailViewController *detail4 = [[BaseDetailViewController alloc] init];
             detail4.title = @"穷游金融活动说明";
             
-            [detail4 setImage:HTImage(@"travel_content") WithTouchBlock:^(NSIndexPath *indexPath) {
+            [detail4 setImage:HTImage(@"qiandaohuodongshuoming") WithTouchBlock:^(NSIndexPath *indexPath) {
                 
                 
                 BaseDetailViewController *detail5 = [[BaseDetailViewController alloc] init];
                 detail5.title = @"验证激活";
                 
-                [detail5 setImage:HTImage(@"travel_content") WithTouchBlock:^(NSIndexPath *indexPath) {
+                [detail5 setImage:HTImage(@"kaihuxingmingyanzheng") WithTouchBlock:^(NSIndexPath *indexPath) {
                     
                     BaseDetailViewController *detail6 = [[BaseDetailViewController alloc] init];
                     detail6.title = @"绑定银行卡号";
                     
-                    [detail6 setImage:HTImage(@"travel_content") WithTouchBlock:^(NSIndexPath *indexPath) {
+                    [detail6 setImage:HTImage(@"setAccount") WithTouchBlock:^(NSIndexPath *indexPath) {
                         
                         NSLog(@"添加提示 和跳转c端");
                         

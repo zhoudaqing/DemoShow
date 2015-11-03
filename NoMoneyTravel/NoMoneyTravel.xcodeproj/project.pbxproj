@@ -71,6 +71,11 @@
 		924D116B1BCE61360040C318 /* ActionWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 924D116A1BCE61360040C318 /* ActionWebViewController.m */; };
 		925BE4C11BD4B8D6007B742C /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 925BE4C01BD4B8D6007B742C /* FirstViewController.m */; };
 		92616C621BE8A0CC000E067A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92616C611BE8A0CC000E067A /* ViewController.m */; settings = {ASSET_TAGS = (); }; };
+		92616C6E1BE8AE30000E067A /* CloudAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92616C671BE8AE30000E067A /* CloudAccountViewController.m */; settings = {ASSET_TAGS = (); }; };
+		92616C6F1BE8AE30000E067A /* CloudTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92616C691BE8AE30000E067A /* CloudTabbarController.m */; settings = {ASSET_TAGS = (); }; };
+		92616C701BE8AE30000E067A /* InvestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92616C6B1BE8AE30000E067A /* InvestViewController.m */; settings = {ASSET_TAGS = (); }; };
+		92616C711BE8AE30000E067A /* PersonalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92616C6D1BE8AE30000E067A /* PersonalViewController.m */; settings = {ASSET_TAGS = (); }; };
+		92616C741BE8AF63000E067A /* CustomInvestGuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92616C731BE8AF63000E067A /* CustomInvestGuideViewController.m */; settings = {ASSET_TAGS = (); }; };
 		926811C21ADE570900FAB0A2 /* HTGuideManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 926811C11ADE570900FAB0A2 /* HTGuideManager.m */; };
 		926811C51ADE571E00FAB0A2 /* HTUserDefault.m in Sources */ = {isa = PBXBuildFile; fileRef = 926811C41ADE571E00FAB0A2 /* HTUserDefault.m */; };
 		926811CB1ADE868C00FAB0A2 /* HTSelectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 926811CA1ADE868C00FAB0A2 /* HTSelectionController.m */; };
@@ -102,10 +107,6 @@
 		92DA92761B3C050000AACF1D /* UIView+Layer.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DA92751B3C050000AACF1D /* UIView+Layer.m */; };
 		92DA92791B3C164800AACF1D /* UIView+NoneDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DA92781B3C164800AACF1D /* UIView+NoneDataView.m */; };
 		92DA92E51B42511900AACF1D /* UIViewController+ViewControllers.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DA92E41B42511900AACF1D /* UIViewController+ViewControllers.m */; };
-		92E69FFF1BD0FA2F001C378A /* CloudAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E69FFE1BD0FA2F001C378A /* CloudAccountViewController.m */; };
-		92E6A0021BD0FA67001C378A /* CloudTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E6A0011BD0FA67001C378A /* CloudTabbarController.m */; };
-		92E6A0051BD0FAAE001C378A /* InvestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E6A0041BD0FAAE001C378A /* InvestViewController.m */; };
-		92E6A0081BD0FAB8001C378A /* PersonalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E6A0071BD0FAB8001C378A /* PersonalViewController.m */; };
 		92EB85481AC5132700A80E03 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EB85471AC5132700A80E03 /* User.m */; };
 		92EB85851AC561C800A80E03 /* HTTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EB85841AC561C800A80E03 /* HTTabBarController.m */; };
 		92EB85881AC561E400A80E03 /* HTNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EB85871AC561E400A80E03 /* HTNavigationController.m */; };
@@ -237,6 +238,16 @@
 		925BE4C01BD4B8D6007B742C /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		92616C601BE8A0CC000E067A /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		92616C611BE8A0CC000E067A /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		92616C661BE8AE30000E067A /* CloudAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudAccountViewController.h; sourceTree = "<group>"; };
+		92616C671BE8AE30000E067A /* CloudAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloudAccountViewController.m; sourceTree = "<group>"; };
+		92616C681BE8AE30000E067A /* CloudTabbarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudTabbarController.h; sourceTree = "<group>"; };
+		92616C691BE8AE30000E067A /* CloudTabbarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloudTabbarController.m; sourceTree = "<group>"; };
+		92616C6A1BE8AE30000E067A /* InvestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InvestViewController.h; sourceTree = "<group>"; };
+		92616C6B1BE8AE30000E067A /* InvestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InvestViewController.m; sourceTree = "<group>"; };
+		92616C6C1BE8AE30000E067A /* PersonalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalViewController.h; sourceTree = "<group>"; };
+		92616C6D1BE8AE30000E067A /* PersonalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalViewController.m; sourceTree = "<group>"; };
+		92616C721BE8AF63000E067A /* CustomInvestGuideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomInvestGuideViewController.h; sourceTree = "<group>"; };
+		92616C731BE8AF63000E067A /* CustomInvestGuideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomInvestGuideViewController.m; sourceTree = "<group>"; };
 		926811C01ADE570900FAB0A2 /* HTGuideManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTGuideManager.h; sourceTree = "<group>"; };
 		926811C11ADE570900FAB0A2 /* HTGuideManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTGuideManager.m; sourceTree = "<group>"; };
 		926811C31ADE571E00FAB0A2 /* HTUserDefault.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTUserDefault.h; sourceTree = "<group>"; };
@@ -297,14 +308,6 @@
 		92DA92781B3C164800AACF1D /* UIView+NoneDataView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+NoneDataView.m"; sourceTree = "<group>"; };
 		92DA92E31B42511900AACF1D /* UIViewController+ViewControllers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ViewControllers.h"; sourceTree = "<group>"; };
 		92DA92E41B42511900AACF1D /* UIViewController+ViewControllers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ViewControllers.m"; sourceTree = "<group>"; };
-		92E69FFD1BD0FA2F001C378A /* CloudAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudAccountViewController.h; sourceTree = "<group>"; };
-		92E69FFE1BD0FA2F001C378A /* CloudAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloudAccountViewController.m; sourceTree = "<group>"; };
-		92E6A0001BD0FA67001C378A /* CloudTabbarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudTabbarController.h; sourceTree = "<group>"; };
-		92E6A0011BD0FA67001C378A /* CloudTabbarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloudTabbarController.m; sourceTree = "<group>"; };
-		92E6A0031BD0FAAE001C378A /* InvestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InvestViewController.h; sourceTree = "<group>"; };
-		92E6A0041BD0FAAE001C378A /* InvestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InvestViewController.m; sourceTree = "<group>"; };
-		92E6A0061BD0FAB8001C378A /* PersonalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalViewController.h; sourceTree = "<group>"; };
-		92E6A0071BD0FAB8001C378A /* PersonalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalViewController.m; sourceTree = "<group>"; };
 		92EB85461AC5132700A80E03 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = iOSFinancial/Singleton/User.h; sourceTree = SOURCE_ROOT; };
 		92EB85471AC5132700A80E03 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = iOSFinancial/Singleton/User.m; sourceTree = SOURCE_ROOT; };
 		92EB857E1AC5517400A80E03 /* NoMoneyTravel-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NoMoneyTravel-Prefix.pch"; sourceTree = "<group>"; };
@@ -615,6 +618,31 @@
 			name = MainViewController;
 			sourceTree = "<group>";
 		};
+		92616C641BE8AB54000E067A /* CustomInvestGuideViewController */ = {
+			isa = PBXGroup;
+			children = (
+				92616C721BE8AF63000E067A /* CustomInvestGuideViewController.h */,
+				92616C731BE8AF63000E067A /* CustomInvestGuideViewController.m */,
+			);
+			path = CustomInvestGuideViewController;
+			sourceTree = "<group>";
+		};
+		92616C651BE8AE30000E067A /* CustomClientViewController */ = {
+			isa = PBXGroup;
+			children = (
+				92E69FFB1BD0F9D1001C378A /* UnionViewController */,
+				92616C661BE8AE30000E067A /* CloudAccountViewController.h */,
+				92616C671BE8AE30000E067A /* CloudAccountViewController.m */,
+				92616C681BE8AE30000E067A /* CloudTabbarController.h */,
+				92616C691BE8AE30000E067A /* CloudTabbarController.m */,
+				92616C6A1BE8AE30000E067A /* InvestViewController.h */,
+				92616C6B1BE8AE30000E067A /* InvestViewController.m */,
+				92616C6C1BE8AE30000E067A /* PersonalViewController.h */,
+				92616C6D1BE8AE30000E067A /* PersonalViewController.m */,
+			);
+			path = CustomClientViewController;
+			sourceTree = "<group>";
+		};
 		9268127C1AE8CE5700FAB0A2 /* Config */ = {
 			isa = PBXGroup;
 			children = (
@@ -756,9 +784,9 @@
 		92D5777C1ACBB7C30070DC76 /* MainController */ = {
 			isa = PBXGroup;
 			children = (
+				92616C651BE8AE30000E067A /* CustomClientViewController */,
+				92616C641BE8AB54000E067A /* CustomInvestGuideViewController */,
 				925BE4BE1BD4B8C1007B742C /* MainViewController */,
-				92E69FFB1BD0F9D1001C378A /* UnionViewController */,
-				92E69FFC1BD0F9F8001C378A /* CustomClientViewController */,
 			);
 			name = MainController;
 			path = MainViewController;
@@ -775,21 +803,7 @@
 				924D116A1BCE61360040C318 /* ActionWebViewController.m */,
 			);
 			name = UnionViewController;
-			sourceTree = "<group>";
-		};
-		92E69FFC1BD0F9F8001C378A /* CustomClientViewController */ = {
-			isa = PBXGroup;
-			children = (
-				92E6A0001BD0FA67001C378A /* CloudTabbarController.h */,
-				92E6A0011BD0FA67001C378A /* CloudTabbarController.m */,
-				92E69FFD1BD0FA2F001C378A /* CloudAccountViewController.h */,
-				92E69FFE1BD0FA2F001C378A /* CloudAccountViewController.m */,
-				92E6A0031BD0FAAE001C378A /* InvestViewController.h */,
-				92E6A0041BD0FAAE001C378A /* InvestViewController.m */,
-				92E6A0061BD0FAB8001C378A /* PersonalViewController.h */,
-				92E6A0071BD0FAB8001C378A /* PersonalViewController.m */,
-			);
-			name = CustomClientViewController;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		92EB85821AC5609000A80E03 /* Controller */ = {
@@ -1033,21 +1047,21 @@
 				92FCF5A51B9405AB00644EEA /* FMDatabase.m in Sources */,
 				921DD2F51AEB67AF0004251F /* UIView+BFExtension.m in Sources */,
 				9217C9201BC6659500938A9E /* JTSImageViewController.m in Sources */,
-				92E69FFF1BD0FA2F001C378A /* CloudAccountViewController.m in Sources */,
 				92871C791AF75D6E002EC9F6 /* HTSectionView.m in Sources */,
 				926811C51ADE571E00FAB0A2 /* HTUserDefault.m in Sources */,
 				925BE4C11BD4B8D6007B742C /* FirstViewController.m in Sources */,
-				92E6A0081BD0FAB8001C378A /* PersonalViewController.m in Sources */,
 				9217C9231BC6659500938A9E /* UIImage+JTSImageEffects.m in Sources */,
 				921DD2EE1AEB67AF0004251F /* NSString+LunchName.m in Sources */,
 				926811D11ADE870000FAB0A2 /* HTSeparateView.m in Sources */,
 				921DD2F31AEB67AF0004251F /* UIImage+Stretch.m in Sources */,
 				921DD2EA1AEB67AF0004251F /* NSDate+BFExtension.m in Sources */,
+				92616C6E1BE8AE30000E067A /* CloudAccountViewController.m in Sources */,
 				921DD28B1AEB65790004251F /* HTBaseCell.m in Sources */,
 				92D2A2831AC3DF7B00C9A4AE /* main.m in Sources */,
 				921DD28F1AEB65790004251F /* LoadMoreCell.m in Sources */,
 				92442FBA1B817B0D006E3290 /* HTBaseModel.m in Sources */,
 				926812831AE8CE5700FAB0A2 /* UIColor+Colors.m in Sources */,
+				92616C6F1BE8AE30000E067A /* CloudTabbarController.m in Sources */,
 				92B480081B6F6B4B00AF9A2D /* UIImageView+BadgeView.m in Sources */,
 				92B480021B6F664B00AF9A2D /* XMBadgeView.m in Sources */,
 				921DD2C61AEB67310004251F /* ButtonCell.m in Sources */,
@@ -1057,16 +1071,16 @@
 				84D9FB051AE77DC500C5AAA8 /* AttributedLabel.m in Sources */,
 				922CB5981AC9786B00C4A438 /* HTBaseTableViewController.m in Sources */,
 				922CB5A51AC9789700C4A438 /* MJRefreshBaseView.m in Sources */,
-				92E6A0021BD0FA67001C378A /* CloudTabbarController.m in Sources */,
 				921DD2C81AEB67310004251F /* LoadingStateView.m in Sources */,
 				921DD28E1AEB65790004251F /* HTListTableViewController.m in Sources */,
 				9228C9901B72FA0D008E3608 /* ZHPickView.m in Sources */,
 				921DD2F11AEB67AF0004251F /* UIAlertView+RWBlock.m in Sources */,
 				922CB5A71AC9789700C4A438 /* MJRefreshFooterView.m in Sources */,
 				92871C7B1AF75D6E002EC9F6 /* HTSelectionView.m in Sources */,
-				92E6A0051BD0FAAE001C378A /* InvestViewController.m in Sources */,
+				92616C711BE8AE30000E067A /* PersonalViewController.m in Sources */,
 				921DD28D1AEB65790004251F /* HTBaseTableControl.m in Sources */,
 				921DD2EC1AEB67AF0004251F /* NSString+BFExtension.m in Sources */,
+				92616C741BE8AF63000E067A /* CustomInvestGuideViewController.m in Sources */,
 				92B480051B6F6B3400AF9A2D /* MCBadgeView.m in Sources */,
 				92EB85851AC561C800A80E03 /* HTTabBarController.m in Sources */,
 				92DA92791B3C164800AACF1D /* UIView+NoneDataView.m in Sources */,
@@ -1074,6 +1088,7 @@
 				92943C3C1BCF7FAE005B44CB /* BaseDetailViewController.m in Sources */,
 				92A41EE31B26D4030036DC58 /* HTADScrollView.m in Sources */,
 				921DD28A1AEB65790004251F /* HTActions.m in Sources */,
+				92616C701BE8AE30000E067A /* InvestViewController.m in Sources */,
 				92DA92761B3C050000AACF1D /* UIView+Layer.m in Sources */,
 				922CB5A61AC9789700C4A438 /* MJRefreshConst.m in Sources */,
 				921DD2CD1AEB67310004251F /* UIBarButtonExtern.m in Sources */,

@@ -10,7 +10,8 @@
 #import "HTNavigationController.h"
 #import "FirstViewController.h"
 #import "ViewController.h"
-
+#import "ViewController1.h"
+#import "ViewController2.h"
 
 @interface HTTabBarController ()
 
@@ -73,11 +74,11 @@
     cart.tabBarItem = [self tabbarItemWithTitle:@"目的地" andItemImage:@"direction"];
     HTNavigationController *nav2 = [[HTNavigationController alloc] initWithRootViewController:cart];
     
-    ViewController *find = [[ViewController alloc]init];
+    ViewController1 *find = [[ViewController1 alloc]init];
     find.tabBarItem = [self tabbarItemWithTitle:@"社区" andItemImage:@"commit"];
     HTNavigationController *nav3 = [[HTNavigationController alloc] initWithRootViewController:find];
     
-    ViewController *mySelf = [[ViewController alloc]init];
+    ViewController2 *mySelf = [[ViewController2 alloc]init];
     mySelf.tabBarItem = [self tabbarItemWithTitle:@"我的" andItemImage:@"mySelf"];
     HTNavigationController *nav4 = [[HTNavigationController alloc] initWithRootViewController:mySelf];
 

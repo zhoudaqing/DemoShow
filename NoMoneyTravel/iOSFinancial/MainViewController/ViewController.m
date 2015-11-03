@@ -22,6 +22,7 @@
     
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     
+<<<<<<< HEAD
     [self.navigationController.navigationBar setBackgroundImage:HTImage(@"statusBar") forBarMetrics:UIBarMetricsDefault];
 }
 
@@ -113,6 +114,15 @@
         }];
         detail4.hidesBottomBarWhenPushed = YES;
         [weakSelf.navigationController pushViewController:detail4 animated:YES];
+=======
+    [self.navigationController.navigationBar setBackgroundImage:HTImage(@"mudidiStatus") forBarMetrics:UIBarMetricsDefault];
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    [self setImage:HTImage(@"mudidi") WithTouchBlock:^(NSIndexPath *indexPath) {
+>>>>>>> 881abc5bf933c4c61935b3790b06bc01d4bde07f
         
     }];
     detail3.hidesBottomBarWhenPushed = YES;

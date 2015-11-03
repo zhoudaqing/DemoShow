@@ -99,7 +99,7 @@
             
             [detail4 setImage:HTImage(@"qiandaohuodongshuoming") WithTouchBlock:^(NSIndexPath *indexPath) {
                 
-                
+                NSLog(@"我知道了  继续赚里程");
                 BaseDetailViewController *detail5 = [[BaseDetailViewController alloc] init];
                 detail5.title = @"验证激活";
                 
@@ -110,7 +110,7 @@
                     
                     [detail6 setImage:HTImage(@"setAccount") WithTouchBlock:^(NSIndexPath *indexPath) {
                         
-                        NSLog(@"添加提示 和跳转c端");
+                        NSLog(@"我知道了 和跳转c端");
                         
                         
                     }];

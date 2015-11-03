@@ -89,7 +89,7 @@
 {
     UIImage *selectImage = HTImage(HTSTR(@"%@H", imageStr));
     UIImage *normalImage = HTImage(HTSTR(@"%@", imageStr));
-    UITabBarItem *tabBarItem = [[UITabBarItem alloc] initWithTitle:title image:nil selectedImage:nil];
+    UITabBarItem *tabBarItem = [[UITabBarItem alloc] initWithTitle:title image:normalImage selectedImage:nil];
     
     return tabBarItem;
 }

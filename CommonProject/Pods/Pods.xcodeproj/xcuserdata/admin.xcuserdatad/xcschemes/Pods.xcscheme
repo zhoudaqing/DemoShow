@@ -14,35 +14,39 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "01248B153230A896C1BF43B2"
+               BlueprintIdentifier = "A300AB13FAE115AD30108A5A8D4F72DF"
                BuildableName = "libPods.a"
                BlueprintName = "Pods"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "92D2A27C1AC3DF7B00C9A4AE"
+               BuildableName = "CommonProject.app"
+               BlueprintName = "CommonProject"
+               ReferencedContainer = "container:../CommonProject.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
+      buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES"
-      buildConfiguration = "Debug">
+      shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
-   </TestAction>
-   <LaunchAction
-      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
-      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      launchStyle = "0"
-      useCustomWorkingDirectory = "NO"
-      buildConfiguration = "Debug"
-      ignoresPersistentStateOnLaunch = "NO"
-      debugDocumentVersioning = "YES"
-      allowLocationSimulation = "YES">
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "01248B153230A896C1BF43B2"
+            BlueprintIdentifier = "A300AB13FAE115AD30108A5A8D4F72DF"
             BuildableName = "libPods.a"
             BlueprintName = "Pods"
             ReferencedContainer = "container:Pods.xcodeproj">
@@ -50,17 +54,45 @@
       </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
+   </TestAction>
+   <LaunchAction
+      buildConfiguration = "Debug"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      launchStyle = "0"
+      useCustomWorkingDirectory = "NO"
+      ignoresPersistentStateOnLaunch = "NO"
+      debugDocumentVersioning = "YES"
+      enableAddressSanitizer = "YES"
+      debugServiceExtension = "internal"
+      allowLocationSimulation = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "A300AB13FAE115AD30108A5A8D4F72DF"
+            BuildableName = "libPods.a"
+            BlueprintName = "Pods"
+            ReferencedContainer = "container:Pods.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
+      <AdditionalOptions>
+         <AdditionalOption
+            key = "NSZombieEnabled"
+            value = "YES"
+            isEnabled = "YES">
+         </AdditionalOption>
+      </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
+      buildConfiguration = "Release"
       shouldUseLaunchSchemeArgsEnv = "YES"
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
-      buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "01248B153230A896C1BF43B2"
+            BlueprintIdentifier = "A300AB13FAE115AD30108A5A8D4F72DF"
             BuildableName = "libPods.a"
             BlueprintName = "Pods"
             ReferencedContainer = "container:Pods.xcodeproj">

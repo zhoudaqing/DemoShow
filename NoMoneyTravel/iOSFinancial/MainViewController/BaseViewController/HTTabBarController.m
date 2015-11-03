@@ -9,8 +9,8 @@
 #import "HTTabBarController.h"
 #import "HTNavigationController.h"
 #import "FirstViewController.h"
-#import "SecondViewController.h"
 #import "ViewController.h"
+
 
 @interface HTTabBarController ()
 
@@ -69,7 +69,7 @@
     store.tabBarItem = [self tabbarItemWithTitle:@"推荐" andItemImage:@"travel"];
     HTNavigationController *nav1 = [[HTNavigationController alloc] initWithRootViewController:store];
     
-    SecondViewController *cart = [[SecondViewController alloc]init];
+    ViewController *cart = [[ViewController alloc]init];
     cart.tabBarItem = [self tabbarItemWithTitle:@"目的地" andItemImage:@"direction"];
     HTNavigationController *nav2 = [[HTNavigationController alloc] initWithRootViewController:cart];
     
@@ -87,7 +87,7 @@
 
 - (UITabBarItem *)tabbarItemWithTitle:(NSString *)title andItemImage:(NSString *)imageStr
 {
-    UIImage *selectImage = HTImage(HTSTR(@"%@H", imageStr));
+    //UIImage *selectImage = HTImage(HTSTR(@"%@H", imageStr));
     UIImage *normalImage = HTImage(HTSTR(@"%@", imageStr));
     UITabBarItem *tabBarItem = [[UITabBarItem alloc] initWithTitle:title image:normalImage selectedImage:nil];
     

@@ -73,20 +73,15 @@
 //  MARK: Setting
 - (void)initAppStyle
 {
-    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor],NSFontAttributeName : [UIFont systemFontOfSize:18]}];
-    
-    [[UINavigationBar appearance] setBarTintColor:[UIColor jt_barTintColor]];
-
-    
     //  去掉tabbar底下的黑线 (顶部的阴影线 是 shoadowImage 造成的)
     [[UITabBar appearance] setTintColor:[UIColor jt_barTintColor]];
     
     //  修改navigation Bar底下的黑色线
-//    [[UINavigationBar appearance] setBarTintColor:[UIColor jt_barTintColor]];
+    [[UINavigationBar appearance] setBarTintColor:[UIColor jt_barTintColor]];
     //[[UINavigationBar appearance] setShadowImage:HTImage(@"")];//[[UIImage alloc] init]
     
     //修改返回按钮图片
-    [[UINavigationBar appearance] setBackIndicatorImage:[UIImage imageNamed:@"return"]];
+    [[UINavigationBar appearance] setBackIndicatorImage:[UIImage imageNamed:@"returnH"]];
     [[UINavigationBar appearance] setBackIndicatorTransitionMaskImage:[UIImage imageNamed:@"returnH"]];
     
     [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor],NSFontAttributeName : [UIFont systemFontOfSize:18]}];
@@ -98,8 +93,6 @@
     [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(0, -160)
                                                          forBarMetrics:UIBarMetricsDefault];
 }
-
-
 
 
 @end

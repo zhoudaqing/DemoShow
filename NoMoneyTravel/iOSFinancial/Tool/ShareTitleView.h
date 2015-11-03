@@ -13,5 +13,4 @@
 @property (nonatomic, strong)   UILabel *titleLabel;
 @property (nonatomic, strong)   UILabel *codeLabel;
 
-
 @end

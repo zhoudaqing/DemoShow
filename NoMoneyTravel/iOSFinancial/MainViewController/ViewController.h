@@ -1,18 +1,13 @@
 //
 //  ViewController.h
-//  OTCoverDemo
+//  NoMoneyTravel
 //
-//  Created by yechunxiao on 14-9-21.
-//  Copyright (c) 2014年 yechunxiao. All rights reserved.
+//  Created by Mr.Yang on 15/11/3.
+//  Copyright © 2015年 Mr.Yang. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 #import "BaseDetailViewController.h"
 
-@interface ViewController : HTBaseViewController
-
+@interface ViewController : BaseDetailViewController
 
 @end
-
-
-

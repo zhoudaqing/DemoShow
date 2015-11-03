@@ -306,7 +306,7 @@
 		92B480071B6F6B4B00AF9A2D /* UIImageView+BadgeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+BadgeView.m"; sourceTree = "<group>"; };
 		92BD02B21AEF430E00758530 /* Buttons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Buttons.h; sourceTree = "<group>"; };
 		92BD02B31AEF430E00758530 /* Buttons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Buttons.m; sourceTree = "<group>"; };
-		92D2A27D1AC3DF7B00C9A4AE /* SelectFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SelectFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		92D2A27D1AC3DF7B00C9A4AE /* NoMoneyTravel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoMoneyTravel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92D2A2811AC3DF7B00C9A4AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92D2A2821AC3DF7B00C9A4AE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		92D2A2841AC3DF7B00C9A4AE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -726,7 +726,7 @@
 		92D2A27E1AC3DF7B00C9A4AE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				92D2A27D1AC3DF7B00C9A4AE /* SelectFood.app */,
+				92D2A27D1AC3DF7B00C9A4AE /* NoMoneyTravel.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -934,9 +934,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		92D2A27C1AC3DF7B00C9A4AE /* SelectFood */ = {
+		92D2A27C1AC3DF7B00C9A4AE /* NoMoneyTravel */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 92D2A2A31AC3DF7B00C9A4AE /* Build configuration list for PBXNativeTarget "SelectFood" */;
+			buildConfigurationList = 92D2A2A31AC3DF7B00C9A4AE /* Build configuration list for PBXNativeTarget "NoMoneyTravel" */;
 			buildPhases = (
 				B17D10F71545FB6155D8822C /* Check Pods Manifest.lock */,
 				92D2A2791AC3DF7B00C9A4AE /* Sources */,
@@ -948,9 +948,9 @@
 			);
 			dependencies = (
 			);
-			name = SelectFood;
+			name = NoMoneyTravel;
 			productName = iOSFinancial;
-			productReference = 92D2A27D1AC3DF7B00C9A4AE /* SelectFood.app */;
+			productReference = 92D2A27D1AC3DF7B00C9A4AE /* NoMoneyTravel.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -968,7 +968,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 92D2A2781AC3DF7B00C9A4AE /* Build configuration list for PBXProject "SelectFood" */;
+			buildConfigurationList = 92D2A2781AC3DF7B00C9A4AE /* Build configuration list for PBXProject "NoMoneyTravel" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -982,7 +982,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				92D2A27C1AC3DF7B00C9A4AE /* SelectFood */,
+				92D2A27C1AC3DF7B00C9A4AE /* NoMoneyTravel */,
 			);
 		};
 /* End PBXProject section */
@@ -1249,7 +1249,7 @@
 					"$(PROJECT_DIR)/iOSFinancial/ThirdPart/ShareSDK/UI",
 					"$(PROJECT_DIR)/iOSFinancial/ThirdPart/SMS_SDK",
 				);
-				GCC_PREFIX_HEADER = "$(SRCROOT)/iOSFinancial/SelectFood-Prefix.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/iOSFinancial/NoMoneyTravel-Prefix.pch";
 				INFOPLIST_FILE = iOSFinancial/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1264,7 +1264,7 @@
 					"$(PROJECT_DIR)/iOSFinancial/ThirdPart/ShareSDK/Extend/WeChatSDK",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jiandanlicai.SelectFoodAll;
-				PRODUCT_NAME = SelectFood;
+				PRODUCT_NAME = NoMoneyTravel;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -1291,7 +1291,7 @@
 					"$(PROJECT_DIR)/iOSFinancial/ThirdPart/ShareSDK/UI",
 					"$(PROJECT_DIR)/iOSFinancial/ThirdPart/SMS_SDK",
 				);
-				GCC_PREFIX_HEADER = "$(SRCROOT)/iOSFinancial/SelectFood-Prefix.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/iOSFinancial/NoMoneyTravel-Prefix.pch";
 				INFOPLIST_FILE = iOSFinancial/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1307,7 +1307,7 @@
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jiandanlicai.SelectFoodAll;
-				PRODUCT_NAME = SelectFood;
+				PRODUCT_NAME = NoMoneyTravel;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -1317,7 +1317,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		92D2A2781AC3DF7B00C9A4AE /* Build configuration list for PBXProject "SelectFood" */ = {
+		92D2A2781AC3DF7B00C9A4AE /* Build configuration list for PBXProject "NoMoneyTravel" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				92D2A2A11AC3DF7B00C9A4AE /* Debug */,
@@ -1326,7 +1326,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		92D2A2A31AC3DF7B00C9A4AE /* Build configuration list for PBXNativeTarget "SelectFood" */ = {
+		92D2A2A31AC3DF7B00C9A4AE /* Build configuration list for PBXNativeTarget "NoMoneyTravel" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				92D2A2A41AC3DF7B00C9A4AE /* Debug */,

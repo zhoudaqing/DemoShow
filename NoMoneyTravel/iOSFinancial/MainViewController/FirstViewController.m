@@ -36,23 +36,23 @@
         BaseDetailViewController *detail3 = [[BaseDetailViewController alloc] init];
         detail3.title = @"折扣详情";
         [weakSelf.navigationController.navigationBar setBackgroundImage:nil forBarMetrics:UIBarMetricsDefault];
-        [detail3 setImage:HTImage(@"travel_content") WithTouchBlock:^(NSIndexPath *indexPath) {
+        [detail3 setImage:HTImage(@"zhekouxiangqing") WithTouchBlock:^(NSIndexPath *indexPath) {
             
             BaseDetailViewController *detail4 = [[BaseDetailViewController alloc] init];
             detail4.title = @"提交订单";
             
-            [detail4 setImage:HTImage(@"travel_content") WithTouchBlock:^(NSIndexPath *indexPath) {
+            [detail4 setImage:HTImage(@"tijiaodingdan") WithTouchBlock:^(NSIndexPath *indexPath) {
                 
                 
                 BaseDetailViewController *detail5 = [[BaseDetailViewController alloc] init];
                 detail5.title = @"待支付订单";
                 
-                [detail5 setImage:HTImage(@"travel_content") WithTouchBlock:^(NSIndexPath *indexPath) {
+                [detail5 setImage:HTImage(@"daizhifudingdan") WithTouchBlock:^(NSIndexPath *indexPath) {
                     
                     BaseDetailViewController *detail6 = [[BaseDetailViewController alloc] init];
                     detail6.title = @"我的折扣";
                     
-                    [detail6 setImage:HTImage(@"travel_content") WithTouchBlock:^(NSIndexPath *indexPath) {
+                    [detail6 setImage:HTImage(@"zhekoujiamo") WithTouchBlock:^(NSIndexPath *indexPath) {
                         
                         NSLog(@"添加提示 和跳转c端");
                         

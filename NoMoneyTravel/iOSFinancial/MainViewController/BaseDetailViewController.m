@@ -127,28 +127,28 @@
         BaseDetailViewController *detail4 = [[BaseDetailViewController alloc] init];
         detail4.title = @"穷游金融活动说明";
         
-        [detail4 setImage:HTImage(@"travel_content") WithTouchBlock:^(NSIndexPath *indexPath) {
+        [detail4 setImage:HTImage(@"yaoqinghuodongshuoming") WithTouchBlock:^(NSIndexPath *indexPath) {
             
             
             BaseDetailViewController *detail5 = [[BaseDetailViewController alloc] init];
-            detail5.title = @"帮助加膜";
+            detail5.title = @"帮助";
             
-            [detail5 setImage:HTImage(@"travel_content") WithTouchBlock:^(NSIndexPath *indexPath) {
+            [detail5 setImage:HTImage(@"bangzhujiamo") WithTouchBlock:^(NSIndexPath *indexPath) {
                 
                 BaseDetailViewController *detail6 = [[BaseDetailViewController alloc] init];
                 detail6.title = @"邮箱注册";
                 
-                [detail6 setImage:HTImage(@"travel_content") WithTouchBlock:^(NSIndexPath *indexPath) {
+                [detail6 setImage:HTImage(@"youxiangzhuce") WithTouchBlock:^(NSIndexPath *indexPath) {
                     
                     BaseDetailViewController *detail7 = [[BaseDetailViewController alloc] init];
                     detail7.title = @"完善安全信息";
                     
-                    [detail7 setImage:HTImage(@"travel_content") WithTouchBlock:^(NSIndexPath *indexPath) {
+                    [detail7 setImage:HTImage(@"haomabangding") WithTouchBlock:^(NSIndexPath *indexPath) {
                         
                         BaseDetailViewController *detail8 = [[BaseDetailViewController alloc] init];
                         detail8.title = @"绑定验证";
                         
-                        [detail8 setImage:HTImage(@"travel_content") WithTouchBlock:^(NSIndexPath *indexPath) {
+                        [detail8 setImage:HTImage(@"kaihuxingmingyanzheng") WithTouchBlock:^(NSIndexPath *indexPath) {
                             
                             NSLog(@"添加提示 和跳转至签到");
                             

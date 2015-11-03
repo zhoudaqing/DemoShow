@@ -50,7 +50,7 @@
 
 + (UIColor *)jt_barTintColor
 {
-    return [UIColor greenColor];
+    return [UIColor colorWithHEX:0x21b589];
 }
 
 + (UIColor *)jd_textGray2Color;

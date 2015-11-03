@@ -7,7 +7,6 @@
 //
 
 #import "FirstViewController.h"
-#import "Shouye1ViewController.h"
 
 @interface FirstViewController ()
 
@@ -21,9 +20,9 @@
 {
     [super viewWillAppear:animated];
     
-    self.navigationController.navigationBar.tintColor = HTRedColor;
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    
     [self.navigationController.navigationBar setBackgroundImage:HTImage(@"statusBar") forBarMetrics:UIBarMetricsDefault];
-    self.title = @"";
 }
 
 - (void)viewDidLoad
@@ -42,8 +41,7 @@
             detail4.title = @"提交订单";
             
             [detail4 setImage:HTImage(@"tijiaodingdan") WithTouchBlock:^(NSIndexPath *indexPath) {
-                
-                
+                      
                 BaseDetailViewController *detail5 = [[BaseDetailViewController alloc] init];
                 detail5.title = @"待支付订单";
                 
@@ -56,11 +54,9 @@
                         
                         NSLog(@"添加提示 和跳转c端");
                         
-                        
                     }];
                     detail6.hidesBottomBarWhenPushed = YES;
                     [weakSelf.navigationController pushViewController:detail6 animated:YES];
-                    
                     
                 }];
                 detail5.hidesBottomBarWhenPushed = YES;
@@ -130,6 +126,11 @@
         }];
         detail3.hidesBottomBarWhenPushed = YES;
         [weakSelf.navigationController pushViewController:detail3 animated:YES];
+}
+
+- (void)invested
+{
+    
 }
 
 @end

@@ -16,13 +16,6 @@
 		846EE5011B020C1A00F0AE4E /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846EE5001B020C1A00F0AE4E /* CoreTelephony.framework */; };
 		846EE5031B020C2700F0AE4E /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 846EE5021B020C2700F0AE4E /* libstdc++.dylib */; };
 		846EE5051B020C3200F0AE4E /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 846EE5041B020C3200F0AE4E /* libz.dylib */; };
-		846FFAC21BD5FCE800FA6C14 /* OTCover.m in Sources */ = {isa = PBXBuildFile; fileRef = 846FFAC11BD5FCE800FA6C14 /* OTCover.m */; };
-		846FFAC51BD6003900FA6C14 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846FFAC41BD6003900FA6C14 /* ViewController.m */; };
-		846FFAC81BD640B300FA6C14 /* Shouye1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846FFAC71BD640B300FA6C14 /* Shouye1ViewController.m */; };
-		846FFACB1BD6482800FA6C14 /* ZhuanPanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846FFACA1BD6482800FA6C14 /* ZhuanPanViewController.m */; };
-		846FFAD01BD64D3300FA6C14 /* KaihuYanzhengViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846FFACF1BD64D3300FA6C14 /* KaihuYanzhengViewController.m */; };
-		846FFAD31BD65EF300FA6C14 /* PaySuccessfulViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846FFAD21BD65EF300FA6C14 /* PaySuccessfulViewController.m */; };
-		846FFAD71BD66E7100FA6C14 /* PackingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846FFAD61BD66E7100FA6C14 /* PackingViewController.m */; };
 		84D9FB051AE77DC500C5AAA8 /* AttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D9FB041AE77DC500C5AAA8 /* AttributedLabel.m */; };
 		920C09881B74975000A8CC30 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 920C09871B74975000A8CC30 /* QuartzCore.framework */; };
 		920C098A1B74977400A8CC30 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 920C09891B74977400A8CC30 /* libicucore.dylib */; };
@@ -77,7 +70,7 @@
 		92442FBA1B817B0D006E3290 /* HTBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 92442FB91B817B0D006E3290 /* HTBaseModel.m */; };
 		924D116B1BCE61360040C318 /* ActionWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 924D116A1BCE61360040C318 /* ActionWebViewController.m */; };
 		925BE4C11BD4B8D6007B742C /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 925BE4C01BD4B8D6007B742C /* FirstViewController.m */; };
-		925BE4C41BD4B8FD007B742C /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 925BE4C31BD4B8FD007B742C /* SecondViewController.m */; };
+		92616C621BE8A0CC000E067A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92616C611BE8A0CC000E067A /* ViewController.m */; settings = {ASSET_TAGS = (); }; };
 		926811C21ADE570900FAB0A2 /* HTGuideManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 926811C11ADE570900FAB0A2 /* HTGuideManager.m */; };
 		926811C51ADE571E00FAB0A2 /* HTUserDefault.m in Sources */ = {isa = PBXBuildFile; fileRef = 926811C41ADE571E00FAB0A2 /* HTUserDefault.m */; };
 		926811CB1ADE868C00FAB0A2 /* HTSelectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 926811CA1ADE868C00FAB0A2 /* HTSelectionController.m */; };
@@ -141,20 +134,6 @@
 		846EE5001B020C1A00F0AE4E /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		846EE5021B020C2700F0AE4E /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
 		846EE5041B020C3200F0AE4E /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
-		846FFAC01BD5FCE800FA6C14 /* OTCover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTCover.h; sourceTree = "<group>"; };
-		846FFAC11BD5FCE800FA6C14 /* OTCover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTCover.m; sourceTree = "<group>"; };
-		846FFAC31BD6003900FA6C14 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		846FFAC41BD6003900FA6C14 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		846FFAC61BD640B300FA6C14 /* Shouye1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shouye1ViewController.h; sourceTree = "<group>"; };
-		846FFAC71BD640B300FA6C14 /* Shouye1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shouye1ViewController.m; sourceTree = "<group>"; };
-		846FFAC91BD6482800FA6C14 /* ZhuanPanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZhuanPanViewController.h; sourceTree = "<group>"; };
-		846FFACA1BD6482800FA6C14 /* ZhuanPanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZhuanPanViewController.m; sourceTree = "<group>"; };
-		846FFACE1BD64D3300FA6C14 /* KaihuYanzhengViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KaihuYanzhengViewController.h; sourceTree = "<group>"; };
-		846FFACF1BD64D3300FA6C14 /* KaihuYanzhengViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KaihuYanzhengViewController.m; sourceTree = "<group>"; };
-		846FFAD11BD65EF300FA6C14 /* PaySuccessfulViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaySuccessfulViewController.h; sourceTree = "<group>"; };
-		846FFAD21BD65EF300FA6C14 /* PaySuccessfulViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaySuccessfulViewController.m; sourceTree = "<group>"; };
-		846FFAD51BD66E7100FA6C14 /* PackingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PackingViewController.h; sourceTree = "<group>"; };
-		846FFAD61BD66E7100FA6C14 /* PackingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PackingViewController.m; sourceTree = "<group>"; };
 		84D9FB031AE77DC500C5AAA8 /* AttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AttributedLabel.h; path = ../../MainViewController/LogIn/AttributedLabel.h; sourceTree = "<group>"; };
 		84D9FB041AE77DC500C5AAA8 /* AttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AttributedLabel.m; path = ../../MainViewController/LogIn/AttributedLabel.m; sourceTree = "<group>"; };
 		920C09871B74975000A8CC30 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -256,8 +235,8 @@
 		924D116A1BCE61360040C318 /* ActionWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionWebViewController.m; sourceTree = "<group>"; };
 		925BE4BF1BD4B8D6007B742C /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		925BE4C01BD4B8D6007B742C /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		925BE4C21BD4B8FD007B742C /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		925BE4C31BD4B8FD007B742C /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		92616C601BE8A0CC000E067A /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		92616C611BE8A0CC000E067A /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		926811C01ADE570900FAB0A2 /* HTGuideManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTGuideManager.h; sourceTree = "<group>"; };
 		926811C11ADE570900FAB0A2 /* HTGuideManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTGuideManager.m; sourceTree = "<group>"; };
 		926811C31ADE571E00FAB0A2 /* HTUserDefault.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTUserDefault.h; sourceTree = "<group>"; };
@@ -328,7 +307,7 @@
 		92E6A0071BD0FAB8001C378A /* PersonalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalViewController.m; sourceTree = "<group>"; };
 		92EB85461AC5132700A80E03 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = iOSFinancial/Singleton/User.h; sourceTree = SOURCE_ROOT; };
 		92EB85471AC5132700A80E03 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = iOSFinancial/Singleton/User.m; sourceTree = SOURCE_ROOT; };
-		92EB857E1AC5517400A80E03 /* SelectFood-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SelectFood-Prefix.pch"; sourceTree = "<group>"; };
+		92EB857E1AC5517400A80E03 /* NoMoneyTravel-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NoMoneyTravel-Prefix.pch"; sourceTree = "<group>"; };
 		92EB85831AC561C800A80E03 /* HTTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTabBarController.h; sourceTree = "<group>"; };
 		92EB85841AC561C800A80E03 /* HTTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTabBarController.m; sourceTree = "<group>"; };
 		92EB85861AC561E400A80E03 /* HTNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTNavigationController.h; sourceTree = "<group>"; };
@@ -387,15 +366,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		846FFAD41BD66E1400FA6C14 /* PaySuccess */ = {
-			isa = PBXGroup;
-			children = (
-				846FFAD51BD66E7100FA6C14 /* PackingViewController.h */,
-				846FFAD61BD66E7100FA6C14 /* PackingViewController.m */,
-			);
-			name = PaySuccess;
-			sourceTree = "<group>";
-		};
 		9211AF721B7AF74D00B7FD9F /* VPImageCropper */ = {
 			isa = PBXGroup;
 			children = (
@@ -639,21 +609,8 @@
 			children = (
 				925BE4BF1BD4B8D6007B742C /* FirstViewController.h */,
 				925BE4C01BD4B8D6007B742C /* FirstViewController.m */,
-				846FFAC61BD640B300FA6C14 /* Shouye1ViewController.h */,
-				846FFAC71BD640B300FA6C14 /* Shouye1ViewController.m */,
-				846FFAC91BD6482800FA6C14 /* ZhuanPanViewController.h */,
-				846FFACA1BD6482800FA6C14 /* ZhuanPanViewController.m */,
-				846FFACE1BD64D3300FA6C14 /* KaihuYanzhengViewController.h */,
-				846FFACF1BD64D3300FA6C14 /* KaihuYanzhengViewController.m */,
-				846FFAD11BD65EF300FA6C14 /* PaySuccessfulViewController.h */,
-				846FFAD21BD65EF300FA6C14 /* PaySuccessfulViewController.m */,
-				846FFAD41BD66E1400FA6C14 /* PaySuccess */,
-				925BE4C21BD4B8FD007B742C /* SecondViewController.h */,
-				925BE4C31BD4B8FD007B742C /* SecondViewController.m */,
-				846FFAC31BD6003900FA6C14 /* ViewController.h */,
-				846FFAC41BD6003900FA6C14 /* ViewController.m */,
-				846FFAC01BD5FCE800FA6C14 /* OTCover.h */,
-				846FFAC11BD5FCE800FA6C14 /* OTCover.m */,
+				92616C601BE8A0CC000E067A /* ViewController.h */,
+				92616C611BE8A0CC000E067A /* ViewController.m */,
 			);
 			name = MainViewController;
 			sourceTree = "<group>";
@@ -735,7 +692,7 @@
 			isa = PBXGroup;
 			children = (
 				92D2A2901AC3DF7B00C9A4AE /* Images.xcassets */,
-				92EB857E1AC5517400A80E03 /* SelectFood-Prefix.pch */,
+				92EB857E1AC5517400A80E03 /* NoMoneyTravel-Prefix.pch */,
 				92D2A2841AC3DF7B00C9A4AE /* AppDelegate.h */,
 				92D2A2851AC3DF7B00C9A4AE /* AppDelegate.m */,
 				9268127C1AE8CE5700FAB0A2 /* Config */,
@@ -1061,17 +1018,13 @@
 				9217C9221BC6659500938A9E /* UIApplication+JTSImageViewController.m in Sources */,
 				921DD2F41AEB67AF0004251F /* UIView+Animation.m in Sources */,
 				92FCF5A71B9405AB00644EEA /* FMDatabasePool.m in Sources */,
-				846FFAD01BD64D3300FA6C14 /* KaihuYanzhengViewController.m in Sources */,
 				9217C9211BC6659500938A9E /* JTSSimpleImageDownloader.m in Sources */,
 				92943C341BCE8FED005B44CB /* ContentCell.m in Sources */,
 				922CB5A81AC9789700C4A438 /* MJRefreshHeaderView.m in Sources */,
-				846FFACB1BD6482800FA6C14 /* ZhuanPanViewController.m in Sources */,
 				921DD2F61AEB67AF0004251F /* UIView+Prompting.m in Sources */,
 				92F559111AE9F3F10074A52A /* HTVersionManager.m in Sources */,
-				846FFAD31BD65EF300FA6C14 /* PaySuccessfulViewController.m in Sources */,
 				92D2A2861AC3DF7B00C9A4AE /* AppDelegate.m in Sources */,
 				9217C91E1BC6659500938A9E /* JTSAnimatedGIFUtility.m in Sources */,
-				846FFAC21BD5FCE800FA6C14 /* OTCover.m in Sources */,
 				921DD2C91AEB67310004251F /* PlaceHolderTextView.m in Sources */,
 				921DD2F01AEB67AF0004251F /* NSString+URLEncoding.m in Sources */,
 				92BD02B41AEF430E00758530 /* Buttons.m in Sources */,
@@ -1112,13 +1065,11 @@
 				922CB5A71AC9789700C4A438 /* MJRefreshFooterView.m in Sources */,
 				92871C7B1AF75D6E002EC9F6 /* HTSelectionView.m in Sources */,
 				92E6A0051BD0FAAE001C378A /* InvestViewController.m in Sources */,
-				925BE4C41BD4B8FD007B742C /* SecondViewController.m in Sources */,
 				921DD28D1AEB65790004251F /* HTBaseTableControl.m in Sources */,
 				921DD2EC1AEB67AF0004251F /* NSString+BFExtension.m in Sources */,
 				92B480051B6F6B3400AF9A2D /* MCBadgeView.m in Sources */,
 				92EB85851AC561C800A80E03 /* HTTabBarController.m in Sources */,
 				92DA92791B3C164800AACF1D /* UIView+NoneDataView.m in Sources */,
-				846FFAC81BD640B300FA6C14 /* Shouye1ViewController.m in Sources */,
 				924D116B1BCE61360040C318 /* ActionWebViewController.m in Sources */,
 				92943C3C1BCF7FAE005B44CB /* BaseDetailViewController.m in Sources */,
 				92A41EE31B26D4030036DC58 /* HTADScrollView.m in Sources */,
@@ -1127,13 +1078,12 @@
 				922CB5A61AC9789700C4A438 /* MJRefreshConst.m in Sources */,
 				921DD2CD1AEB67310004251F /* UIBarButtonExtern.m in Sources */,
 				928860E61B297F810060502D /* UILabel+FlickerNumber.m in Sources */,
-				846FFAC51BD6003900FA6C14 /* ViewController.m in Sources */,
 				926811CB1ADE868C00FAB0A2 /* HTSelectionController.m in Sources */,
 				921DD28C1AEB65790004251F /* HTBaseSource.m in Sources */,
-				846FFAD71BD66E7100FA6C14 /* PackingViewController.m in Sources */,
 				92871C841AF761C3002EC9F6 /* LoginRequest.m in Sources */,
 				92F01EA51AF4A58F00957F7C /* HTPercentView.m in Sources */,
 				922CB5831AC93E8300C4A438 /* HTBaseViewController.m in Sources */,
+				92616C621BE8A0CC000E067A /* ViewController.m in Sources */,
 				9296B25C1B70C9680053B157 /* ShareTitleView.m in Sources */,
 				921DD2F91AEB68070004251F /* CustomIOS7AlertView.m in Sources */,
 				926811C21ADE570900FAB0A2 /* HTGuideManager.m in Sources */,

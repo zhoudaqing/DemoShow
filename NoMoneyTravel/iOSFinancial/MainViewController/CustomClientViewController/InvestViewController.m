@@ -80,7 +80,7 @@
                                 
                                 BaseDetailViewController *regedit = [[BaseDetailViewController alloc] init];
                                 regedit.title = @"输入完成";
-                                [regedit setAlerConten:@"恭喜您已获得50元挑食现金券" withLeftBtn:@"查看" rightBtn:@"我知道了"];
+                                [regedit setAlerConten:@"恭喜您已获得穷游100里程啦，可以兑换穷游的礼品时使用" withLeftBtn:@"我知道了" rightBtn:nil];
                                 [regedit setImage:HTImage(@"buyStep3") WithTouchBlock:^(NSIndexPath *indexPath) {
                                     
                                     weakSelf.tabBarController.selectedIndex = 0;

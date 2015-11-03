@@ -8,6 +8,8 @@
 
 #import "BaseDetailViewController.h"
 #import "ContentCell.h"
+#import "CustomInvestGuideViewController.h"
+#import "CloudTabbarController.h"
 
 
 @interface BaseDetailViewController ()<UIAlertViewDelegate>
@@ -41,26 +43,26 @@
 
 - (void)alertView:(UIAlertView *)alertView willDismissWithButtonIndex:(NSInteger)buttonIndex
 {
-    if (buttonIndex == 1) {
-        //创建通知
-        NSNotification *notification =[NSNotification notificationWithName:@"chongzhitongzhi" object:nil userInfo:nil];
-        //通过通知中心发送通知
-        [[NSNotificationCenter defaultCenter] postNotification:notification];
 
-        [self.navigationController popToRootViewControllerAnimated:YES];
-    }else if([alertView.message isEqualToString:@"精品羊肉券已放入您的挑食账户中，可供下次购买使用"]) {
-        _cellToucheBlock(_index);
+    if([alertView.message isEqualToString:@"恭喜您已获得穷游15里程,可以兑换穷游的礼品时使用"]) {
 
-    }else
-    {
-        //创建通知
-        NSNotification *notification =[NSNotification notificationWithName:@"chongzhitongzhigeren" object:nil userInfo:nil];
-        //通过通知中心发送通知
-        [[NSNotificationCenter defaultCenter] postNotification:notification];
+        [self.navigationController popToViewController:self.navigationController.viewControllers[1] animated:YES];
         
-        [self.navigationController popToRootViewControllerAnimated:YES];
-
     }
+    if ([alertView.message isEqualToString:@"恭喜你，订单已支付成功，稍后商家会直接联系你。距离启程还有1个月，赶紧把旅游花费都存起来，1个月的收益多到让你惊讶哦。"]) {
+        
+        CloudTabbarController *VC = [[CloudTabbarController alloc]init];
+        VC.selectedIndex = 1;
+        VC.showType = ShowTypeInvest;
+        [VC showPromptView];
+        [self.navigationController presentViewController:VC animated:YES completion:nil];
+        [self.navigationController   popToViewController:self.navigationController.viewControllers[1] animated:NO];
+        
+    }
+    if ([alertView.message isEqualToString:@"恭喜您已获得穷游100里程啦，可以兑换穷游的礼品时使用"]) {
+        [self.tabBarController dismissViewControllerAnimated:YES completion:nil];
+    }
+    
 }
 
 - (void)tongzhi
@@ -150,8 +152,7 @@
                         
                         [detail8 setImage:HTImage(@"kaihuxingmingyanzheng") WithTouchBlock:^(NSIndexPath *indexPath) {
                             
-                            NSLog(@"添加提示 和跳转至签到");
-                            
+                            [weakSelf setAlerConten:@"恭喜您已获得穷游15里程,可以兑换穷游的礼品时使用" withLeftBtn:@"我知道了" rightBtn:nil];
                             
                         }];
                         detail8.hidesBottomBarWhenPushed = YES;

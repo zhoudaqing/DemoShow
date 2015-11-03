@@ -7,6 +7,7 @@
 //
 
 #import "FirstViewController.h"
+#import "CustomInvestGuideViewController.h"
 
 @interface FirstViewController ()
 
@@ -41,7 +42,7 @@
             detail4.title = @"提交订单";
             
             [detail4 setImage:HTImage(@"tijiaodingdan") WithTouchBlock:^(NSIndexPath *indexPath) {
-                      
+                
                 BaseDetailViewController *detail5 = [[BaseDetailViewController alloc] init];
                 detail5.title = @"待支付订单";
                 
@@ -52,7 +53,7 @@
                     
                     [detail6 setImage:HTImage(@"zhekoujiamo") WithTouchBlock:^(NSIndexPath *indexPath) {
                         
-                        NSLog(@"添加提示 和跳转c端");
+                        [weakSelf setAlerConten:@"恭喜你，订单已支付成功，稍后商家会直接联系你。距离启程还有1个月，赶紧把旅游花费都存起来，1个月的收益多到让你惊讶哦。" withLeftBtn:@"立即购买" rightBtn:nil];
                         
                     }];
                     detail6.hidesBottomBarWhenPushed = YES;
@@ -74,63 +75,50 @@
     UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(300, 25, 70, 59)];
     [self.view addSubview:btn];
     [btn addTarget:self action:@selector(qiandao) forControlEvents:UIControlEventTouchUpInside];
-
+    
 }
 
 - (void)qiandao
 {
     __weakSelf;
-        //  结算页面
-        BaseDetailViewController *detail3 = [[BaseDetailViewController alloc] init];
-        detail3.title = @"签到";
+    //  结算页面
+    BaseDetailViewController *detail3 = [[BaseDetailViewController alloc] init];
+    detail3.title = @"签到";
     UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(300, 25, 70, 59)];
     [detail3.view addSubview:btn];
     [btn addTarget:detail3 action:@selector(invested) forControlEvents:UIControlEventTouchUpInside];
     [weakSelf.navigationController.navigationBar setBackgroundImage:nil forBarMetrics:UIBarMetricsDefault];
-
-        [detail3 setImage:HTImage(@"qiandao") WithTouchBlock:^(NSIndexPath *indexPath) {
+    
+    [detail3 setImage:HTImage(@"qiandao") WithTouchBlock:^(NSIndexPath *indexPath) {
+        
+        BaseDetailViewController *detail4 = [[BaseDetailViewController alloc] init];
+        detail4.title = @"穷游金融活动说明";
+        
+        [detail4 setImage:HTImage(@"qiandaohuodongshuoming") WithTouchBlock:^(NSIndexPath *indexPath) {
             
-            BaseDetailViewController *detail4 = [[BaseDetailViewController alloc] init];
-            detail4.title = @"穷游金融活动说明";
+            CustomInvestGuideViewController *guide = [[CustomInvestGuideViewController alloc] init];
             
-            [detail4 setImage:HTImage(@"qiandaohuodongshuoming") WithTouchBlock:^(NSIndexPath *indexPath) {
-                
-                NSLog(@"我知道了  继续赚里程");
-                BaseDetailViewController *detail5 = [[BaseDetailViewController alloc] init];
-                detail5.title = @"验证激活";
-                
-                [detail5 setImage:HTImage(@"kaihuxingmingyanzheng") WithTouchBlock:^(NSIndexPath *indexPath) {
-                    
-                    BaseDetailViewController *detail6 = [[BaseDetailViewController alloc] init];
-                    detail6.title = @"绑定银行卡号";
-                    
-                    [detail6 setImage:HTImage(@"setAccount") WithTouchBlock:^(NSIndexPath *indexPath) {
-                        
-                        NSLog(@"我知道了 和跳转c端");
-                        
-                        
-                    }];
-                    detail6.hidesBottomBarWhenPushed = YES;
-                    [weakSelf.navigationController pushViewController:detail6 animated:YES];
-                    
-                    
-                }];
-                detail5.hidesBottomBarWhenPushed = YES;
-                [weakSelf.navigationController pushViewController:detail5 animated:YES];
-                
-                
-            }];
-            detail4.hidesBottomBarWhenPushed = YES;
-            [weakSelf.navigationController pushViewController:detail4 animated:YES];
+            guide.step1AlertMsg = @"恭喜您已获得穷游2里程，继续设置银行卡即可获得10里程";
+            guide.step1AlertButtons = @[@"我知道了", @"继续赚里程"];
+            
+            guide.step2AlertMsg = @"恭喜您已获得穷游10里程，完成任意一笔投资即可获得100里程";
+            guide.step2AlertButtons = @[@"我知道了", @"获100里程"];
+            
+            guide.step3AlertMsg = @"恭喜您已获得穷游100里程啦，可以兑换穷游的礼品时使用";
+            guide.step3AlertButtons = @[@"查看"];
+            
+            HTNavigationController *nav = [[HTNavigationController alloc] initWithRootViewController:guide];
+            
+            [self.tabBarController presentViewController:nav animated:YES completion:nil];
             
         }];
-        detail3.hidesBottomBarWhenPushed = YES;
-        [weakSelf.navigationController pushViewController:detail3 animated:YES];
-}
-
-- (void)invested
-{
-    
+        detail4.hidesBottomBarWhenPushed = YES;
+        [weakSelf.navigationController pushViewController:detail4 animated:YES];
+        
+        
+    }];
+    detail3.hidesBottomBarWhenPushed = YES;
+    [weakSelf.navigationController pushViewController:detail3 animated:YES];
 }
 
 @end

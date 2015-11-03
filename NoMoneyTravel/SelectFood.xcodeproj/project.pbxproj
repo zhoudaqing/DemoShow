@@ -23,6 +23,7 @@
 		846FFAD01BD64D3300FA6C14 /* KaihuYanzhengViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846FFACF1BD64D3300FA6C14 /* KaihuYanzhengViewController.m */; };
 		846FFAD31BD65EF300FA6C14 /* PaySuccessfulViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846FFAD21BD65EF300FA6C14 /* PaySuccessfulViewController.m */; };
 		846FFAD71BD66E7100FA6C14 /* PackingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846FFAD61BD66E7100FA6C14 /* PackingViewController.m */; };
+		847307121BE8A09F00F27D12 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 847307111BE8A09F00F27D12 /* MineViewController.m */; };
 		84D9FB051AE77DC500C5AAA8 /* AttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D9FB041AE77DC500C5AAA8 /* AttributedLabel.m */; };
 		920C09881B74975000A8CC30 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 920C09871B74975000A8CC30 /* QuartzCore.framework */; };
 		920C098A1B74977400A8CC30 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 920C09891B74977400A8CC30 /* libicucore.dylib */; };
@@ -155,6 +156,8 @@
 		846FFAD21BD65EF300FA6C14 /* PaySuccessfulViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaySuccessfulViewController.m; sourceTree = "<group>"; };
 		846FFAD51BD66E7100FA6C14 /* PackingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PackingViewController.h; sourceTree = "<group>"; };
 		846FFAD61BD66E7100FA6C14 /* PackingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PackingViewController.m; sourceTree = "<group>"; };
+		847307101BE8A09F00F27D12 /* MineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
+		847307111BE8A09F00F27D12 /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
 		84D9FB031AE77DC500C5AAA8 /* AttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AttributedLabel.h; path = ../../MainViewController/LogIn/AttributedLabel.h; sourceTree = "<group>"; };
 		84D9FB041AE77DC500C5AAA8 /* AttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AttributedLabel.m; path = ../../MainViewController/LogIn/AttributedLabel.m; sourceTree = "<group>"; };
 		920C09871B74975000A8CC30 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -650,6 +653,8 @@
 				846FFAD41BD66E1400FA6C14 /* PaySuccess */,
 				925BE4C21BD4B8FD007B742C /* SecondViewController.h */,
 				925BE4C31BD4B8FD007B742C /* SecondViewController.m */,
+				847307101BE8A09F00F27D12 /* MineViewController.h */,
+				847307111BE8A09F00F27D12 /* MineViewController.m */,
 				846FFAC31BD6003900FA6C14 /* ViewController.h */,
 				846FFAC41BD6003900FA6C14 /* ViewController.m */,
 				846FFAC01BD5FCE800FA6C14 /* OTCover.h */,
@@ -1135,6 +1140,7 @@
 				92F01EA51AF4A58F00957F7C /* HTPercentView.m in Sources */,
 				922CB5831AC93E8300C4A438 /* HTBaseViewController.m in Sources */,
 				9296B25C1B70C9680053B157 /* ShareTitleView.m in Sources */,
+				847307121BE8A09F00F27D12 /* MineViewController.m in Sources */,
 				921DD2F91AEB68070004251F /* CustomIOS7AlertView.m in Sources */,
 				926811C21ADE570900FAB0A2 /* HTGuideManager.m in Sources */,
 				92FCF5A91B9405AB00644EEA /* FMResultSet.m in Sources */,

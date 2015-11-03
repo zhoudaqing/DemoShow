@@ -16,6 +16,8 @@
 		846EE5011B020C1A00F0AE4E /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846EE5001B020C1A00F0AE4E /* CoreTelephony.framework */; };
 		846EE5031B020C2700F0AE4E /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 846EE5021B020C2700F0AE4E /* libstdc++.dylib */; };
 		846EE5051B020C3200F0AE4E /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 846EE5041B020C3200F0AE4E /* libz.dylib */; };
+		847307151BE8B4DC00F27D12 /* ViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = 847307141BE8B4DC00F27D12 /* ViewController1.m */; };
+		847307181BE8B4EC00F27D12 /* ViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 847307171BE8B4EC00F27D12 /* ViewController2.m */; };
 		84D9FB051AE77DC500C5AAA8 /* AttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D9FB041AE77DC500C5AAA8 /* AttributedLabel.m */; };
 		920C09881B74975000A8CC30 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 920C09871B74975000A8CC30 /* QuartzCore.framework */; };
 		920C098A1B74977400A8CC30 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 920C09891B74977400A8CC30 /* libicucore.dylib */; };
@@ -70,7 +72,7 @@
 		92442FBA1B817B0D006E3290 /* HTBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 92442FB91B817B0D006E3290 /* HTBaseModel.m */; };
 		924D116B1BCE61360040C318 /* ActionWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 924D116A1BCE61360040C318 /* ActionWebViewController.m */; };
 		925BE4C11BD4B8D6007B742C /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 925BE4C01BD4B8D6007B742C /* FirstViewController.m */; };
-		92616C621BE8A0CC000E067A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92616C611BE8A0CC000E067A /* ViewController.m */; settings = {ASSET_TAGS = (); }; };
+		92616C621BE8A0CC000E067A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92616C611BE8A0CC000E067A /* ViewController.m */; };
 		926811C21ADE570900FAB0A2 /* HTGuideManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 926811C11ADE570900FAB0A2 /* HTGuideManager.m */; };
 		926811C51ADE571E00FAB0A2 /* HTUserDefault.m in Sources */ = {isa = PBXBuildFile; fileRef = 926811C41ADE571E00FAB0A2 /* HTUserDefault.m */; };
 		926811CB1ADE868C00FAB0A2 /* HTSelectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 926811CA1ADE868C00FAB0A2 /* HTSelectionController.m */; };
@@ -134,6 +136,10 @@
 		846EE5001B020C1A00F0AE4E /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		846EE5021B020C2700F0AE4E /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
 		846EE5041B020C3200F0AE4E /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		847307131BE8B4DC00F27D12 /* ViewController1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController1.h; sourceTree = "<group>"; };
+		847307141BE8B4DC00F27D12 /* ViewController1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController1.m; sourceTree = "<group>"; };
+		847307161BE8B4EC00F27D12 /* ViewController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController2.h; sourceTree = "<group>"; };
+		847307171BE8B4EC00F27D12 /* ViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController2.m; sourceTree = "<group>"; };
 		84D9FB031AE77DC500C5AAA8 /* AttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AttributedLabel.h; path = ../../MainViewController/LogIn/AttributedLabel.h; sourceTree = "<group>"; };
 		84D9FB041AE77DC500C5AAA8 /* AttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AttributedLabel.m; path = ../../MainViewController/LogIn/AttributedLabel.m; sourceTree = "<group>"; };
 		920C09871B74975000A8CC30 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -611,6 +617,10 @@
 				925BE4C01BD4B8D6007B742C /* FirstViewController.m */,
 				92616C601BE8A0CC000E067A /* ViewController.h */,
 				92616C611BE8A0CC000E067A /* ViewController.m */,
+				847307131BE8B4DC00F27D12 /* ViewController1.h */,
+				847307141BE8B4DC00F27D12 /* ViewController1.m */,
+				847307161BE8B4EC00F27D12 /* ViewController2.h */,
+				847307171BE8B4EC00F27D12 /* ViewController2.m */,
 			);
 			name = MainViewController;
 			sourceTree = "<group>";
@@ -1004,6 +1014,7 @@
 				928C97521B85834900D4CDD5 /* UIView+LabelSign.m in Sources */,
 				921DD2CB1AEB67310004251F /* RedPointLabel.m in Sources */,
 				9217C9261BC66A3E00938A9E /* HTTransparentView.m in Sources */,
+				847307181BE8B4EC00F27D12 /* ViewController2.m in Sources */,
 				92B47FFE1B6F611C00AF9A2D /* UIBarButtonItem+Badge.m in Sources */,
 				921DD2EB1AEB67AF0004251F /* NSDictionary+JSONEXtern.m in Sources */,
 				9217C91F1BC6659500938A9E /* JTSImageInfo.m in Sources */,
@@ -1015,6 +1026,7 @@
 				9211AF751B7AF74D00B7FD9F /* VPImageCropperViewController.m in Sources */,
 				92F01EA11AF46A7600957F7C /* HTCircleView.m in Sources */,
 				92EB85881AC561E400A80E03 /* HTNavigationController.m in Sources */,
+				847307151BE8B4DC00F27D12 /* ViewController1.m in Sources */,
 				9217C9221BC6659500938A9E /* UIApplication+JTSImageViewController.m in Sources */,
 				921DD2F41AEB67AF0004251F /* UIView+Animation.m in Sources */,
 				92FCF5A71B9405AB00644EEA /* FMDatabasePool.m in Sources */,
@@ -1085,7 +1097,6 @@
 				922CB5831AC93E8300C4A438 /* HTBaseViewController.m in Sources */,
 				92616C621BE8A0CC000E067A /* ViewController.m in Sources */,
 				9296B25C1B70C9680053B157 /* ShareTitleView.m in Sources */,
-				847307121BE8A09F00F27D12 /* MineViewController.m in Sources */,
 				921DD2F91AEB68070004251F /* CustomIOS7AlertView.m in Sources */,
 				926811C21ADE570900FAB0A2 /* HTGuideManager.m in Sources */,
 				92FCF5A91B9405AB00644EEA /* FMResultSet.m in Sources */,

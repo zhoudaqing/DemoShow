@@ -14,10 +14,19 @@
 
 @implementation ViewController
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    
+    [self.navigationController.navigationBar setBackgroundImage:HTImage(@"mudidiStatus") forBarMetrics:UIBarMetricsDefault];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self setImage:HTImage(@"travel_content") WithTouchBlock:^(NSIndexPath *indexPath) {
+    [self setImage:HTImage(@"mudidi") WithTouchBlock:^(NSIndexPath *indexPath) {
         
     }];
     

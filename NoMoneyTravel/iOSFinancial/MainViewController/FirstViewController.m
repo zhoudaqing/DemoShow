@@ -35,7 +35,7 @@
         //  结算页面
         BaseDetailViewController *detail3 = [[BaseDetailViewController alloc] init];
         detail3.title = @"折扣详情";
-        
+        [weakSelf.navigationController.navigationBar setBackgroundImage:nil forBarMetrics:UIBarMetricsDefault];
         [detail3 setImage:HTImage(@"travel_content") WithTouchBlock:^(NSIndexPath *indexPath) {
             
             BaseDetailViewController *detail4 = [[BaseDetailViewController alloc] init];
@@ -75,8 +75,7 @@
         detail3.hidesBottomBarWhenPushed = YES;
         [weakSelf.navigationController pushViewController:detail3 animated:YES];    }];
     
-    UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(100, 105, 100, 59)];
-    btn.backgroundColor = [UIColor redColor];
+    UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(300, 25, 70, 59)];
     [self.view addSubview:btn];
     [btn addTarget:self action:@selector(qiandao) forControlEvents:UIControlEventTouchUpInside];
 
@@ -88,7 +87,12 @@
         //  结算页面
         BaseDetailViewController *detail3 = [[BaseDetailViewController alloc] init];
         detail3.title = @"签到";
-        
+    UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(300, 25, 70, 59)];
+    btn.backgroundColor = [UIColor redColor];
+    [detail3.view addSubview:btn];
+    [btn addTarget:detail3 action:@selector(invested) forControlEvents:UIControlEventTouchUpInside];
+    [weakSelf.navigationController.navigationBar setBackgroundImage:nil forBarMetrics:UIBarMetricsDefault];
+
         [detail3 setImage:HTImage(@"travel_content") WithTouchBlock:^(NSIndexPath *indexPath) {
             
             BaseDetailViewController *detail4 = [[BaseDetailViewController alloc] init];

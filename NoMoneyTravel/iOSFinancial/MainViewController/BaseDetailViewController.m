@@ -116,5 +116,75 @@
         
 }
 
+- (void)invested
+{
+    __weakSelf;
+    //  结算页面
+    BaseDetailViewController *detail3 = [[BaseDetailViewController alloc] init];
+    detail3.title = @"帮助";
+    UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(300, 25, 70, 59)];
+    btn.backgroundColor = [UIColor redColor];
+    [detail3.view addSubview:btn];
+    [btn addTarget:detail3 action:@selector(invested) forControlEvents:UIControlEventTouchUpInside];
+    
+    [detail3 setImage:HTImage(@"travel_content") WithTouchBlock:^(NSIndexPath *indexPath) {
+        
+        BaseDetailViewController *detail4 = [[BaseDetailViewController alloc] init];
+        detail4.title = @"穷游金融活动说明";
+        
+        [detail4 setImage:HTImage(@"travel_content") WithTouchBlock:^(NSIndexPath *indexPath) {
+            
+            
+            BaseDetailViewController *detail5 = [[BaseDetailViewController alloc] init];
+            detail5.title = @"帮助加膜";
+            
+            [detail5 setImage:HTImage(@"travel_content") WithTouchBlock:^(NSIndexPath *indexPath) {
+                
+                BaseDetailViewController *detail6 = [[BaseDetailViewController alloc] init];
+                detail6.title = @"邮箱注册";
+                
+                [detail6 setImage:HTImage(@"travel_content") WithTouchBlock:^(NSIndexPath *indexPath) {
+                    
+                    BaseDetailViewController *detail7 = [[BaseDetailViewController alloc] init];
+                    detail7.title = @"完善安全信息";
+                    
+                    [detail7 setImage:HTImage(@"travel_content") WithTouchBlock:^(NSIndexPath *indexPath) {
+                        
+                        BaseDetailViewController *detail8 = [[BaseDetailViewController alloc] init];
+                        detail8.title = @"绑定验证";
+                        
+                        [detail8 setImage:HTImage(@"travel_content") WithTouchBlock:^(NSIndexPath *indexPath) {
+                            
+                            NSLog(@"添加提示 和跳转至签到");
+                            
+                            
+                        }];
+                        detail8.hidesBottomBarWhenPushed = YES;
+                        [weakSelf.navigationController pushViewController:detail8 animated:YES];
+                        
+                        
+                    }];
+                    detail7.hidesBottomBarWhenPushed = YES;
+                    [weakSelf.navigationController pushViewController:detail7 animated:YES];
+                    
+                    
+                }];
+                detail6.hidesBottomBarWhenPushed = YES;
+                [weakSelf.navigationController pushViewController:detail6 animated:YES];
+                
+                
+            }];
+            detail5.hidesBottomBarWhenPushed = YES;
+            [weakSelf.navigationController pushViewController:detail5 animated:YES];
+            
+            
+        }];
+        detail4.hidesBottomBarWhenPushed = YES;
+        [weakSelf.navigationController pushViewController:detail4 animated:YES];
+        
+    }];
+    detail3.hidesBottomBarWhenPushed = YES;
+    [weakSelf.navigationController pushViewController:detail3 animated:YES];
+}
 
 @end

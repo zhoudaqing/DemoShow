@@ -326,6 +326,19 @@ typedef void (^AlertViewBlock)(UIAlertView *alertView, NSInteger buttonIndex);
 
 #pragma mark - AlertView
 
+- (void)showAlert:(NSString *)message withButtons:(NSArray *)buttons andCompletionBlock:(RWAlertViewCompletionBlock)block
+{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:message delegate:nil cancelButtonTitle:nil otherButtonTitles:nil];
+    [alert setCompletionBlock:block];
+    
+    for (NSString *title in buttons) {
+        [alert addButtonWithTitle:title];
+    }
+    
+    [alert show];
+
+}
+
 - (void)showAlert:(NSString *)message
 {
     //  兼容ios8弹框
@@ -343,7 +356,6 @@ typedef void (^AlertViewBlock)(UIAlertView *alertView, NSInteger buttonIndex);
         
         [self presentViewController:alertController animated:YES completion:NULL];
     }
-    
 }
 
 - (void)alertViewWithButtonsBlock:(NSArray *(^)(void))buttonsBlock
@@ -351,7 +363,7 @@ typedef void (^AlertViewBlock)(UIAlertView *alertView, NSInteger buttonIndex);
 {
     NSArray *array = buttonsBlock();
     
-    _alertViewBlock = handleBlock;
+    _alertViewBlock = [handleBlock copy];
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:message delegate:self cancelButtonTitle:nil otherButtonTitles:nil];
     
     __weak UIAlertView *alertWeak = alert;

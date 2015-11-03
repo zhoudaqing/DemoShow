@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import <MBProgressHUD.h>
+#import "UIAlertView+RWBlock.h"
+
 
 #define PromptTypeSuccess   @"成功"
 #define PromptTypeWating    @"请稍候..."
@@ -27,6 +29,7 @@ typedef enum {
 @optional
 //警告框
 - (void)showAlert:(NSString *)message;
+- (void)showAlert:(NSString *)message withButtons:(NSArray *)buttons andCompletionBlock:(RWAlertViewCompletionBlock)block;
 - (void)alertViewWithButtonsBlock:(NSArray *(^)(void))buttonsBlock
                    andHandleBlock:(void(^)(UIAlertView *alertView, NSInteger buttonIndex))handleBlock andMessage:(NSString *)message;
 /**

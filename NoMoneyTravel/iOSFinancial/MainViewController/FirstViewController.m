@@ -8,6 +8,7 @@
 
 #import "FirstViewController.h"
 #import "CustomInvestGuideViewController.h"
+#import "CloudTabbarController.h"
 
 @interface FirstViewController ()
 
@@ -53,7 +54,13 @@
                     
                     [detail6 setImage:HTImage(@"zhekoujiamo") WithTouchBlock:^(NSIndexPath *indexPath) {
                         
-                        [weakSelf setAlerConten:@"恭喜你，订单已支付成功，稍后商家会直接联系你。距离启程还有1个月，赶紧把旅游花费都存起来，1个月的收益多到让你惊讶哦。" withLeftBtn:@"立即购买" rightBtn:nil];
+                        CloudTabbarController *VC = [[CloudTabbarController alloc]init];
+                        VC.selectedIndex = 1;
+                        VC.showType = ShowTypeInvest;
+                        VC.isBuy = YES;
+                        [VC showPromptView];
+                        [weakSelf.navigationController presentViewController:VC animated:YES completion:nil];
+                        [weakSelf.navigationController   popToViewController:weakSelf.navigationController.viewControllers[1] animated:NO];
                         
                     }];
                     detail6.hidesBottomBarWhenPushed = YES;
@@ -95,7 +102,7 @@
         detail4.title = @"穷游金融活动说明";
         
         [detail4 setImage:HTImage(@"qiandaohuodongshuoming") WithTouchBlock:^(NSIndexPath *indexPath) {
-            
+            [detail3 refreshView:HTImage(@"yiqiandao")];
             CustomInvestGuideViewController *guide = [[CustomInvestGuideViewController alloc] init];
             
             guide.step1AlertMsg = @"恭喜您已获得穷游2里程，继续设置银行卡即可获得10里程";
@@ -110,6 +117,7 @@
             HTNavigationController *nav = [[HTNavigationController alloc] initWithRootViewController:guide];
             
             [self.tabBarController presentViewController:nav animated:YES completion:nil];
+            [weakSelf.navigationController popViewControllerAnimated:YES];
             
         }];
         detail4.hidesBottomBarWhenPushed = YES;

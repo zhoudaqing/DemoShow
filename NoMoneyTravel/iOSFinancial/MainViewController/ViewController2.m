@@ -7,7 +7,7 @@
 //
 
 #import "ViewController2.h"
-
+#import "CloudTabbarController.h"
 @interface ViewController2 ()
 
 @end
@@ -26,8 +26,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    __weakSelf;
+    
     [self setImage:HTImage(@"mine") WithTouchBlock:^(NSIndexPath *indexPath) {
-        
+        CloudTabbarController *VC = [[CloudTabbarController alloc]init];
+        [VC showPromptView];
+        [weakSelf.navigationController presentViewController:VC animated:YES completion:nil];
+
     }];
     
 }

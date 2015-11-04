@@ -10,4 +10,7 @@
 
 @interface InvestViewController : BaseDetailViewController
 
+//是否直接进入购买页面
+@property (nonatomic, assign) BOOL isBuy;
+
 @end

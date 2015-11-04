@@ -39,6 +39,9 @@ typedef NS_ENUM(NSInteger, ShowType) {
 //  是否弹出云账户介绍页
 @property (nonatomic, assign) BOOL isPromptShowed;
 
+//是否直接进入购买页面
+@property (nonatomic, assign) BOOL isBuy;
+
 - (void)refreshView;
 
 - (void)showPromptView;

@@ -66,6 +66,7 @@
     nav1.isContentLight = YES;
     
     InvestViewController *cart = [[InvestViewController alloc]init];
+    cart.isBuy = YES;
     cart.tabBarItem = [self tabbarItemWithTitle:@"我要理财" andItemImage:@"tab_invest"];
     HTNavigationController *nav2 = [[HTNavigationController alloc] initWithRootViewController:cart];
     nav2.isContentLight = YES;
@@ -138,5 +139,7 @@
         [_promptView removeFromSuperview];
     }];
 }
+
+
 
 @end

@@ -24,4 +24,7 @@
 
 - (void)setAlerConten:(NSString *)conten withLeftBtn:(NSString *)leftTitle rightBtn:(NSString *)rightTitle;
 
+- (void)refreshView:(UIImage *)image;
+
+
 @end

@@ -33,11 +33,15 @@
     
     self.navigationItem.leftBarButtonItem = [UIBarButtonExtern buttonWithTitle:@"关闭" target:self andSelector:@selector(closeTabBar)];
     
+    if (self.isBuy) {
+        [self doInvest];
+    }else{
+    
     __weakSelf;
     [self setImage:HTImage(@"InvestIndex") WithTouchBlock:^(NSIndexPath *indexPath) {
         [weakSelf doNext];
     }];
-    
+    }
 }
 
 - (void)doNext
@@ -139,6 +143,9 @@
                 
                 BaseDetailViewController *regedit = [[BaseDetailViewController alloc] init];
                 regedit.title = @"输入完成";
+                if (self.isBuy) {
+                    [regedit setAlerConten:@"恭喜您已获得穷游100里程啦，可以兑换穷游的礼品时使用" withLeftBtn:@"我知道了" rightBtn:nil];
+                }
                 [regedit setImage:HTImage(@"buyStep3") WithTouchBlock:^(NSIndexPath *indexPath) {
                     
                     [weakSelf.navigationController popToRootViewControllerAnimated:YES];

@@ -9,7 +9,6 @@
 #import "BaseDetailViewController.h"
 #import "ContentCell.h"
 #import "CustomInvestGuideViewController.h"
-#import "CloudTabbarController.h"
 
 
 @interface BaseDetailViewController ()<UIAlertViewDelegate>
@@ -44,25 +43,21 @@
 - (void)alertView:(UIAlertView *)alertView willDismissWithButtonIndex:(NSInteger)buttonIndex
 {
 
-    if([alertView.message isEqualToString:@"恭喜您已获得穷游15里程,可以兑换穷游的礼品时使用"]) {
+    if([alertView.message isEqualToString:@"恭喜您已获得穷游20里程,可以兑换穷游的礼品时使用"]) {
 
         [self.navigationController popToViewController:self.navigationController.viewControllers[1] animated:YES];
-        
-    }
-    if ([alertView.message isEqualToString:@"恭喜你，订单已支付成功，稍后商家会直接联系你。距离启程还有1个月，赶紧把旅游花费都存起来，1个月的收益多到让你惊讶哦。"]) {
-        
-        CloudTabbarController *VC = [[CloudTabbarController alloc]init];
-        VC.selectedIndex = 1;
-        VC.showType = ShowTypeInvest;
-        [VC showPromptView];
-        [self.navigationController presentViewController:VC animated:YES completion:nil];
-        [self.navigationController   popToViewController:self.navigationController.viewControllers[1] animated:NO];
         
     }
     if ([alertView.message isEqualToString:@"恭喜您已获得穷游100里程啦，可以兑换穷游的礼品时使用"]) {
         [self.tabBarController dismissViewControllerAnimated:YES completion:nil];
     }
     
+}
+
+- (void)refreshView:(UIImage *)image
+{
+    self.contentImage = image;
+    [self.tableView reloadData];
 }
 
 - (void)tongzhi
@@ -152,7 +147,8 @@
                         
                         [detail8 setImage:HTImage(@"kaihuxingmingyanzheng") WithTouchBlock:^(NSIndexPath *indexPath) {
                             
-                            [weakSelf setAlerConten:@"恭喜您已获得穷游15里程,可以兑换穷游的礼品时使用" withLeftBtn:@"我知道了" rightBtn:nil];
+                            [weakSelf setAlerConten:@"恭喜您已获得穷游20里程,可以兑换穷游的礼品时使用" withLeftBtn:@"我知道了" rightBtn:nil];
+                            [self refreshView:HTImage(@"yiqiandao")];
                             
                         }];
                         detail8.hidesBottomBarWhenPushed = YES;

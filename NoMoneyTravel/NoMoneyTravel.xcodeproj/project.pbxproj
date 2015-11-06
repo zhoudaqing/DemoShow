@@ -72,13 +72,12 @@
 		92442FBA1B817B0D006E3290 /* HTBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 92442FB91B817B0D006E3290 /* HTBaseModel.m */; };
 		924D116B1BCE61360040C318 /* ActionWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 924D116A1BCE61360040C318 /* ActionWebViewController.m */; };
 		925BE4C11BD4B8D6007B742C /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 925BE4C01BD4B8D6007B742C /* FirstViewController.m */; };
-		92616C621BE8A0CC000E067A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92616C611BE8A0CC000E067A /* ViewController.m */; settings = {ASSET_TAGS = (); }; };
-		92616C6E1BE8AE30000E067A /* CloudAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92616C671BE8AE30000E067A /* CloudAccountViewController.m */; settings = {ASSET_TAGS = (); }; };
-		92616C6F1BE8AE30000E067A /* CloudTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92616C691BE8AE30000E067A /* CloudTabbarController.m */; settings = {ASSET_TAGS = (); }; };
-		92616C701BE8AE30000E067A /* InvestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92616C6B1BE8AE30000E067A /* InvestViewController.m */; settings = {ASSET_TAGS = (); }; };
-		92616C711BE8AE30000E067A /* PersonalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92616C6D1BE8AE30000E067A /* PersonalViewController.m */; settings = {ASSET_TAGS = (); }; };
-		92616C741BE8AF63000E067A /* CustomInvestGuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92616C731BE8AF63000E067A /* CustomInvestGuideViewController.m */; settings = {ASSET_TAGS = (); }; };
 		92616C621BE8A0CC000E067A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92616C611BE8A0CC000E067A /* ViewController.m */; };
+		92616C6E1BE8AE30000E067A /* CloudAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92616C671BE8AE30000E067A /* CloudAccountViewController.m */; };
+		92616C6F1BE8AE30000E067A /* CloudTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92616C691BE8AE30000E067A /* CloudTabbarController.m */; };
+		92616C701BE8AE30000E067A /* InvestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92616C6B1BE8AE30000E067A /* InvestViewController.m */; };
+		92616C711BE8AE30000E067A /* PersonalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92616C6D1BE8AE30000E067A /* PersonalViewController.m */; };
+		92616C741BE8AF63000E067A /* CustomInvestGuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92616C731BE8AF63000E067A /* CustomInvestGuideViewController.m */; };
 		926811C21ADE570900FAB0A2 /* HTGuideManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 926811C11ADE570900FAB0A2 /* HTGuideManager.m */; };
 		926811C51ADE571E00FAB0A2 /* HTUserDefault.m in Sources */ = {isa = PBXBuildFile; fileRef = 926811C41ADE571E00FAB0A2 /* HTUserDefault.m */; };
 		926811CB1ADE868C00FAB0A2 /* HTSelectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 926811CA1ADE868C00FAB0A2 /* HTSelectionController.m */; };
@@ -1241,7 +1240,7 @@
 					"$(PROJECT_DIR)/iOSFinancial/ThirdPart/ShareSDK/Extend/SinaWeiboSDK",
 					"$(PROJECT_DIR)/iOSFinancial/ThirdPart/ShareSDK/Extend/WeChatSDK",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jiandanlicai.SelectFoodAll;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jiandanlicai.NoMoneyTravel;
 				PRODUCT_NAME = NoMoneyTravel;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1284,7 +1283,7 @@
 					"$(PROJECT_DIR)/iOSFinancial/ThirdPart/ShareSDK/Extend/WeChatSDK",
 				);
 				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = com.jiandanlicai.SelectFoodAll;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jiandanlicai.NoMoneyTravel;
 				PRODUCT_NAME = NoMoneyTravel;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;

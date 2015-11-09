@@ -32,6 +32,7 @@
     [super viewDidLoad];
     
     __weakSelf;
+    __weak BaseDetailViewController *weakBase = self;
     [self setImage:HTImage(@"travel_content") WithTouchBlock:^(NSIndexPath *indexPath) {
         //  结算页面
         BaseDetailViewController *detail3 = [[BaseDetailViewController alloc] init];
@@ -56,21 +57,23 @@
                         
                         BaseDetailViewController *detail7 = [[BaseDetailViewController alloc] init];
                         detail7.title = @"保险选择";
+                        __weak BaseDetailViewController *weakBase1 = detail7;
                         
-                        [detail7 setImage:HTImage(@"zhekoujiamo") WithTouchBlock:^(NSIndexPath *indexPath) {
+                        [detail7 setImage:HTImage(@"baoxianxuanze") WithTouchBlock:^(NSIndexPath *indexPath) {
                             
                             BaseDetailViewController *detail8 = [[BaseDetailViewController alloc] init];
                             detail8.title = @"高铁管家金融活动说明";
                             
-                            [detail8 setImage:HTImage(@"zhekoujiamo") WithTouchBlock:^(NSIndexPath *indexPath) {
+                            [detail8 setImage:HTImage(@"yaoqinghuodongshuoming") WithTouchBlock:^(NSIndexPath *indexPath) {
                                 
                                 BaseDetailViewController *detail9 = [[BaseDetailViewController alloc] init];
                                 detail9.title = @"绑定验证";
                                 
-                                [detail9 setImage:HTImage(@"zhekoujiamo") WithTouchBlock:^(NSIndexPath *indexPath) {
+                                [detail9 setImage:HTImage(@"kaihuxingmingyanzheng") WithTouchBlock:^(NSIndexPath *indexPath) {
                                     
                                     [weakSelf setAlerConten:@"恭喜您已获得交通意外保险一份，仅限高铁管家订票使用" withLeftBtn:@"我知道了" rightBtn:nil];
-                                    
+                                    [weakBase1 refreshView:HTImage(@"baoxianxuanze1")];
+                                    [weakBase1 returnBackRootView:weakBase];
                                 }];
                                 detail9.hidesBottomBarWhenPushed = YES;
                                 [weakSelf.navigationController pushViewController:detail9 animated:YES];

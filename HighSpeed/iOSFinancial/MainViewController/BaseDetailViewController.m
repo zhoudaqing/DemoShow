@@ -9,7 +9,7 @@
 #import "BaseDetailViewController.h"
 #import "ContentCell.h"
 #import "CustomInvestGuideViewController.h"
-
+#import "CloudTabbarController.h"
 
 @interface BaseDetailViewController ()<UIAlertViewDelegate>
 {
@@ -55,10 +55,13 @@
 
     if([alertView.message isEqualToString:@"恭喜您已获得交通意外保险一份，仅限高铁管家订票使用"]) {
 
-        [self.navigationController popToRootViewControllerAnimated:YES];
+        [self.navigationController popToViewController:self.navigationController.viewControllers[5] animated:YES];
         
     }
     if ([alertView.message isEqualToString:@"恭喜您已获得高铁管家1000积分，可用于兑换高铁商城礼品"]) {
+        [self.tabBarController dismissViewControllerAnimated:YES completion:nil];
+    }
+    if ([alertView.message isEqualToString:@"恭喜您已获得高铁管家的神秘大礼包，共有200积分、2个5元红包、1张个10元代金券，返回高铁管家即可查看。"]) {
         [self.tabBarController dismissViewControllerAnimated:YES completion:nil];
     }
     
@@ -68,6 +71,7 @@
 {
     self.contentImage = image;
     [self.tableView reloadData];
+
 }
 
 - (void)tongzhi
@@ -123,9 +127,25 @@
         
 }
 
+- (void)returnBackRootView:(UIViewController *)vc
+{
+    
+    UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(0, 400, APPScreenWidth, 120)];
+    [btn setTitle:@"返回首页" forState:UIControlStateNormal];
+    [btn setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    [self.view addSubview:btn];
+    [btn addTarget:self action:@selector(popTOView:) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void)popTOView:(UIViewController *)vc
+{
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
 
 - (void)invested
 {
+
     __weakSelf;
     //  结算页面
     BaseDetailViewController *detail3 = [[BaseDetailViewController alloc] init];
@@ -135,10 +155,16 @@
         BaseDetailViewController *detail4 = [[BaseDetailViewController alloc] init];
         detail4.title = @"高铁管家金融签到活动说明";
         
-        [detail4 setImage:HTImage(@"yaoqinghuodongshuoming") WithTouchBlock:^(NSIndexPath *indexPath) {
+        [detail4 setImage:HTImage(@"shenmindalibaohuo") WithTouchBlock:^(NSIndexPath *indexPath) {
             
             
-            
+            CloudTabbarController *VC = [[CloudTabbarController alloc]init];
+            [VC changeMessageWith:@"恭喜您已获得高铁管家的神秘大礼包，共有200积分、2个5元红包、1张个10元代金券，返回高铁管家即可查看。"];
+            VC.selectedIndex = 1;
+            [weakSelf.navigationController presentViewController:VC animated:YES completion:^{
+                    [weakSelf.navigationController popToViewController:weakSelf.navigationController.viewControllers[1] animated:NO];
+            }];
+
             
         }];
         detail4.hidesBottomBarWhenPushed = YES;

@@ -13,4 +13,6 @@
 //是否直接进入购买页面
 @property (nonatomic, assign) BOOL isBuy;
 
+@property (nonatomic, copy) NSString *notciceStr;
+
 @end

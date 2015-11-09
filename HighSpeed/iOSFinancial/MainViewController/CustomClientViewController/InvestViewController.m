@@ -28,7 +28,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
- 
+
     self.title = @"我要理财";
     
     self.navigationItem.leftBarButtonItem = [UIBarButtonExtern buttonWithTitle:@"关闭" target:self andSelector:@selector(closeTabBar)];
@@ -84,7 +84,7 @@
                                 
                                 BaseDetailViewController *regedit = [[BaseDetailViewController alloc] init];
                                 regedit.title = @"输入完成";
-                                [regedit setAlerConten:@"恭喜您已获得高铁管家1000积分，可用于兑换高铁商城礼品" withLeftBtn:@"我知道了" rightBtn:nil];
+                                [regedit setAlerConten:self.notciceStr withLeftBtn:@"我知道了" rightBtn:nil];
                                 [regedit setImage:HTImage(@"buyStep3") WithTouchBlock:^(NSIndexPath *indexPath) {
                                     
                                     weakSelf.tabBarController.selectedIndex = 0;
@@ -144,7 +144,7 @@
                 BaseDetailViewController *regedit = [[BaseDetailViewController alloc] init];
                 regedit.title = @"输入完成";
                 if (self.isBuy) {
-                    [regedit setAlerConten:@"恭喜您已获得穷游100里程啦，可以兑换穷游的礼品时使用" withLeftBtn:@"我知道了" rightBtn:nil];
+                    [regedit setAlerConten:self.notciceStr withLeftBtn:@"我知道了" rightBtn:nil];
                 }
                 [regedit setImage:HTImage(@"buyStep3") WithTouchBlock:^(NSIndexPath *indexPath) {
                     

@@ -77,7 +77,7 @@
     [[UITabBar appearance] setTintColor:[UIColor jt_barTintColor]];
     
     //  修改navigation Bar底下的黑色线
-    [[UINavigationBar appearance] setBarTintColor:[UIColor jt_barTintColor]];
+    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:74/255.0 green:136/255.0 blue:220/255.0 alpha:1.0]];
     //[[UINavigationBar appearance] setShadowImage:HTImage(@"")];//[[UIImage alloc] init]
     
     //修改返回按钮图片

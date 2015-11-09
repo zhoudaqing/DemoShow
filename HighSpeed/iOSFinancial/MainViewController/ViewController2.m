@@ -14,26 +14,16 @@
 
 @implementation ViewController2
 
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    
-    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
-    
-    [self.navigationController.navigationBar setBackgroundImage:HTImage(@"mineStatus") forBarMetrics:UIBarMetricsDefault];
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    __weakSelf;
+    self.navigationController.navigationBar.hidden = YES;
     
-    [self setImage:HTImage(@"mine") WithTouchBlock:^(NSIndexPath *indexPath) {
-        CloudTabbarController *VC = [[CloudTabbarController alloc]init];
-        [VC showPromptView];
-        [weakSelf.navigationController presentViewController:VC animated:YES completion:nil];
-
-    }];
+    UIImageView *imageView = [[UIImageView alloc]initWithFrame:self.view.bounds];
+    [imageView setImage:HTImage(@"mine")];
+    
+    [self.view addSubview:imageView];
     
 }
 @end

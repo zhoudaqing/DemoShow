@@ -29,5 +29,6 @@
 
 - (void)refreshView:(UIImage *)image;
 
+- (void)returnBackRootView:(UIViewController *)vc;
 
 @end

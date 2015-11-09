@@ -21,28 +21,38 @@
     [super viewDidLoad];
     self.title = @"旅行服务";
     __weakSelf;
-    [self setImage:HTImage(@"shequ") WithTouchBlock:^(NSIndexPath *indexPath) {
+    [self setImage:HTImage(@"lvxingfuwu") WithTouchBlock:^(NSIndexPath *indexPath) {
         BaseDetailViewController *detail8 = [[BaseDetailViewController alloc] init];
         detail8.title = @"高铁商城";
         
         
         [detail8 setViewDidLoadBlock:^(UIViewController *viewController) {
-            UIBarButtonItem *item = [UIBarButtonExtern buttonWithTitle:@"签到" target:viewController andSelector:@selector(invested)];
-            [item setTintColor:[UIColor whiteColor]];
-            weakSelf.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+            
+            UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+            button.titleLabel.font = [UIFont systemFontOfSize:16.0f];
+            [button setTitle:@"签到" forState:UIControlStateNormal];
+            [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+            [button setTitleShadowColor:[UIColor blackColor] forState:UIControlStateNormal];
+            [button setTitleShadowColor:[UIColor jt_lightBlackTextColor] forState:UIControlStateHighlighted];
+            [button addTarget:weakSelf action:@selector(invested) forControlEvents:UIControlEventTouchUpInside];
+            [button sizeToFit];
+            
+            UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithCustomView:button];
+
             [viewController.navigationItem setRightBarButtonItem:item];
 
         }];
         
         
-        [detail8 setImage:HTImage(@"zhekoujiamo") WithTouchBlock:^(NSIndexPath *indexPath) {
+        [detail8 setImage:HTImage(@"jifenfangsong") WithTouchBlock:^(NSIndexPath *indexPath) {
             
             BaseDetailViewController *detail9 = [[BaseDetailViewController alloc] init];
             detail9.title = @"高铁管家金融活动说明";
             
-            [detail9 setImage:HTImage(@"zhekoujiamo") WithTouchBlock:^(NSIndexPath *indexPath) {
+            [detail9 setImage:HTImage(@"shangchengjifen") WithTouchBlock:^(NSIndexPath *indexPath) {
                 
                 CloudTabbarController *VC = [[CloudTabbarController alloc]init];
+                [VC changeMessageWith:@"恭喜您已获得高铁管家1000积分，可用于兑换高铁商城礼品"];
                 VC.selectedIndex = 1;
                 [weakSelf.navigationController presentViewController:VC animated:YES completion:nil];
                 [weakSelf.navigationController popToViewController:weakSelf.navigationController.viewControllers[1] animated:NO];

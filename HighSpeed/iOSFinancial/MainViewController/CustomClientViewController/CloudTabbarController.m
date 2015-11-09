@@ -13,7 +13,9 @@
 
 
 @interface CloudTabbarController ()
-
+{
+    InvestViewController *cart;
+}
 @property (nonatomic, strong)   UIView *promptView;
 
 @end
@@ -43,7 +45,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
 }
 
 - (void)showActionPageViewController
@@ -65,7 +66,7 @@
     HTNavigationController *nav1 = [[HTNavigationController alloc] initWithRootViewController:store];
     nav1.isContentLight = YES;
     
-    InvestViewController *cart = [[InvestViewController alloc]init];
+    cart = [[InvestViewController alloc]init];
     cart.isBuy = self.isBuy;
     cart.tabBarItem = [self tabbarItemWithTitle:@"我要理财" andItemImage:@"tab_invest"];
     HTNavigationController *nav2 = [[HTNavigationController alloc] initWithRootViewController:cart];
@@ -140,6 +141,9 @@
     }];
 }
 
-
+- (void)changeMessageWith:(NSString *)message
+{
+    cart.notciceStr = message;
+}
 
 @end

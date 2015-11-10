@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "HTBaseTableViewController.h"
+#import "BaseDetailViewController.h"
 
 
-@interface MyStoreViewController : HTBaseTableViewController
+@interface MyStoreViewController : BaseDetailViewController
 
 @end

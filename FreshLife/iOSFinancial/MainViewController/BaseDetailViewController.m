@@ -88,6 +88,10 @@
                 [self.navigationController popToViewController:self.navigationController.viewControllers[1] animated:YES];
             }else if ([alertView.message isEqualToString:@"恭喜您已获得50元挑食现金券"]) {
                 
+            } else if ([alertView.message isEqualToString:@"恭喜您已获得减免提现手续费特权1次，仅供下次提现时使用~"]) {
+                [self.navigationController popToViewController:self.navigationController.viewControllers[1] animated:YES];
+            }else if ([alertView.message isEqualToString:@"恭喜您已获得鲜life5元现金券，可供在鲜life购买商品时抵现金使用~"]) {
+                [self.navigationController popToViewController:self.navigationController.viewControllers[1] animated:YES];
             }
             else{
         _cellToucheBlock(_index);

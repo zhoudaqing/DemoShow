@@ -19,30 +19,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"旅行服务";
+    [self.navigationController.navigationBar setBackgroundImage:HTImage(@"") forBarMetrics:UIBarMetricsDefault];
     __weakSelf;
     [self setImage:HTImage(@"lvxingfuwu") WithTouchBlock:^(NSIndexPath *indexPath) {
         BaseDetailViewController *detail8 = [[BaseDetailViewController alloc] init];
         detail8.title = @"高铁商城";
-        
-        
-        [detail8 setViewDidLoadBlock:^(UIViewController *viewController) {
-            
-            UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-            button.titleLabel.font = [UIFont systemFontOfSize:16.0f];
-            [button setTitle:@"签到" forState:UIControlStateNormal];
-            [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-            [button setTitleShadowColor:[UIColor blackColor] forState:UIControlStateNormal];
-            [button setTitleShadowColor:[UIColor jt_lightBlackTextColor] forState:UIControlStateHighlighted];
-            [button addTarget:weakSelf action:@selector(invested) forControlEvents:UIControlEventTouchUpInside];
-            [button sizeToFit];
-            
-            UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithCustomView:button];
-
-            [viewController.navigationItem setRightBarButtonItem:item];
-
-        }];
-        
         
         [detail8 setImage:HTImage(@"jifenfangsong") WithTouchBlock:^(NSIndexPath *indexPath) {
             
@@ -58,17 +39,13 @@
                 [weakSelf.navigationController popToViewController:weakSelf.navigationController.viewControllers[1] animated:NO];
                 
             }];
-            detail9.hidesBottomBarWhenPushed = YES;
+            
+            
             [weakSelf.navigationController pushViewController:detail9 animated:YES];
             
         }];
-        detail8.hidesBottomBarWhenPushed = YES;
-        
         
         [weakSelf.navigationController pushViewController:detail8 animated:YES];
-        
-
-
         
     }];
     

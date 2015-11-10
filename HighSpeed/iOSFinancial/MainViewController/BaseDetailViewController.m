@@ -53,17 +53,9 @@
 - (void)alertView:(UIAlertView *)alertView willDismissWithButtonIndex:(NSInteger)buttonIndex
 {
 
-    if([alertView.message isEqualToString:@"恭喜您已获得交通意外保险一份，仅限高铁管家订票使用"]) {
 
-        [self.navigationController popToViewController:self.navigationController.viewControllers[5] animated:YES];
+        [self.navigationController popToViewController:self.navigationController.viewControllers[1] animated:YES];
         
-    }
-    if ([alertView.message isEqualToString:@"恭喜您已获得高铁管家1000积分，可用于兑换高铁商城礼品"]) {
-        [self.tabBarController dismissViewControllerAnimated:YES completion:nil];
-    }
-    if ([alertView.message isEqualToString:@"恭喜您已获得高铁管家的神秘大礼包，共有200积分、2个5元红包、1张个10元代金券，返回高铁管家即可查看。"]) {
-        [self.tabBarController dismissViewControllerAnimated:YES completion:nil];
-    }
     
 }
 

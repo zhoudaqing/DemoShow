@@ -22,9 +22,13 @@
 {
     [super viewWillAppear:animated];
     
-    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    self.isStyleLight = YES;
     
-    [self.navigationController.navigationBar setBackgroundImage:HTImage(@"statusBar") forBarMetrics:UIBarMetricsDefault];
+    [self.navigationController.navigationBar setBarTintColor:HTWhiteColor];
+    [self.navigationController.navigationBar setTintColor:[UIColor jt_barTintColor]];
+    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor blackColor],NSFontAttributeName : [UIFont systemFontOfSize:18]}];
+    
+    self.navigationController.navigationBarHidden = YES;
 }
 
 - (void)viewDidLoad
@@ -32,64 +36,26 @@
     [super viewDidLoad];
     
     __weakSelf;
-    __weak BaseDetailViewController *weakBase = self;
+    __weak  BaseDetailViewController  *weakBase = self;
     [self setImage:HTImage(@"travel_content") WithTouchBlock:^(NSIndexPath *indexPath) {
         //  结算页面
         BaseDetailViewController *detail3 = [[BaseDetailViewController alloc] init];
-        detail3.title = @"北京 至 石家庄";
+        detail3.title = @"提现详情";
         [weakSelf.navigationController.navigationBar setBackgroundImage:nil forBarMetrics:UIBarMetricsDefault];
         [detail3 setImage:HTImage(@"zhekouxiangqing") WithTouchBlock:^(NSIndexPath *indexPath) {
             
             BaseDetailViewController *detail4 = [[BaseDetailViewController alloc] init];
-            detail4.title = @"北京 至 石家庄";
+            detail4.title = @"鲜Life金融活动说明";
             
             [detail4 setImage:HTImage(@"tijiaodingdan") WithTouchBlock:^(NSIndexPath *indexPath) {
                 
                 BaseDetailViewController *detail5 = [[BaseDetailViewController alloc] init];
-                detail5.title = @"北京 至 石家庄";
+                detail5.title = @"身份绑定";
                 
                 [detail5 setImage:HTImage(@"daizhifudingdan") WithTouchBlock:^(NSIndexPath *indexPath) {
                     
-                    BaseDetailViewController *detail6 = [[BaseDetailViewController alloc] init];
-                    detail6.title = @"预订车票";
-                    
-                    [detail6 setImage:HTImage(@"zhekoujiamo") WithTouchBlock:^(NSIndexPath *indexPath) {
-                        
-                        BaseDetailViewController *detail7 = [[BaseDetailViewController alloc] init];
-                        detail7.title = @"保险选择";
-                        __weak BaseDetailViewController *weakBase1 = detail7;
-                        
-                        [detail7 setImage:HTImage(@"baoxianxuanze") WithTouchBlock:^(NSIndexPath *indexPath) {
-                            
-                            BaseDetailViewController *detail8 = [[BaseDetailViewController alloc] init];
-                            detail8.title = @"高铁管家金融活动说明";
-                            
-                            [detail8 setImage:HTImage(@"yaoqinghuodongshuoming") WithTouchBlock:^(NSIndexPath *indexPath) {
-                                
-                                BaseDetailViewController *detail9 = [[BaseDetailViewController alloc] init];
-                                detail9.title = @"绑定验证";
-                                
-                                [detail9 setImage:HTImage(@"kaihuxingmingyanzheng") WithTouchBlock:^(NSIndexPath *indexPath) {
-                                    
-                                    [weakSelf setAlerConten:@"恭喜您已获得交通意外保险一份，仅限高铁管家订票使用" withLeftBtn:@"我知道了" rightBtn:nil];
-                                    [weakBase1 refreshView:HTImage(@"baoxianxuanze1")];
-                                    [weakBase1 returnBackRootView:weakBase];
-                                }];
-                                detail9.hidesBottomBarWhenPushed = YES;
-                                [weakSelf.navigationController pushViewController:detail9 animated:YES];
-                                
-                            }];
-                            detail8.hidesBottomBarWhenPushed = YES;
-                            [weakSelf.navigationController pushViewController:detail8 animated:YES];
-                            
-                        }];
-                        detail7.hidesBottomBarWhenPushed = YES;
-                        [weakSelf.navigationController pushViewController:detail7 animated:YES];
-
-                        
-                    }];
-                    detail6.hidesBottomBarWhenPushed = YES;
-                    [weakSelf.navigationController pushViewController:detail6 animated:YES];
+                    [weakSelf setAlerConten:@"恭喜您已获得减免提现手续费特权1次，仅供下次提现时使用~" withLeftBtn:nil rightBtn:@"我知道了"];
+                    [weakBase refreshView:HTImage(@"")];
                     
                 }];
                 detail5.hidesBottomBarWhenPushed = YES;
@@ -105,7 +71,10 @@
         [weakSelf.navigationController pushViewController:detail3 animated:YES];    }];
     
 }
-
-@end
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    self.navigationController.navigationBarHidden = NO;
+}@end
 
 

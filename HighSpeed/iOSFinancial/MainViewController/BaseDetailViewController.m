@@ -54,7 +54,7 @@
 {
 
 
-        [self.navigationController popToViewController:self.navigationController.viewControllers[1] animated:YES];
+        [self.navigationController popToViewController:self.navigationController.viewControllers[3] animated:YES];
         
     
 }

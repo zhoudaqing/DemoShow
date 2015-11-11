@@ -101,22 +101,23 @@
     BaseDetailViewController *update = [[BaseDetailViewController alloc] init];
     update.title = @"我的收入";
     __weak BaseDetailViewController *wakeBsae = update;
-    [update setImage:HTImage(@"dianpushengji") WithTouchBlock:^(NSIndexPath *indexPath) {
+    [update setImage:HTImage(@"zhekouxiangqing") WithTouchBlock:^(NSIndexPath *indexPath) {
         
         BaseDetailViewController *Activity = [[BaseDetailViewController alloc] init];
         Activity.title = @"鲜life金融活动说明";
-        [Activity setImage:HTImage(@"dianpushengji") WithTouchBlock:^(NSIndexPath *indexPath) {
+        [Activity setImage:HTImage(@"tijiaodingdan") WithTouchBlock:^(NSIndexPath *indexPath) {
             
             BaseDetailViewController *NameService = [[BaseDetailViewController alloc] init];
             NameService.title = @"姓名电话绑定";
-            [NameService setImage:HTImage(@"dianpushengji") WithTouchBlock:^(NSIndexPath *indexPath) {
+            [NameService setImage:HTImage(@"tiyanshiming") WithTouchBlock:^(NSIndexPath *indexPath) {
                 
                 BaseDetailViewController *bankCardService = [[BaseDetailViewController alloc] init];
                 bankCardService.title = @"银行卡绑定";
-                [bankCardService setImage:HTImage(@"dianpushengji") WithTouchBlock:^(NSIndexPath *indexPath) {
+                [bankCardService setImage:HTImage(@"jiesuanbangka") WithTouchBlock:^(NSIndexPath *indexPath) {
                     
                     [weakSelf setAlerConten:@"恭喜您已获得减免提现手续费特权1次，仅供下次提现时使用~" withLeftBtn:nil rightBtn:@"我知道了" isPush:YES];
-                    [wakeBsae refreshView:HTImage(@"")];
+                    [wakeBsae refreshView:HTImage(@"zhekouxiangqing1")];
+                    wakeBsae.view.userInteractionEnabled = NO;
                 }];
                 
                 [weakSelf.navigationController pushViewController:bankCardService animated:YES];
@@ -142,22 +143,23 @@
     BaseDetailViewController *update = [[BaseDetailViewController alloc] init];
     update.title = @"邀请管理";
     __weak BaseDetailViewController *wakeBsae = update;
-    [update setImage:HTImage(@"dianpushengji") WithTouchBlock:^(NSIndexPath *indexPath) {
+    [update setImage:HTImage(@"yaoqingguanli") WithTouchBlock:^(NSIndexPath *indexPath) {
         
         BaseDetailViewController *Activity = [[BaseDetailViewController alloc] init];
         Activity.title = @"鲜life金融活动说明";
-        [Activity setImage:HTImage(@"dianpushengji") WithTouchBlock:^(NSIndexPath *indexPath) {
+        [Activity setImage:HTImage(@"yaoqingguanlihuodong") WithTouchBlock:^(NSIndexPath *indexPath) {
             
             BaseDetailViewController *NameService = [[BaseDetailViewController alloc] init];
             NameService.title = @"姓名电话绑定";
-            [NameService setImage:HTImage(@"dianpushengji") WithTouchBlock:^(NSIndexPath *indexPath) {
+            [NameService setImage:HTImage(@"tiyanshiming") WithTouchBlock:^(NSIndexPath *indexPath) {
                 
                 BaseDetailViewController *bankCardService = [[BaseDetailViewController alloc] init];
                 bankCardService.title = @"银行卡绑定";
-                [bankCardService setImage:HTImage(@"dianpushengji") WithTouchBlock:^(NSIndexPath *indexPath) {
+                [bankCardService setImage:HTImage(@"jiesuanbangka") WithTouchBlock:^(NSIndexPath *indexPath) {
                     
                     [weakSelf setAlerConten:@"恭喜您已获得鲜life5元现金券，可供在鲜life购买商品时抵现金使用~" withLeftBtn:nil rightBtn:@"我知道了" isPush:YES];
-                    [wakeBsae refreshView:HTImage(@"")];
+                    [wakeBsae refreshView:HTImage(@"yaoqingguanli1")];
+                    wakeBsae.view.userInteractionEnabled = NO;
                 }];
                 
                 [weakSelf.navigationController pushViewController:bankCardService animated:YES];

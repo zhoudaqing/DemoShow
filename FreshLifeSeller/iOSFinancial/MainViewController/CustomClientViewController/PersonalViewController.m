@@ -33,7 +33,7 @@
     self.navigationItem.leftBarButtonItem = [UIBarButtonExtern buttonWithTitle:@"关闭" target:self andSelector:@selector(closeTabBar)];
     
     __weakSelf;
-    [self setImage:HTImage(@"InvestIndex") WithTouchBlock:^(NSIndexPath *indexPath) {
+    [self setImage:HTImage(@"personalIndex") WithTouchBlock:^(NSIndexPath *indexPath) {
         [weakSelf doInvest];
     }];
     

@@ -26,7 +26,7 @@
     if (_viewDidLoadBlock) {
         _viewDidLoadBlock(self);
     }
-
+   
 }
 
 - (void)setImage:(UIImage *)image WithTouchBlock:(void (^)(NSIndexPath *))touchBlock
@@ -52,10 +52,10 @@
 
 - (void)alertView:(UIAlertView *)alertView willDismissWithButtonIndex:(NSInteger)buttonIndex
 {
-
-
-        [self.navigationController popToViewController:self.navigationController.viewControllers[3] animated:YES];
-        
+    
+        [self.tabBarController dismissViewControllerAnimated:YES completion:^{
+            
+        }];
     
 }
 
@@ -165,6 +165,23 @@
     }];
     detail3.hidesBottomBarWhenPushed = YES;
     [weakSelf.navigationController pushViewController:detail3 animated:YES];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    if (self.isHidnBar) {
+        self.navigationController.navigationBar.hidden = YES;
+        UIButton *backBtn = [[UIButton alloc]initWithFrame:CGRectMake(2, 32, 88, 88)];
+        [self.view addSubview:backBtn];
+        [backBtn addTarget:self action:@selector(dismissViewController) forControlEvents:UIControlEventTouchUpInside];
+        self.tableView.frame = CGRectMake(0, -20, APPScreenWidth, APPScreenHeight+40);
+    }else
+    {
+        self.navigationController.navigationBar.hidden = NO;
+        [self.navigationController.navigationBar setBackgroundImage:HTImage(@"") forBarMetrics:UIBarMetricsDefault
+         ];
+    }
 }
 
 @end

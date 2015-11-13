@@ -18,76 +18,97 @@
 
 @implementation FirstViewController
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.navigationController.navigationBar setBackgroundImage:HTImage(@"jingxuanhead") forBarMetrics:UIBarMetricsDefault];
+    self.navigationController.navigationBar.hidden = YES;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
-    [self.navigationController.navigationBar setBackgroundImage:HTImage(@"jingxuanhead") forBarMetrics:UIBarMetricsDefault];
 
-    __weakSelf;
     [self setImage:HTImage(@"jingxuan") WithTouchBlock:^(NSIndexPath *indexPath) {
         
-        BaseDetailViewController *detailN = [[BaseDetailViewController alloc] init];
-        detailN.title = @"我的资产";
+}];
+    
+    self.tableView.frame = CGRectMake(0, -20, APPScreenWidth, APPScreenHeight+20);
+    
+    UIButton *woyaozu = [[UIButton alloc]initWithFrame:CGRectMake(0, 200, APPScreenWidth, 150)];
+    [woyaozu addTarget:self action:@selector(woyaozu) forControlEvents:UIControlEventTouchUpInside];
+    [self.tableView addSubview:woyaozu];
+    
+    UIButton *mianbaiozhengjin = [[UIButton alloc]initWithFrame:CGRectMake(0, 400, APPScreenWidth, 150)];
+    [mianbaiozhengjin addTarget:self action:@selector(mianbaiozhengjin) forControlEvents:UIControlEventTouchUpInside];
+    [self.tableView addSubview:mianbaiozhengjin];
+
+}
+- (void)woyaozu
+{
+    __weakSelf;
+    
+    BaseDetailViewController *detailN = [[BaseDetailViewController alloc] init];
+    detailN.title = @"";
+    detailN.isHidnBar = YES;
+    __weak  BaseDetailViewController  *weakBase = detailN;
+    [detailN setImage:HTImage(@"woyaozu") WithTouchBlock:^(NSIndexPath *indexPath) {
         
-        [detailN setImage:HTImage(@"Withdraw") WithTouchBlock:^(NSIndexPath *indexPath) {
+        BaseDetailViewController *detailN = [[BaseDetailViewController alloc] init];
+        detailN.title = @"大咖金融活动说明";
+        
+        [detailN setImage:HTImage(@"woyaozuhuodongshuoming") WithTouchBlock:^(NSIndexPath *indexPath) {
             
-            BaseDetailViewController *detailN = [[BaseDetailViewController alloc] init];
-            detailN.title = @"提现";
-            
-            [detailN setImage:HTImage(@"MyAsset") WithTouchBlock:^(NSIndexPath *indexPath) {
-                
-                BaseDetailViewController *detail3 = [[BaseDetailViewController alloc] init];
-                detail3.title = @"提现详情";
-                __weak  BaseDetailViewController  *weakBase = detail3;
-                [weakSelf.navigationController.navigationBar setBackgroundImage:nil forBarMetrics:UIBarMetricsDefault];
-                [detail3 setImage:HTImage(@"zhekouxiangqing") WithTouchBlock:^(NSIndexPath *indexPath) {
-                    
-                    BaseDetailViewController *detail4 = [[BaseDetailViewController alloc] init];
-                    detail4.title = @"鲜Life金融活动说明";
-                    
-                    [detail4 setImage:HTImage(@"tijiaodingdan") WithTouchBlock:^(NSIndexPath *indexPath) {
-                        
-                        BaseDetailViewController *detail5 = [[BaseDetailViewController alloc] init];
-                        detail5.title = @"身份绑定";
-                        
-                        [detail5 setImage:HTImage(@"client_validate_name") WithTouchBlock:^(NSIndexPath *indexPath) {
-                            
-                            [weakSelf setAlerConten:@"恭喜您已获得减免提现手续费特权1次，仅供下次提现时使用~" withLeftBtn:nil rightBtn:@"我知道了"];
-                            [weakBase refreshView:HTImage(@"zhekouxiangqing1")];
-                            weakBase.view.userInteractionEnabled = NO;
-                            
-                        }];
-                        detail5.hidesBottomBarWhenPushed = YES;
-                        [weakSelf.navigationController pushViewController:detail5 animated:YES];
-                        
-                        
-                    }];
-                    detail4.hidesBottomBarWhenPushed = YES;
-                    [weakSelf.navigationController pushViewController:detail4 animated:YES];
-                    
-                }];
-                detail3.hidesBottomBarWhenPushed = YES;
-                [weakSelf.navigationController pushViewController:detail3 animated:YES];
-                
-            }];
-            detailN.hidesBottomBarWhenPushed = YES;
-            [weakSelf.navigationController pushViewController:detailN animated:YES];
+            CloudTabbarController *VC = [[CloudTabbarController alloc]init];
+            [VC changeMessageWith:@"恭喜您完成投资，稍后工作人员会联系您安排寄送安装等相关事宜，请耐心等待！"];
+            VC.selectedIndex = 1;
+            [weakSelf.navigationController presentViewController:VC animated:YES completion:nil];
+            [weakBase refreshView:HTImage(@"yizu")];
+            weakBase.tableView.userInteractionEnabled = NO;
+            [self.navigationController popViewControllerAnimated:YES];
             
         }];
         detailN.hidesBottomBarWhenPushed = YES;
         [weakSelf.navigationController pushViewController:detailN animated:YES];
-
         
-        
-        
-        
-        
-        
-        
-          }];
-    
+    }];
+    detailN.hidesBottomBarWhenPushed = YES;
+    [weakSelf.navigationController pushViewController:detailN animated:YES];
 }
+
+- (void)mianbaiozhengjin
+{
+    __weakSelf;
+    
+    BaseDetailViewController *detailN = [[BaseDetailViewController alloc] init];
+    detailN.title = @"";
+    detailN.isHidnBar = YES;
+    __weak  BaseDetailViewController  *weakBase = detailN;
+    [detailN setImage:HTImage(@"miaobaozhengjin") WithTouchBlock:^(NSIndexPath *indexPath) {
+        
+        BaseDetailViewController *detailN = [[BaseDetailViewController alloc] init];
+        detailN.title = @"大咖金融活动说明";
+        
+        [detailN setImage:HTImage(@"miaobaozhengjinhuodong") WithTouchBlock:^(NSIndexPath *indexPath) {
+            
+            CloudTabbarController *VC = [[CloudTabbarController alloc]init];
+            [VC changeMessageWith:@"恭喜您完成本次投资，您可以自由去参拍啦！"];
+            VC.selectedIndex = 1;
+            [weakSelf.navigationController presentViewController:VC animated:YES completion:nil];
+            [weakBase refreshView:HTImage(@"miaobaozhengjinBack")];
+            weakBase.tableView.userInteractionEnabled = NO;
+            [self.navigationController popViewControllerAnimated:YES];
+            
+        }];
+        detailN.hidesBottomBarWhenPushed = YES;
+        [weakSelf.navigationController pushViewController:detailN animated:YES];
+        
+    }];
+    detailN.hidesBottomBarWhenPushed = YES;
+    [weakSelf.navigationController pushViewController:detailN animated:YES];
+}
+
 @end
 
 

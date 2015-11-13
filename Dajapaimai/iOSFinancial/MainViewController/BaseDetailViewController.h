@@ -19,6 +19,8 @@
 
 @property (nonatomic,assign) BOOL isRecharge;
 
+@property (nonatomic,assign) BOOL isHidnBar;
+
 @property (nonatomic,copy) NSString *alertContent;
 
 - (void)setImage:(UIImage *)image WithTouchBlock:(void (^)(NSIndexPath *indexPath))cellTouchBlock;

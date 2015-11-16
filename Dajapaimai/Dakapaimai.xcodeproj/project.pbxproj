@@ -305,7 +305,7 @@
 		92B480071B6F6B4B00AF9A2D /* UIImageView+BadgeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+BadgeView.m"; sourceTree = "<group>"; };
 		92BD02B21AEF430E00758530 /* Buttons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Buttons.h; sourceTree = "<group>"; };
 		92BD02B31AEF430E00758530 /* Buttons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Buttons.m; sourceTree = "<group>"; };
-		92D2A27D1AC3DF7B00C9A4AE /* Louxia100.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Louxia100.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		92D2A27D1AC3DF7B00C9A4AE /* Dakapaimai.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dakapaimai.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92D2A2811AC3DF7B00C9A4AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92D2A2821AC3DF7B00C9A4AE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		92D2A2841AC3DF7B00C9A4AE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -319,7 +319,7 @@
 		92DA92E41B42511900AACF1D /* UIViewController+ViewControllers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ViewControllers.m"; sourceTree = "<group>"; };
 		92EB85461AC5132700A80E03 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = iOSFinancial/Singleton/User.h; sourceTree = SOURCE_ROOT; };
 		92EB85471AC5132700A80E03 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = iOSFinancial/Singleton/User.m; sourceTree = SOURCE_ROOT; };
-		92EB857E1AC5517400A80E03 /* Louxia100-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Louxia100-Prefix.pch"; sourceTree = "<group>"; };
+		92EB857E1AC5517400A80E03 /* Dakapaimai-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Dakapaimai-Prefix.pch"; sourceTree = "<group>"; };
 		92EB85831AC561C800A80E03 /* HTTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTabBarController.h; sourceTree = "<group>"; };
 		92EB85841AC561C800A80E03 /* HTTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTabBarController.m; sourceTree = "<group>"; };
 		92EB85861AC561E400A80E03 /* HTNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTNavigationController.h; sourceTree = "<group>"; };
@@ -726,7 +726,7 @@
 		92D2A27E1AC3DF7B00C9A4AE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				92D2A27D1AC3DF7B00C9A4AE /* Louxia100.app */,
+				92D2A27D1AC3DF7B00C9A4AE /* Dakapaimai.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -735,7 +735,7 @@
 			isa = PBXGroup;
 			children = (
 				92D2A2901AC3DF7B00C9A4AE /* Images.xcassets */,
-				92EB857E1AC5517400A80E03 /* Louxia100-Prefix.pch */,
+				92EB857E1AC5517400A80E03 /* Dakapaimai-Prefix.pch */,
 				92D2A2841AC3DF7B00C9A4AE /* AppDelegate.h */,
 				92D2A2851AC3DF7B00C9A4AE /* AppDelegate.m */,
 				9268127C1AE8CE5700FAB0A2 /* Config */,
@@ -920,9 +920,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		92D2A27C1AC3DF7B00C9A4AE /* Louxia100 */ = {
+		92D2A27C1AC3DF7B00C9A4AE /* Dakapaimai */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 92D2A2A31AC3DF7B00C9A4AE /* Build configuration list for PBXNativeTarget "Louxia100" */;
+			buildConfigurationList = 92D2A2A31AC3DF7B00C9A4AE /* Build configuration list for PBXNativeTarget "Dakapaimai" */;
 			buildPhases = (
 				B17D10F71545FB6155D8822C /* Check Pods Manifest.lock */,
 				92D2A2791AC3DF7B00C9A4AE /* Sources */,
@@ -934,9 +934,9 @@
 			);
 			dependencies = (
 			);
-			name = Louxia100;
+			name = Dakapaimai;
 			productName = iOSFinancial;
-			productReference = 92D2A27D1AC3DF7B00C9A4AE /* Louxia100.app */;
+			productReference = 92D2A27D1AC3DF7B00C9A4AE /* Dakapaimai.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -954,7 +954,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 92D2A2781AC3DF7B00C9A4AE /* Build configuration list for PBXProject "Louxia100" */;
+			buildConfigurationList = 92D2A2781AC3DF7B00C9A4AE /* Build configuration list for PBXProject "Dakapaimai" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -968,7 +968,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				92D2A27C1AC3DF7B00C9A4AE /* Louxia100 */,
+				92D2A27C1AC3DF7B00C9A4AE /* Dakapaimai */,
 			);
 		};
 /* End PBXProject section */
@@ -1232,7 +1232,7 @@
 					"$(PROJECT_DIR)/iOSFinancial/ThirdPart/ShareSDK/UI",
 					"$(PROJECT_DIR)/iOSFinancial/ThirdPart/SMS_SDK",
 				);
-				GCC_PREFIX_HEADER = "$(SRCROOT)/iOSFinancial/Louxia100-Prefix.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/iOSFinancial/Dakapaimai-Prefix.pch";
 				INFOPLIST_FILE = iOSFinancial/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1246,8 +1246,8 @@
 					"$(PROJECT_DIR)/iOSFinancial/ThirdPart/ShareSDK/Extend/SinaWeiboSDK",
 					"$(PROJECT_DIR)/iOSFinancial/ThirdPart/ShareSDK/Extend/WeChatSDK",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jiandanlicai.Louxia100;
-				PRODUCT_NAME = Louxia100;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jiandanlicai.Dakapaimai;
+				PRODUCT_NAME = Dakapaimai;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -1274,7 +1274,7 @@
 					"$(PROJECT_DIR)/iOSFinancial/ThirdPart/ShareSDK/UI",
 					"$(PROJECT_DIR)/iOSFinancial/ThirdPart/SMS_SDK",
 				);
-				GCC_PREFIX_HEADER = "$(SRCROOT)/iOSFinancial/Louxia100-Prefix.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/iOSFinancial/Dakapaimai-Prefix.pch";
 				INFOPLIST_FILE = iOSFinancial/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1289,8 +1289,8 @@
 					"$(PROJECT_DIR)/iOSFinancial/ThirdPart/ShareSDK/Extend/WeChatSDK",
 				);
 				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = com.jiandanlicai.Louxia100;
-				PRODUCT_NAME = Louxia100;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jiandanlicai.Dakapaimai;
+				PRODUCT_NAME = Dakapaimai;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -1300,7 +1300,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		92D2A2781AC3DF7B00C9A4AE /* Build configuration list for PBXProject "Louxia100" */ = {
+		92D2A2781AC3DF7B00C9A4AE /* Build configuration list for PBXProject "Dakapaimai" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				92D2A2A11AC3DF7B00C9A4AE /* Debug */,
@@ -1309,7 +1309,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		92D2A2A31AC3DF7B00C9A4AE /* Build configuration list for PBXNativeTarget "Louxia100" */ = {
+		92D2A2A31AC3DF7B00C9A4AE /* Build configuration list for PBXNativeTarget "Dakapaimai" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				92D2A2A41AC3DF7B00C9A4AE /* Debug */,

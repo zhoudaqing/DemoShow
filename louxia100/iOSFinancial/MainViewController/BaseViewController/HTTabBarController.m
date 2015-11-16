@@ -67,26 +67,22 @@
 - (NSArray *)subViewControllers
 {
     FirstViewController *store = [[FirstViewController alloc]init];
-    store.tabBarItem = [self tabbarItemWithTitle:@"精选" andItemImage:@"travel"];
+    store.tabBarItem = [self tabbarItemWithTitle:@"下午茶" andItemImage:@"travel"];
     HTNavigationController *nav1 = [[HTNavigationController alloc] initWithRootViewController:store];
     
     ViewController *cart = [[ViewController alloc]init];
-    cart.tabBarItem = [self tabbarItemWithTitle:@"专场" andItemImage:@"direction"];
+    cart.tabBarItem = [self tabbarItemWithTitle:@"蛋糕" andItemImage:@"direction"];
     HTNavigationController *nav2 = [[HTNavigationController alloc] initWithRootViewController:cart];
     
     ViewController1 *find = [[ViewController1 alloc]init];
-    find.tabBarItem = [self tabbarItemWithTitle:@"直播" andItemImage:@"commit"];
+    find.tabBarItem = [self tabbarItemWithTitle:@"订单" andItemImage:@"commit"];
     HTNavigationController *nav3 = [[HTNavigationController alloc] initWithRootViewController:find];
     
     ViewController2 *mySelf = [[ViewController2 alloc]init];
     mySelf.tabBarItem = [self tabbarItemWithTitle:@"我的" andItemImage:@"mySelf"];
     HTNavigationController *nav4 = [[HTNavigationController alloc] initWithRootViewController:mySelf];
     
-    ViewController3 *viewC31 = [[ViewController3 alloc]init];
-    viewC31.tabBarItem = [self tabbarItemWithTitle:@"艺术品" andItemImage:@"workofart"];
-    HTNavigationController *viewC3 = [[HTNavigationController alloc] initWithRootViewController:viewC31];
-
-    return @[nav1, nav2, nav3,viewC3, nav4];
+    return @[nav1, nav2, nav3, nav4];
 }
 
 - (UITabBarItem *)tabbarItemWithTitle:(NSString *)title andItemImage:(NSString *)imageStr

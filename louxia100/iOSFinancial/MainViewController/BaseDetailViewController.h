@@ -21,6 +21,8 @@
 
 @property (nonatomic,assign) BOOL isHidnBar;
 
+@property (nonatomic,assign) BOOL isAddBtn;
+
 @property (nonatomic,copy) NSString *alertContent;
 
 - (void)setImage:(UIImage *)image WithTouchBlock:(void (^)(NSIndexPath *indexPath))cellTouchBlock;

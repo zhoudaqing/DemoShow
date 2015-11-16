@@ -53,9 +53,16 @@
 - (void)alertView:(UIAlertView *)alertView willDismissWithButtonIndex:(NSInteger)buttonIndex
 {
     
+    
         [self.tabBarController dismissViewControllerAnimated:YES completion:^{
             
         }];
+    if ([alertView.message isEqualToString:@"恭喜您已获得楼下100双倍返现资格，完成订单即可返现至“我的余额”中。"]) {
+        [self.navigationController popToViewController:self.navigationController.viewControllers[1] animated:YES];
+    }
+    if ([alertView.message isEqualToString:@"恭喜您获得楼下100免邮资格，下单即可体验。"]) {
+        [self.navigationController popToViewController:self.navigationController.viewControllers[1] animated:YES];
+    }
     
 }
 
@@ -139,32 +146,31 @@
 {
 
     __weakSelf;
-    //  结算页面
-    BaseDetailViewController *detail3 = [[BaseDetailViewController alloc] init];
-    detail3.title = @"积分礼包双重礼";
-    [detail3 setImage:HTImage(@"bangzhu") WithTouchBlock:^(NSIndexPath *indexPath) {
+    BaseDetailViewController *detail8 = [[BaseDetailViewController alloc] init];
+    detail8.title = @"订单详情";
+    __weak BaseDetailViewController *weakbase = detail8;
+    [detail8 setImage:HTImage(@"dingdanxiangqing") WithTouchBlock:^(NSIndexPath *indexPath) {
         
-        BaseDetailViewController *detail4 = [[BaseDetailViewController alloc] init];
-        detail4.title = @"高铁管家金融签到活动说明";
+        BaseDetailViewController *detail9 = [[BaseDetailViewController alloc] init];
+        detail9.title = @"100金融活动说明";
         
-        [detail4 setImage:HTImage(@"shenmindalibaohuo") WithTouchBlock:^(NSIndexPath *indexPath) {
-            
+        [detail9 setImage:HTImage(@"dingdanhuodongshuoming") WithTouchBlock:^(NSIndexPath *indexPath) {
             
             CloudTabbarController *VC = [[CloudTabbarController alloc]init];
-            [VC changeMessageWith:@"恭喜您已获得高铁管家的神秘大礼包，共有200积分、2个5元红包、1张个10元代金券，返回高铁管家即可查看。"];
-            VC.selectedIndex = 1;
-            [weakSelf.navigationController presentViewController:VC animated:YES completion:^{
-                    [weakSelf.navigationController popToViewController:weakSelf.navigationController.viewControllers[1] animated:NO];
-            }];
-
             
+            [VC changeMessageWith:@"恭喜您已获得楼下100的20元返现，返回“我的余额”查看。"];
+            VC.selectedIndex = 1;
+            [weakSelf.navigationController presentViewController:VC animated:YES completion:nil];
+            [weakSelf.navigationController popToViewController:weakSelf.navigationController.viewControllers[2] animated:NO];
+            [weakbase refreshView:HTImage(@"dingdanxiangqingback")];
         }];
-        detail4.hidesBottomBarWhenPushed = YES;
-        [weakSelf.navigationController pushViewController:detail4 animated:YES];
+        
+        
+        [weakSelf.navigationController pushViewController:detail9 animated:YES];
         
     }];
-    detail3.hidesBottomBarWhenPushed = YES;
-    [weakSelf.navigationController pushViewController:detail3 animated:YES];
+    
+    [weakSelf.navigationController pushViewController:detail8 animated:YES];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -182,6 +188,12 @@
         [self.navigationController.navigationBar setBackgroundImage:HTImage(@"") forBarMetrics:UIBarMetricsDefault
          ];
     }
+    if (self.isAddBtn) {
+        UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(272, 550, 100, 60)];
+        [btn addTarget:self action:@selector(invested) forControlEvents:UIControlEventTouchUpInside];
+        [self.tableView addSubview:btn];
+    }
+    
 }
 
 @end

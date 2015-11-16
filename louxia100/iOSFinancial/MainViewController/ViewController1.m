@@ -19,25 +19,27 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"直播";
+    self.title = @"订单";
     __weakSelf;
-    [self setImage:HTImage(@"zhibo") WithTouchBlock:^(NSIndexPath *indexPath) {
+    [self setImage:HTImage(@"dingdan") WithTouchBlock:^(NSIndexPath *indexPath) {
         BaseDetailViewController *detail8 = [[BaseDetailViewController alloc] init];
-        detail8.title = @"高铁商城";
-        
-        [detail8 setImage:HTImage(@"jifenfangsong") WithTouchBlock:^(NSIndexPath *indexPath) {
+        detail8.title = @"订单详情";
+        __weak BaseDetailViewController *weakbase = detail8;
+        [detail8 setImage:HTImage(@"dingdanxiangqing") WithTouchBlock:^(NSIndexPath *indexPath) {
             
             BaseDetailViewController *detail9 = [[BaseDetailViewController alloc] init];
-            detail9.title = @"高铁管家金融活动说明";
+            detail9.title = @"100金融活动说明";
             
-            [detail9 setImage:HTImage(@"shangchengjifen") WithTouchBlock:^(NSIndexPath *indexPath) {
+            [detail9 setImage:HTImage(@"dingdanhuodongshuoming") WithTouchBlock:^(NSIndexPath *indexPath) {
                 
                 CloudTabbarController *VC = [[CloudTabbarController alloc]init];
-                [VC changeMessageWith:@"恭喜您已获得高铁管家1000积分，可用于兑换高铁商城礼品"];
+               
+                [VC changeMessageWith:@"恭喜您已获得楼下100的20元返现，返回“我的余额”查看。"];
                 VC.selectedIndex = 1;
                 [weakSelf.navigationController presentViewController:VC animated:YES completion:nil];
                 [weakSelf.navigationController popToViewController:weakSelf.navigationController.viewControllers[1] animated:NO];
                 
+                [weakbase refreshView:HTImage(@"dingdanxiangqingback")];
             }];
             
             

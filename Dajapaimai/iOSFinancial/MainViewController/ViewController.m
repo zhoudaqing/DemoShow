@@ -19,8 +19,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title = @"专场";
-    [self setImage:HTImage(@"zhuanchang") WithTouchBlock:^(NSIndexPath *indexPath) {
+    self.title = @"蛋糕";
+    [self setImage:HTImage(@"dangao") WithTouchBlock:^(NSIndexPath *indexPath) {
         
           }];
     

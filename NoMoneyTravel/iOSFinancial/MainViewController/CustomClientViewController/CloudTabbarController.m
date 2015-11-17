@@ -61,12 +61,12 @@
 - (NSArray *)subViewControllers
 {
     CloudAccountViewController *store = [[CloudAccountViewController alloc]init];
-    store.tabBarItem = [self tabbarItemWithTitle:@"云账户" andItemImage:@"tab_account"];
+    store.tabBarItem = [self tabbarItemWithTitle:@"穷游金融" andItemImage:@"tab_account"];
     HTNavigationController *nav1 = [[HTNavigationController alloc] initWithRootViewController:store];
     nav1.isContentLight = YES;
     
     InvestViewController *cart = [[InvestViewController alloc]init];
-    cart.isBuy = YES;
+    cart.isBuy = self.isBuy;
     cart.tabBarItem = [self tabbarItemWithTitle:@"我要理财" andItemImage:@"tab_invest"];
     HTNavigationController *nav2 = [[HTNavigationController alloc] initWithRootViewController:cart];
     nav2.isContentLight = YES;

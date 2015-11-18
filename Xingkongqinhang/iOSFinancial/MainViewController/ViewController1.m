@@ -89,9 +89,12 @@
                 CloudTabbarController *VC = [[CloudTabbarController alloc]init];
                 [VC changeMessageWith:@"恭喜您已获得星空琴行的琴课体验券一张，可返回星空琴行查看。"];
                 VC.selectedIndex = 1;
-                [weakSelf.navigationController presentViewController:VC animated:YES completion:nil];
-                [weakSelf.navigationController popToViewController:weakSelf.navigationController.viewControllers[2] animated:NO];
-                [weakBase refreshView:HTImage(@"kechengjieshaoneirongback")];
+                [weakSelf.navigationController presentViewController:VC animated:YES completion:^{
+                    
+                    [weakSelf.navigationController popToViewController:weakSelf.navigationController.viewControllers[2] animated:NO];
+                    [weakBase refreshView:HTImage(@"kechengjieshaoneirongback")];
+                }];
+                
             }];
             detailN1.hidesBottomBarWhenPushed = YES;
             [weakSelf.navigationController pushViewController:detailN1 animated:YES];

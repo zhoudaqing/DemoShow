@@ -62,7 +62,7 @@
 - (NSArray *)subViewControllers
 {
     CloudAccountViewController *store = [[CloudAccountViewController alloc]init];
-    store.tabBarItem = [self tabbarItemWithTitle:@"云账户" andItemImage:@"tab_account"];
+    store.tabBarItem = [self tabbarItemWithTitle:@"星空金融" andItemImage:@"tab_account"];
     HTNavigationController *nav1 = [[HTNavigationController alloc] initWithRootViewController:store];
     nav1.isContentLight = YES;
     

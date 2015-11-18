@@ -83,7 +83,7 @@
                             [regedit setImage:HTImage(@"buyStep2") WithTouchBlock:^(NSIndexPath *indexPath) {
                                 
                                 BaseDetailViewController *regedit = [[BaseDetailViewController alloc] init];
-                                regedit.title = @"输入完成";
+                                regedit.title = @"购买完成";
                                 [regedit setAlerConten:self.notciceStr withLeftBtn:@"我知道了" rightBtn:nil];
                                 [regedit setImage:HTImage(@"buyStep3") WithTouchBlock:^(NSIndexPath *indexPath) {
                                     
@@ -142,7 +142,7 @@
             [regedit setImage:HTImage(@"buyStep2") WithTouchBlock:^(NSIndexPath *indexPath) {
                 
                 BaseDetailViewController *regedit = [[BaseDetailViewController alloc] init];
-                regedit.title = @"输入完成";
+                regedit.title = @"购买完成";
                 if (self.isBuy) {
                     [regedit setAlerConten:self.notciceStr withLeftBtn:@"我知道了" rightBtn:nil];
                 }

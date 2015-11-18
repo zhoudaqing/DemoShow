@@ -26,7 +26,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    [self.navigationController.navigationBar setBackgroundImage:HTImage(@"jingxuanhead") forBarMetrics:UIBarMetricsDefault
+     ];
     self.title = @"新闻动态";
     [self setImage:HTImage(@"jingxuan") WithTouchBlock:^(NSIndexPath *indexPath) {
         

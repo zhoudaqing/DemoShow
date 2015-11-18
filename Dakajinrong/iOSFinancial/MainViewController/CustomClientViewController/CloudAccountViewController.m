@@ -30,7 +30,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"大咖金融";
-    self.tabBarItem.title = @"云账户";
     
     self.navigationItem.leftBarButtonItem = [UIBarButtonExtern buttonWithTitle:@"关闭" target:self andSelector:@selector(closeTabBar)];
     

@@ -172,9 +172,6 @@
     [super viewWillAppear:animated];
     if (self.isHidnBar) {
         self.navigationController.navigationBar.hidden = YES;
-        UIButton *backBtn = [[UIButton alloc]initWithFrame:CGRectMake(2, 32, 88, 88)];
-        [self.view addSubview:backBtn];
-        [backBtn addTarget:self action:@selector(dismissViewController) forControlEvents:UIControlEventTouchUpInside];
         self.tableView.frame = CGRectMake(0, -20, APPScreenWidth, APPScreenHeight+40);
     }else
     {
@@ -184,4 +181,8 @@
     }
 }
 
+- (void)clickLeftBtn
+{
+    [self.navigationController popToRootViewControllerAnimated:NO];
+}
 @end

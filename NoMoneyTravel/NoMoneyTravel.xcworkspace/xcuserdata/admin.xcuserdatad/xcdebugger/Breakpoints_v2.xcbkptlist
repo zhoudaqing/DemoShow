@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iOSFinancial/MainViewController/CustomClientViewController/InvestViewController.m"
-            timestampString = "469455592.468248"
+            timestampString = "469526022.151263"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "128"
-            endingLineNumber = "128"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
             landmarkName = "-doInvest"
             landmarkType = "5">
          </BreakpointContent>

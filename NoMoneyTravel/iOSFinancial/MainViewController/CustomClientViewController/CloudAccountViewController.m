@@ -29,7 +29,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"云账户";
+    self.title = @"穷游金融";
     
     self.navigationItem.leftBarButtonItem = [UIBarButtonExtern buttonWithTitle:@"关闭" target:self andSelector:@selector(closeTabBar)];
     
@@ -54,6 +54,11 @@
             //  验证真实姓名
             BaseDetailViewController *regedit = [[BaseDetailViewController alloc] init];
             regedit.title = @"验证真实姓名";
+            
+            UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 460, APPScreenWidth, 60)];
+            imageView.backgroundColor = [UIColor colorWithRed:239/255.0 green:239/255.0 blue:239/255.0 alpha:1];
+            [regedit.tableView addSubview:imageView];
+
             [regedit setImage:HTImage(@"validateUserName") WithTouchBlock:^(NSIndexPath *indexPath) {
                 
                 //  设置密码

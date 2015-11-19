@@ -30,6 +30,7 @@
     
     [self setImage:HTImage(@"mine") WithTouchBlock:^(NSIndexPath *indexPath) {
         CloudTabbarController *VC = [[CloudTabbarController alloc]init];
+        VC.isBuy = NO;
         [VC showPromptView];
         [weakSelf.navigationController presentViewController:VC animated:YES completion:nil];
 

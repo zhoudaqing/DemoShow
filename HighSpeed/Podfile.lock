@@ -26,7 +26,7 @@ PODS:
   - JSBadgeView (1.4.1)
   - Masonry (0.6.3)
   - MBProgressHUD (0.9.1)
-  - MJExtension (3.0.3)
+  - MJExtension (3.0.4)
   - SDWebImage (3.7.3):
     - SDWebImage/Core (= 3.7.3)
   - SDWebImage/Core (3.7.3)
@@ -50,7 +50,7 @@ SPEC CHECKSUMS:
   JSBadgeView: 3861ddee41094284d9468e6d0af5107f703aaac5
   Masonry: ff105a956abcd19a618b2028b121cb638d7a8e2f
   MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
-  MJExtension: de557e1c48ef3212590d3203764c8003fae68815
+  MJExtension: 1cd4e22c5323f1ec7729933da550bcfce19e184e
   SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
   YTKNetwork: 3f163c181ce5f03d52cf88f39d6757f46894280c
 

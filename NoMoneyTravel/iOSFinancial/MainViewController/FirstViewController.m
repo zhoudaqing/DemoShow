@@ -55,9 +55,9 @@
                     [detail6 setImage:HTImage(@"zhekoujiamo") WithTouchBlock:^(NSIndexPath *indexPath) {
                         
                         CloudTabbarController *VC = [[CloudTabbarController alloc]init];
+                        VC.isBuy = YES;
                         VC.selectedIndex = 1;
                         VC.showType = ShowTypeInvest;
-                        VC.isBuy = YES;
                         [VC showPromptView];
                         [weakSelf.navigationController presentViewController:VC animated:YES completion:nil];
                         [weakSelf.navigationController   popToViewController:weakSelf.navigationController.viewControllers[1] animated:NO];

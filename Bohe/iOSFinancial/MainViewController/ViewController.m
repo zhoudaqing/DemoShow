@@ -19,6 +19,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     self.title = @"伙伴";
     __weakSelf;
     [self setImage:HTImage(@"zuanshidaka") WithTouchBlock:^(NSIndexPath *indexPath) {
@@ -54,6 +55,5 @@
     
     
 }
-
 
 @end

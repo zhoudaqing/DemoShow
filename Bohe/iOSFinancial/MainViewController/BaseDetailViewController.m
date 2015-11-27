@@ -122,7 +122,7 @@
 {
     
     UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(0, 400, APPScreenWidth, 120)];
-    [btn setTitle:@"返回首页" forState:UIControlStateNormal];
+    [btn setTitle:@"" forState:UIControlStateNormal];
     [btn setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
     [self.view addSubview:btn];
     [btn addTarget:self action:@selector(popTOView:) forControlEvents:UIControlEventTouchUpInside];

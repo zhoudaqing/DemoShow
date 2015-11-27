@@ -1246,7 +1246,7 @@
 					"$(PROJECT_DIR)/iOSFinancial/ThirdPart/ShareSDK/Extend/SinaWeiboSDK",
 					"$(PROJECT_DIR)/iOSFinancial/ThirdPart/ShareSDK/Extend/WeChatSDK",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jiandanlicai.Dakajinrong;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dakajinrong.jinrong;
 				PRODUCT_NAME = Dakajinrong;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1289,7 +1289,7 @@
 					"$(PROJECT_DIR)/iOSFinancial/ThirdPart/ShareSDK/Extend/WeChatSDK",
 				);
 				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = com.jiandanlicai.Dakajinrong;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dakajinrong.jinrong;
 				PRODUCT_NAME = Dakajinrong;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;

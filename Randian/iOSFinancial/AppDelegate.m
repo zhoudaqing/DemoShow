@@ -12,7 +12,7 @@
 #import "HTVersionManager.h"
 #import "UIAlertView+RWBlock.h"
 #import "SystemConfig.h"
-
+#import "RandianWeixin.h"
 
 #define UMSYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
 #define _IPHONE80_ 80000
@@ -32,7 +32,10 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
-    self.window.rootViewController = self.tabBarController;
+    RandianWeixin *weixin = [[RandianWeixin alloc]init];
+    HTNavigationController *nav2 = [[HTNavigationController alloc] initWithRootViewController:weixin];
+    
+    self.window.rootViewController = nav2;
 
     [self.window makeKeyAndVisible];
 

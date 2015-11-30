@@ -18,6 +18,7 @@
 		846EE5051B020C3200F0AE4E /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 846EE5041B020C3200F0AE4E /* libz.dylib */; };
 		847307151BE8B4DC00F27D12 /* ViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = 847307141BE8B4DC00F27D12 /* ViewController1.m */; };
 		847307181BE8B4EC00F27D12 /* ViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 847307171BE8B4EC00F27D12 /* ViewController2.m */; };
+		84BA9C121C0AF26D00C5F15E /* RandianWeixin.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BA9C111C0AF26D00C5F15E /* RandianWeixin.m */; };
 		84D9FB051AE77DC500C5AAA8 /* AttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D9FB041AE77DC500C5AAA8 /* AttributedLabel.m */; };
 		920C09881B74975000A8CC30 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 920C09871B74975000A8CC30 /* QuartzCore.framework */; };
 		920C098A1B74977400A8CC30 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 920C09891B74977400A8CC30 /* libicucore.dylib */; };
@@ -142,6 +143,8 @@
 		847307141BE8B4DC00F27D12 /* ViewController1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController1.m; sourceTree = "<group>"; };
 		847307161BE8B4EC00F27D12 /* ViewController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController2.h; sourceTree = "<group>"; };
 		847307171BE8B4EC00F27D12 /* ViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController2.m; sourceTree = "<group>"; };
+		84BA9C101C0AF26D00C5F15E /* RandianWeixin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RandianWeixin.h; sourceTree = "<group>"; };
+		84BA9C111C0AF26D00C5F15E /* RandianWeixin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RandianWeixin.m; sourceTree = "<group>"; };
 		84D9FB031AE77DC500C5AAA8 /* AttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AttributedLabel.h; path = ../../MainViewController/LogIn/AttributedLabel.h; sourceTree = "<group>"; };
 		84D9FB041AE77DC500C5AAA8 /* AttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AttributedLabel.m; path = ../../MainViewController/LogIn/AttributedLabel.m; sourceTree = "<group>"; };
 		920C09871B74975000A8CC30 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -624,6 +627,8 @@
 				847307141BE8B4DC00F27D12 /* ViewController1.m */,
 				847307161BE8B4EC00F27D12 /* ViewController2.h */,
 				847307171BE8B4EC00F27D12 /* ViewController2.m */,
+				84BA9C101C0AF26D00C5F15E /* RandianWeixin.h */,
+				84BA9C111C0AF26D00C5F15E /* RandianWeixin.m */,
 			);
 			name = MainViewController;
 			sourceTree = "<group>";
@@ -1083,6 +1088,7 @@
 				84D9FB051AE77DC500C5AAA8 /* AttributedLabel.m in Sources */,
 				922CB5981AC9786B00C4A438 /* HTBaseTableViewController.m in Sources */,
 				922CB5A51AC9789700C4A438 /* MJRefreshBaseView.m in Sources */,
+				84BA9C121C0AF26D00C5F15E /* RandianWeixin.m in Sources */,
 				921DD2C81AEB67310004251F /* LoadingStateView.m in Sources */,
 				921DD28E1AEB65790004251F /* HTListTableViewController.m in Sources */,
 				9228C9901B72FA0D008E3608 /* ZHPickView.m in Sources */,

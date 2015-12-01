@@ -61,16 +61,12 @@
     if ([alertView.message isEqualToString:@"恭喜您已获得燃点30元优惠券，可用于预约燃点课程支付时抵现金使用，返回查看。"]||[alertView.message isEqualToString:@"恭喜您已获得燃点健身体验券，快去免费体验吧"]) {
         [self.tabBarController dismissViewControllerAnimated:YES completion:nil];
     }
-    if ([alertView.message isEqualToString:@"恭喜您获得薄荷6元优惠券，可在购物支付时抵现金使用。"]) {
-        [self.navigationController popToViewController:self.navigationController.viewControllers[4] animated:YES];
-    }
+    
     if ([alertView.message isEqualToString:@"为了保障您的资金安全，请先完善信息。"]) {
         _cellToucheBlock(_index);
 
     }
-    if ([alertView.message isEqualToString:@"恭喜，您的薄荷金融服务已开通，同时也已获得了1元现金，连续7天记录体重即可每天都获得1元现金哦~"]) {
-        [self.navigationController popToViewController:self.navigationController.viewControllers[2] animated:YES];
-    }
+    
 }
 
 - (void)refreshView:(UIImage *)image

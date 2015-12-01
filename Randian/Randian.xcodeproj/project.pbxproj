@@ -378,6 +378,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		84BA9C241C0C796600C5F15E /* Caidan */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Caidan;
+			sourceTree = "<group>";
+		};
 		9211AF721B7AF74D00B7FD9F /* VPImageCropper */ = {
 			isa = PBXGroup;
 			children = (
@@ -629,6 +636,7 @@
 				847307171BE8B4EC00F27D12 /* ViewController2.m */,
 				84BA9C101C0AF26D00C5F15E /* RandianWeixin.h */,
 				84BA9C111C0AF26D00C5F15E /* RandianWeixin.m */,
+				84BA9C241C0C796600C5F15E /* Caidan */,
 			);
 			name = MainViewController;
 			sourceTree = "<group>";

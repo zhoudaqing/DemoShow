@@ -7,7 +7,10 @@
 //
 
 #import "BaseDetailViewController.h"
+#import "HTTabBarController.h"
 
 @interface RandianWeixin : BaseDetailViewController
+
+@property (strong, nonatomic)  HTTabBarController *tabBarController;
 
 @end

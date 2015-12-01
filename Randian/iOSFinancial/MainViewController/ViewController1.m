@@ -19,7 +19,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"工具";
     __weakSelf;
     [self setImage:HTImage(@"lvxingfuwu") WithTouchBlock:^(NSIndexPath *indexPath) {
         
@@ -30,7 +29,7 @@
         
         }];
     
-    UIButton *btn =[[UIButton alloc]initWithFrame:CGRectMake(0, 138, APPScreenWidth, 60)];
+    UIButton *btn =[[UIButton alloc]initWithFrame:CGRectMake(0, 158, APPScreenWidth, 60)];
     [self.tableView addSubview:btn];
     [btn addTarget:self action:@selector(jitizhong) forControlEvents:UIControlEventTouchUpInside];
 }
@@ -39,45 +38,21 @@
     __weakSelf;
         //  结算页面
         BaseDetailViewController *detail3 = [[BaseDetailViewController alloc] init];
-        detail3.isHidnBar = YES;
-        [weakSelf.navigationController.navigationBar setBackgroundImage:nil forBarMetrics:UIBarMetricsDefault];
+        detail3.title = @"我的优惠券";
+        __weak BaseDetailViewController *weakBase = detail3;
         [detail3 setImage:HTImage(@"xuanzeriqi") WithTouchBlock:^(NSIndexPath *indexPath) {
             
             BaseDetailViewController *detail4 = [[BaseDetailViewController alloc] init];
-            detail4.isHidnBar = YES;
-            __weak BaseDetailViewController *weakBase = detail4;
+            detail4.title = @"优惠券免费领取";
             [detail4 setImage:HTImage(@"jilutizhong") WithTouchBlock:^(NSIndexPath *indexPath) {
                 
-                if (weakBase.isOpen) {
                     CloudTabbarController *VC = [[CloudTabbarController alloc]init];
-                    [VC showPromptView];
+                    [VC changeMessageWith:@"恭喜您已获得燃点30元优惠券，可用于预约燃点课程支付时抵现金使用，返回查看。"];
+                    VC.selectedIndex = 1;
                     [weakSelf.navigationController presentViewController:VC animated:YES completion:nil];
-                    
-                }else
-                {
-                    BaseDetailViewController *detail5 = [[BaseDetailViewController alloc] init];
-                    detail5.title = @"你购物我包邮";
-                    
-                    [detail5 setImage:HTImage(@"nigouwuwobaoyou") WithTouchBlock:^(NSIndexPath *indexPath) {
-                        
-                        
-                        
-                        BaseDetailViewController *detail9 = [[BaseDetailViewController alloc] init];
-                        detail9.title = @"绑定验证";
-                        
-                        [detail9 setImage:HTImage(@"kaihuxingmingyanzheng") WithTouchBlock:^(NSIndexPath *indexPath) {
-                            
-                            [weakSelf setAlerConten:@"恭喜，您的薄荷金融服务已开通，同时也已获得了1元现金，连续7天记录体重即可每天都获得1元现金哦~" withLeftBtn:@"我知道了" rightBtn:nil];
-                            [weakBase refreshView:HTImage(@"jilutizhongback")];
-                            weakBase.isOpen = YES;
-                        }];
-                        detail9.hidesBottomBarWhenPushed = YES;
-                        [weakSelf.navigationController pushViewController:detail9 animated:YES];
-                        
-                    }];
-                    detail5.hidesBottomBarWhenPushed = YES;
-                    [weakSelf.navigationController pushViewController:detail5 animated:YES];
-                }
+                    [weakBase refreshView:HTImage(@"xuanzeriqiback")];
+                    [weakSelf.navigationController popToViewController:weakBase animated:YES];
+                    weakBase.tableView.userInteractionEnabled = NO;
                 
                 
             }];
@@ -87,5 +62,11 @@
         }];
         detail3.hidesBottomBarWhenPushed = YES;
         [weakSelf.navigationController pushViewController:detail3 animated:YES];    
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.title = @"我的";
 }
 @end

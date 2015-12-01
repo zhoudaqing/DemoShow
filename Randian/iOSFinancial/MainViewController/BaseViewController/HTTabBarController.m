@@ -12,6 +12,7 @@
 #import "ViewController.h"
 #import "ViewController1.h"
 #import "ViewController2.h"
+#import "UIBarButtonExtern.h"
 
 @interface HTTabBarController ()
 
@@ -32,22 +33,8 @@
     
     [self changeShowdImageColor];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tongzhi) name:@"chongzhitongzhi" object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tongzhi1) name:@"chongzhitongzhigeren" object:nil];
-
-}
-
-- (void)tongzhi
-{
-    [self dismissViewControllerAnimated:NO completion:^{
-        
-    }];
-}
-- (void)tongzhi1
-{
-    [self dismissViewControllerAnimated:NO completion:^{
-        
-    }];
+    
+    
 }
 //  改变阴影线颜色
 - (void)changeShowdImageColor
@@ -69,25 +56,21 @@
     FirstViewController *store = [[FirstViewController alloc]init];
     store.tabBarItem = [self tabbarItemWithTitle:@"首页" andItemImage:@"travel"];
     HTNavigationController *nav1 = [[HTNavigationController alloc] initWithRootViewController:store];
-    nav1.isContentLight = NO;
     
     ViewController *cart = [[ViewController alloc]init];
-    cart.tabBarItem = [self tabbarItemWithTitle:@"伙伴" andItemImage:@"direction"];
+    cart.tabBarItem = [self tabbarItemWithTitle:@"教练" andItemImage:@"direction"];
     HTNavigationController *nav2 = [[HTNavigationController alloc] initWithRootViewController:cart];
-    nav2.isContentLight = YES;
     
     ViewController1 *find = [[ViewController1 alloc]init];
-    find.tabBarItem = [self tabbarItemWithTitle:@"工具" andItemImage:@"commit"];
+    find.tabBarItem = [self tabbarItemWithTitle:@"我的" andItemImage:@"commit"];
     HTNavigationController *nav3 = [[HTNavigationController alloc] initWithRootViewController:find];
-    nav3.isContentLight  = YES;
     
     ViewController2 *mySelf = [[ViewController2 alloc]init];
-    mySelf.tabBarItem = [self tabbarItemWithTitle:@"商店" andItemImage:@"mySelf"];
+    mySelf.tabBarItem = [self tabbarItemWithTitle:@"订单" andItemImage:@"mySelf"];
     HTNavigationController *nav4 = [[HTNavigationController alloc] initWithRootViewController:mySelf];
-    nav4.isContentLight = YES;
     
     
-    return @[nav1, nav2, nav3, nav4];
+    return @[nav1, nav2, nav4, nav3];
 }
 
 - (UITabBarItem *)tabbarItemWithTitle:(NSString *)title andItemImage:(NSString *)imageStr
@@ -98,6 +81,7 @@
     
     return tabBarItem;
 }
+
 
 
 @end

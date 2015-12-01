@@ -80,14 +80,14 @@
     [[UITabBar appearance] setTintColor:[UIColor jt_barTintColor]];
     
     //  修改navigation Bar底下的黑色线
-    [[UINavigationBar appearance] setBarTintColor:[UIColor whiteColor]];
+    [[UINavigationBar appearance] setBarTintColor:[UIColor blackColor]];
     [[UINavigationBar appearance] setShadowImage:HTImage(@"")];//[[UIImage alloc] init]
     
     //修改返回按钮图片
     [[UINavigationBar appearance] setBackIndicatorImage:[UIImage imageNamed:@"returnH"]];
     [[UINavigationBar appearance] setBackIndicatorTransitionMaskImage:[UIImage imageNamed:@"returnH"]];
-    [[UINavigationBar appearance] setTintColor:[UIColor blackColor]];
-    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor blackColor],NSFontAttributeName : [UIFont systemFontOfSize:18]}];
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor],NSFontAttributeName : [UIFont systemFontOfSize:18]}];
     [[UITableView appearance] setSeparatorColor:[UIColor jt_lineColor]];
     
     [[UISwitch appearance] setOnTintColor:[UIColor jt_barTintColor]];

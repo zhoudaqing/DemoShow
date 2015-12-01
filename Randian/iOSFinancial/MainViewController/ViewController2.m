@@ -85,8 +85,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
-    [self.navigationController.navigationBar setBackgroundImage:HTImage(@"StorestatusBar") forBarMetrics:UIBarMetricsDefault];
+    self.title = @"订单";
 }
 
 @end

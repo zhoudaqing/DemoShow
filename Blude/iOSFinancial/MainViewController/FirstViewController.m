@@ -20,9 +20,10 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    
     [super viewWillAppear:animated];
     [self.navigationController.navigationBar setBackgroundImage:HTImage(@"jingxuanhead") forBarMetrics:UIBarMetricsDefault];
-    self.navigationController.navigationBar.hidden = YES;
+    
 }
 
 - (void)viewDidLoad
@@ -33,16 +34,14 @@
     [self setImage:HTImage(@"jingxuan") WithTouchBlock:^(NSIndexPath *indexPath) {
         
 }];
-    
-    self.tableView.frame = CGRectMake(0, -20, APPScreenWidth, APPScreenHeight+20);
-    
-    UIButton *woyaozu = [[UIButton alloc]initWithFrame:CGRectMake(0, 200, APPScreenWidth, 150)];
-    [woyaozu addTarget:self action:@selector(woyaozu) forControlEvents:UIControlEventTouchUpInside];
-    [self.tableView addSubview:woyaozu];
-    
-    UIButton *mianbaiozhengjin = [[UIButton alloc]initWithFrame:CGRectMake(0, 400, APPScreenWidth, 150)];
-    [mianbaiozhengjin addTarget:self action:@selector(mianbaiozhengjin) forControlEvents:UIControlEventTouchUpInside];
-    [self.tableView addSubview:mianbaiozhengjin];
+        
+//    UIButton *woyaozu = [[UIButton alloc]initWithFrame:CGRectMake(0, 200, APPScreenWidth, 150)];
+//    [woyaozu addTarget:self action:@selector(woyaozu) forControlEvents:UIControlEventTouchUpInside];
+//    [self.tableView addSubview:woyaozu];
+//    
+//    UIButton *mianbaiozhengjin = [[UIButton alloc]initWithFrame:CGRectMake(0, 400, APPScreenWidth, 150)];
+//    [mianbaiozhengjin addTarget:self action:@selector(mianbaiozhengjin) forControlEvents:UIControlEventTouchUpInside];
+//    [self.tableView addSubview:mianbaiozhengjin];
 
 }
 - (void)woyaozu

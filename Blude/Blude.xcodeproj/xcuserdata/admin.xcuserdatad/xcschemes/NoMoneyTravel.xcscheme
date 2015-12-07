@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "92D2A27C1AC3DF7B00C9A4AE"
-               BuildableName = "Dakajinrong.app"
+               BuildableName = "Blude.app"
                BlueprintName = "Blude"
                ReferencedContainer = "container:Blude.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "92D2A27C1AC3DF7B00C9A4AE"
-            BuildableName = "Dakajinrong.app"
+            BuildableName = "Blude.app"
             BlueprintName = "Blude"
             ReferencedContainer = "container:Blude.xcodeproj">
          </BuildableReference>
@@ -56,7 +56,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "92D2A27C1AC3DF7B00C9A4AE"
-            BuildableName = "Dakajinrong.app"
+            BuildableName = "Blude.app"
             BlueprintName = "Blude"
             ReferencedContainer = "container:Blude.xcodeproj">
          </BuildableReference>
@@ -75,7 +75,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "92D2A27C1AC3DF7B00C9A4AE"
-            BuildableName = "Dakajinrong.app"
+            BuildableName = "Blude.app"
             BlueprintName = "Blude"
             ReferencedContainer = "container:Blude.xcodeproj">
          </BuildableReference>

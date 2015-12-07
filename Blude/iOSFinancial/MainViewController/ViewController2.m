@@ -9,7 +9,9 @@
 #import "ViewController2.h"
 #import "CloudTabbarController.h"
 @interface ViewController2 ()
-
+{
+    UIImageView *_heart;
+}
 @end
 
 @implementation ViewController2
@@ -27,13 +29,25 @@
         
     }];
     
-    UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(0, 20, APPScreenWidth, 60)];
-    [btn addTarget:self action:@selector(huangguan) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:btn];
+    UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(150, 20, APPScreenWidth, 60)];
+    btn.tag = 1;
+    [btn addTarget:self action:@selector(huangguan:) forControlEvents:UIControlEventTouchUpInside];
+    [self.tableView addSubview:btn];
+    
+    UIButton *btn1 = [[UIButton alloc]initWithFrame:CGRectMake(60, 10, 80, 70)];
+    [btn1 addTarget:self action:@selector(huangguan:) forControlEvents:UIControlEventTouchUpInside];
+    btn1.tag = 2;
+    [self.tableView addSubview:btn1];
+    
+    _heart = [[UIImageView alloc]initWithFrame:CGRectMake(55, 55, 31, 31)];
+    [_heart setImage:HTImage(@"heart")];
+    [self.tableView addSubview:_heart];
+    
 }
 
-- (void)huangguan
+- (void)huangguan:(id)sender
 {
+    UIButton *btn = sender;
     __weakSelf;
     
     BaseDetailViewController *detail9 = [[BaseDetailViewController alloc] init];
@@ -49,11 +63,25 @@
         [detail9 setImage:HTImage(@"mianfeishengji") WithTouchBlock:^(NSIndexPath *indexPath) {
             
             CloudTabbarController *VC = [[CloudTabbarController alloc]init];
-            [VC changeMessageWith:@"恭喜您已获得blued至尊会员，可免费享用至尊会员的全部服务，请返回查看。"];
             VC.selectedIndex = 1;
+            if (btn.tag ==1) {
+                [VC changeMessageWith:@"恭喜您已获得blued至尊会员，可免费享用至尊会员的全部服务，请返回查看。"];
+                [self refreshView:HTImage(@"mineback")];
+            }
+            if (btn.tag == 2) {
+                [_heart setImage:HTImage(@"hearts")];
+                [VC changeMessageWith:@"恭喜您已点亮双人恩爱标识。"];
+            }
             [weakSelf.navigationController presentViewController:VC animated:YES completion:nil];
             [weakSelf.navigationController popToViewController:weakSelf.navigationController.viewControllers[0] animated:NO];
-            [self refreshView:HTImage(@"mineback")];
+            if (btn.tag ==1) {
+                [VC changeMessageWith:@"恭喜您已获得blued至尊会员，可免费享用至尊会员的全部服务，请返回查看。"];
+                [self refreshView:HTImage(@"mineback")];
+            }
+            if (btn.tag == 2) {
+                [_heart setImage:HTImage(@"hearts")];
+                [VC changeMessageWith:@"恭喜您已点亮双人恩爱标识。"];
+            }
         }];
     
         [weakSelf.navigationController pushViewController:detail9 animated:YES];

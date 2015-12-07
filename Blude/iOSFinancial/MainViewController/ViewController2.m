@@ -74,15 +74,7 @@
             }
             [weakSelf.navigationController presentViewController:VC animated:YES completion:nil];
             [weakSelf.navigationController popToViewController:weakSelf.navigationController.viewControllers[0] animated:NO];
-            if (btn.tag ==1) {
-                [VC changeMessageWith:@"恭喜您已获得blued至尊会员，可免费享用至尊会员的全部服务，请返回查看。"];
-                [self refreshView:HTImage(@"mineback")];
-            }
-            if (btn.tag == 2) {
-                [_heart setImage:HTImage(@"hearts")];
-                [VC changeMessageWith:@"恭喜您已点亮双人恩爱标识。"];
-            }
-        }];
+                    }];
     
         [weakSelf.navigationController pushViewController:detail9 animated:YES];
     

@@ -11,7 +11,10 @@
 #import "UIBarButtonExtern.h"
 
 @interface ViewController1 ()
-
+{
+    UILabel *_flowerCloud;
+    int _clouds;
+}
 @end
 
 @implementation ViewController1
@@ -28,7 +31,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    _clouds = 0;
     __weakSelf;
 
     [self setImage:HTImage(@"dongtai") WithTouchBlock:^(NSIndexPath *indexPath) {
@@ -46,10 +49,14 @@
             [detail9 setImage:HTImage(@"mianfeishengji2") WithTouchBlock:^(NSIndexPath *indexPath) {
                 
                 CloudTabbarController *VC = [[CloudTabbarController alloc]init];
-                [VC changeMessageWith:@"恭喜您已获得blued至尊会员，可免费享用至尊会员的全部服务，请返回查看。"];
+                [VC changeMessageWith:@"恭喜您已经成功赠送出一朵玫瑰，送人玫瑰手有余香。"];
                 VC.selectedIndex = 1;
                 [weakSelf.navigationController presentViewController:VC animated:YES completion:nil];
                 [weakSelf.navigationController popToViewController:weakSelf.navigationController.viewControllers[0] animated:NO];
+                _clouds++;
+                if (_clouds>0) {
+                    _flowerCloud.text = [NSString stringWithFormat:@"+%d",_clouds];
+                }
             }];
             
             [weakSelf.navigationController pushViewController:detail9 animated:YES];
@@ -62,6 +69,10 @@
         
     }];
     
+    _flowerCloud = [[UILabel alloc]initWithFrame:CGRectMake(APPScreenWidth*.81, 373, 20, 20)];
+    _flowerCloud.textColor = [UIColor redColor];
+    _flowerCloud.font = [UIFont systemFontOfSize:12.0];
+    [self.tableView addSubview:_flowerCloud];
 }
 
 @end

@@ -39,7 +39,7 @@
     btn1.tag = 2;
     [self.tableView addSubview:btn1];
     
-    _heart = [[UIImageView alloc]initWithFrame:CGRectMake(55, 55, 31, 31)];
+    _heart = [[UIImageView alloc]initWithFrame:CGRectMake(52, 52, 22, 22)];
     [_heart setImage:HTImage(@"heart")];
     [self.tableView addSubview:_heart];
     

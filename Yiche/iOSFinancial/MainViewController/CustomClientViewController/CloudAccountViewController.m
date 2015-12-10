@@ -44,6 +44,8 @@
 {
     __weakSelf;
     
+    __weak BaseDetailViewController *weakbase = self;
+    
     CloudTabbarController *tabbar = (CloudTabbarController *)self.navigationController.tabBarController;
     if (!tabbar.isLogin) {
         
@@ -83,6 +85,7 @@
                                 [regedit setImage:HTImage(@"buyStep3") WithTouchBlock:^(NSIndexPath *indexPath) {
                                     
                                     [weakSelf.navigationController popToRootViewControllerAnimated:YES];
+                                    [weakbase refreshView:HTImage(@"LoginIndex")];
                                 }];
                                 
                                 [weakSelf.navigationController pushViewController:regedit animated:YES];

@@ -48,7 +48,7 @@
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     button.titleLabel.font = [UIFont systemFontOfSize:16.0f];
     [button setTitle:title forState:UIControlStateNormal];
-    [button setTitleColor:HTHexColor(0x167ffc) forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
 //    [button setTitleShadowColor:[UIColor blackColor] forState:UIControlStateNormal];
 //    [button setTitleShadowColor:[UIColor jt_lightBlackTextColor] forState:UIControlStateHighlighted];
     [button addTarget:target action:selector forControlEvents:UIControlEventTouchUpInside];

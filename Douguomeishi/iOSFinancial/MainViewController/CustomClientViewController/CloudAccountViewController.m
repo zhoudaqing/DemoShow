@@ -22,14 +22,14 @@
     [super viewWillAppear:animated];
     
     [self.navigationController.navigationBar setBarTintColor:HTWhiteColor];
-    [self.navigationController.navigationBar setTintColor:[UIColor jt_barTintColor]];
+    [self.navigationController.navigationBar setTintColor:[UIColor redColor]];
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor blackColor],NSFontAttributeName : [UIFont systemFontOfSize:18]}];
     
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"薄荷金融";
+    self.title = @"金豆儿";
     
     self.navigationItem.leftBarButtonItem = [UIBarButtonExtern buttonWithTitle:@"关闭" target:self andSelector:@selector(closeTabBar)];
     

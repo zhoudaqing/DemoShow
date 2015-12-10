@@ -74,7 +74,7 @@
 - (void)initAppStyle
 {
     //  去掉tabbar底下的黑线 (顶部的阴影线 是 shoadowImage 造成的)
-    [[UITabBar appearance] setTintColor:[UIColor jt_barTintColor]];
+    [[UITabBar appearance] setTintColor:[UIColor redColor]];
     
     //  修改navigation Bar底下的黑色线
     [[UINavigationBar appearance] setBarTintColor:[UIColor whiteColor]];
@@ -87,7 +87,7 @@
     [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor blackColor],NSFontAttributeName : [UIFont systemFontOfSize:18]}];
     [[UITableView appearance] setSeparatorColor:[UIColor jt_lineColor]];
     
-    [[UISwitch appearance] setOnTintColor:[UIColor jt_barTintColor]];
+    [[UISwitch appearance] setOnTintColor:[UIColor redColor]];
     
     [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(0, -160)
                                                          forBarMetrics:UIBarMetricsDefault];

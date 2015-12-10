@@ -27,9 +27,13 @@
     __weakSelf;
     [self setImage:HTImage(@"ThirdImage") WithTouchBlock:^(NSIndexPath *indexPath) {
         
-                CloudTabbarController *VC = [[CloudTabbarController alloc]init];
-                [VC showPromptView];
-                [weakSelf.navigationController presentViewController:VC animated:YES completion:nil];
+        BaseDetailViewController *detail9 = [[BaseDetailViewController alloc] init];
+        detail9.isHidnBar = YES;
+        detail9.hidesBottomBarWhenPushed = YES;
+        [detail9 setImage:HTImage(@"ThirdImageTwo") WithTouchBlock:^(NSIndexPath *indexPath) {
+            
+        }];
+        [weakSelf.navigationController pushViewController:detail9 animated:YES];
         
         
         }];

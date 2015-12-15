@@ -12,6 +12,8 @@
 
 @interface InvestViewController ()
 
+@property (nonatomic)UIView *promptView;
+
 @end
 
 @implementation InvestViewController
@@ -42,6 +44,10 @@
         [weakSelf doNext];
     }];
     }
+    
+    UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, APPScreenWidth, 44)];
+    [self.tableView addSubview:btn];
+    [btn addTarget:self action:@selector(pushHongbao) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)doNext
@@ -173,6 +179,50 @@
 - (void)closeTabBar
 {
     [self dismissViewController];
+}
+
+- (void)pushHongbao
+{
+    [self.view addSubview:self.promptView];
+}
+
+- (UIView *)promptView
+{
+    if (!_promptView) {
+        _promptView = [[UIView alloc] initWithFrame:self.view.bounds];
+        _promptView.backgroundColor = HTClearColor;
+        UIImageView *imageView = [[UIImageView alloc]initWithFrame:_promptView.bounds];
+        imageView.image = HTImage(@"pushhongbao");//instruction
+        [_promptView addSubview:imageView];
+        //        UIView *alphaView = [[UIView alloc] initWithFrame:self.view.bounds];
+        //        alphaView.backgroundColor = HTBlackColor;
+        //        alphaView.alpha = 1;
+        //        [_promptView addSubview:alphaView];
+        
+        UILabel *titleLabel = [[UILabel alloc] init];
+        titleLabel.numberOfLines = 4;
+        titleLabel.textColor = HTWhiteColor;
+        CGSize size = [titleLabel sizeThatFits:CGSizeMake(300, 200)];
+        titleLabel.size = size;
+        titleLabel.center = _promptView.center;
+        [_promptView addSubview:titleLabel];
+        
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapGestureTaped)];
+        
+        [_promptView addGestureRecognizer:tap];
+    }
+    
+    return _promptView;
+}
+
+- (void)tapGestureTaped
+{
+    [UIView animateWithDuration:.25 animations:^{
+        _promptView.alpha = 0;
+    } completion:^(BOOL finished) {
+        [_promptView removeFromSuperview];
+        [self refreshView:HTImage(@"InvestIndexback")];
+    }];
 }
 
 @end

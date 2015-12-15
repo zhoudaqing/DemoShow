@@ -14,6 +14,8 @@
 
 @property (nonatomic) UITapGestureRecognizer *tap;
 
+@property (nonatomic) UIButton *middlebtn;
+
 @end
 
 @implementation FirstViewController
@@ -22,7 +24,7 @@
 {
     [super viewWillAppear:animated];
     self.navigationController.navigationBar.hidden = YES;
-
+    [self.tabBarController.view addSubview:self.middlebtn];
 }
 
 - (void)viewDidLoad
@@ -57,10 +59,6 @@
     UIButton *rightBtn = [[UIButton alloc]initWithFrame:CGRectMake(leftBtn.right +25, 25, 129, 44)];
     [self.tableView addSubview:rightBtn];
     [rightBtn addTarget:self action:@selector(clickRightBtn) forControlEvents:UIControlEventTouchUpInside];
-    
-    UIButton *middleBtn = [[UIButton alloc]initWithFrame:CGRectMake((APPScreenWidth - 44)*.5, APPScreenHeight -30, 54, 54)];
-    [middleBtn setImage:HTImage(@"direction") forState:UIControlStateNormal];
-    [self.tabBarController.view addSubview:middleBtn];
 
 }
 - (void)clickRightBtn
@@ -92,6 +90,22 @@
         
     }];
     [weakSelf.navigationController pushViewController:detailN animated:NO];
+}
+
+- (UIButton *)middlebtn
+{
+    if (!_middlebtn) {
+        _middlebtn =[[UIButton alloc]initWithFrame:CGRectMake((APPScreenWidth - 44)*.5, APPScreenHeight -30, 54, 54)];
+        [_middlebtn setImage:HTImage(@"direction") forState:UIControlStateNormal];
+
+    }
+    return _middlebtn;
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    [self.middlebtn removeFromSuperview];
 }
 
 @end

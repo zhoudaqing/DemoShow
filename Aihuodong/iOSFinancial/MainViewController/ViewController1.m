@@ -52,7 +52,7 @@
                     [weakSelf.navigationController presentViewController:VC animated:YES completion:nil];
                     
                 [self refreshView:HTImage(@"ThirdImageback")];
-                [self.navigationController popToRootViewControllerAnimated:YES];
+                [self.navigationController popToViewController:self.navigationController.viewControllers[1] animated:NO];
             }];
     
         detail3.hidesBottomBarWhenPushed = YES;

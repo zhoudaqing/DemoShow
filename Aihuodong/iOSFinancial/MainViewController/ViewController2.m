@@ -12,6 +12,8 @@
 
 @interface ViewController2 ()
 
+@property (nonatomic) UIButton *middlebtn;
+
 @end
 
 @implementation ViewController2
@@ -23,12 +25,11 @@
     __weakSelf;
     [self setImage:HTImage(@"ForthImage") WithTouchBlock:^(NSIndexPath *indexPath) {
         ViewController1 *view1 = [[ViewController1 alloc]init];
+        view1.hidesBottomBarWhenPushed = YES;
         [weakSelf.navigationController pushViewController:view1 animated:YES];
         }];
     
-    UIButton *middleBtn = [[UIButton alloc]initWithFrame:CGRectMake((APPScreenWidth - 44)*.5, APPScreenHeight -30, 54, 54)];
-    [middleBtn setImage:HTImage(@"direction") forState:UIControlStateNormal];
-    [self.tabBarController.view addSubview:middleBtn];
+   
 
     
 }
@@ -38,12 +39,32 @@
     [super viewWillAppear:animated];
     
     [self.navigationController.navigationBar setBackgroundImage:HTImage(@"FourthHead") forBarMetrics:UIBarMetricsDefault];
+    [self.tabBarController.view addSubview:self.middlebtn];
+
 }
 
 - (void)psuhView1
 {
     ViewController1 *view1 = [[ViewController1 alloc]init];
+    view1.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:view1 animated:YES];
 }
+
+- (UIButton *)middlebtn
+{
+    if (!_middlebtn) {
+        _middlebtn =[[UIButton alloc]initWithFrame:CGRectMake((APPScreenWidth - 44)*.5, APPScreenHeight -30, 54, 54)];
+        [_middlebtn setImage:HTImage(@"direction") forState:UIControlStateNormal];
+        
+    }
+    return _middlebtn;
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    [self.middlebtn removeFromSuperview];
+}
+
 
 @end

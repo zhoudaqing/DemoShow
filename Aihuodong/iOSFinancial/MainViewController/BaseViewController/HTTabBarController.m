@@ -32,9 +32,6 @@
     
     [self changeShowdImageColor];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tongzhi) name:@"chongzhitongzhi" object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tongzhi1) name:@"chongzhitongzhigeren" object:nil];
-
 }
 
 - (void)tongzhi

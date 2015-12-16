@@ -10,6 +10,6 @@
 
 @interface HTTabBarController : UITabBarController
 
-
+- (void)setMiddleBtn;
 
 @end

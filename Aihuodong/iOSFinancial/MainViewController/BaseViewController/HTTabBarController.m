@@ -34,10 +34,12 @@
     
     [self changeShowdImageColor];
     
+}
+
+- (void)setMiddleBtn
+{
     [self.tabBar addSubview:self.middlebtn];
-    
-    
-    
+ 
 }
 
 - (UIButton *)middlebtn
@@ -51,18 +53,6 @@
 }
 
 
-- (void)tongzhi
-{
-    [self dismissViewControllerAnimated:NO completion:^{
-        
-    }];
-}
-- (void)tongzhi1
-{
-    [self dismissViewControllerAnimated:NO completion:^{
-        
-    }];
-}
 //  改变阴影线颜色
 - (void)changeShowdImageColor
 {

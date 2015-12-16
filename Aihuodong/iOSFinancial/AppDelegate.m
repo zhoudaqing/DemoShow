@@ -43,6 +43,7 @@
 {
     if (!_tabBarController) {
         _tabBarController = [[HTTabBarController alloc] init];
+        [_tabBarController setMiddleBtn];
     }
 
     return _tabBarController;

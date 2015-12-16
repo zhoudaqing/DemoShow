@@ -12,7 +12,6 @@
 
 @interface ViewController2 ()
 
-@property (nonatomic) UIButton *middlebtn;
 
 @end
 
@@ -39,7 +38,6 @@
     [super viewWillAppear:animated];
     
     [self.navigationController.navigationBar setBackgroundImage:HTImage(@"FourthHead") forBarMetrics:UIBarMetricsDefault];
-    [self.tabBarController.view addSubview:self.middlebtn];
 
 }
 
@@ -50,20 +48,9 @@
     [self.navigationController pushViewController:view1 animated:YES];
 }
 
-- (UIButton *)middlebtn
-{
-    if (!_middlebtn) {
-        _middlebtn =[[UIButton alloc]initWithFrame:CGRectMake((APPScreenWidth - 44)*.5, APPScreenHeight -30, 54, 54)];
-        [_middlebtn setImage:HTImage(@"direction") forState:UIControlStateNormal];
-        
-    }
-    return _middlebtn;
-}
-
 - (void)viewDidDisappear:(BOOL)animated
 {
     [super viewDidDisappear:animated];
-    [self.middlebtn removeFromSuperview];
 }
 
 

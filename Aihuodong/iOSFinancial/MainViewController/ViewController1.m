@@ -49,10 +49,12 @@
                     CloudTabbarController *VC = [[CloudTabbarController alloc]init];
                     VC.selectedIndex = 1;
                     [VC changeMessageWith:@"魅力值已点亮！"];
-                    [weakSelf.navigationController presentViewController:VC animated:YES completion:nil];
-                    
-                [self refreshView:HTImage(@"ThirdImageback")];
-                [self.navigationController popToViewController:self.navigationController.viewControllers[1] animated:NO];
+                    [weakSelf.navigationController presentViewController:VC animated:YES completion:^{
+                        [self refreshView:HTImage(@"ThirdImageback")];
+                    }];
+            [weakSelf.navigationController popToViewController:weakSelf.navigationController.viewControllers[1] animated:YES];
+            
+            
             }];
     
         detail3.hidesBottomBarWhenPushed = YES;

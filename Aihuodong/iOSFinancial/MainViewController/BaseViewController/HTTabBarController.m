@@ -15,6 +15,8 @@
 
 @interface HTTabBarController ()
 
+@property (nonatomic) UIButton *middlebtn;
+
 @end
 
 @implementation HTTabBarController
@@ -32,7 +34,22 @@
     
     [self changeShowdImageColor];
     
+    [self.tabBar addSubview:self.middlebtn];
+    
+    
+    
 }
+
+- (UIButton *)middlebtn
+{
+    if (!_middlebtn) {
+        _middlebtn =[[UIButton alloc]initWithFrame:CGRectMake((APPScreenWidth - 44)*.5, 0, 54, 54)];
+        [_middlebtn setImage:HTImage(@"direction") forState:UIControlStateNormal];
+        
+    }
+    return _middlebtn;
+}
+
 
 - (void)tongzhi
 {

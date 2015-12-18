@@ -20,11 +20,10 @@
 
 - (void)setImage:(UIImage *)image WithTouchBlock:(void (^)(NSIndexPath *indexPath))cellTouchBlock;
 
-- (void)setBackImage:(UIImage *)image WithTouchBlock:(void (^)(NSIndexPath *indexPath ))TouchBlock;
-
 - (void)setAlerConten:(NSString *)conten withLeftBtn:(NSString *)leftTitle rightBtn:(NSString *)rightTitle;
 
 - (void)refreshView:(UIImage *)image;
 
+@property (nonatomic,assign) BOOL isHidnBar;
 
 @end

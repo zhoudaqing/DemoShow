@@ -25,8 +25,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    //换图  理财
+    __weakSelf;
     [self setImage:HTImage(@"shequ") WithTouchBlock:^(NSIndexPath *indexPath) {
+        
+     
+            
+            BaseDetailViewController *detail6 = [[BaseDetailViewController alloc] init];
+            detail6.isHidnBar = YES;
+            [detail6 setImage:HTImage(@"shequlicai") WithTouchBlock:^(NSIndexPath *indexPath) {
+                
+                [weakSelf.navigationController popToRootViewControllerAnimated:YES];
+                
+            }];
+            [weakSelf.navigationController pushViewController:detail6 animated:YES];
+            
         
     }];
     

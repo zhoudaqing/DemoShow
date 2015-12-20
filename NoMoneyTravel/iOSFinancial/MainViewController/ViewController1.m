@@ -38,6 +38,7 @@
                 [weakSelf.navigationController popToRootViewControllerAnimated:YES];
                 
             }];
+            weakSelf.hidesBottomBarWhenPushed = YES;
             [weakSelf.navigationController pushViewController:detail6 animated:YES];
             
         

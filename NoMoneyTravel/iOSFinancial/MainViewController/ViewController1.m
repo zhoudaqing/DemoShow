@@ -19,7 +19,6 @@
     [super viewWillAppear:animated];
     
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
-    
     [self.navigationController.navigationBar setBackgroundImage:HTImage(@"shequStatus") forBarMetrics:UIBarMetricsDefault];
 }
 
@@ -38,10 +37,9 @@
                 [weakSelf.navigationController popToRootViewControllerAnimated:YES];
                 
             }];
-            weakSelf.hidesBottomBarWhenPushed = YES;
+            detail6.hidesBottomBarWhenPushed = YES;
             [weakSelf.navigationController pushViewController:detail6 animated:YES];
             
-        
     }];
     
 }

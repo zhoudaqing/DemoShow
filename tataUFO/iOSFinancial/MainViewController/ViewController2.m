@@ -17,10 +17,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    __weakSelf;
     [self setImage:HTImage(@"mine") WithTouchBlock:^(NSIndexPath *indexPath) {
         
     CloudTabbarController *VC = [[CloudTabbarController alloc]init];
-    [self.navigationController presentViewController:VC animated:YES completion:^{
+    [weakSelf.navigationController presentViewController:VC animated:YES completion:^{
                     }];
         
     }];

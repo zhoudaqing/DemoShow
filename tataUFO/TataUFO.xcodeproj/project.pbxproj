@@ -950,7 +950,7 @@
 				TargetAttributes = {
 					92D2A27C1AC3DF7B00C9A4AE = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = PUEB48NTQQ;
+						DevelopmentTeam = 3T4BLT5L4D;
 					};
 				};
 			};
@@ -1147,7 +1147,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: 先生 杨 (C8FXD8VZBU)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: 先生 杨 (C8FXD8VZBU)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -1192,7 +1192,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Tianjin YouYoung Network Technology Co.,Ltd. (PUEB48NTQQ)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Tianjin YouYoung Network Technology Co.,Ltd. (PUEB48NTQQ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;

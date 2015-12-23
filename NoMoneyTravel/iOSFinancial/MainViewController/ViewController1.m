@@ -19,15 +19,27 @@
     [super viewWillAppear:animated];
     
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
-    
     [self.navigationController.navigationBar setBackgroundImage:HTImage(@"shequStatus") forBarMetrics:UIBarMetricsDefault];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    //换图  理财
+    __weakSelf;
     [self setImage:HTImage(@"shequ") WithTouchBlock:^(NSIndexPath *indexPath) {
         
+     
+            
+            BaseDetailViewController *detail6 = [[BaseDetailViewController alloc] init];
+            detail6.isHidnBar = YES;
+            [detail6 setImage:HTImage(@"shequlicai") WithTouchBlock:^(NSIndexPath *indexPath) {
+                
+                [weakSelf.navigationController popToRootViewControllerAnimated:YES];
+                
+            }];
+            detail6.hidesBottomBarWhenPushed = YES;
+            [weakSelf.navigationController pushViewController:detail6 animated:YES];
+            
     }];
     
 }

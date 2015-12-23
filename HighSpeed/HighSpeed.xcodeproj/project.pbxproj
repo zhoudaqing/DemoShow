@@ -316,7 +316,7 @@
 		92DA92E41B42511900AACF1D /* UIViewController+ViewControllers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ViewControllers.m"; sourceTree = "<group>"; };
 		92EB85461AC5132700A80E03 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = iOSFinancial/Singleton/User.h; sourceTree = SOURCE_ROOT; };
 		92EB85471AC5132700A80E03 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = iOSFinancial/Singleton/User.m; sourceTree = SOURCE_ROOT; };
-		92EB857E1AC5517400A80E03 /* FreshLifeSeller-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FreshLifeSeller-Prefix.pch"; sourceTree = "<group>"; };
+		92EB857E1AC5517400A80E03 /* HighSpeed-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HighSpeed-Prefix.pch"; sourceTree = "<group>"; };
 		92EB85831AC561C800A80E03 /* HTTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTabBarController.h; sourceTree = "<group>"; };
 		92EB85841AC561C800A80E03 /* HTTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTabBarController.m; sourceTree = "<group>"; };
 		92EB85861AC561E400A80E03 /* HTNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTNavigationController.h; sourceTree = "<group>"; };
@@ -730,7 +730,7 @@
 			isa = PBXGroup;
 			children = (
 				92D2A2901AC3DF7B00C9A4AE /* Images.xcassets */,
-				92EB857E1AC5517400A80E03 /* FreshLifeSeller-Prefix.pch */,
+				92EB857E1AC5517400A80E03 /* HighSpeed-Prefix.pch */,
 				92D2A2841AC3DF7B00C9A4AE /* AppDelegate.h */,
 				92D2A2851AC3DF7B00C9A4AE /* AppDelegate.m */,
 				9268127C1AE8CE5700FAB0A2 /* Config */,

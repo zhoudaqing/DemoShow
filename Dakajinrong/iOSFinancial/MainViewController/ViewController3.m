@@ -18,32 +18,32 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"艺术品";
-    __weakSelf;
+//    __weakSelf;
     [self setImage:HTImage(@"yishupin") WithTouchBlock:^(NSIndexPath *indexPath) {
-        BaseDetailViewController *detail8 = [[BaseDetailViewController alloc] init];
-        detail8.title = @"高铁商城";
-        
-        [detail8 setImage:HTImage(@"jifenfangsong") WithTouchBlock:^(NSIndexPath *indexPath) {
-            
-            BaseDetailViewController *detail9 = [[BaseDetailViewController alloc] init];
-            detail9.title = @"高铁管家金融活动说明";
-            
-            [detail9 setImage:HTImage(@"shangchengjifen") WithTouchBlock:^(NSIndexPath *indexPath) {
-                
-                CloudTabbarController *VC = [[CloudTabbarController alloc]init];
-                [VC changeMessageWith:@"恭喜您已获得高铁管家1000积分，可用于兑换高铁商城礼品"];
-                VC.selectedIndex = 1;
-                [weakSelf.navigationController presentViewController:VC animated:YES completion:nil];
-                [weakSelf.navigationController popToViewController:weakSelf.navigationController.viewControllers[1] animated:NO];
-                
-            }];
-            
-            
-            [weakSelf.navigationController pushViewController:detail9 animated:YES];
-            
-        }];
-        
-        [weakSelf.navigationController pushViewController:detail8 animated:YES];
+//        BaseDetailViewController *detail8 = [[BaseDetailViewController alloc] init];
+//        detail8.title = @"高铁商城";
+//        
+//        [detail8 setImage:HTImage(@"jifenfangsong") WithTouchBlock:^(NSIndexPath *indexPath) {
+//            
+//            BaseDetailViewController *detail9 = [[BaseDetailViewController alloc] init];
+//            detail9.title = @"高铁管家金融活动说明";
+//            
+//            [detail9 setImage:HTImage(@"shangchengjifen") WithTouchBlock:^(NSIndexPath *indexPath) {
+//                
+//                CloudTabbarController *VC = [[CloudTabbarController alloc]init];
+//                [VC changeMessageWith:@"恭喜您已获得高铁管家1000积分，可用于兑换高铁商城礼品"];
+//                VC.selectedIndex = 1;
+//                [weakSelf.navigationController presentViewController:VC animated:YES completion:nil];
+//                [weakSelf.navigationController popToViewController:weakSelf.navigationController.viewControllers[1] animated:NO];
+//                
+//            }];
+//            
+//            
+//            [weakSelf.navigationController pushViewController:detail9 animated:YES];
+//            
+//        }];
+//        
+//        [weakSelf.navigationController pushViewController:detail8 animated:YES];
         
     }];
 

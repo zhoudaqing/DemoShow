@@ -56,6 +56,14 @@
         [self.tabBarController dismissViewControllerAnimated:YES completion:^{
             
         }];
+    if ([alertView.message isEqualToString:@"你想以30.00元的价格购买3个月的ZANK会员吗？"]) {
+        
+        [self setAlerConten:@"购买成功~！" withLeftBtn:@"我知道了" rightBtn:nil];
+        
+    }
+    if ([alertView.message isEqualToString:@"购买成功~！"]) {
+        [self.navigationController popToRootViewControllerAnimated:YES];
+    }
     
 }
 

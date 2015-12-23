@@ -19,7 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"直播";
+    self.title = @"服务";
     [self setImage:HTImage(@"zhibo") WithTouchBlock:^(NSIndexPath *indexPath) {
             
     }];

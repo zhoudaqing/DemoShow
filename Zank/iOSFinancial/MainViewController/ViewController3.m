@@ -17,7 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"艺术品";
+    self.title = @"消息";
 //    __weakSelf;
     [self setImage:HTImage(@"yishupin") WithTouchBlock:^(NSIndexPath *indexPath) {
 //        BaseDetailViewController *detail8 = [[BaseDetailViewController alloc] init];

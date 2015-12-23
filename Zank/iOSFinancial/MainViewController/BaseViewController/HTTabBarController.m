@@ -55,6 +55,7 @@
     FirstViewController *store = [[FirstViewController alloc]init];
     store.tabBarItem = [self tabbarItemWithTitle:@"附近" andItemImage:@"travel"];
     HTNavigationController *nav1 = [[HTNavigationController alloc] initWithRootViewController:store];
+    nav1.isContentLight = YES;
     
     ViewController *cart = [[ViewController alloc]init];
     cart.tabBarItem = [self tabbarItemWithTitle:@"发现" andItemImage:@"direction"];

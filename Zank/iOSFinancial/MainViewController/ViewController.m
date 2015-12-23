@@ -19,7 +19,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title = @"专场";
+    self.title = @"发现";
     [self setImage:HTImage(@"zhuanchang") WithTouchBlock:^(NSIndexPath *indexPath) {
         
           }];

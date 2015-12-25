@@ -83,7 +83,7 @@
     //[[UINavigationBar appearance] setShadowImage:HTImage(@"")];//[[UIImage alloc] init]
     
     //修改返回按钮图片
-    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    [[UINavigationBar appearance] setTintColor:[UIColor yellowColor]];
     [[UINavigationBar appearance] setBackIndicatorImage:[UIImage imageNamed:@"dismissIndicatior"]];
     [[UINavigationBar appearance] setBackIndicatorTransitionMaskImage:[UIImage imageNamed:@"dismissIndicatior"]];
     

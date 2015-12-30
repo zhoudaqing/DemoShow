@@ -140,10 +140,10 @@
 {
     // 取消选中状态
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
-    if (indexPath.row == 0) {
+    if (indexPath.row == 0 && indexPath.section == 0) {
         [self pushViewControllers];
         
-    }else {
+    }else if (indexPath.row == 1 && indexPath.section == 0) {
         
         CloudTabbarController *tab = [[CloudTabbarController alloc] init];
         [tab addPromptView];

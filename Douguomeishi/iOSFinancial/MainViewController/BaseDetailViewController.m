@@ -26,8 +26,17 @@
     if (_viewDidLoadBlock) {
         _viewDidLoadBlock(self);
     }
+    UIButton *btn = [[UIButton alloc]initWithFrame:self.btnFrame];
+    [self.tableView addSubview:btn];
+    [btn addTarget:self action:@selector(nextplan) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void)nextplan
+{
+    _cellToucheBlock(_index);
 
 }
+
 
 - (void)setImage:(UIImage *)image WithTouchBlock:(void (^)(NSIndexPath *))touchBlock
 {
@@ -106,16 +115,15 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     _index = indexPath;
-    if (_cellToucheBlock&&!self.alertContent) {
+    if (_cellToucheBlock&&!self.alertContent&&((int)self.btnFrame.origin.y == 0)) {
         _cellToucheBlock(indexPath);
        
     }else{
         
-        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"" message:self.alertContent delegate:self cancelButtonTitle:@"我知道了" otherButtonTitles: nil];
-        self.alertContent = nil;
-        [alert show];
+//        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"" message:self.alertContent delegate:self cancelButtonTitle:@"我知道了" otherButtonTitles: nil];
+//        self.alertContent = nil;
+//        [alert show];
     }
-        
 }
 
 - (void)returnBackRootView:(UIViewController *)vc

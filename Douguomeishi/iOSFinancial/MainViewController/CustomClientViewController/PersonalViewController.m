@@ -32,9 +32,9 @@
     
     self.navigationItem.leftBarButtonItem = [UIBarButtonExtern buttonWithTitle:@"关闭" target:self andSelector:@selector(closeTabBar)];
     
-    __weakSelf;
+//    __weakSelf;
     [self setImage:HTImage(@"personalIndex") WithTouchBlock:^(NSIndexPath *indexPath) {
-        [weakSelf doInvest];
+//        [weakSelf doInvest];
     }];
     
 }
@@ -45,18 +45,22 @@
     
     BaseDetailViewController *regedit = [[BaseDetailViewController alloc] init];
     regedit.title = @"买入基金";
+    regedit.btnFrame = CGRectMake(0, APPScreenHeight+95, APPScreenWidth, 60);
     [regedit setImage:HTImage(@"buyStep0") WithTouchBlock:^(NSIndexPath *indexPath) {
         
         BaseDetailViewController *regedit = [[BaseDetailViewController alloc] init];
         regedit.title = @"买入金额";
+        regedit.btnFrame = CGRectMake(0, 268, APPScreenWidth, 58);
         [regedit setImage:HTImage(@"buyStep1") WithTouchBlock:^(NSIndexPath *indexPath) {
             
             BaseDetailViewController *regedit = [[BaseDetailViewController alloc] init];
             regedit.title = @"输入验证码";
+            regedit.btnFrame = CGRectMake(0, 118, APPScreenWidth, 58);
             [regedit setImage:HTImage(@"buyStep2") WithTouchBlock:^(NSIndexPath *indexPath) {
                 
                 BaseDetailViewController *regedit = [[BaseDetailViewController alloc] init];
                 regedit.title = @"输入完成";
+                regedit.btnFrame = CGRectMake(0, 254, APPScreenWidth, 58);
                 [regedit setImage:HTImage(@"client_invest_success") WithTouchBlock:^(NSIndexPath *indexPath) {
                     
                     [weakSelf.navigationController popToRootViewControllerAnimated:YES];

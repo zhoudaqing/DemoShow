@@ -18,15 +18,24 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    __weakSelf;
     [self setImage:HTImage(@"ForthImage") WithTouchBlock:^(NSIndexPath *indexPath) {
         
-        CloudTabbarController *VC = [[CloudTabbarController alloc]init];
-        [weakSelf.navigationController presentViewController:VC animated:YES completion:nil];
-
+        
         
         }];
+    UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(0, 338, APPScreenWidth, 44)];
+    [self.tableView addSubview:btn];
+    [btn addTarget:self action:@selector(jindouSDK) forControlEvents:UIControlEventTouchUpInside];
     
+}
+
+- (void)jindouSDK
+{
+    __weakSelf;
+
+    CloudTabbarController *VC = [[CloudTabbarController alloc]init];
+    [weakSelf.navigationController presentViewController:VC animated:YES completion:nil];
+
 }
 
 - (void)viewWillAppear:(BOOL)animated

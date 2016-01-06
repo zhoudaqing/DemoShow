@@ -28,45 +28,49 @@
 {
     [super viewDidLoad];
     
-    __weakSelf;
-    
     [self setImage:HTImage(@"jingxuan") WithTouchBlock:^(NSIndexPath *indexPath) {
-        BaseDetailViewController *detailN = [[BaseDetailViewController alloc] init];
-        detailN.isHidnBar = YES;
-        [detailN setImage:HTImage(@"woyaozu") WithTouchBlock:^(NSIndexPath *indexPath) {
-            
-            BaseDetailViewController *detailN = [[BaseDetailViewController alloc] init];
-            detailN.isHidnBar = YES;
-            [detailN setImage:HTImage(@"woyaozuhuodongshuoming") WithTouchBlock:^(NSIndexPath *indexPath) {
-                
-                BaseDetailViewController *detailN = [[BaseDetailViewController alloc] init];
-                detailN.title = @"Zank金融活动说明";
-                
-                [detailN setImage:HTImage(@"Zankjinronghuodong") WithTouchBlock:^(NSIndexPath *indexPath) {
-                    
-                    CloudTabbarController *VC = [[CloudTabbarController alloc]init];
-                    [VC changeMessageWith:@"玫瑰已送出!"];
-                    VC.selectedIndex = 1;
-                    [weakSelf.navigationController presentViewController:VC animated:YES completion:^{
-                        [weakSelf.navigationController popToRootViewControllerAnimated:NO];
-                    }];
-                }];
-                detailN.hidesBottomBarWhenPushed = YES;
-                [weakSelf.navigationController pushViewController:detailN animated:YES];
-            }];
-            detailN.hidesBottomBarWhenPushed = YES;
-            [weakSelf.navigationController pushViewController:detailN animated:NO];
-            
-        }];
-        detailN.hidesBottomBarWhenPushed = YES;
-        [weakSelf.navigationController pushViewController:detailN animated:YES];
+        
 
 }];
     
+    UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(0, 60, 90, 90)];
+    [btn addTarget:self action:@selector(songmeigui) forControlEvents:UIControlEventTouchUpInside];
+    [self.tableView addSubview:btn];
 
 }
-- (void)woyaozu
+- (void)songmeigui
 {
+    
+    __weakSelf;
+    BaseDetailViewController *detailN = [[BaseDetailViewController alloc] init];
+    detailN.isHidnBar = YES;
+    [detailN setImage:HTImage(@"woyaozu") WithTouchBlock:^(NSIndexPath *indexPath) {
+        
+        BaseDetailViewController *detailN = [[BaseDetailViewController alloc] init];
+        detailN.isHidnBar = YES;
+        [detailN setImage:HTImage(@"woyaozuhuodongshuoming") WithTouchBlock:^(NSIndexPath *indexPath) {
+            
+            BaseDetailViewController *detailN = [[BaseDetailViewController alloc] init];
+            detailN.title = @"Zank金融活动说明";
+            
+            [detailN setImage:HTImage(@"Zankjinronghuodong") WithTouchBlock:^(NSIndexPath *indexPath) {
+                
+                CloudTabbarController *VC = [[CloudTabbarController alloc]init];
+                [VC changeMessageWith:@"玫瑰已送出!"];
+                VC.selectedIndex = 1;
+                [weakSelf.navigationController presentViewController:VC animated:YES completion:^{
+                    [weakSelf.navigationController popToRootViewControllerAnimated:NO];
+                }];
+            }];
+            detailN.hidesBottomBarWhenPushed = YES;
+            [weakSelf.navigationController pushViewController:detailN animated:YES];
+        }];
+        detailN.hidesBottomBarWhenPushed = YES;
+        [weakSelf.navigationController pushViewController:detailN animated:NO];
+        
+    }];
+    detailN.hidesBottomBarWhenPushed = YES;
+    [weakSelf.navigationController pushViewController:detailN animated:YES];
     
    }
 

@@ -53,6 +53,7 @@
         
         BaseDetailViewController *buy = [[BaseDetailViewController alloc] init];
         buy.title = @"买入基金";
+        buy.btnFrame = CGRectMake(0, APPScreenHeight+95, APPScreenWidth, 60);
         [buy setImage:HTImage(@"buyStep0") WithTouchBlock:^(NSIndexPath *indexPath) {
             
             //  验证真实姓名
@@ -70,7 +71,7 @@
                     //  绑定银行卡
                     BaseDetailViewController *regedit = [[BaseDetailViewController alloc] init];
                     regedit.title = @"绑定银行卡";
-                    regedit.btnFrame = CGRectMake(0, 386, APPScreenWidth, 58);
+                    regedit.btnFrame = CGRectMake(0, 256, APPScreenWidth, 58);
                     [regedit setImage:HTImage(@"setAccount") WithTouchBlock:^(NSIndexPath *indexPath) {
                         
                         //  登陆完成

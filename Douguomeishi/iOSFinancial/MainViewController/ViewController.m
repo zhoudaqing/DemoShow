@@ -27,26 +27,36 @@
 {
     [super viewDidLoad];
     
-    __weakSelf;
+    UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(0, 55, APPScreenWidth, 220)];
+    [self.tableView addSubview:btn];
+    [btn addTarget:self action:@selector(jingshuiqi) forControlEvents:UIControlEventTouchUpInside];
+    
     [self setImage:HTImage(@"SecondImage") WithTouchBlock:^(NSIndexPath *indexPath) {
         
             
-            BaseDetailViewController *detail4 = [[BaseDetailViewController alloc] init];
-            detail4.isHidnBar = YES;
-            [detail4 setImage:HTImage(@"SecondsonImage") WithTouchBlock:^(NSIndexPath *indexPath) {
-                
-                
-                    
-                
-                
-            }];
-            detail4.hidesBottomBarWhenPushed = YES;
-            [weakSelf.navigationController pushViewController:detail4 animated:YES];
+        
             
         }];
     
     
     
+}
+
+- (void)jingshuiqi
+{
+    __weakSelf;
+    BaseDetailViewController *detail4 = [[BaseDetailViewController alloc] init];
+    detail4.isHidnBar = YES;
+    [detail4 setImage:HTImage(@"SecondsonImage") WithTouchBlock:^(NSIndexPath *indexPath) {
+        
+        
+        
+        
+        
+    }];
+    detail4.hidesBottomBarWhenPushed = YES;
+    [weakSelf.navigationController pushViewController:detail4 animated:YES];
+
 }
 
 @end

@@ -27,38 +27,47 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    __weakSelf;
     [self setImage:HTImage(@"FirstImage") WithTouchBlock:^(NSIndexPath *indexPath) {
-        //  结算页面
-        BaseDetailViewController *detail3 = [[BaseDetailViewController alloc] init];
-        detail3.isHidnBar = YES;
-        [weakSelf.navigationController.navigationBar setBackgroundImage:nil forBarMetrics:UIBarMetricsDefault];
-        [detail3 setImage:HTImage(@"tianqibaosong") WithTouchBlock:^(NSIndexPath *indexPath) {
+           }];
+    UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(0, 339, APPScreenWidth, 60)];
+    [self.tableView addSubview:btn];
+    [btn addTarget:self action:@selector(tianqimaimai) forControlEvents:UIControlEventTouchUpInside];
+
+}
+
+- (void)tianqimaimai
+{
+    __weakSelf;
+    //  结算页面
+    BaseDetailViewController *detail3 = [[BaseDetailViewController alloc] init];
+    detail3.isHidnBar = YES;
+    detail3.btnFrame = CGRectMake(0, 529, APPScreenWidth, 80);
+    [weakSelf.navigationController.navigationBar setBackgroundImage:nil forBarMetrics:UIBarMetricsDefault];
+    [detail3 setImage:HTImage(@"tianqibaosong") WithTouchBlock:^(NSIndexPath *indexPath) {
+        
+        BaseDetailViewController *detail4 = [[BaseDetailViewController alloc] init];
+        detail4.isHidnBar = YES;
+        [detail4 setImage:HTImage(@"goumaitianqibao") WithTouchBlock:^(NSIndexPath *indexPath) {
             
-            BaseDetailViewController *detail4 = [[BaseDetailViewController alloc] init];
-            detail4.isHidnBar = YES;
-            [detail4 setImage:HTImage(@"goumaitianqibao") WithTouchBlock:^(NSIndexPath *indexPath) {
+            
+            BaseDetailViewController *detail5 = [[BaseDetailViewController alloc] init];
+            detail5.isHidnBar = YES;
+            [detail5 setImage:HTImage(@"yunzhanghu") WithTouchBlock:^(NSIndexPath *indexPath) {
                 
-           
-                    BaseDetailViewController *detail5 = [[BaseDetailViewController alloc] init];
-                    detail5.isHidnBar = YES;
-                    [detail5 setImage:HTImage(@"yunzhanghu") WithTouchBlock:^(NSIndexPath *indexPath) {
-                        
-                        [weakSelf.navigationController popToRootViewControllerAnimated:YES];
-                        
-                    }];
-                    detail5.hidesBottomBarWhenPushed = YES;
-                    [weakSelf.navigationController pushViewController:detail5 animated:YES];
-                
+                [weakSelf.navigationController popToRootViewControllerAnimated:YES];
                 
             }];
-            detail4.hidesBottomBarWhenPushed = YES;
-            [weakSelf.navigationController pushViewController:detail4 animated:YES];
+            detail5.hidesBottomBarWhenPushed = YES;
+            [weakSelf.navigationController pushViewController:detail5 animated:YES];
+            
             
         }];
-        detail3.hidesBottomBarWhenPushed = YES;
-        [weakSelf.navigationController pushViewController:detail3 animated:YES];    }];
-    
+        detail4.hidesBottomBarWhenPushed = YES;
+        [weakSelf.navigationController pushViewController:detail4 animated:YES];
+        
+    }];
+    detail3.hidesBottomBarWhenPushed = YES;
+    [weakSelf.navigationController pushViewController:detail3 animated:YES];
 }
 
 @end

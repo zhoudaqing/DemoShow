@@ -90,6 +90,7 @@
                     
                     BaseDetailViewController *vc1 = [[BaseDetailViewController alloc] init];
                     vc1.title = @"投资成功";
+                    vc1.btnFrame = CGRectMake(0, 254, APPScreenWidth, 58);
                     [vc1 setImage:HTImage(@"client_invest_validate_message") WithTouchBlock:^(NSIndexPath *indexPath) {
                         
                         [self doStep3InvestSuccess];

@@ -58,16 +58,19 @@
             //  验证真实姓名
             BaseDetailViewController *regedit = [[BaseDetailViewController alloc] init];
             regedit.title = @"验证真实姓名";
+            regedit.btnFrame = CGRectMake(0, 205, APPScreenWidth, 58);
             [regedit setImage:HTImage(@"validateUserName") WithTouchBlock:^(NSIndexPath *indexPath) {
                 
                 //  设置密码
                 BaseDetailViewController *regedit = [[BaseDetailViewController alloc] init];
-                regedit.title = @"设置密码";
+                regedit.title = @"设置密码";                regedit.btnFrame = CGRectMake(0, 243, APPScreenWidth, 58);
+                regedit.btnFrame = CGRectMake(0, 243, APPScreenWidth, 58);
                 [regedit setImage:HTImage(@"setPass") WithTouchBlock:^(NSIndexPath *indexPath) {
                     
                     //  绑定银行卡
                     BaseDetailViewController *regedit = [[BaseDetailViewController alloc] init];
                     regedit.title = @"绑定银行卡";
+                    regedit.btnFrame = CGRectMake(0, 386, APPScreenWidth, 58);
                     [regedit setImage:HTImage(@"setAccount") WithTouchBlock:^(NSIndexPath *indexPath) {
                         
                         //  登陆完成
@@ -76,10 +79,12 @@
                         
                         BaseDetailViewController *regedit = [[BaseDetailViewController alloc] init];
                         regedit.title = @"买入金额";
+                        regedit.btnFrame = CGRectMake(0, 268, APPScreenWidth, 58);
                         [regedit setImage:HTImage(@"buyStep1") WithTouchBlock:^(NSIndexPath *indexPath) {
                             
                             BaseDetailViewController *regedit = [[BaseDetailViewController alloc] init];
                             regedit.title = @"输入验证码";
+                            regedit.btnFrame = CGRectMake(0, 118, APPScreenWidth, 58);
                             [regedit setImage:HTImage(@"buyStep2") WithTouchBlock:^(NSIndexPath *indexPath) {
                                 
                                 BaseDetailViewController *regedit = [[BaseDetailViewController alloc] init];
@@ -131,14 +136,17 @@
     
     BaseDetailViewController *regedit = [[BaseDetailViewController alloc] init];
     regedit.title = @"买入基金";
+    regedit.btnFrame = CGRectMake(0, APPScreenHeight+95, APPScreenWidth, 60);
     [regedit setImage:HTImage(@"buyStep0") WithTouchBlock:^(NSIndexPath *indexPath) {
         
         BaseDetailViewController *regedit = [[BaseDetailViewController alloc] init];
         regedit.title = @"买入金额";
+        regedit.btnFrame = CGRectMake(0, 268, APPScreenWidth, 58);
         [regedit setImage:HTImage(@"buyStep1") WithTouchBlock:^(NSIndexPath *indexPath) {
             
             BaseDetailViewController *regedit = [[BaseDetailViewController alloc] init];
             regedit.title = @"输入验证码";
+            regedit.btnFrame = CGRectMake(0, 118, APPScreenWidth, 58);
             [regedit setImage:HTImage(@"buyStep2") WithTouchBlock:^(NSIndexPath *indexPath) {
                 
                 BaseDetailViewController *regedit = [[BaseDetailViewController alloc] init];

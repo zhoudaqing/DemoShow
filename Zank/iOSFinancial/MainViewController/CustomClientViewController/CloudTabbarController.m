@@ -63,12 +63,14 @@
 {
     CloudAccountViewController *store = [[CloudAccountViewController alloc]init];
     store.tabBarItem = [self tabbarItemWithTitle:@"ZANK金融" andItemImage:@"tab_account"];
+    store.btnFrame = CGRectMake(0, 440, APPScreenWidth, 113);
     HTNavigationController *nav1 = [[HTNavigationController alloc] initWithRootViewController:store];
     nav1.isContentLight = YES;
     
     cart = [[InvestViewController alloc]init];
     cart.isBuy = self.isBuy;
     cart.tabBarItem = [self tabbarItemWithTitle:@"我要理财" andItemImage:@"tab_invest"];
+    cart.btnFrame = CGRectMake(0, 40, APPScreenWidth, 110);
     HTNavigationController *nav2 = [[HTNavigationController alloc] initWithRootViewController:cart];
     nav2.isContentLight = YES;
     

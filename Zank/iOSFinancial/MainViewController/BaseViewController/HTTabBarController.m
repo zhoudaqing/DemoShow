@@ -60,18 +60,22 @@
     ViewController *cart = [[ViewController alloc]init];
     cart.tabBarItem = [self tabbarItemWithTitle:@"发现" andItemImage:@"direction"];
     HTNavigationController *nav2 = [[HTNavigationController alloc] initWithRootViewController:cart];
+    nav2.isContentLight = YES;
     
     ViewController1 *find = [[ViewController1 alloc]init];
     find.tabBarItem = [self tabbarItemWithTitle:@"服务" andItemImage:@"commit"];
     HTNavigationController *nav3 = [[HTNavigationController alloc] initWithRootViewController:find];
+    nav3.isContentLight = YES;
     
     ViewController2 *mySelf = [[ViewController2 alloc]init];
     mySelf.tabBarItem = [self tabbarItemWithTitle:@"我的" andItemImage:@"mySelf"];
     HTNavigationController *nav4 = [[HTNavigationController alloc] initWithRootViewController:mySelf];
+    nav4.isContentLight = YES;
     
     ViewController3 *viewC31 = [[ViewController3 alloc]init];
     viewC31.tabBarItem = [self tabbarItemWithTitle:@"消息" andItemImage:@"message"];
     HTNavigationController *viewC3 = [[HTNavigationController alloc] initWithRootViewController:viewC31];
+    viewC3.isContentLight = YES;
 
     return @[nav1, nav2, nav3,viewC3, nav4];
 }

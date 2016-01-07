@@ -23,6 +23,9 @@
 
 @property (nonatomic,copy) NSString *alertContent;
 
+@property (nonatomic) CGRect btnFrame;
+
+
 - (void)setImage:(UIImage *)image WithTouchBlock:(void (^)(NSIndexPath *indexPath))cellTouchBlock;
 
 - (void)setBackImage:(UIImage *)image WithTouchBlock:(void (^)(NSIndexPath *indexPath ))TouchBlock;

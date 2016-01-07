@@ -81,6 +81,7 @@
     
     ViewController1 *find = [[ViewController1 alloc]init];
     find.tabBarItem = [self tabbarItemWithTitle:@"服务" andItemImage:@"commit"];
+    find.btnFrame = CGRectMake(0, 60, APPScreenWidth, 200);
     HTNavigationController *nav3 = [[HTNavigationController alloc] initWithRootViewController:find];
     nav3.isContentLight = YES;
     

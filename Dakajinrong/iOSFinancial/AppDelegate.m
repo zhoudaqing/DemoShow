@@ -75,7 +75,7 @@
     [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor blackColor],NSFontAttributeName : [UIFont systemFontOfSize:18]}];
     
     //  去掉tabbar底下的黑线 (顶部的阴影线 是 shoadowImage 造成的)
-    [[UITabBar appearance] setTintColor:[UIColor jt_barTintColor]];
+    [[UITabBar appearance] setTintColor:[UIColor blackColor]];
     
     //  修改navigation Bar底下的黑色线
     //    [[UINavigationBar appearance] setBarTintColor:[UIColor jt_barTintColor]];

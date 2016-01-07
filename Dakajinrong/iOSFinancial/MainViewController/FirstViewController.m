@@ -21,7 +21,6 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [self.navigationController.navigationBar setBackgroundImage:HTImage(@"jingxuanhead") forBarMetrics:UIBarMetricsDefault];
     self.navigationController.navigationBar.hidden = YES;
 }
 
@@ -34,13 +33,13 @@
         
 }];
     
-    self.tableView.frame = CGRectMake(0, -20, APPScreenWidth, APPScreenHeight+20);
+    self.tableView.frame = CGRectMake(0, -20, APPScreenWidth, APPScreenHeight+40);
     
-    UIButton *woyaozu = [[UIButton alloc]initWithFrame:CGRectMake(0, 200, APPScreenWidth, 150)];
-    [woyaozu addTarget:self action:@selector(woyaozu) forControlEvents:UIControlEventTouchUpInside];
-    [self.tableView addSubview:woyaozu];
+//    UIButton *woyaozu = [[UIButton alloc]initWithFrame:CGRectMake(0, 200, APPScreenWidth, 210)];
+//    [woyaozu addTarget:self action:@selector(woyaozu) forControlEvents:UIControlEventTouchUpInside];
+//    [self.tableView addSubview:woyaozu];
     
-    UIButton *mianbaiozhengjin = [[UIButton alloc]initWithFrame:CGRectMake(0, 400, APPScreenWidth, 150)];
+    UIButton *mianbaiozhengjin = [[UIButton alloc]initWithFrame:CGRectMake(0, 200, APPScreenWidth*.5, 210)];
     [mianbaiozhengjin addTarget:self action:@selector(mianbaiozhengjin) forControlEvents:UIControlEventTouchUpInside];
     [self.tableView addSubview:mianbaiozhengjin];
 
@@ -84,21 +83,25 @@
     BaseDetailViewController *detailN = [[BaseDetailViewController alloc] init];
     detailN.title = @"";
     detailN.isHidnBar = YES;
-    __weak  BaseDetailViewController  *weakBase = detailN;
-    [detailN setImage:HTImage(@"miaobaozhengjin") WithTouchBlock:^(NSIndexPath *indexPath) {
+    detailN.btnFrame = CGRectMake(0, 605, APPScreenWidth, 60);
+    [detailN setImage:HTImage(@"miaobaozhengjin1") WithTouchBlock:^(NSIndexPath *indexPath) {
         
         BaseDetailViewController *detailN = [[BaseDetailViewController alloc] init];
-        detailN.title = @"大咖金融活动说明";
-        
-        [detailN setImage:HTImage(@"miaobaozhengjinhuodong") WithTouchBlock:^(NSIndexPath *indexPath) {
+        detailN.isHidnBar = YES;
+        detailN.btnFrame = CGRectMake(0, 605, APPScreenWidth, 60);
+        [detailN setImage:HTImage(@"miaobaozhengjin2") WithTouchBlock:^(NSIndexPath *indexPath) {
             
-            CloudTabbarController *VC = [[CloudTabbarController alloc]init];
-            [VC changeMessageWith:@"恭喜您完成本次投资，您可以自由去参拍啦！"];
-            VC.selectedIndex = 1;
-            [weakSelf.navigationController presentViewController:VC animated:YES completion:nil];
-            [weakBase refreshView:HTImage(@"miaobaozhengjinBack")];
-            weakBase.tableView.userInteractionEnabled = NO;
-            [self.navigationController popViewControllerAnimated:YES];
+            BaseDetailViewController *detailN = [[BaseDetailViewController alloc] init];
+            detailN.isHidnBar = YES;
+            detailN.btnFrame = CGRectMake(0, 605, APPScreenWidth, 60);
+            [detailN setImage:HTImage(@"miaobaozhengjin3") WithTouchBlock:^(NSIndexPath *indexPath) {
+                
+                [weakSelf setAlerConten:@"支付成功" withLeftBtn:@"确定" rightBtn:nil];
+                
+            }];
+            detailN.hidesBottomBarWhenPushed = YES;
+            [weakSelf.navigationController pushViewController:detailN animated:YES];
+
             
         }];
         detailN.hidesBottomBarWhenPushed = YES;
@@ -108,6 +111,7 @@
     detailN.hidesBottomBarWhenPushed = YES;
     [weakSelf.navigationController pushViewController:detailN animated:YES];
 }
+
 
 @end
 

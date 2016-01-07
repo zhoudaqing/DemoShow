@@ -26,9 +26,16 @@
     if (_viewDidLoadBlock) {
         _viewDidLoadBlock(self);
     }
-   
+    UIButton *btn = [[UIButton alloc]initWithFrame:self.btnFrame];
+    [self.tableView addSubview:btn];
+    [btn addTarget:self action:@selector(nextplan) forControlEvents:UIControlEventTouchUpInside];
 }
 
+- (void)nextplan
+{
+    _cellToucheBlock(_index);
+    
+}
 - (void)setImage:(UIImage *)image WithTouchBlock:(void (^)(NSIndexPath *))touchBlock
 {
     self.contentImage = image;
@@ -52,10 +59,11 @@
 
 - (void)alertView:(UIAlertView *)alertView willDismissWithButtonIndex:(NSInteger)buttonIndex
 {
-    
-        [self.tabBarController dismissViewControllerAnimated:YES completion:^{
-            
-        }];
+    if ([alertView.message isEqualToString:@"支付成功"]) {
+        [self.navigationController.viewControllers[1] refreshView:HTImage(@"miaobaozhengjinBack")];
+        [self.navigationController popToViewController:self.navigationController.viewControllers[1] animated:YES];
+
+    }
     
 }
 
@@ -107,14 +115,16 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     _index = indexPath;
-    if (_cellToucheBlock&&!self.alertContent) {
+    if (_cellToucheBlock&&!self.alertContent&&((int)self.btnFrame.origin.y == 0)) {
         _cellToucheBlock(indexPath);
        
     }else{
-        
-        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"" message:self.alertContent delegate:self cancelButtonTitle:@"我知道了" otherButtonTitles: nil];
-        self.alertContent = nil;
-        [alert show];
+        if (self.alertContent.length >2) {
+            UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"" message:self.alertContent delegate:self cancelButtonTitle:@"我知道了" otherButtonTitles: nil];
+            self.alertContent = nil;
+            [alert show];
+        }
+       
     }
         
 }

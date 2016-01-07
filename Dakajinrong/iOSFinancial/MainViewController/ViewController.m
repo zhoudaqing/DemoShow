@@ -23,9 +23,15 @@
     [self setImage:HTImage(@"zhuanchang") WithTouchBlock:^(NSIndexPath *indexPath) {
         
           }];
-    
+    self.tableView.frame = CGRectMake(0, -20, APPScreenWidth, APPScreenHeight+40);
+
     
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBar.hidden = YES;
+}
 
 @end

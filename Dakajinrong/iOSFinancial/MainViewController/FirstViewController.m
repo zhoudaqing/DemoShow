@@ -83,6 +83,7 @@
     BaseDetailViewController *detailN = [[BaseDetailViewController alloc] init];
     detailN.title = @"";
     detailN.isHidnBar = YES;
+    __weak BaseDetailViewController *weakbase = detailN;
     detailN.btnFrame = CGRectMake(0, 605, APPScreenWidth, 60);
     [detailN setImage:HTImage(@"miaobaozhengjin1") WithTouchBlock:^(NSIndexPath *indexPath) {
         
@@ -97,7 +98,7 @@
             [detailN setImage:HTImage(@"miaobaozhengjin3") WithTouchBlock:^(NSIndexPath *indexPath) {
                 
                 [weakSelf setAlerConten:@"支付成功" withLeftBtn:@"确定" rightBtn:nil];
-                
+                weakbase.tableView.userInteractionEnabled = NO;
             }];
             detailN.hidesBottomBarWhenPushed = YES;
             [weakSelf.navigationController pushViewController:detailN animated:YES];

@@ -21,10 +21,15 @@
     __weakSelf;
     
     [self setImage:HTImage(@"mine") WithTouchBlock:^(NSIndexPath *indexPath) {
+        
+    BaseDetailViewController *buy = [[BaseDetailViewController alloc] init];
+    buy.isHidnBar = YES;
+    buy.btnFrame = CGRectMake(0, 425, APPScreenWidth, 60);
+    [buy setImage:HTImage(@"buyStep0") WithTouchBlock:^(NSIndexPath *indexPath) {
         BaseDetailViewController *buy = [[BaseDetailViewController alloc] init];
         buy.isHidnBar = YES;
-        buy.btnFrame = CGRectMake(0, 425, APPScreenWidth, 60);
-        [buy setImage:HTImage(@"buyStep0") WithTouchBlock:^(NSIndexPath *indexPath) {
+        buy.btnFrame = CGRectMake(APPScreenWidth*.5, APPScreenHeight-40, APPScreenWidth*.5, 60);
+        [buy setImage:HTImage(@"buyStep01") WithTouchBlock:^(NSIndexPath *indexPath) {
             
             //  验证真实姓名
             BaseDetailViewController *regedit = [[BaseDetailViewController alloc] init];
@@ -87,6 +92,10 @@
             
         }];
         
+        buy.hidesBottomBarWhenPushed = YES;
+        [weakSelf.navigationController pushViewController:buy animated:YES];
+        
+    }];
         buy.hidesBottomBarWhenPushed = YES;
         [weakSelf.navigationController pushViewController:buy animated:YES];
         

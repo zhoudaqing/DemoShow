@@ -28,7 +28,14 @@
         [detailN setImage:HTImage(@"woyaozu") WithTouchBlock:^(NSIndexPath *indexPath) {
             
             ViewController3 *detailN = [[ViewController3 alloc] init];
-            detailN.btnFrame = CGRectMake(0, APPScreenHeight - 30, APPScreenWidth*.5, 60);
+            int btnY;
+            if (is55Inch) {
+                btnY = APPScreenHeight-100;
+            }else
+            {
+                btnY = APPScreenHeight - 30;
+            }
+            detailN.btnFrame = CGRectMake(0, btnY, APPScreenWidth*.5, 60);
             detailN.isHidnBar = YES;
             [weakSelf.navigationController pushViewController:detailN animated:YES];
             

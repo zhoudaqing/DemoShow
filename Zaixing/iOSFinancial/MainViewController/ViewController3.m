@@ -94,9 +94,14 @@
     //  验证真实姓名
     BaseDetailViewController *regedit = [[BaseDetailViewController alloc] init];
     regedit.isHidnBar = YES;
-    regedit.btnFrame = CGRectMake(0, APPScreenHeight - 30, APPScreenWidth*.5, 60);
-    [regedit setImage:HTImage(@"woyaozuhuodongshuoming1") WithTouchBlock:^(NSIndexPath *indexPath) {
-        
+    int btnY;
+    if (is55Inch) {
+        btnY = APPScreenHeight-100;
+    }else
+    {
+        btnY = APPScreenHeight - 30;
+    }
+    regedit.btnFrame = CGRectMake(0, btnY, APPScreenWidth*.5, 60);    [regedit setImage:HTImage(@"woyaozuhuodongshuoming1") WithTouchBlock:^(NSIndexPath *indexPath) {
         //  验证真实姓名
         BaseDetailViewController *regedit = [[BaseDetailViewController alloc] init];
         regedit.title = @"验证真实姓名";

@@ -28,7 +28,14 @@
     [buy setImage:HTImage(@"buyStep0") WithTouchBlock:^(NSIndexPath *indexPath) {
         BaseDetailViewController *buy = [[BaseDetailViewController alloc] init];
         buy.isHidnBar = YES;
-        buy.btnFrame = CGRectMake(APPScreenWidth*.5, APPScreenHeight-40, APPScreenWidth*.5, 60);
+        int btnY;
+        if (is55Inch) {
+            btnY = APPScreenHeight -100;
+        }else
+        {
+            btnY = APPScreenHeight-40;
+        }
+        buy.btnFrame = CGRectMake(APPScreenWidth*.5, btnY, APPScreenWidth*.5, 60);
         [buy setImage:HTImage(@"buyStep01") WithTouchBlock:^(NSIndexPath *indexPath) {
             
             //  验证真实姓名

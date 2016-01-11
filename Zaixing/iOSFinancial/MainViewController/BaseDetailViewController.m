@@ -28,7 +28,6 @@
     }
     UIButton *btn = [[UIButton alloc]initWithFrame:self.btnFrame];
     [self.tableView addSubview:btn];
-    btn.backgroundColor = [UIColor redColor];
     [btn addTarget:self action:@selector(nextplan) forControlEvents:UIControlEventTouchUpInside];
 
 }

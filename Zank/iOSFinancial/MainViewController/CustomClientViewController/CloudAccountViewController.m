@@ -49,7 +49,14 @@
         
         BaseDetailViewController *buy = [[BaseDetailViewController alloc] init];
         buy.title = @"买入基金";
-        buy.btnFrame = CGRectMake(0, APPScreenHeight+95, APPScreenWidth, 60);
+        int btnY;
+        if (is55Inch) {
+            btnY = APPScreenHeight;
+        }else
+        {
+            btnY = APPScreenHeight+95;
+        }
+        buy.btnFrame = CGRectMake(0, btnY, APPScreenWidth, 60);
         [buy setImage:HTImage(@"buyStep0") WithTouchBlock:^(NSIndexPath *indexPath) {
             
             //  验证真实姓名
@@ -130,7 +137,14 @@
     
     BaseDetailViewController *regedit = [[BaseDetailViewController alloc] init];
     regedit.title = @"买入基金";
-    regedit.btnFrame = CGRectMake(0, APPScreenHeight+95, APPScreenWidth, 60);
+    int btnY;
+    if (is55Inch) {
+        btnY = APPScreenHeight;
+    }else
+    {
+        btnY = APPScreenHeight+95;
+    }
+    regedit.btnFrame = CGRectMake(0, btnY, APPScreenWidth, 60);
     [regedit setImage:HTImage(@"buyStep0") WithTouchBlock:^(NSIndexPath *indexPath) {
         
         BaseDetailViewController *regedit = [[BaseDetailViewController alloc] init];
